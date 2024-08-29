@@ -6,32 +6,12 @@
 </head>
 
 <body>
-
-	<!-- *********** -->
-	<!-- main_header -->
-	<!-- *********** -->
-	
     <header id="main_header">
-	    <h1>
-			<a href="index.html">CampusEmpresa</a>
-		</h1>
-		<h2><a href="index.html"><i>${lang.get("title")}</i></a></h2>
-		<div style="text-align:right">
-			#if(${lang.get("lang")} == "es")
-				<b>${lang.get("menu.lang.es")}</b>
-				<a href="../ca/${doc_name}.html" onclick="setLang('ca'); return false;"  title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.ca")}</i></a>
-			#end
-			#if(${lang.get("lang")} == "ca")
-				<a href="../es/${doc_name}.html" onclick="setLang('es'); return false;" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.es")}</i></a>
-				<b>${lang.get("menu.lang.ca")}</b>
-			#end
-		</div>
+	    <h1><a href="index.html">CampusEmpresa</a></h1>
+		<h2><a href="index.html">${lang.get("title")}</h2>
+		<div>#parse("idioma.vm")</div>
     </header>
 
-	<!-- ******* -->
-	<!-- top bar -->
-	<!-- ******* -->
-	
     <div class="top-bar">
     	<ul>
 			<li><a href="about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>
@@ -41,28 +21,14 @@
     	</ul>
     </div>
 	
-	<!-- ******* -->
-	<!-- Content -->
-	<!-- ******* -->
-	
     <div id="main_content" class="clearfix">
-      <article>
-		#parse("/navigation.vm")
-		
-		#parse("/doc.vm")	
-	
-		#if($doc.getChilds("text").size()>0)
+    	<article>
 			#parse("/navigation.vm")
-		#end
-	  </article>
-	  	
-	  <aside id="advertisement">
-    	<h2>${lang.get("lat.ads.title")}</h2>
-    	<p>${lang.get("lat.ads.1")}</p>
-    	<p>${lang.get("lat.ads.2")}</p>
-    	
-    	#parse("/ads.vm")
-	  </aside>
+			#parse("/doc.vm")	
+	  	</article>
+		<aside id="advertisement">
+	  		#parse("/ads.vm")
+	  	</aside>
 	</div>
 	
 	<footer>${lang.get("foot.1")}</footer>
