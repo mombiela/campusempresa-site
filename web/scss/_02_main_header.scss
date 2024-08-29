@@ -1,0 +1,58 @@
+/* *********** */
+/* main_header */
+/* *********** */
+
+#main_header {
+	h1, h2 {
+		color: #444;
+		padding: 0;
+		margin: 0;
+		font-family: "Courier New", Courier, monospace;
+		text-align: left
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: normal;
+		margin-top: 10px;
+	}
+	
+	h2 {
+		font-size: 1.3rem;
+		font-weight: normal;
+		line-height: 0.8rem
+	}
+	
+	@media (max-width: 450px) {
+		h1 {
+			font-size: 1.7rem;
+		}
+		h2 {
+			display:none;
+		}
+	}	
+	
+	a {
+		color: #444;
+		text-decoration: none;
+	}
+	
+	ul {
+		margin-top: 0;
+		margin-bottom: 3px;
+		list-style: none;
+		padding-left: 0;
+		text-align: right;
+		
+		li {
+			display: inline-block;
+		}
+		
+		a, b {
+			padding-left: 1em;
+		}
+		a {
+			color: $color2;
+		}
+	}
+}
+

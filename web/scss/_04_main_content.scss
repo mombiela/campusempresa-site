@@ -1,0 +1,78 @@
+/* ************ */
+/* main_content */
+/* ************ */
+
+#main_content {
+	@media (min-width: 750px) {
+		article {
+			width: 60%;
+			float: left;
+		}
+		aside {
+			width: 40%; 
+			float: right;
+			padding-left: 1.5em;
+		}
+
+		/* Revisar...
+		display: flex;
+		article {
+			flex: 1;
+		}
+		aside { 
+			padding-left: 1.5em;
+			flex: 0 0 350px;
+		}
+		*/
+	}
+
+/*	
+	aside {
+		height: 500px;
+	}
+	*/
+	
+	background-color: #fff;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	padding: 1em;
+	padding-top: 0.5em;
+	margin-top: 0;
+	
+	h1, h2, h3, h4 {
+		color: $color2;
+		font-weight: bold;
+	}
+	h1 {font-size: 1.9rem;}
+	h2 {font-size: 1.5rem;}
+	h3 {font-size: 1.1rem;}
+	h4 {font-size: 1.0rem;}
+	
+	.alert p, .assert p {
+		border: 3px dashed $color2;
+		text-align: center;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		padding: 0.7em;
+	}
+	.alert p {
+		border-color: $color1;
+	}
+	
+	@media (min-width: 750px) {
+		.alert p, .assert p {
+			width: 85%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}	
+	
+	p {
+		text-align: justify;
+	}	
+	
+	div.preamble p
+	{
+		text-align: right;
+	}
+}
+
