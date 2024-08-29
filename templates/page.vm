@@ -2,25 +2,7 @@
 #parse("/init.vm")
 <html lang="${lang.get("lang")}">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${doc.getText()}</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
-
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-	#if(${lang.get("lang")} == "es")
-	<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/${doc_name}.html" />
-	#end
-	
-	#if(${lang.get("lang")} == "ca")
-	<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/${doc_name}.html" />
-	#end
-		
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+	#parse("/head.vm")
 </head>
 
 <body>
@@ -31,15 +13,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">${lang.get("title")}</a></h2>
+		<h2><a href="index.html"><i>${lang.get("title")}</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>
-			<li><a href="donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a></li>
-			<li><a href="contribute.html" title="${lang.get("menu.contrib")}">${lang.get("menu.contrib")}</a></li>
-			<li><a href="licence.html" title="${lang.get("menu.licence")}">${lang.get("menu.licence")}</a></li>
-			<li><b> | </b></li>
 			#if(${lang.get("lang")} == "es")
 				<li><b>${lang.get("menu.lang.es")}</b></li>
 				<li><a href="../ca/${doc_name}.html" onclick="setLang('ca'); return false;"  title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.ca")}</i></a></li>
@@ -57,13 +34,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
-			<li><a href="00-table-content" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
-			<li><a href="02-tutorial" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
-			<li><a href="08-stxt-vs" title="${lang.get("menu.vs")}">${lang.get("menu.vs")}</a></li>
-			<li><a href="global-campus" title="${lang.get("menu.global_campus")}">${lang.get("menu.global_campus")}</a></li>
-			<li><a href="stxt" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
+			<li><a href="about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>
+			<li><a href="donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a></li>
+			<li><a href="contribute.html" title="${lang.get("menu.contrib")}">${lang.get("menu.contrib")}</a></li>
+			<li><a href="licence.html" title="${lang.get("menu.licence")}">${lang.get("menu.licence")}</a></li>
     	</ul>
     </div>
 	
@@ -73,42 +47,9 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      	##parse("/ads.vm")
 		#parse("/navigation.vm")
-	
-		#if(${doc.name} == "chapter")
-			#if(${doc.getChild("title")})
-				<h1>${doc.getChild("title").text}</h1>
-			#end
-		#end
-	
-		#set($numPart = 0)
-	
-		#foreach($node in $doc.getChilds())
-			#if(${node.name} == "html")
-				${node.text}
-			#elseif(${node.name} == "content" || ${node.name} == "text")
-				${wiki.render($node.text)}
-			#elseif(${node.name} == "preamble")
-            	<div class="preamble">${wiki.render($node.text)}</div>
-			#elseif(${node.name} == "header")
-            	<h2><a id="index_${numPart}"></a>$node.text</h2>
-				#set($numPart = $numPart + 1)
-			#elseif(${node.name} == "subheader")
-            	<h3><a id="index_${numPart}"></a>$node.text</h3>
-				#set($numPart = $numPart + 1)
-			#elseif(${node.name} == "code")
-				<pre>${utils.escapeHtml($node.text)}</pre>
-			#elseif(${node.name} == "assert")
-				<div class="row">
-            		<div class="assert">${wiki.render($node.text)}</div>
-            	</div>
-			#elseif(${node.name} == "alert")
-				<div class="row">
-            		<div class="alert">${wiki.render($node.text)}</div>
-            	</div>
-			#end
-		#end
+		
+		#parse("/doc.vm")	
 	
 		#if($doc.getChilds("text").size()>0)
 			#parse("/navigation.vm")
@@ -116,11 +57,6 @@
 	  </article>
 	  	
 	  <aside id="advertisement">
-		##<h2>${lang.get("lat.sponsors.title")}</h2>
-    	##<p>${lang.get("lat.sponsors.1")}<p>
-    	##<p>${lang.get("lat.sponsors.2")}</p>
-    	##<p>${lang.get("lat.sponsors.3")}</p>
-    	##<br>
     	<h2>${lang.get("lat.ads.title")}</h2>
     	<p>${lang.get("lat.ads.1")}</p>
     	<p>${lang.get("lat.ads.2")}</p>

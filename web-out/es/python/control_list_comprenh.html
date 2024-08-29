@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprensiones de listas</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprensiones de listas</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/python\control_list_comprenh.html" />
-		
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprendizaje continuo, uniendo la sociedad</a></h2>
+		<h2><a href="index.html"><i>Aprendiendo juntos, uniendo la sociedad</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 							<li><b>Castellano</b></li>
 				<li><a href="../ca/python\control_list_comprenh.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
 						    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="python\control_list_comprenh.stxt" target="python\control_list_comprenh" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,90 +49,90 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>Las comprensiones de listas en Python son una forma concisa y
+				
+		
+
+			<p>Las comprensiones de listas en Python son una forma concisa y
 elegante de crear listas. Permiten generar una nueva lista
 aplicando una expresión a cada elemento de una secuencia
 (como una lista, tupla o cualquier otro iterable) y,
 opcionalmente, filtrando elementos con una condición.</p>
 
-								            	<h2><a id="index_0"></a>Sintaxis Básica</h2>
-																<p>La sintaxis básica de una comprensión de lista es la siguiente:</p>
+		    	<h2><a id="index_0"></a>Sintaxis Básica</h2>
+						<p>La sintaxis básica de una comprensión de lista es la siguiente:</p>
 
-												<pre>[nueva_lista] = [expresi&oacute;n for elemento in iterable if condici&oacute;n]</pre>
-												<ul>
+				<pre>[nueva_lista] = [expresi&oacute;n for elemento in iterable if condici&oacute;n]</pre>
+				<ul>
 <li><strong>expresión</strong>: Operación que se realiza sobre cada elemento de la secuencia.</li>
 <li><strong>elemento</strong>: Variable que toma el valor de cada uno de los elementos del iterable.</li>
 <li><strong>iterable</strong>: La secuencia de datos que se recorre.</li>
 <li><strong>condición (opcional)</strong>: Filtro que determina si un elemento se incluye en la nueva lista.</li>
 </ul>
 
-								            	<h2><a id="index_1"></a>Ejemplos de Comprensiones de Listas</h2>
-																<p><strong>1. Crear una lista de números:</strong></p>
+		    	<h2><a id="index_1"></a>Ejemplos de Comprensiones de Listas</h2>
+						<p><strong>1. Crear una lista de números:</strong></p>
 
-												<pre>numeros = [1, 2, 3, 4, 5]
+				<pre>numeros = [1, 2, 3, 4, 5]
 cuadrados = [n ** 2 for n in numeros]
 print(cuadrados)  # Salida: [1, 4, 9, 16, 25]</pre>
-												<p>En este ejemplo, <code>n ** 2</code> es la expresión que se aplica
+				<p>En este ejemplo, <code>n ** 2</code> es la expresión que se aplica
 a cada elemento <code>n</code> de la lista <code>numeros</code>.</p>
 <p><strong>2. Filtrar elementos con una condición:</strong></p>
 
-												<pre>numeros = [1, 2, 3, 4, 5]
+				<pre>numeros = [1, 2, 3, 4, 5]
 pares = [n for n in numeros if n % 2 == 0]
 print(pares)  # Salida: [2, 4]</pre>
-												<p>Aquí, <code>n % 2 == 0</code> es la condición que filtra los números pares de la lista <code>numeros</code>.</p>
+				<p>Aquí, <code>n % 2 == 0</code> es la condición que filtra los números pares de la lista <code>numeros</code>.</p>
 <p><strong>3. Aplicar una función a cada elemento:</strong></p>
 
-												<pre>def cuadrado(n):
+				<pre>def cuadrado(n):
 return n ** 2
 
 numeros = [1, 2, 3, 4, 5]
 cuadrados = [cuadrado(n) for n in numeros]
 print(cuadrados)  # Salida: [1, 4, 9, 16, 25]</pre>
-												<p>En este ejemplo, la función cuadrado se aplica a cada elemento de la lista <code>numeros</code>.</p>
+				<p>En este ejemplo, la función cuadrado se aplica a cada elemento de la lista <code>numeros</code>.</p>
 <p><strong>4. Convertir caracteres a mayúsculas:</strong></p>
 
-												<pre>frutas = [&quot;manzana&quot;, &quot;banana&quot;, &quot;cereza&quot;]
+				<pre>frutas = [&quot;manzana&quot;, &quot;banana&quot;, &quot;cereza&quot;]
 mayusculas = [fruta.upper() for fruta in frutas]
 print(mayusculas)  # Salida: ['MANZANA', 'BANANA', 'CEREZA']</pre>
-												<p>La expresión <code>fruta.upper()</code> convierte cada cadena de la lista <code>frutas</code> a mayúsculas.</p>
+				<p>La expresión <code>fruta.upper()</code> convierte cada cadena de la lista <code>frutas</code> a mayúsculas.</p>
 
-								            	<h2><a id="index_2"></a>Comprensiones Anidadas</h2>
-																<p>Las comprensiones de listas también pueden ser anidadas, permitiendo crear listas multidimensionales.</p>
+		    	<h2><a id="index_2"></a>Comprensiones Anidadas</h2>
+						<p>Las comprensiones de listas también pueden ser anidadas, permitiendo crear listas multidimensionales.</p>
 
-								            	<h2><a id="index_3"></a>Ejemplo: Matriz de números:</h2>
-																
-												<pre>matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+		    	<h2><a id="index_3"></a>Ejemplo: Matriz de números:</h2>
+						
+				<pre>matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 transpuesta = [[fila[i] for fila in matriz] for i in range(len(matriz[0]))]
 print(transpuesta)  # Salida: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]</pre>
-												<p>En este ejemplo, la lista <code>transpuesta</code> se genera tomando los elementos por columna en lugar de por fila.</p>
+				<p>En este ejemplo, la lista <code>transpuesta</code> se genera tomando los elementos por columna en lugar de por fila.</p>
 
-								            	<h2><a id="index_4"></a>Uso de Comprensiones de Listas con Diccionarios y Conjuntos</h2>
-																<p>Las comprensiones de listas no se limitan solo a listas. También pueden usarse para crear diccionarios y conjuntos.</p>
+		    	<h2><a id="index_4"></a>Uso de Comprensiones de Listas con Diccionarios y Conjuntos</h2>
+						<p>Las comprensiones de listas no se limitan solo a listas. También pueden usarse para crear diccionarios y conjuntos.</p>
 
-								            	<h2><a id="index_5"></a>Ejemplo con diccionarios:</h2>
-																
-												<pre>frutas = [&quot;manzana&quot;, &quot;banana&quot;, &quot;cereza&quot;]
+		    	<h2><a id="index_5"></a>Ejemplo con diccionarios:</h2>
+						
+				<pre>frutas = [&quot;manzana&quot;, &quot;banana&quot;, &quot;cereza&quot;]
 precios = [1.2, 0.5, 2.0]
 frutas_precios = {fruta: precio for fruta, precio in zip(frutas, precios)}
 print(frutas_precios)  # Salida: {'manzana': 1.2, 'banana': 0.5, 'cereza': 2.0}</pre>
-												<p>En este ejemplo, se crea un diccionario <code>frutas_precios</code> a partir de dos listas usando <code>zip</code>.</p>
+				<p>En este ejemplo, se crea un diccionario <code>frutas_precios</code> a partir de dos listas usando <code>zip</code>.</p>
 
-								            	<h2><a id="index_6"></a>Ejemplo con conjuntos:</h2>
-																
-												<pre>numeros = [1, 2, 2, 3, 4, 4, 5]
+		    	<h2><a id="index_6"></a>Ejemplo con conjuntos:</h2>
+						
+				<pre>numeros = [1, 2, 2, 3, 4, 4, 5]
 cuadrados_unicos = {n ** 2 for n in numeros}
 print(cuadrados_unicos)  # Salida: {1, 4, 9, 16, 25}</pre>
-												<p>En este ejemplo, se crea un conjunto <code>cuadrados_unicos</code> con los cuadrados únicos de los números en la lista <code>numeros</code>.</p>
+				<p>En este ejemplo, se crea un conjunto <code>cuadrados_unicos</code> con los cuadrados únicos de los números en la lista <code>numeros</code>.</p>
 <p>Las comprensiones de listas son una herramienta poderosa para escribir código más claro y conciso. Facilitan la creación y manipulación de listas de una manera legible y eficiente.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -163,7 +151,7 @@ print(cuadrados_unicos)  # Salida: {1, 4, 9, 16, 25}</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

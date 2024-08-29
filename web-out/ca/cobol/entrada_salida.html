@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Técnicas de entrada y salida de datos</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Técnicas de entrada y salida de datos</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/cobol\entrada_salida.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/cobol\entrada_salida.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="cobol\entrada_salida.stxt" target="cobol\entrada_salida" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,18 +49,18 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>En COBOL, las técnicas de entrada y salida de datos (I/O) son fundamentales para interactuar con archivos, bases de datos y dispositivos externos. Estas técnicas incluyen operaciones básicas como leer, escribir, actualizar y eliminar datos. A continuación, se describen las técnicas de I/O más comunes en COBOL.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Entrada y salida en archivos secuenciales</h2>
-																<p>Los archivos secuenciales son uno de los tipos más comunes de archivos en COBOL. Se accede a ellos de manera secuencial, lo que significa que los registros se leen o escriben en el orden en que aparecen en el archivo.</p>
+			<p>En COBOL, las técnicas de entrada y salida de datos (I/O) son fundamentales para interactuar con archivos, bases de datos y dispositivos externos. Estas técnicas incluyen operaciones básicas como leer, escribir, actualizar y eliminar datos. A continuación, se describen las técnicas de I/O más comunes en COBOL.</p>
 
-								            	<h3><a id="index_1"></a>Lectura de archivos secuenciales</h3>
-																<p>Para leer archivos secuenciales, se utiliza la sentencia <code>READ</code> dentro de un bucle.</p>
+		    	<h2><a id="index_0"></a>Entrada y salida en archivos secuenciales</h2>
+						<p>Los archivos secuenciales son uno de los tipos más comunes de archivos en COBOL. Se accede a ellos de manera secuencial, lo que significa que los registros se leen o escriben en el orden en que aparecen en el archivo.</p>
 
-												<pre>FILE CONTROL.
+		    	<h3><a id="index_1"></a>Lectura de archivos secuenciales</h3>
+						<p>Para leer archivos secuenciales, se utiliza la sentencia <code>READ</code> dentro de un bucle.</p>
+
+				<pre>FILE CONTROL.
 SELECT Entrada-Archivo ASSIGN TO 'ENTRADA.TXT'
 ORGANIZATION IS LINE SEQUENTIAL.
 
@@ -96,16 +84,16 @@ END-READ
 END-PERFORM.
 CLOSE Entrada-Archivo.
 STOP RUN.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>READ Entrada-Archivo INTO Registro-Entrada</code> lee registros secuencialmente hasta alcanzar el final del archivo.</li>
 <li><code>AT END</code> se utiliza para detectar el final del archivo y establecer la condición de fin de archivo.</li>
 </ul>
 
-								            	<h3><a id="index_2"></a>Escritura en archivos secuenciales</h3>
-																<p>Para escribir en archivos secuenciales, se utiliza la sentencia <code>WRITE</code>.</p>
+		    	<h3><a id="index_2"></a>Escritura en archivos secuenciales</h3>
+						<p>Para escribir en archivos secuenciales, se utiliza la sentencia <code>WRITE</code>.</p>
 
-												<pre>FILE CONTROL.
+				<pre>FILE CONTROL.
 SELECT Salida-Archivo ASSIGN TO 'SALIDA.TXT'
 ORGANIZATION IS LINE SEQUENTIAL.
 
@@ -123,18 +111,18 @@ MOVE 12345 TO Campo2.
 WRITE Registro-Salida.
 CLOSE Salida-Archivo.
 STOP RUN.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>WRITE Registro-Salida</code> escribe un registro en el archivo secuencial.</li>
 </ul>
 
-								            	<h2><a id="index_3"></a>Entrada y salida en archivos indexados</h2>
-																<p>Los archivos indexados permiten acceso aleatorio a registros mediante claves.</p>
+		    	<h2><a id="index_3"></a>Entrada y salida en archivos indexados</h2>
+						<p>Los archivos indexados permiten acceso aleatorio a registros mediante claves.</p>
 
-								            	<h3><a id="index_4"></a>Lectura de archivos indexados</h3>
-																<p>Para leer registros específicos en archivos indexados, se utiliza la sentencia <code>READ</code> con la clave de registro.</p>
+		    	<h3><a id="index_4"></a>Lectura de archivos indexados</h3>
+						<p>Para leer registros específicos en archivos indexados, se utiliza la sentencia <code>READ</code> con la clave de registro.</p>
 
-												<pre>FILE CONTROL.
+				<pre>FILE CONTROL.
 SELECT Clientes ASSIGN TO 'CLIENTES.DAT'
 ORGANIZATION IS INDEXED
 ACCESS MODE IS DYNAMIC
@@ -158,15 +146,15 @@ READ Clientes INTO Registro-Cliente KEY IS Cliente-ID
 INVALID KEY DISPLAY 'Cliente no encontrado'.
 CLOSE Clientes.
 STOP RUN.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>READ Clientes INTO Registro-Cliente KEY IS Cliente-ID</code> lee un registro específico usando la clave primaria.</li>
 </ul>
 
-								            	<h3><a id="index_5"></a>Escritura en archivos indexados</h3>
-																<p>Para escribir registros en archivos indexados, se utiliza la sentencia <code>WRITE</code>.</p>
+		    	<h3><a id="index_5"></a>Escritura en archivos indexados</h3>
+						<p>Para escribir registros en archivos indexados, se utiliza la sentencia <code>WRITE</code>.</p>
 
-												<pre>PROCEDURE DIVISION.
+				<pre>PROCEDURE DIVISION.
 OPEN I-O Clientes.
 MOVE 12345 TO Cliente-ID.
 MOVE 'Juan P&eacute;rez' TO Cliente-Nombre.
@@ -174,18 +162,18 @@ MOVE 'Calle Falsa 123' TO Cliente-Direccion.
 WRITE Registro-Cliente.
 CLOSE Clientes.
 STOP RUN.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>WRITE Registro-Cliente</code> escribe un nuevo registro en el archivo indexado.</li>
 </ul>
 
-								            	<h2><a id="index_6"></a>Entrada y salida con bases de datos relacionales</h2>
-																<p>El acceso a bases de datos relacionales en COBOL se realiza mediante SQL embebido.</p>
+		    	<h2><a id="index_6"></a>Entrada y salida con bases de datos relacionales</h2>
+						<p>El acceso a bases de datos relacionales en COBOL se realiza mediante SQL embebido.</p>
 
-								            	<h3><a id="index_7"></a>Lectura de datos en bases de datos relacionales</h3>
-																<p>Para realizar consultas en una base de datos relacional, se utiliza la sentencia <code>EXEC SQL SELECT</code>.</p>
+		    	<h3><a id="index_7"></a>Lectura de datos en bases de datos relacionales</h3>
+						<p>Para realizar consultas en una base de datos relacional, se utiliza la sentencia <code>EXEC SQL SELECT</code>.</p>
 
-												<pre>WORKING-STORAGE SECTION.
+				<pre>WORKING-STORAGE SECTION.
 EXEC SQL INCLUDE SQLCA END-EXEC.
 01 CLIENTE-ID PIC 9(5).
 01 CLIENTE-NOMBRE PIC X(30).
@@ -206,15 +194,15 @@ DISPLAY 'Cliente Direcci&oacute;n: ' CLIENTE-DIRECCION.
 ELSE
 DISPLAY 'Error en consulta: ' SQLCODE.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>EXEC SQL SELECT</code> realiza una consulta en la base de datos y almacena los resultados en las variables correspondientes.</li>
 </ul>
 
-								            	<h3><a id="index_8"></a>Escritura de datos en bases de datos relacionales</h3>
-																<p>Para insertar datos en una base de datos relacional, se utiliza la sentencia <code>EXEC SQL INSERT</code>.</p>
+		    	<h3><a id="index_8"></a>Escritura de datos en bases de datos relacionales</h3>
+						<p>Para insertar datos en una base de datos relacional, se utiliza la sentencia <code>EXEC SQL INSERT</code>.</p>
 
-												<pre>PROCEDURE DIVISION.
+				<pre>PROCEDURE DIVISION.
 EXEC SQL
 INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION)
 VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION)
@@ -225,17 +213,17 @@ DISPLAY 'Error insertando datos: ' SQLCODE.
 ELSE
 DISPLAY 'Datos insertados correctamente'.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC</code> inserta un nuevo registro en la tabla CLIENTES.</li>
 </ul>
 
-								            	<h2><a id="index_9"></a>Manejo de errores en operaciones de I/O</h2>
-																<p>Es crucial manejar errores durante las operaciones de entrada y salida para garantizar la integridad y robustez del programa. En COBOL, se utilizan el <code>FILE STATUS</code> para archivos y <code>SQLCODE</code> para bases de datos.</p>
+		    	<h2><a id="index_9"></a>Manejo de errores en operaciones de I/O</h2>
+						<p>Es crucial manejar errores durante las operaciones de entrada y salida para garantizar la integridad y robustez del programa. En COBOL, se utilizan el <code>FILE STATUS</code> para archivos y <code>SQLCODE</code> para bases de datos.</p>
 
-								            	<h3><a id="index_10"></a>Ejemplo de manejo de errores con FILE STATUS</h3>
-																
-												<pre>FILE CONTROL.
+		    	<h3><a id="index_10"></a>Ejemplo de manejo de errores con FILE STATUS</h3>
+						
+				<pre>FILE CONTROL.
 SELECT Entrada-Archivo ASSIGN TO 'ENTRADA.TXT'
 ORGANIZATION IS LINE SEQUENTIAL
 FILE STATUS IS WS-File-Status.
@@ -250,15 +238,15 @@ DISPLAY 'Error abriendo archivo: ' WS-File-Status.
 END-IF.
 CLOSE Entrada-Archivo.
 STOP RUN.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>FILE STATUS IS WS-File-Status</code> define una variable para capturar el estado del archivo.</li>
 <li>Se verifica <code>WS-File-Status</code> para manejar errores durante las operaciones de archivo.</li>
 </ul>
 
-								            	<h3><a id="index_11"></a>Ejemplo de manejo de errores con SQLCODE</h3>
-																
-												<pre>WORKING-STORAGE SECTION.
+		    	<h3><a id="index_11"></a>Ejemplo de manejo de errores con SQLCODE</h3>
+						
+				<pre>WORKING-STORAGE SECTION.
 EXEC SQL INCLUDE SQLCA END-EXEC.
 
 PROCEDURE DIVISION.
@@ -271,19 +259,19 @@ END-EXEC.
 IF SQLCODE &lt;&gt; 0
 DISPLAY 'Error conectando a la base de datos: ' SQLCODE.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>SQLCODE</code> se utiliza para verificar y manejar errores en operaciones de base de datos.</li>
 </ul>
 
-								            	<h2><a id="index_12"></a>Conclusión</h2>
-																<p>Las técnicas de entrada y salida de datos en COBOL son esenciales para interactuar con archivos y bases de datos. Comprender cómo definir, abrir, cerrar, leer, escribir y manejar errores en estas operaciones es fundamental para desarrollar aplicaciones COBOL robustas y eficientes.</p>
+		    	<h2><a id="index_12"></a>Conclusión</h2>
+						<p>Las técnicas de entrada y salida de datos en COBOL son esenciales para interactuar con archivos y bases de datos. Comprender cómo definir, abrir, cerrar, leer, escribir y manejar errores en estas operaciones es fundamental para desarrollar aplicaciones COBOL robustas y eficientes.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -302,7 +290,7 @@ END-IF.</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

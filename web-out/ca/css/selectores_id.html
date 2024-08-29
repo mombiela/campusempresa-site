@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uso de selectores por ID</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uso de selectores por ID</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/css\selectores_id.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/css\selectores_id.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="css\selectores_id.stxt" target="css\selectores_id" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,10 +49,10 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<ul>
+				
+		
+
+			<ul>
 <li>
 <p><strong>Introducción</strong>
 Los selectores por ID en CSS permiten aplicar estilos a un único elemento que tiene un identificador específico. Este método es útil para estilizar elementos únicos en una página, como un encabezado o una sección específica.</p>
@@ -75,7 +63,7 @@ Un ID se define en HTML utilizando el atributo <code>id</code>. En CSS, el selec
 </li>
 </ul>
 
-												<pre>&lt;!DOCTYPE html&gt;
+				<pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;style&gt;
@@ -89,7 +77,7 @@ font-size: 20px;
 &lt;p id=&quot;miID&quot;&gt;Este es un p&aacute;rrafo con el ID &quot;miID&quot;.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-												<ul>
+				<ul>
 <li>
 <p><strong>Ventajas de usar selectores por ID</strong>
 <code>startalert</code></p>
@@ -130,7 +118,7 @@ Puedes combinar selectores por ID con otros selectores para aplicar estilos de m
 </li>
 </ul>
 
-												<pre>&lt;!DOCTYPE html&gt;
+				<pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;style&gt;
@@ -144,16 +132,16 @@ font-style: italic;
 &lt;p id=&quot;miID&quot; class=&quot;especial&quot;&gt;Este es un p&aacute;rrafo verde e it&aacute;lico con el ID &quot;miID&quot;.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-												<ul>
+				<ul>
 <li><strong>Conclusión</strong>
 El uso de selectores por ID en CSS es ideal para aplicar estilos a elementos únicos en un documento HTML. Aunque los IDs ofrecen alta especificidad y control, es importante usarlos con moderación y combinarlos adecuadamente con otros selectores para mantener un código CSS limpio y manejable.</li>
 </ul>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -172,7 +160,7 @@ El uso de selectores por ID en CSS es ideal para aplicar estilos a elementos ún
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estado y Ciclo de Vida</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estado y Ciclo de Vida</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/react\tema-05.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/react\tema-05.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="react\tema-05.stxt" target="react\tema-05" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,20 +49,20 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="tema-04" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="tema-06" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Introducción</h2>
-																<p>En React, el <strong>estado</strong> es una estructura que almacena datos que pueden cambiar con el tiempo y afectan la forma en que se renderiza un componente. A diferencia de las props, que son inmutables y se pasan desde componentes padres, el estado es gestionado internamente por el propio componente.</p>
+		
+		
+
+		    	<h2><a id="index_0"></a>Introducción</h2>
+						<p>En React, el <strong>estado</strong> es una estructura que almacena datos que pueden cambiar con el tiempo y afectan la forma en que se renderiza un componente. A diferencia de las props, que son inmutables y se pasan desde componentes padres, el estado es gestionado internamente por el propio componente.</p>
 <p>El <strong>ciclo de vida</strong> de un componente describe las diferentes fases por las que pasa un componente desde su creación hasta su destrucción. Comprender el ciclo de vida es fundamental para gestionar correctamente recursos, realizar actualizaciones y optimizar el rendimiento de las aplicaciones React.</p>
 
-								            	<h3><a id="index_1"></a>Concepto de Estado en React</h3>
-																<p>El estado permite que los componentes React respondan a interacciones del usuario, cambios en los datos o cualquier otra actualización que requiera una re-renderización del componente.</p>
+		    	<h3><a id="index_1"></a>Concepto de Estado en React</h3>
+						<p>El estado permite que los componentes React respondan a interacciones del usuario, cambios en los datos o cualquier otra actualización que requiera una re-renderización del componente.</p>
 <p><strong>Características del Estado:</strong></p>
 <ul>
 <li><strong>Mutable:</strong> A diferencia de las props, el estado puede cambiar.</li>
@@ -82,11 +70,11 @@
 <li><strong>Local:</strong> El estado es local al componente donde se define, aunque puede ser compartido mediante técnicas como el levantamiento del estado o el uso de Context API.</li>
 </ul>
 
-								            	<h3><a id="index_2"></a>Manejo del Estado en Componentes de Clase</h3>
-																<p>En los componentes de clase, el estado se maneja a través de <code>this.state</code> y se actualiza utilizando <code>this.setState()</code>.</p>
+		    	<h3><a id="index_2"></a>Manejo del Estado en Componentes de Clase</h3>
+						<p>En los componentes de clase, el estado se maneja a través de <code>this.state</code> y se actualiza utilizando <code>this.setState()</code>.</p>
 <p><strong>Definiendo el Estado Inicial:</strong></p>
 
-												<pre>// Definiendo el estado inicial en un componente de clase
+				<pre>// Definiendo el estado inicial en un componente de clase
 class Contador extends React.Component {
     constructor(props) {
         super(props);
@@ -103,9 +91,9 @@ class Contador extends React.Component {
         );
     }
 }</pre>
-												<p><strong>Actualizando el Estado:</strong></p>
+				<p><strong>Actualizando el Estado:</strong></p>
 
-												<pre>// Actualizando el estado con setState
+				<pre>// Actualizando el estado con setState
 class Contador extends React.Component {
     constructor(props) {
         super(props);
@@ -130,11 +118,11 @@ class Contador extends React.Component {
         );
     }
 }</pre>
-								            	<h3><a id="index_3"></a>Hooks: useState en Componentes Funcionales</h3>
-																<p>Con la introducción de los <strong>hooks</strong> en React, es posible manejar el estado en componentes funcionales utilizando el hook <code>useState</code>.</p>
+		    	<h3><a id="index_3"></a>Hooks: useState en Componentes Funcionales</h3>
+						<p>Con la introducción de los <strong>hooks</strong> en React, es posible manejar el estado en componentes funcionales utilizando el hook <code>useState</code>.</p>
 <p><strong>Uso Básico de useState:</strong></p>
 
-												<pre>// Usando useState en un componente funcional
+				<pre>// Usando useState en un componente funcional
 import React, { useState } from 'react';
 
 function Contador() {
@@ -151,9 +139,9 @@ function Contador() {
         &lt;/div&gt;
     );
 }</pre>
-												<p><strong>Actualizaciones Basadas en el Estado Anterior:</strong></p>
+				<p><strong>Actualizaciones Basadas en el Estado Anterior:</strong></p>
 
-												<pre>// Actualizando el estado basado en el valor anterior
+				<pre>// Actualizando el estado basado en el valor anterior
 function Contador() {
     const [cuenta, setCuenta] = useState(0);
     
@@ -168,8 +156,8 @@ function Contador() {
         &lt;/div&gt;
     );
 }</pre>
-								            	<h3><a id="index_4"></a>Ciclo de Vida de los Componentes de Clase</h3>
-																<p>Los componentes de clase tienen métodos que se ejecutan en diferentes fases de su ciclo de vida. Algunos de los métodos más importantes son:</p>
+		    	<h3><a id="index_4"></a>Ciclo de Vida de los Componentes de Clase</h3>
+						<p>Los componentes de clase tienen métodos que se ejecutan en diferentes fases de su ciclo de vida. Algunos de los métodos más importantes son:</p>
 <p><strong>Montaje:</strong></p>
 <ul>
 <li><code>constructor()</code>: Inicializa el estado y enlaza métodos.</li>
@@ -186,7 +174,7 @@ function Contador() {
 </ul>
 <p><strong>Ejemplo de Uso de Métodos del Ciclo de Vida:</strong></p>
 
-												<pre>class Temporizador extends React.Component {
+				<pre>class Temporizador extends React.Component {
     constructor(props) {
         super(props);
         this.state = { segundos: 0 };
@@ -206,11 +194,11 @@ function Contador() {
         return &lt;p&gt;Segundos: {this.state.segundos}&lt;/p&gt;;
     }
 }</pre>
-								            	<h3><a id="index_5"></a>Hooks: useEffect en Componentes Funcionales</h3>
-																<p>El hook <code>useEffect</code> permite manejar efectos secundarios en componentes funcionales, reemplazando la funcionalidad de los métodos del ciclo de vida en componentes de clase.</p>
+		    	<h3><a id="index_5"></a>Hooks: useEffect en Componentes Funcionales</h3>
+						<p>El hook <code>useEffect</code> permite manejar efectos secundarios en componentes funcionales, reemplazando la funcionalidad de los métodos del ciclo de vida en componentes de clase.</p>
 <p><strong>Uso Básico de useEffect:</strong></p>
 
-												<pre>// Usando useEffect para montar un temporizador
+				<pre>// Usando useEffect para montar un temporizador
 import React, { useState, useEffect } from 'react';
 
 function Temporizador() {
@@ -227,9 +215,9 @@ function Temporizador() {
     
     return &lt;p&gt;Segundos: {segundos}&lt;/p&gt;;
 }</pre>
-												<p><strong>useEffect con Dependencias:</strong></p>
+				<p><strong>useEffect con Dependencias:</strong></p>
 
-												<pre>// useEffect que se ejecuta cuando una dependencia cambia
+				<pre>// useEffect que se ejecuta cuando una dependencia cambia
 function Contador({ inicial }) {
     const [cuenta, setCuenta] = useState(inicial);
     
@@ -244,10 +232,10 @@ function Contador({ inicial }) {
         &lt;/div&gt;
     );
 }</pre>
-								            	<h3><a id="index_6"></a>Ejemplos Prácticos</h3>
-																<p><strong>Ejemplo 1: Fetch de Datos al Montar el Componente</strong></p>
+		    	<h3><a id="index_6"></a>Ejemplos Prácticos</h3>
+						<p><strong>Ejemplo 1: Fetch de Datos al Montar el Componente</strong></p>
 
-												<pre>// Componente que obtiene datos al montar
+				<pre>// Componente que obtiene datos al montar
 import React, { useState, useEffect } from 'react';
 
 function Usuarios() {
@@ -267,9 +255,9 @@ function Usuarios() {
         &lt;/ul&gt;
     );
 }</pre>
-												<p><strong>Ejemplo 2: Limpieza de Recursos</strong></p>
+				<p><strong>Ejemplo 2: Limpieza de Recursos</strong></p>
 
-												<pre>// Componente que configura y limpia un evento
+				<pre>// Componente que configura y limpia un evento
 import React, { useEffect } from 'react';
 
 function EventoVentana() {
@@ -287,14 +275,14 @@ function EventoVentana() {
     
     return &lt;p&gt;Redimensiona la ventana y revisa la consola.&lt;/p&gt;;
 }</pre>
-								            	<h3><a id="index_7"></a>Conclusión</h3>
-																<p>En este tema, hemos explorado cómo manejar el estado en React, tanto en componentes de clase como en componentes funcionales utilizando hooks. También hemos visto cómo gestionar el ciclo de vida de los componentes para realizar operaciones en momentos específicos de su existencia. Dominar el manejo del estado y el ciclo de vida es esencial para construir aplicaciones React eficientes, interactivas y bien estructuradas. En los próximos temas, profundizaremos en el manejo de eventos y otras funcionalidades avanzadas de React.</p>
+		    	<h3><a id="index_7"></a>Conclusión</h3>
+						<p>En este tema, hemos explorado cómo manejar el estado en React, tanto en componentes de clase como en componentes funcionales utilizando hooks. También hemos visto cómo gestionar el ciclo de vida de los componentes para realizar operaciones en momentos específicos de su existencia. Dominar el manejo del estado y el ciclo de vida es esencial para construir aplicaciones React eficientes, interactivas y bien estructuradas. En los próximos temas, profundizaremos en el manejo de eventos y otras funcionalidades avanzadas de React.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -313,7 +301,7 @@ function EventoVentana() {
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

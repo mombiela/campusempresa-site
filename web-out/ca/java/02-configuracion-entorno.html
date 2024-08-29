@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuración del Entorno de Desarrollo</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configuración del Entorno de Desarrollo</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/java\02-configuracion-entorno.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/java\02-configuracion-entorno.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="java\02-configuracion-entorno.stxt" target="java\02-configuracion-entorno" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,17 +49,17 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="01-introduccion" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="03-sintaxis-basica" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Instalación del JDK (Java Development Kit)</h2>
-												            	<h3><a id="index_1"></a>Descarga del JDK</h3>
-																<p>Para comenzar a programar en Java, lo primero que necesitas es instalar el <strong>Java Development Kit (JDK)</strong>. El JDK incluye el compilador de Java y las herramientas necesarias para desarrollar aplicaciones Java.</p>
+		
+		
+
+		    	<h2><a id="index_0"></a>Instalación del JDK (Java Development Kit)</h2>
+				    	<h3><a id="index_1"></a>Descarga del JDK</h3>
+						<p>Para comenzar a programar en Java, lo primero que necesitas es instalar el <strong>Java Development Kit (JDK)</strong>. El JDK incluye el compilador de Java y las herramientas necesarias para desarrollar aplicaciones Java.</p>
 <p><strong>Pasos para descargar el JDK:</strong></p>
 <ol>
 <li>Visita el sitio oficial de Oracle: <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html">Descargar JDK</a></li>
@@ -80,8 +68,8 @@
 </ol>
 <p><strong>Nota:</strong> También puedes considerar utilizar OpenJDK, una versión de código abierto del JDK.</p>
 
-								            	<h3><a id="index_2"></a>Instalación del JDK</h3>
-																<p>Una vez descargado el JDK, procede con la instalación:</p>
+		    	<h3><a id="index_2"></a>Instalación del JDK</h3>
+						<p>Una vez descargado el JDK, procede con la instalación:</p>
 <ul>
 <li>
 <p><strong>Windows</strong>:</p>
@@ -110,11 +98,11 @@
 </li>
 </ul>
 
-												<pre>// Comando para verificar la instalaci&oacute;n de Java en cualquier sistema operativo
+				<pre>// Comando para verificar la instalaci&oacute;n de Java en cualquier sistema operativo
 java -version</pre>
-								            	<h2><a id="index_3"></a>Instalación de un Entorno de Desarrollo Integrado (IDE)</h2>
-												            	<h3><a id="index_4"></a>Elección del IDE</h3>
-																<p>Un <strong>Entorno de Desarrollo Integrado (IDE)</strong> es una herramienta esencial para la programación en Java. Un IDE proporciona una interfaz amigable para escribir, compilar, y depurar tu código.</p>
+		    	<h2><a id="index_3"></a>Instalación de un Entorno de Desarrollo Integrado (IDE)</h2>
+				    	<h3><a id="index_4"></a>Elección del IDE</h3>
+						<p>Un <strong>Entorno de Desarrollo Integrado (IDE)</strong> es una herramienta esencial para la programación en Java. Un IDE proporciona una interfaz amigable para escribir, compilar, y depurar tu código.</p>
 <p><strong>IDEs populares para Java:</strong></p>
 <ul>
 <li><strong>Eclipse</strong>: Un IDE libre y altamente configurable. Descarga desde <a href="https://www.eclipse.org/">Eclipse.org</a>.</li>
@@ -123,8 +111,8 @@ java -version</pre>
 </ul>
 <p><strong>Consejo:</strong> IntelliJ IDEA es popular por su soporte avanzado para refactorización y sus características de autocompletado inteligente.</p>
 
-								            	<h3><a id="index_5"></a>Configuración básica del IDE</h3>
-																<p>Una vez que has instalado un IDE, sigue estos pasos para configurarlo:</p>
+		    	<h3><a id="index_5"></a>Configuración básica del IDE</h3>
+						<p>Una vez que has instalado un IDE, sigue estos pasos para configurarlo:</p>
 <ul>
 <li>
 <p><strong>Configuración del JDK</strong>:</p>
@@ -144,15 +132,15 @@ java -version</pre>
 </li>
 </ul>
 
-												<pre>// C&oacute;digo de ejemplo para un proyecto b&aacute;sico en Java
+				<pre>// C&oacute;digo de ejemplo para un proyecto b&aacute;sico en Java
 public class Main {
     public static void main(String[] args) {
         System.out.println(&quot;&iexcl;Bienvenido a tu primer proyecto en Java!&quot;);
     }
 }</pre>
-								            	<h2><a id="index_6"></a>Prueba de la Configuración</h2>
-												            	<h3><a id="index_7"></a>Compilación y Ejecución de un Programa de Ejemplo</h3>
-																<p>Para asegurarte de que todo esté configurado correctamente, compila y ejecuta un programa Java simple.</p>
+		    	<h2><a id="index_6"></a>Prueba de la Configuración</h2>
+				    	<h3><a id="index_7"></a>Compilación y Ejecución de un Programa de Ejemplo</h3>
+						<p>Para asegurarte de que todo esté configurado correctamente, compila y ejecuta un programa Java simple.</p>
 <p><strong>Pasos:</strong></p>
 <ol>
 <li>Escribe el código de ejemplo en el editor del IDE.</li>
@@ -161,7 +149,7 @@ public class Main {
 <li>Ejecuta el programa para ver el resultado en la consola del IDE.</li>
 </ol>
 
-												<p>Si ves el mensaje &quot;¡Bienvenido a tu primer proyecto en Java!&quot; en la consola, ¡felicidades! Has configurado exitosamente tu entorno de desarrollo.</p>
+				<p>Si ves el mensaje &quot;¡Bienvenido a tu primer proyecto en Java!&quot; en la consola, ¡felicidades! Has configurado exitosamente tu entorno de desarrollo.</p>
 <p>Si encuentras algún error, revisa que el JDK esté correctamente configurado y que la ruta esté incluida en las variables de entorno.</p>
 <p><strong>Recursos adicionales:</strong></p>
 <ul>
@@ -169,11 +157,11 @@ public class Main {
 <li><a href="https://www.eclipse.org/downloads/packages/installer">Tutorial de configuración de Eclipse</a></li>
 </ul>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -192,7 +180,7 @@ public class Main {
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

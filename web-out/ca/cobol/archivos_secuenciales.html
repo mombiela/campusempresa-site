@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajo con archivos secuenciales</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trabajo con archivos secuenciales</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/cobol\archivos_secuenciales.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/cobol\archivos_secuenciales.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="cobol\archivos_secuenciales.stxt" target="cobol\archivos_secuenciales" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,17 +49,17 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>En COBOL, el manejo de archivos secuenciales es una tarea común que implica la lectura y escritura de datos en un orden específico. Los archivos secuenciales son uno de los tipos de archivos más utilizados y se gestionan mediante la División de Archivo (File Section) y la División de Procedimiento (Procedure Division).</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Definición de la División de Archivo</h2>
-																<p>La División de Archivo en COBOL se utiliza para definir los archivos que se van a utilizar en el programa. Aquí se especifican los nombres lógicos de los archivos, el tipo de organización (secuencial, en este caso) y las descripciones de los registros.</p>
+			<p>En COBOL, el manejo de archivos secuenciales es una tarea común que implica la lectura y escritura de datos en un orden específico. Los archivos secuenciales son uno de los tipos de archivos más utilizados y se gestionan mediante la División de Archivo (File Section) y la División de Procedimiento (Procedure Division).</p>
 
-								            	<h3><a id="index_1"></a>Ejemplo de definición de archivo</h3>
-																
-												<pre>FILE CONTROL.
+		    	<h2><a id="index_0"></a>Definición de la División de Archivo</h2>
+						<p>La División de Archivo en COBOL se utiliza para definir los archivos que se van a utilizar en el programa. Aquí se especifican los nombres lógicos de los archivos, el tipo de organización (secuencial, en este caso) y las descripciones de los registros.</p>
+
+		    	<h3><a id="index_1"></a>Ejemplo de definición de archivo</h3>
+						
+				<pre>FILE CONTROL.
 SELECT Entrada-Archivo ASSIGN TO 'ENTRADA.TXT'
 ORGANIZATION IS LINE SEQUENTIAL.
 
@@ -81,7 +69,7 @@ FD Entrada-Archivo.
 01 Registro-Entrada.
 05 Campo1 PIC X(10).
 05 Campo2 PIC 9(5).</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>FILE CONTROL</code> define el archivo lógico <code>Entrada-Archivo</code> y lo asigna al archivo físico 'ENTRADA.TXT'.</li>
 <li><code>ORGANIZATION IS LINE SEQUENTIAL</code> indica que el archivo es secuencial.</li>
@@ -89,29 +77,29 @@ FD Entrada-Archivo.
 <li><code>01 Registro-Entrada</code> define la estructura del registro del archivo.</li>
 </ul>
 
-								            	<h2><a id="index_2"></a>Apertura y cierre de archivos</h2>
-																<p>Antes de realizar cualquier operación de lectura o escritura, los archivos deben ser abiertos con la sentencia <code>OPEN</code> y cerrados al finalizar con la sentencia <code>CLOSE</code>.</p>
+		    	<h2><a id="index_2"></a>Apertura y cierre de archivos</h2>
+						<p>Antes de realizar cualquier operación de lectura o escritura, los archivos deben ser abiertos con la sentencia <code>OPEN</code> y cerrados al finalizar con la sentencia <code>CLOSE</code>.</p>
 
-								            	<h3><a id="index_3"></a>Ejemplo de apertura y cierre de archivos</h3>
-																
-												<pre>PROCEDURE DIVISION.
+		    	<h3><a id="index_3"></a>Ejemplo de apertura y cierre de archivos</h3>
+						
+				<pre>PROCEDURE DIVISION.
 OPEN INPUT Entrada-Archivo.
 PERFORM Leer-Registros.
 CLOSE Entrada-Archivo.
 STOP RUN.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>OPEN INPUT Entrada-Archivo</code> abre el archivo para lectura.</li>
 <li><code>PERFORM Leer-Registros</code> llama a un procedimiento para leer los registros.</li>
 <li><code>CLOSE Entrada-Archivo</code> cierra el archivo al finalizar.</li>
 </ul>
 
-								            	<h2><a id="index_4"></a>Lectura de archivos secuenciales</h2>
-																<p>La lectura de archivos secuenciales se realiza utilizando la sentencia <code>READ</code> en un bucle que continúa hasta el final del archivo.</p>
+		    	<h2><a id="index_4"></a>Lectura de archivos secuenciales</h2>
+						<p>La lectura de archivos secuenciales se realiza utilizando la sentencia <code>READ</code> en un bucle que continúa hasta el final del archivo.</p>
 
-								            	<h3><a id="index_5"></a>Ejemplo de lectura de registros</h3>
-																
-												<pre>PROCEDURE DIVISION.
+		    	<h3><a id="index_5"></a>Ejemplo de lectura de registros</h3>
+						
+				<pre>PROCEDURE DIVISION.
 Leer-Registros.
 READ Entrada-Archivo INTO Registro-Entrada
 AT END SET Fin-De-Archivo TO TRUE
@@ -125,19 +113,19 @@ NOT AT END
 DISPLAY Campo1 Campo2
 END-READ
 END-PERFORM.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>La sentencia <code>READ Entrada-Archivo INTO Registro-Entrada</code> lee un registro del archivo.</li>
 <li><code>AT END</code> se utiliza para detectar el final del archivo y establecer la condición <code>Fin-De-Archivo</code>.</li>
 <li>Los registros se muestran utilizando <code>DISPLAY</code>.</li>
 </ul>
 
-								            	<h2><a id="index_6"></a>Escritura en archivos secuenciales</h2>
-																<p>Para escribir en archivos secuenciales, se utiliza la sentencia <code>WRITE</code> después de abrir el archivo en modo de salida.</p>
+		    	<h2><a id="index_6"></a>Escritura en archivos secuenciales</h2>
+						<p>Para escribir en archivos secuenciales, se utiliza la sentencia <code>WRITE</code> después de abrir el archivo en modo de salida.</p>
 
-								            	<h3><a id="index_7"></a>Ejemplo de escritura de registros</h3>
-																
-												<pre>FILE CONTROL.
+		    	<h3><a id="index_7"></a>Ejemplo de escritura de registros</h3>
+						
+				<pre>FILE CONTROL.
 SELECT Salida-Archivo ASSIGN TO 'SALIDA.TXT'
 ORGANIZATION IS LINE SEQUENTIAL.
 
@@ -155,7 +143,7 @@ MOVE 12345 TO Campo2.
 WRITE Registro-Salida FROM Campo1 Campo2.
 CLOSE Salida-Archivo.
 STOP RUN.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>FILE CONTROL</code> define el archivo lógico <code>Salida-Archivo</code>.</li>
 <li><code>OPEN OUTPUT Salida-Archivo</code> abre el archivo para escritura.</li>
@@ -163,12 +151,12 @@ STOP RUN.</pre>
 <li><code>CLOSE Salida-Archivo</code> cierra el archivo al finalizar.</li>
 </ul>
 
-								            	<h2><a id="index_8"></a>Manejo de errores en operaciones con archivos</h2>
-																<p>Es importante manejar los posibles errores durante las operaciones con archivos. COBOL proporciona el uso de <code>FILE STATUS</code> para capturar y manejar estos errores.</p>
+		    	<h2><a id="index_8"></a>Manejo de errores en operaciones con archivos</h2>
+						<p>Es importante manejar los posibles errores durante las operaciones con archivos. COBOL proporciona el uso de <code>FILE STATUS</code> para capturar y manejar estos errores.</p>
 
-								            	<h3><a id="index_9"></a>Ejemplo de manejo de errores con FILE STATUS</h3>
-																
-												<pre>FILE CONTROL.
+		    	<h3><a id="index_9"></a>Ejemplo de manejo de errores con FILE STATUS</h3>
+						
+				<pre>FILE CONTROL.
 SELECT Entrada-Archivo ASSIGN TO 'ENTRADA.TXT'
 ORGANIZATION IS LINE SEQUENTIAL
 FILE STATUS IS WS-File-Status.
@@ -190,20 +178,20 @@ DISPLAY 'Error abriendo archivo: ' WS-File-Status.
 END-IF.
 CLOSE Entrada-Archivo.
 STOP RUN.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>FILE STATUS IS WS-File-Status</code> define una variable para capturar el estado del archivo.</li>
 <li>Se verifica <code>WS-File-Status</code> después de abrir el archivo para manejar cualquier error que ocurra.</li>
 </ul>
 
-								            	<h2><a id="index_10"></a>Conclusión</h2>
-																<p>El trabajo con archivos secuenciales en COBOL es fundamental para muchas aplicaciones de negocio. Comprender cómo definir, abrir, cerrar, leer y escribir archivos secuenciales, así como manejar errores, es esencial para desarrollar programas COBOL robustos y eficientes.</p>
+		    	<h2><a id="index_10"></a>Conclusión</h2>
+						<p>El trabajo con archivos secuenciales en COBOL es fundamental para muchas aplicaciones de negocio. Comprender cómo definir, abrir, cerrar, leer y escribir archivos secuenciales, así como manejar errores, es esencial para desarrollar programas COBOL robustos y eficientes.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -222,7 +210,7 @@ STOP RUN.</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

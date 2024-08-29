@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arreglos (Arrays)</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arreglos (Arrays)</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/javascript\07-arreglos-arrays.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/javascript\07-arreglos-arrays.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="javascript\07-arreglos-arrays.stxt" target="javascript\07-arreglos-arrays" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,29 +49,29 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="06-funciones" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="08-objetos-json" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Arreglos (Arrays) en JavaScript</h2>
-												            	<h3><a id="index_1"></a>¿Qué es un arreglo?</h3>
-																<p>Un arreglo (o array) es una estructura de datos que permite almacenar múltiples valores en una sola variable.
+		
+		
+
+		    	<h2><a id="index_0"></a>Arreglos (Arrays) en JavaScript</h2>
+				    	<h3><a id="index_1"></a>¿Qué es un arreglo?</h3>
+						<p>Un arreglo (o array) es una estructura de datos que permite almacenar múltiples valores en una sola variable.
 Los arreglos son especialmente útiles cuando se necesita manejar una colección de elementos relacionados.</p>
 <p>En JavaScript, los arreglos son objetos, lo que significa que pueden contener elementos de diferentes tipos de datos,
 incluso otros arreglos.</p>
 
-												<pre>// Ejemplo b&aacute;sico de un arreglo
+				<pre>// Ejemplo b&aacute;sico de un arreglo
 let frutas = [&quot;manzana&quot;, &quot;banana&quot;, &quot;naranja&quot;];
 console.log(frutas); // Output: [&quot;manzana&quot;, &quot;banana&quot;, &quot;naranja&quot;]</pre>
-								            	<h3><a id="index_2"></a>Creación y acceso a elementos</h3>
-																<p>Los arreglos en JavaScript se crean utilizando corchetes <code>[]</code>. Los elementos dentro de un arreglo están indexados
+		    	<h3><a id="index_2"></a>Creación y acceso a elementos</h3>
+						<p>Los arreglos en JavaScript se crean utilizando corchetes <code>[]</code>. Los elementos dentro de un arreglo están indexados
 empezando desde <code>0</code>, lo que significa que el primer elemento está en la posición <code>0</code>, el segundo en la posición <code>1</code>, y así sucesivamente.</p>
 
-												<pre>// Creaci&oacute;n de un arreglo
+				<pre>// Creaci&oacute;n de un arreglo
 let numeros = [1, 2, 3, 4, 5];
 
 // Acceso a un elemento del arreglo
@@ -93,8 +81,8 @@ console.log(&quot;El primer n&uacute;mero es: &quot; + primero); // Output: El p
 // Modificar un elemento del arreglo
 numeros[2] = 10;
 console.log(numeros); // Output: [1, 2, 10, 4, 5]</pre>
-								            	<h3><a id="index_3"></a>Métodos comunes de los arreglos</h3>
-																<p>JavaScript proporciona una amplia variedad de métodos incorporados para manipular arreglos.
+		    	<h3><a id="index_3"></a>Métodos comunes de los arreglos</h3>
+						<p>JavaScript proporciona una amplia variedad de métodos incorporados para manipular arreglos.
 Algunos de los más comunes son:</p>
 <ul>
 <li><code>push()</code> - Añade uno o más elementos al final del arreglo.</li>
@@ -106,7 +94,7 @@ Algunos de los más comunes son:</p>
 <li><code>splice()</code> - Añade o elimina elementos en un arreglo.</li>
 </ul>
 
-												<pre>// Uso de m&eacute;todos de arreglo
+				<pre>// Uso de m&eacute;todos de arreglo
 let colores = [&quot;rojo&quot;, &quot;verde&quot;, &quot;azul&quot;];
 
 // A&ntilde;adir un elemento al final
@@ -127,11 +115,11 @@ console.log(colores); // Output: [&quot;rojo&quot;, &quot;verde&quot;, &quot;azu
 
 // Obtener la longitud del arreglo
 console.log(&quot;El n&uacute;mero de colores es: &quot; + colores.length); // Output: El n&uacute;mero de colores es: 3</pre>
-								            	<h3><a id="index_4"></a>Iteración sobre arreglos</h3>
-																<p>Es común querer recorrer todos los elementos de un arreglo para realizar alguna operación en cada uno de ellos.
+		    	<h3><a id="index_4"></a>Iteración sobre arreglos</h3>
+						<p>Es común querer recorrer todos los elementos de un arreglo para realizar alguna operación en cada uno de ellos.
 JavaScript ofrece varias formas de iterar sobre arreglos, incluyendo bucles <code>for</code>, <code>for...of</code>, y métodos como <code>forEach()</code>.</p>
 
-												<pre>// Iterar sobre un arreglo usando un bucle for
+				<pre>// Iterar sobre un arreglo usando un bucle for
 let animales = [&quot;perro&quot;, &quot;gato&quot;, &quot;elefante&quot;];
 
 for (let i = 0; i &lt; animales.length; i++) {
@@ -147,11 +135,11 @@ animales.forEach(function(animal) {
 for (let animal of animales) {
     console.log(&quot;Animal usando for...of: &quot; + animal);
 }</pre>
-								            	<h3><a id="index_5"></a>Arreglos multidimensionales</h3>
-																<p>Un arreglo multidimensional es un arreglo que contiene otros arreglos como elementos.
+		    	<h3><a id="index_5"></a>Arreglos multidimensionales</h3>
+						<p>Un arreglo multidimensional es un arreglo que contiene otros arreglos como elementos.
 Estos son útiles para representar estructuras como matrices.</p>
 
-												<pre>// Ejemplo de un arreglo bidimensional
+				<pre>// Ejemplo de un arreglo bidimensional
 let matriz = [
     [1, 2, 3],
     [4, 5, 6],
@@ -161,15 +149,15 @@ let matriz = [
 // Acceder a un elemento en un arreglo bidimensional
 let valor = matriz[1][2];
 console.log(&quot;El valor en la posici&oacute;n [1][2] es: &quot; + valor); // Output: El valor en la posici&oacute;n [1][2] es: 6</pre>
-								            	<h3><a id="index_6"></a>Métodos avanzados de arreglos</h3>
-																<p>JavaScript también incluye métodos avanzados para trabajar con arreglos, como <code>map()</code>, <code>filter()</code>, <code>reduce()</code>, entre otros.</p>
+		    	<h3><a id="index_6"></a>Métodos avanzados de arreglos</h3>
+						<p>JavaScript también incluye métodos avanzados para trabajar con arreglos, como <code>map()</code>, <code>filter()</code>, <code>reduce()</code>, entre otros.</p>
 <ul>
 <li><code>map()</code> - Crea un nuevo arreglo con los resultados de aplicar una función a cada elemento del arreglo original.</li>
 <li><code>filter()</code> - Crea un nuevo arreglo con todos los elementos que pasen una prueba especificada en una función.</li>
 <li><code>reduce()</code> - Aplica una función a un acumulador y a cada elemento del arreglo (de izquierda a derecha) para reducirlo a un único valor.</li>
 </ul>
 
-												<pre>// Ejemplo de uso de map
+				<pre>// Ejemplo de uso de map
 let numerosOriginales = [1, 2, 3, 4];
 let numerosCuadrados = numerosOriginales.map(function(num) {
     return num * num;
@@ -187,11 +175,11 @@ let sumaTotal = numerosOriginales.reduce(function(acumulador, num) {
     return acumulador + num;
 }, 0);
 console.log(&quot;Suma total: &quot; + sumaTotal); // Output: Suma total: 10</pre>
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -210,7 +198,7 @@ console.log(&quot;Suma total: &quot; + sumaTotal); // Output: Suma total: 10</pr
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

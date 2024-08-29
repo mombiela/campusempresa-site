@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Componentes Controlados vs. No Controlados</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Componentes Controlados vs. No Controlados</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/react\tema-09.html" />
-		
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprendizaje continuo, uniendo la sociedad</a></h2>
+		<h2><a href="index.html"><i>Aprendiendo juntos, uniendo la sociedad</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 							<li><b>Castellano</b></li>
 				<li><a href="../ca/react\tema-09.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
 						    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="react\tema-09.stxt" target="react\tema-09" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,23 +49,23 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="tema-08" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="tema-10" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Introducción</h2>
-												            	<h3><a id="index_1"></a>Diferencias Fundamentales entre Componentes Controlados y No Controlados</h3>
-																<p>En React, los componentes pueden manejar la entrada de datos de dos maneras principales: como <strong>componentes controlados</strong> o <strong>componentes no controlados</strong>. Comprender las diferencias entre ambos enfoques es crucial para decidir cuál utilizar en diferentes situaciones al desarrollar formularios y gestionar la entrada de datos.</p>
+		
+		
 
-								            	<h2><a id="index_2"></a>Componentes Controlados</h2>
-												            	<h3><a id="index_3"></a>¿Qué es un Componente Controlado?</h3>
-																<p>Un componente controlado es aquel en el que el estado de los elementos del formulario (como <code>input</code>, <code>textarea</code>, <code>select</code>) es manejado por el estado del componente React. El valor del campo es almacenado en el estado y actualizado mediante eventos de cambio.</p>
+		    	<h2><a id="index_0"></a>Introducción</h2>
+				    	<h3><a id="index_1"></a>Diferencias Fundamentales entre Componentes Controlados y No Controlados</h3>
+						<p>En React, los componentes pueden manejar la entrada de datos de dos maneras principales: como <strong>componentes controlados</strong> o <strong>componentes no controlados</strong>. Comprender las diferencias entre ambos enfoques es crucial para decidir cuál utilizar en diferentes situaciones al desarrollar formularios y gestionar la entrada de datos.</p>
 
-												<pre>// Ejemplo de un componente controlado
+		    	<h2><a id="index_2"></a>Componentes Controlados</h2>
+				    	<h3><a id="index_3"></a>¿Qué es un Componente Controlado?</h3>
+						<p>Un componente controlado es aquel en el que el estado de los elementos del formulario (como <code>input</code>, <code>textarea</code>, <code>select</code>) es manejado por el estado del componente React. El valor del campo es almacenado en el estado y actualizado mediante eventos de cambio.</p>
+
+				<pre>// Ejemplo de un componente controlado
 function FormularioControlado() {
     const [valor, setValor] = useState('');
 
@@ -100,20 +88,20 @@ function FormularioControlado() {
         &lt;/form&gt;
     );
 }</pre>
-												<p>En este ejemplo, el valor del campo de entrada está completamente controlado por el estado de React. Cualquier cambio en el campo de entrada dispara un evento que actualiza el estado del componente, manteniendo siempre la UI sincronizada con los datos.</p>
+				<p>En este ejemplo, el valor del campo de entrada está completamente controlado por el estado de React. Cualquier cambio en el campo de entrada dispara un evento que actualiza el estado del componente, manteniendo siempre la UI sincronizada con los datos.</p>
 
-								            	<h3><a id="index_4"></a>Ventajas de los Componentes Controlados</h3>
-																<ul>
+		    	<h3><a id="index_4"></a>Ventajas de los Componentes Controlados</h3>
+						<ul>
 <li><strong>Sincronización directa:</strong> La UI refleja directamente el estado del componente, lo que facilita la validación en tiempo real y la gestión de datos.</li>
 <li><strong>Mejor control sobre la entrada del usuario:</strong> Al manejar el estado internamente, puedes aplicar transformaciones, validaciones y restricciones antes de que el valor sea considerado final.</li>
 <li><strong>Consistencia:</strong> Los componentes controlados permiten que todas las actualizaciones del estado pasen por React, lo que facilita el seguimiento y la depuración.</li>
 </ul>
 
-								            	<h2><a id="index_5"></a>Componentes No Controlados</h2>
-												            	<h3><a id="index_6"></a>¿Qué es un Componente No Controlado?</h3>
-																<p>Un componente no controlado es aquel en el que el valor de los elementos del formulario es gestionado directamente por el DOM, en lugar de por el estado de React. Para acceder al valor del campo de entrada, se utilizan referencias (<code>refs</code>).</p>
+		    	<h2><a id="index_5"></a>Componentes No Controlados</h2>
+				    	<h3><a id="index_6"></a>¿Qué es un Componente No Controlado?</h3>
+						<p>Un componente no controlado es aquel en el que el valor de los elementos del formulario es gestionado directamente por el DOM, en lugar de por el estado de React. Para acceder al valor del campo de entrada, se utilizan referencias (<code>refs</code>).</p>
 
-												<pre>// Ejemplo de un componente no controlado
+				<pre>// Ejemplo de un componente no controlado
 function FormularioNoControlado() {
     const inputRef = useRef(null);
 
@@ -132,39 +120,39 @@ function FormularioNoControlado() {
         &lt;/form&gt;
     );
 }</pre>
-												<p>En este ejemplo, el valor del campo de entrada es manejado directamente por el DOM. Cuando se envía el formulario, el valor es accedido a través de una referencia (<code>ref</code>), permitiendo que React no controle el valor del campo hasta que sea necesario.</p>
+				<p>En este ejemplo, el valor del campo de entrada es manejado directamente por el DOM. Cuando se envía el formulario, el valor es accedido a través de una referencia (<code>ref</code>), permitiendo que React no controle el valor del campo hasta que sea necesario.</p>
 
-								            	<h3><a id="index_7"></a>Ventajas de los Componentes No Controlados</h3>
-																<ul>
+		    	<h3><a id="index_7"></a>Ventajas de los Componentes No Controlados</h3>
+						<ul>
 <li><strong>Menor sobrecarga de gestión del estado:</strong> No necesitas mantener un estado sincronizado en React para cada campo de entrada, lo que puede simplificar el código en formularios grandes.</li>
 <li><strong>Configuración inicial simple:</strong> Para formularios simples, la configuración inicial puede ser más directa, ya que no necesitas vincular cada campo al estado.</li>
 <li><strong>Compatibilidad con bibliotecas externas:</strong> Los componentes no controlados pueden ser más compatibles con bibliotecas que gestionan el DOM directamente.</li>
 </ul>
 
-								            	<h2><a id="index_8"></a>Comparación y Elección</h2>
-												            	<h3><a id="index_9"></a>Cuándo Usar Componentes Controlados</h3>
-																<ul>
+		    	<h2><a id="index_8"></a>Comparación y Elección</h2>
+				    	<h3><a id="index_9"></a>Cuándo Usar Componentes Controlados</h3>
+						<ul>
 <li><strong>Validación en tiempo real:</strong> Si necesitas validar los datos a medida que el usuario los introduce.</li>
 <li><strong>Sincronización compleja del estado:</strong> Cuando la entrada del usuario debe interactuar de manera compleja con otros estados o componentes.</li>
 <li><strong>Transformaciones de datos:</strong> Si necesitas transformar los datos de entrada antes de enviarlos o almacenarlos.</li>
 </ul>
 
-								            	<h3><a id="index_10"></a>Cuándo Usar Componentes No Controlados</h3>
-																<ul>
+		    	<h3><a id="index_10"></a>Cuándo Usar Componentes No Controlados</h3>
+						<ul>
 <li><strong>Formularios simples:</strong> Para formularios pequeños donde no se requiere validación en tiempo real o manipulación avanzada del estado.</li>
 <li><strong>Compatibilidad con bibliotecas:</strong> Si estás utilizando bibliotecas que ya gestionan la entrada del usuario y no quieres duplicar la gestión del estado en React.</li>
 <li><strong>Optimización de rendimiento:</strong> Cuando el rendimiento es crucial y quieres minimizar la cantidad de actualizaciones del estado en formularios grandes.</li>
 </ul>
 
-								            	<h2><a id="index_11"></a>Conclusión</h2>
-												            	<h3><a id="index_12"></a>Resumen sobre Componentes Controlados vs. No Controlados</h3>
-																<p>La elección entre componentes controlados y no controlados depende del contexto y los requisitos específicos de tu aplicación. Mientras que los componentes controlados ofrecen un control total y una sincronización directa del estado, los componentes no controlados pueden ser más simples y eficientes en casos específicos. Entender cuándo usar cada enfoque es clave para construir aplicaciones React eficientes y mantenibles. En los próximos temas, exploraremos más técnicas avanzadas para optimizar y gestionar el estado en React.</p>
+		    	<h2><a id="index_11"></a>Conclusión</h2>
+				    	<h3><a id="index_12"></a>Resumen sobre Componentes Controlados vs. No Controlados</h3>
+						<p>La elección entre componentes controlados y no controlados depende del contexto y los requisitos específicos de tu aplicación. Mientras que los componentes controlados ofrecen un control total y una sincronización directa del estado, los componentes no controlados pueden ser más simples y eficientes en casos específicos. Entender cuándo usar cada enfoque es clave para construir aplicaciones React eficientes y mantenibles. En los próximos temas, exploraremos más técnicas avanzadas para optimizar y gestionar el estado en React.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -183,7 +171,7 @@ function FormularioNoControlado() {
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema 4: Texto y párrafos en HTML</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 4: Texto y párrafos en HTML</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/html\tema-04.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/html\tema-04.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="html\tema-04.stxt" target="html\tema-04" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,21 +49,21 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="tema-03" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="tema-05" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Trabajando con texto y párrafos en HTML</h2>
-												            	<h3><a id="index_1"></a>La etiqueta `<p>` para párrafos</h3>
-																<p>La etiqueta <code>&lt;p&gt;</code> es una de las etiquetas más utilizadas en HTML, ya que define párrafos de texto. Cada vez que se usa la etiqueta <code>&lt;p&gt;</code>, el navegador coloca el texto dentro de un bloque y lo separa con un espacio antes y después del párrafo.</p>
+		
+		
 
-												<pre>&lt;p&gt;Este es un p&aacute;rrafo de ejemplo. Los p&aacute;rrafos se utilizan para agrupar bloques de texto.&lt;/p&gt;</pre>
-								            	<h3><a id="index_2"></a>Encabezados en HTML</h3>
-																<p>Los encabezados son cruciales para estructurar el contenido de una página web. HTML proporciona seis niveles de encabezados, desde <code>&lt;h1&gt;</code> hasta <code>&lt;h6&gt;</code>. <code>&lt;h1&gt;</code> es el nivel más alto y más importante, generalmente usado para títulos principales, mientras que <code>&lt;h6&gt;</code> es el nivel más bajo.</p>
+		    	<h2><a id="index_0"></a>Trabajando con texto y párrafos en HTML</h2>
+				    	<h3><a id="index_1"></a>La etiqueta `<p>` para párrafos</h3>
+						<p>La etiqueta <code>&lt;p&gt;</code> es una de las etiquetas más utilizadas en HTML, ya que define párrafos de texto. Cada vez que se usa la etiqueta <code>&lt;p&gt;</code>, el navegador coloca el texto dentro de un bloque y lo separa con un espacio antes y después del párrafo.</p>
+
+				<pre>&lt;p&gt;Este es un p&aacute;rrafo de ejemplo. Los p&aacute;rrafos se utilizan para agrupar bloques de texto.&lt;/p&gt;</pre>
+		    	<h3><a id="index_2"></a>Encabezados en HTML</h3>
+						<p>Los encabezados son cruciales para estructurar el contenido de una página web. HTML proporciona seis niveles de encabezados, desde <code>&lt;h1&gt;</code> hasta <code>&lt;h6&gt;</code>. <code>&lt;h1&gt;</code> es el nivel más alto y más importante, generalmente usado para títulos principales, mientras que <code>&lt;h6&gt;</code> es el nivel más bajo.</p>
 <p><strong>Uso típico de encabezados:</strong></p>
 <ul>
 <li><code>&lt;h1&gt;</code>: Título principal</li>
@@ -84,11 +72,11 @@
 <li>Y así sucesivamente.</li>
 </ul>
 
-												<pre>&lt;h1&gt;Este es un encabezado de nivel 1&lt;/h1&gt;
+				<pre>&lt;h1&gt;Este es un encabezado de nivel 1&lt;/h1&gt;
 &lt;h2&gt;Este es un encabezado de nivel 2&lt;/h2&gt;
 &lt;h3&gt;Este es un encabezado de nivel 3&lt;/h3&gt;</pre>
-								            	<h3><a id="index_3"></a>Formateo de texto</h3>
-																<p>HTML ofrece una variedad de etiquetas para dar formato al texto. Estas etiquetas permiten resaltar o enfatizar partes del texto según sea necesario.</p>
+		    	<h3><a id="index_3"></a>Formateo de texto</h3>
+						<p>HTML ofrece una variedad de etiquetas para dar formato al texto. Estas etiquetas permiten resaltar o enfatizar partes del texto según sea necesario.</p>
 <p><strong>Etiquetas comunes de formateo:</strong></p>
 <ul>
 <li><code>&lt;strong&gt;</code>: Para resaltar texto en negrita, indicando importancia.</li>
@@ -98,12 +86,12 @@
 <li><code>&lt;mark&gt;</code>: Para resaltar texto como si estuviera marcado con un rotulador.</li>
 </ul>
 
-												<pre>&lt;p&gt;Este es un texto con &lt;strong&gt;negrita&lt;/strong&gt;, &lt;em&gt;cursiva&lt;/em&gt;, y &lt;u&gt;subrayado&lt;/u&gt;.&lt;/p&gt;
+				<pre>&lt;p&gt;Este es un texto con &lt;strong&gt;negrita&lt;/strong&gt;, &lt;em&gt;cursiva&lt;/em&gt;, y &lt;u&gt;subrayado&lt;/u&gt;.&lt;/p&gt;
 &lt;p&gt;Este es un &lt;small&gt;texto m&aacute;s peque&ntilde;o&lt;/small&gt; y este es un &lt;mark&gt;texto resaltado&lt;/mark&gt;.&lt;/p&gt;</pre>
-								            	<h3><a id="index_4"></a>Citas y citas en bloque</h3>
-																<p>HTML permite incluir citas de dos maneras: con la etiqueta <code>&lt;q&gt;</code> para citas en línea y <code>&lt;blockquote&gt;</code> para citas en bloque. La diferencia principal es que <code>&lt;q&gt;</code> es para citas cortas dentro de un párrafo, mientras que <code>&lt;blockquote&gt;</code> es para citas más largas que ocupan un bloque completo.</p>
+		    	<h3><a id="index_4"></a>Citas y citas en bloque</h3>
+						<p>HTML permite incluir citas de dos maneras: con la etiqueta <code>&lt;q&gt;</code> para citas en línea y <code>&lt;blockquote&gt;</code> para citas en bloque. La diferencia principal es que <code>&lt;q&gt;</code> es para citas cortas dentro de un párrafo, mientras que <code>&lt;blockquote&gt;</code> es para citas más largas que ocupan un bloque completo.</p>
 
-												<pre>&lt;p&gt;El autor dijo: &lt;q&gt;La pr&aacute;ctica hace al maestro.&lt;/q&gt;&lt;/p&gt;
+				<pre>&lt;p&gt;El autor dijo: &lt;q&gt;La pr&aacute;ctica hace al maestro.&lt;/q&gt;&lt;/p&gt;
 &lt;blockquote&gt;
     &lt;p&gt;&ldquo;Ser o no ser, esa es la cuesti&oacute;n:
     si es m&aacute;s noble para el esp&iacute;ritu sufrir
@@ -112,8 +100,8 @@
     y oponi&eacute;ndose a ellas, acabar con ellas&rdquo;.&lt;/p&gt;
     &lt;footer&gt;&mdash; William Shakespeare, Hamlet&lt;/footer&gt;
 &lt;/blockquote&gt;</pre>
-								            	<h2><a id="index_5"></a>Listas en HTML</h2>
-																<p>HTML también proporciona etiquetas para crear listas, que son útiles para organizar el contenido de forma estructurada.</p>
+		    	<h2><a id="index_5"></a>Listas en HTML</h2>
+						<p>HTML también proporciona etiquetas para crear listas, que son útiles para organizar el contenido de forma estructurada.</p>
 <p><strong>Tipos de listas en HTML:</strong></p>
 <ol>
 <li><strong>Listas no ordenadas</strong>: Utilizan la etiqueta <code>&lt;ul&gt;</code> y cada ítem dentro de la lista se marca con <code>&lt;li&gt;</code>.</li>
@@ -121,7 +109,7 @@
 <li><strong>Listas de definición</strong>: Utilizan <code>&lt;dl&gt;</code> para definir una lista de términos y <code>&lt;dt&gt;</code> y <code>&lt;dd&gt;</code> para definir cada término y su descripción.</li>
 </ol>
 
-												<pre>&lt;!-- Lista no ordenada --&gt;
+				<pre>&lt;!-- Lista no ordenada --&gt;
 &lt;ul&gt;
     &lt;li&gt;Elemento 1&lt;/li&gt;
     &lt;li&gt;Elemento 2&lt;/li&gt;
@@ -142,11 +130,11 @@
     &lt;dt&gt;CSS&lt;/dt&gt;
     &lt;dd&gt;Lenguaje para dar estilo a documentos HTML&lt;/dd&gt;
 &lt;/dl&gt;</pre>
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -165,7 +153,7 @@
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

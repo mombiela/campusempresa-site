@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Técnicas de optimización de código COBOL</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Técnicas de optimización de código COBOL</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/cobol\optimizacion.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/cobol\optimizacion.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="cobol\optimizacion.stxt" target="cobol\optimizacion" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,17 +49,17 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>Optimizar el código COBOL es crucial para mejorar la eficiencia y el rendimiento de las aplicaciones, especialmente en sistemas de misión crítica. A continuación, se presentan diversas técnicas y mejores prácticas para optimizar el código COBOL.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>1. Uso Eficiente de las Operaciones de Entrada/Salida (I/O)</h2>
-																<p>Las operaciones de I/O pueden ser costosas en términos de tiempo de ejecución. Minimiza las operaciones de I/O innecesarias y agrupa las operaciones cuando sea posible.</p>
+			<p>Optimizar el código COBOL es crucial para mejorar la eficiencia y el rendimiento de las aplicaciones, especialmente en sistemas de misión crítica. A continuación, se presentan diversas técnicas y mejores prácticas para optimizar el código COBOL.</p>
 
-								            	<h3><a id="index_1"></a>Ejemplo de lectura eficiente de archivos</h3>
-																
-												<pre>PROCEDURE DIVISION.
+		    	<h2><a id="index_0"></a>1. Uso Eficiente de las Operaciones de Entrada/Salida (I/O)</h2>
+						<p>Las operaciones de I/O pueden ser costosas en términos de tiempo de ejecución. Minimiza las operaciones de I/O innecesarias y agrupa las operaciones cuando sea posible.</p>
+
+		    	<h3><a id="index_1"></a>Ejemplo de lectura eficiente de archivos</h3>
+						
+				<pre>PROCEDURE DIVISION.
 Leer-Registros.
 OPEN INPUT Archivo-Datos.
 PERFORM UNTIL EOF = TRUE
@@ -79,30 +67,30 @@ READ Archivo-Datos INTO Registro-Datos
 AT END SET EOF TO TRUE
 END-READ.
 CLOSE Archivo-Datos.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>Se utiliza un bucle para leer todos los registros en una sola operación de apertura y cierre de archivo, reduciendo las operaciones de I/O.</li>
 </ul>
 
-								            	<h2><a id="index_2"></a>2. Optimización de la Memoria</h2>
-																<p>Usa la memoria de manera eficiente evitando declaraciones de variables innecesarias y utilizando las estructuras de datos adecuadas.</p>
+		    	<h2><a id="index_2"></a>2. Optimización de la Memoria</h2>
+						<p>Usa la memoria de manera eficiente evitando declaraciones de variables innecesarias y utilizando las estructuras de datos adecuadas.</p>
 
-								            	<h3><a id="index_3"></a>Ejemplo de uso eficiente de la memoria</h3>
-																
-												<pre>WORKING-STORAGE SECTION.
+		    	<h3><a id="index_3"></a>Ejemplo de uso eficiente de la memoria</h3>
+						
+				<pre>WORKING-STORAGE SECTION.
 01 WS-Nombre-Cliente PIC X(50).
 01 WS-Total-Ventas PIC 9(9)V99.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>Se declaran solo las variables necesarias y se asignan longitudes adecuadas para evitar el uso excesivo de memoria.</li>
 </ul>
 
-								            	<h2><a id="index_4"></a>3. Uso de Compilación Condicional</h2>
-																<p>La compilación condicional puede ayudar a incluir o excluir partes del código en tiempo de compilación, mejorando la eficiencia del programa.</p>
+		    	<h2><a id="index_4"></a>3. Uso de Compilación Condicional</h2>
+						<p>La compilación condicional puede ayudar a incluir o excluir partes del código en tiempo de compilación, mejorando la eficiencia del programa.</p>
 
-								            	<h3><a id="index_5"></a>Ejemplo de compilación condicional</h3>
-																
-												<pre>CONFIGURATION SECTION.
+		    	<h3><a id="index_5"></a>Ejemplo de compilación condicional</h3>
+						
+				<pre>CONFIGURATION SECTION.
 SPECIAL-NAMES.
 COPY 'DEBUG-CONFIG'.
 
@@ -114,17 +102,17 @@ MAIN-PROCEDURE.
 IF DEBUG-MODE = 'Y'
 DISPLAY 'Modo Debug Activado'.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>El código para el modo de depuración se incluye condicionalmente solo si está habilitado, evitando la sobrecarga en producción.</li>
 </ul>
 
-								            	<h2><a id="index_6"></a>4. Indexación y Acceso Eficiente a Archivos</h2>
-																<p>Utiliza índices para acceder rápidamente a los registros en archivos indexados y evita la lectura secuencial innecesaria.</p>
+		    	<h2><a id="index_6"></a>4. Indexación y Acceso Eficiente a Archivos</h2>
+						<p>Utiliza índices para acceder rápidamente a los registros en archivos indexados y evita la lectura secuencial innecesaria.</p>
 
-								            	<h3><a id="index_7"></a>Ejemplo de uso de archivos indexados</h3>
-																
-												<pre>FILE CONTROL.
+		    	<h3><a id="index_7"></a>Ejemplo de uso de archivos indexados</h3>
+						
+				<pre>FILE CONTROL.
 SELECT Clientes ASSIGN TO 'CLIENTES.DAT'
 ORGANIZATION IS INDEXED
 ACCESS MODE IS RANDOM
@@ -143,52 +131,52 @@ Buscar-Cliente.
 MOVE 12345 TO Cliente-ID.
 READ Clientes INTO Registro-Cliente KEY IS Cliente-ID
 INVALID KEY DISPLAY 'Cliente no encontrado'.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>Se utiliza un acceso aleatorio para encontrar rápidamente un registro específico en un archivo indexado.</li>
 </ul>
 
-								            	<h2><a id="index_8"></a>5. Optimización de Bucles</h2>
-																<p>Los bucles son una fuente común de ineficiencias. Optimiza los bucles para minimizar las operaciones dentro de ellos y utiliza técnicas como la eliminación de la redundancia.</p>
+		    	<h2><a id="index_8"></a>5. Optimización de Bucles</h2>
+						<p>Los bucles son una fuente común de ineficiencias. Optimiza los bucles para minimizar las operaciones dentro de ellos y utiliza técnicas como la eliminación de la redundancia.</p>
 
-								            	<h3><a id="index_9"></a>Ejemplo de optimización de bucles</h3>
-																
-												<pre>PROCEDURE DIVISION.
+		    	<h3><a id="index_9"></a>Ejemplo de optimización de bucles</h3>
+						
+				<pre>PROCEDURE DIVISION.
 Optimizar-Bucle.
 PERFORM VARYING Indice FROM 1 BY 1 UNTIL Indice &gt; Max-Valor
 IF Tabla(Indice) &gt; 0
 COMPUTE Total = Total + Tabla(Indice).
 END-IF
 END-PERFORM.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>La condición del bucle y la operación dentro del bucle están optimizadas para minimizar la cantidad de operaciones.</li>
 </ul>
 
-								            	<h2><a id="index_10"></a>6. Reducción de la Sobrecarga de Llamadas a Subprogramas</h2>
-																<p>Las llamadas a subprogramas pueden ser costosas. Usa subprogramas solo cuando sea necesario y considera la posibilidad de inlinear el código cuando sea apropiado.</p>
+		    	<h2><a id="index_10"></a>6. Reducción de la Sobrecarga de Llamadas a Subprogramas</h2>
+						<p>Las llamadas a subprogramas pueden ser costosas. Usa subprogramas solo cuando sea necesario y considera la posibilidad de inlinear el código cuando sea apropiado.</p>
 
-								            	<h3><a id="index_11"></a>Ejemplo de inlineación de código</h3>
-																<p>Antes (con subprograma):</p>
+		    	<h3><a id="index_11"></a>Ejemplo de inlineación de código</h3>
+						<p>Antes (con subprograma):</p>
 
-												<pre>CALL 'Calculo-Interes' USING WS-Capital WS-Tasa WS-Interes.</pre>
-												<p>Después (inlineado):</p>
+				<pre>CALL 'Calculo-Interes' USING WS-Capital WS-Tasa WS-Interes.</pre>
+				<p>Después (inlineado):</p>
 
-												<pre>PROCEDURE DIVISION.
+				<pre>PROCEDURE DIVISION.
 Calculo-Interes-Inline.
 COMPUTE WS-Interes = WS-Capital * WS-Tasa.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>El cálculo del interés se realiza inlineado en lugar de llamar a un subprograma, reduciendo la sobrecarga de llamadas.</li>
 </ul>
 
-								            	<h2><a id="index_12"></a>7. Uso de Sentencias Eficientes</h2>
-																<p>Elige sentencias COBOL que sean más eficientes para la tarea específica. Por ejemplo, utiliza <code>PERFORM</code> en lugar de <code>GO TO</code> para bucles y control de flujo.</p>
+		    	<h2><a id="index_12"></a>7. Uso de Sentencias Eficientes</h2>
+						<p>Elige sentencias COBOL que sean más eficientes para la tarea específica. Por ejemplo, utiliza <code>PERFORM</code> en lugar de <code>GO TO</code> para bucles y control de flujo.</p>
 
-								            	<h3><a id="index_13"></a>Ejemplo de uso de @@PERFORM@@ en lugar de @@GO TO@@</h3>
-																<p>Antes (con <code>GO TO</code>):</p>
+		    	<h3><a id="index_13"></a>Ejemplo de uso de @@PERFORM@@ en lugar de @@GO TO@@</h3>
+						<p>Antes (con <code>GO TO</code>):</p>
 
-												<pre>PROCEDURE DIVISION.
+				<pre>PROCEDURE DIVISION.
 INICIO.
 DISPLAY 'Inicio del Programa'.
 GO TO PROCESO.
@@ -200,9 +188,9 @@ GO TO FIN.
 FIN.
 DISPLAY 'Fin del Programa'.
 STOP RUN.</pre>
-												<p>Después (con <code>PERFORM</code>):</p>
+				<p>Después (con <code>PERFORM</code>):</p>
 
-												<pre>PROCEDURE DIVISION.
+				<pre>PROCEDURE DIVISION.
 MAIN-PROCEDURE.
 PERFORM INICIO.
 PERFORM PROCESO.
@@ -217,19 +205,19 @@ DISPLAY 'Procesando Datos'.
 
 FIN.
 DISPLAY 'Fin del Programa'.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>PERFORM</code> proporciona un control de flujo más claro y eficiente que <code>GO TO</code>.</li>
 </ul>
 
-								            	<h2><a id="index_14"></a>Conclusión</h2>
-																<p>Implementar técnicas de optimización en el código COBOL es esencial para mejorar el rendimiento y la eficiencia de las aplicaciones. Al seguir prácticas como el uso eficiente de operaciones de I/O, optimización de la memoria, uso de compilación condicional, acceso eficiente a archivos, optimización de bucles, reducción de la sobrecarga de llamadas a subprogramas y uso de sentencias eficientes, los desarrolladores pueden crear aplicaciones COBOL robustas y de alto rendimiento.</p>
+		    	<h2><a id="index_14"></a>Conclusión</h2>
+						<p>Implementar técnicas de optimización en el código COBOL es esencial para mejorar el rendimiento y la eficiencia de las aplicaciones. Al seguir prácticas como el uso eficiente de operaciones de I/O, optimización de la memoria, uso de compilación condicional, acceso eficiente a archivos, optimización de bucles, reducción de la sobrecarga de llamadas a subprogramas y uso de sentencias eficientes, los desarrolladores pueden crear aplicaciones COBOL robustas y de alto rendimiento.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -248,7 +236,7 @@ DISPLAY 'Fin del Programa'.</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

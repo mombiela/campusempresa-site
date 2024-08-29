@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uso de paquetes estándar de Python (os, sys, math, etc.)</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uso de paquetes estándar de Python (os, sys, math, etc.)</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/python\mod_std.html" />
-		
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprendizaje continuo, uniendo la sociedad</a></h2>
+		<h2><a href="index.html"><i>Aprendiendo juntos, uniendo la sociedad</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 							<li><b>Castellano</b></li>
 				<li><a href="../ca/python\mod_std.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
 						    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="python\mod_std.stxt" target="python\mod_std" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,240 +49,240 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>Python viene con una extensa biblioteca estándar que proporciona módulos y paquetes útiles para realizar una amplia variedad de tareas. A continuación, se describen algunos de los módulos estándar más comúnmente utilizados: <code>os</code>, <code>sys</code>, <code>math</code>, y otros.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Módulo os</h2>
-																<p>El módulo <code>os</code> proporciona una forma de usar funcionalidades dependientes del sistema operativo como leer o escribir en el sistema de archivos.</p>
+			<p>Python viene con una extensa biblioteca estándar que proporciona módulos y paquetes útiles para realizar una amplia variedad de tareas. A continuación, se describen algunos de los módulos estándar más comúnmente utilizados: <code>os</code>, <code>sys</code>, <code>math</code>, y otros.</p>
+
+		    	<h2><a id="index_0"></a>Módulo os</h2>
+						<p>El módulo <code>os</code> proporciona una forma de usar funcionalidades dependientes del sistema operativo como leer o escribir en el sistema de archivos.</p>
 <ul>
 <li><code>os.getcwd()</code>: Devuelve el directorio de trabajo actual.</li>
 </ul>
 
-												<pre>import os
+				<pre>import os
 
 cwd = os.getcwd()
 print(&quot;Directorio de trabajo actual:&quot;, cwd)</pre>
-												<ul>
+				<ul>
 <li><code>os.listdir()</code>: Lista los archivos y directorios en un directorio específico.</li>
 </ul>
 
-												<pre>import os
+				<pre>import os
 
 archivos = os.listdir('.')
 print(&quot;Archivos y directorios en el directorio actual:&quot;, archivos)</pre>
-												<ul>
+				<ul>
 <li><code>os.mkdir()</code>: Crea un nuevo directorio.</li>
 </ul>
 
-												<pre>import os
+				<pre>import os
 
 os.mkdir('nuevo_directorio')</pre>
-												<ul>
+				<ul>
 <li><code>os.remove()</code> y <code>os.rmdir()</code>: Elimina un archivo o un directorio, respectivamente.</li>
 </ul>
 
-												<pre>import os
+				<pre>import os
 
 os.remove('archivo_a_eliminar.txt')
 os.rmdir('directorio_a_eliminar')</pre>
-												
-								            	<h2><a id="index_1"></a>Módulo sys</h2>
-																<p>El módulo <code>sys</code> proporciona acceso a algunas variables y funciones que interactúan fuertemente con el intérprete de Python.</p>
+				
+		    	<h2><a id="index_1"></a>Módulo sys</h2>
+						<p>El módulo <code>sys</code> proporciona acceso a algunas variables y funciones que interactúan fuertemente con el intérprete de Python.</p>
 <ul>
 <li><code>sys.argv</code>: Lista de argumentos pasados al script de Python.</li>
 </ul>
 
-												<pre>import sys
+				<pre>import sys
 
 print(&quot;Argumentos pasados al script:&quot;, sys.argv)</pre>
-												<ul>
+				<ul>
 <li><code>sys.exit()</code>: Termina el programa con un estado de salida opcional.</li>
 </ul>
 
-												<pre>import sys
+				<pre>import sys
 
 sys.exit(&quot;Terminando el programa&quot;)</pre>
-												<ul>
+				<ul>
 <li><code>sys.path</code>: Lista de rutas donde Python busca módulos.</li>
 </ul>
 
-												<pre>import sys
+				<pre>import sys
 
 print(&quot;Rutas de b&uacute;squeda de m&oacute;dulos:&quot;, sys.path)</pre>
-												
-								            	<h2><a id="index_2"></a>Módulo math</h2>
-																<p>El módulo <code>math</code> proporciona acceso a las funciones matemáticas más comunes.</p>
+				
+		    	<h2><a id="index_2"></a>Módulo math</h2>
+						<p>El módulo <code>math</code> proporciona acceso a las funciones matemáticas más comunes.</p>
 <ul>
 <li><code>math.sqrt()</code>: Devuelve la raíz cuadrada de un número.</li>
 </ul>
 
-												<pre>import math
+				<pre>import math
 
 raiz = math.sqrt(16)
 print(&quot;Ra&iacute;z cuadrada de 16:&quot;, raiz)</pre>
-												<ul>
+				<ul>
 <li><code>math.factorial()</code>: Devuelve el factorial de un número.</li>
 </ul>
 
-												<pre>import math
+				<pre>import math
 
 factorial = math.factorial(5)
 print(&quot;Factorial de 5:&quot;, factorial)</pre>
-												<ul>
+				<ul>
 <li><code>math.pow()</code>: Devuelve el resultado de elevar un número a una potencia.</li>
 </ul>
 
-												<pre>import math
+				<pre>import math
 
 potencia = math.pow(2, 3)
 print(&quot;2 elevado a la potencia de 3:&quot;, potencia)</pre>
-												
-								            	<h2><a id="index_3"></a>Módulo datetime</h2>
-																<p>El módulo <code>datetime</code> proporciona clases para manipular fechas y horas.</p>
+				
+		    	<h2><a id="index_3"></a>Módulo datetime</h2>
+						<p>El módulo <code>datetime</code> proporciona clases para manipular fechas y horas.</p>
 <ul>
 <li><code>datetime.datetime.now()</code>: Devuelve la fecha y hora actual.</li>
 </ul>
 
-												<pre>import datetime
+				<pre>import datetime
 
 ahora = datetime.datetime.now()
 print(&quot;Fecha y hora actual:&quot;, ahora)</pre>
-												<ul>
+				<ul>
 <li><code>datetime.datetime.strptime()</code>: Convierte una cadena de texto en un objeto datetime.</li>
 </ul>
 
-												<pre>import datetime
+				<pre>import datetime
 
 fecha_str = &quot;2023-05-27&quot;
 fecha_obj = datetime.datetime.strptime(fecha_str, &quot;%Y-%m-%d&quot;)
 print(&quot;Fecha como objeto datetime:&quot;, fecha_obj)</pre>
-												<ul>
+				<ul>
 <li><code>datetime.datetime.strftime()</code>: Convierte un objeto datetime en una cadena de texto.</li>
 </ul>
 
-												<pre>import datetime
+				<pre>import datetime
 
 ahora = datetime.datetime.now()
 fecha_str = ahora.strftime(&quot;%Y-%m-%d&quot;)
 print(&quot;Fecha como cadena de texto:&quot;, fecha_str)</pre>
-												
-								            	<h2><a id="index_4"></a>Módulo random</h2>
-																<p>El módulo <code>random</code> proporciona funciones para generar números aleatorios y realizar operaciones aleatorias.</p>
+				
+		    	<h2><a id="index_4"></a>Módulo random</h2>
+						<p>El módulo <code>random</code> proporciona funciones para generar números aleatorios y realizar operaciones aleatorias.</p>
 <ul>
 <li><code>random.randint()</code>: Devuelve un número entero aleatorio entre un rango especificado.</li>
 </ul>
 
-												<pre>import random
+				<pre>import random
 
 numero_aleatorio = random.randint(1, 10)
 print(&quot;N&uacute;mero aleatorio entre 1 y 10:&quot;, numero_aleatorio)</pre>
-												<ul>
+				<ul>
 <li><code>random.choice()</code>: Devuelve un elemento aleatorio de una secuencia.</li>
 </ul>
 
-												<pre>import random
+				<pre>import random
 
 elemento_aleatorio = random.choice(['a', 'b', 'c', 'd'])
 print(&quot;Elemento aleatorio de la lista:&quot;, elemento_aleatorio)</pre>
-												<ul>
+				<ul>
 <li><code>random.shuffle()</code>: Mezcla los elementos de una lista.</li>
 </ul>
 
-												<pre>import random
+				<pre>import random
 
 lista = [1, 2, 3, 4, 5]
 random.shuffle(lista)
 print(&quot;Lista mezclada:&quot;, lista)</pre>
-												
-								            	<h2><a id="index_5"></a>Módulo json</h2>
-																<p>El módulo <code>json</code> permite trabajar con datos en formato JSON.</p>
+				
+		    	<h2><a id="index_5"></a>Módulo json</h2>
+						<p>El módulo <code>json</code> permite trabajar con datos en formato JSON.</p>
 <ul>
 <li><code>json.loads()</code>: Convierte una cadena JSON en un objeto Python.</li>
 </ul>
 
-												<pre>import json
+				<pre>import json
 
 json_str = '{&quot;nombre&quot;: &quot;Juan&quot;, &quot;edad&quot;: 30}'
 datos = json.loads(json_str)
 print(&quot;Datos como diccionario:&quot;, datos)</pre>
-												<ul>
+				<ul>
 <li><code>json.dumps()</code>: Convierte un objeto Python en una cadena JSON.</li>
 </ul>
 
-												<pre>import json
+				<pre>import json
 
 datos = {&quot;nombre&quot;: &quot;Juan&quot;, &quot;edad&quot;: 30}
 json_str = json.dumps(datos)
 print(&quot;Datos como cadena JSON:&quot;, json_str)</pre>
-												
-								            	<h2><a id="index_6"></a>Módulo re</h2>
-																<p>El módulo <code>re</code> proporciona herramientas para trabajar con expresiones regulares.</p>
+				
+		    	<h2><a id="index_6"></a>Módulo re</h2>
+						<p>El módulo <code>re</code> proporciona herramientas para trabajar con expresiones regulares.</p>
 <ul>
 <li><code>re.match()</code>: Determina si una expresión regular coincide con el comienzo de una cadena.</li>
 </ul>
 
-												<pre>import re
+				<pre>import re
 
 texto = &quot;Hola mundo&quot;
 coincidencia = re.match(r'Hola', texto)
 print(&quot;Coincidencia:&quot;, coincidencia)</pre>
-												<ul>
+				<ul>
 <li><code>re.search()</code>: Busca una coincidencia de una expresión regular en toda la cadena.</li>
 </ul>
 
-												<pre>import re
+				<pre>import re
 
 texto = &quot;Hola mundo&quot;
 coincidencia = re.search(r'mundo', texto)
 print(&quot;Coincidencia:&quot;, coincidencia)</pre>
-												<ul>
+				<ul>
 <li><code>re.findall()</code>: Encuentra todas las coincidencias de una expresión regular en una cadena.</li>
 </ul>
 
-												<pre>import re
+				<pre>import re
 
 texto = &quot;Hola mundo, Hola Python&quot;
 coincidencias = re.findall(r'Hola', texto)
 print(&quot;Todas las coincidencias:&quot;, coincidencias)</pre>
-												<ul>
+				<ul>
 <li><code>re.sub()</code>: Reemplaza las coincidencias de una expresión regular en una cadena con otra cadena.</li>
 </ul>
 
-												<pre>import re
+				<pre>import re
 
 texto = &quot;Hola mundo&quot;
 nuevo_texto = re.sub(r'mundo', 'Python', texto)
 print(&quot;Texto modificado:&quot;, nuevo_texto)</pre>
-												
-								            	<h2><a id="index_7"></a>Módulo collections</h2>
-																<p>El módulo <code>collections</code> proporciona tipos de datos especializados como <code>namedtuple</code>, <code>deque</code>, <code>Counter</code>, y otros.</p>
+				
+		    	<h2><a id="index_7"></a>Módulo collections</h2>
+						<p>El módulo <code>collections</code> proporciona tipos de datos especializados como <code>namedtuple</code>, <code>deque</code>, <code>Counter</code>, y otros.</p>
 <ul>
 <li><code>collections.namedtuple()</code>: Crea una tupla con nombre.</li>
 </ul>
 
-												<pre>import collections
+				<pre>import collections
 
 Punto = collections.namedtuple('Punto', ['x', 'y'])
 p = Punto(1, 2)
 print(&quot;Punto:&quot;, p)
 print(&quot;Coordenada x:&quot;, p.x)
 print(&quot;Coordenada y:&quot;, p.y)</pre>
-												<ul>
+				<ul>
 <li><code>collections.Counter()</code>: Un contador que cuenta la cantidad de elementos en una colección.</li>
 </ul>
 
-												<pre>import collections
+				<pre>import collections
 
 contador = collections.Counter(['a', 'b', 'a', 'c', 'b', 'a'])
 print(&quot;Contador:&quot;, contador)</pre>
-												
-						
+				
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -313,7 +301,7 @@ print(&quot;Contador:&quot;, contador)</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

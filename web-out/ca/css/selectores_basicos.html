@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introducción a los selectores básicos en CSS</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introducción a los selectores básicos en CSS</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/css\selectores_basicos.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/css\selectores_basicos.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="css\selectores_basicos.stxt" target="css\selectores_basicos" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,12 +49,12 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
+				
+		
+
 			
-			
-									
-								            	<h2><a id="index_0"></a>Introducción a los selectores básicos en CSS</h2>
-																<ul>
+		    	<h2><a id="index_0"></a>Introducción a los selectores básicos en CSS</h2>
+						<ul>
 <li>
 <p><strong>Definición</strong>
 Los selectores en CSS permiten seleccionar y estilizar elementos específicos dentro de un documento HTML. Los selectores básicos son fundamentales para aplicar estilos de manera eficiente y precisa.</p>
@@ -97,57 +85,57 @@ El selector de tipo selecciona todos los elementos de un tipo específico, como 
 </li>
 </ul>
 
-												<pre>p {
+				<pre>p {
 color: blue;
 }</pre>
-												<ul>
+				<ul>
 <li><strong>Selector de clase</strong>
 El selector de clase selecciona todos los elementos que tienen una clase específica, definida por el atributo <code>class</code> en HTML. Se utiliza un punto (.) antes del nombre de la clase.</li>
 </ul>
 
-												<pre>.intro {
+				<pre>.intro {
 font-size: 14px;
 color: green;
 }</pre>
-												<ul>
+				<ul>
 <li><strong>Selector de ID</strong>
 El selector de ID selecciona un único elemento que tiene un ID específico, definido por el atributo <code>id</code> en HTML. Se utiliza un símbolo de almohadilla (#) antes del nombre del ID.</li>
 </ul>
 
-												<pre>#header {
+				<pre>#header {
 background-color: yellow;
 }</pre>
-												<ul>
+				<ul>
 <li><strong>Selector universal</strong>
 El selector universal selecciona todos los elementos en la página y se denota con un asterisco (*).</li>
 </ul>
 
-												<pre>* {
+				<pre>* {
 margin: 0;
 padding: 0;
 }</pre>
-												<ul>
+				<ul>
 <li><strong>Selector de atributo</strong>
 El selector de atributo selecciona elementos que tienen un atributo específico, y puede filtrar por el valor del atributo si es necesario.</li>
 </ul>
 
-												<pre>a[href] {
+				<pre>a[href] {
 color: red;
 }
 
 input[type=&quot;text&quot;] {
 border: 1px solid black;
 }</pre>
-												<ul>
+				<ul>
 <li><strong>Conclusión</strong>
 Entender y utilizar los selectores básicos en CSS es esencial para aplicar estilos de manera efectiva y eficiente. Estos selectores permiten apuntar a los elementos deseados y aplicarles los estilos necesarios para lograr el diseño deseado.</li>
 </ul>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -166,7 +154,7 @@ Entender y utilizar los selectores básicos en CSS es esencial para aplicar esti
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

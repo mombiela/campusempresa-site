@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Final: Desarrollo de una Aplicación Completa</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Final: Desarrollo de una Aplicación Completa</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/java\15-proyecto-final.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/java\15-proyecto-final.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="java\15-proyecto-final.stxt" target="java\15-proyecto-final" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,21 +49,21 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="14-buenas-practicas" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="../index" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Introducción al Proyecto Final</h2>
-												            	<h3><a id="index_1"></a>Objetivo del Proyecto</h3>
-																<p>El objetivo del proyecto final es aplicar todos los conceptos aprendidos a lo largo del curso &quot;Java para principiantes&quot; para desarrollar una aplicación completa. Este proyecto integrará aspectos como la programación orientada a objetos, manejo de excepciones, concurrencia, manejo de datos con colecciones, y buenas prácticas de programación.</p>
+		
+		
 
-								            	<h2><a id="index_2"></a>Descripción de la Aplicación</h2>
-												            	<h3><a id="index_3"></a>Aplicación de Gestión de Tareas</h3>
-																<p>La aplicación que desarrollaremos es un gestor de tareas básico. Esta aplicación permitirá a los usuarios:</p>
+		    	<h2><a id="index_0"></a>Introducción al Proyecto Final</h2>
+				    	<h3><a id="index_1"></a>Objetivo del Proyecto</h3>
+						<p>El objetivo del proyecto final es aplicar todos los conceptos aprendidos a lo largo del curso &quot;Java para principiantes&quot; para desarrollar una aplicación completa. Este proyecto integrará aspectos como la programación orientada a objetos, manejo de excepciones, concurrencia, manejo de datos con colecciones, y buenas prácticas de programación.</p>
+
+		    	<h2><a id="index_2"></a>Descripción de la Aplicación</h2>
+				    	<h3><a id="index_3"></a>Aplicación de Gestión de Tareas</h3>
+						<p>La aplicación que desarrollaremos es un gestor de tareas básico. Esta aplicación permitirá a los usuarios:</p>
 <ul>
 <li>Crear nuevas tareas.</li>
 <li>Listar todas las tareas.</li>
@@ -85,9 +73,9 @@
 </ul>
 <p>El objetivo es crear una aplicación de consola que sea fácil de usar y que permita a los usuarios manejar sus tareas diarias.</p>
 
-								            	<h2><a id="index_4"></a>Estructura del Proyecto</h2>
-												            	<h3><a id="index_5"></a>Clases y Componentes Principales</h3>
-																<p>El proyecto se estructurará en las siguientes clases principales:</p>
+		    	<h2><a id="index_4"></a>Estructura del Proyecto</h2>
+				    	<h3><a id="index_5"></a>Clases y Componentes Principales</h3>
+						<p>El proyecto se estructurará en las siguientes clases principales:</p>
 <ul>
 <li><code>Tarea</code>: Representa una tarea individual.</li>
 <li><code>GestorTareas</code>: Gestiona una lista de tareas, incluyendo la creación, eliminación, y listado de tareas.</li>
@@ -95,9 +83,9 @@
 <li><code>Main</code>: Contiene el punto de entrada de la aplicación y la lógica principal del menú de usuario.</li>
 </ul>
 
-								            	<h2><a id="index_6"></a>Implementación de la Clase `Tarea`</h2>
-												            	<h3><a id="index_7"></a>Atributos y Métodos de la Clase `Tarea`</h3>
-																<p>La clase <code>Tarea</code> tendrá los siguientes atributos y métodos:</p>
+		    	<h2><a id="index_6"></a>Implementación de la Clase `Tarea`</h2>
+				    	<h3><a id="index_7"></a>Atributos y Métodos de la Clase `Tarea`</h3>
+						<p>La clase <code>Tarea</code> tendrá los siguientes atributos y métodos:</p>
 <ul>
 <li>Atributos:
 <ul>
@@ -114,7 +102,7 @@
 </li>
 </ul>
 
-												<pre>public class Tarea {
+				<pre>public class Tarea {
     private String descripcion;
     private boolean completada;
 
@@ -140,9 +128,9 @@
         return completada;
     }
 }</pre>
-								            	<h2><a id="index_8"></a>Implementación de la Clase `GestorTareas`</h2>
-												            	<h3><a id="index_9"></a>Gestión de la Lista de Tareas</h3>
-																<p>La clase <code>GestorTareas</code> manejará la lista de tareas y proporcionará métodos para agregar, eliminar, y listar tareas:</p>
+		    	<h2><a id="index_8"></a>Implementación de la Clase `GestorTareas`</h2>
+				    	<h3><a id="index_9"></a>Gestión de la Lista de Tareas</h3>
+						<p>La clase <code>GestorTareas</code> manejará la lista de tareas y proporcionará métodos para agregar, eliminar, y listar tareas:</p>
 <ul>
 <li>Atributos:
 <ul>
@@ -159,7 +147,7 @@
 </li>
 </ul>
 
-												<pre>import java.util.ArrayList;
+				<pre>import java.util.ArrayList;
 import java.util.List;
 
 public class GestorTareas {
@@ -195,9 +183,9 @@ public class GestorTareas {
         return listaTareas;
     }
 }</pre>
-								            	<h2><a id="index_10"></a>Implementación de la Clase `PersistenciaTareas`</h2>
-												            	<h3><a id="index_11"></a>Guardado y Carga de Tareas en Archivos</h3>
-																<p>La clase <code>PersistenciaTareas</code> manejará la persistencia de datos, permitiendo guardar y cargar la lista de tareas desde un archivo:</p>
+		    	<h2><a id="index_10"></a>Implementación de la Clase `PersistenciaTareas`</h2>
+				    	<h3><a id="index_11"></a>Guardado y Carga de Tareas en Archivos</h3>
+						<p>La clase <code>PersistenciaTareas</code> manejará la persistencia de datos, permitiendo guardar y cargar la lista de tareas desde un archivo:</p>
 <ul>
 <li>Métodos:
 <ul>
@@ -207,7 +195,7 @@ public class GestorTareas {
 </li>
 </ul>
 
-												<pre>import java.io.*;
+				<pre>import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -226,9 +214,9 @@ public class PersistenciaTareas {
         }
     }
 }</pre>
-								            	<h2><a id="index_12"></a>Implementación de la Clase `Main`</h2>
-												            	<h3><a id="index_13"></a>Lógica Principal del Programa</h3>
-																<p>La clase <code>Main</code> contendrá el punto de entrada de la aplicación y gestionará la interacción con el usuario a través de un menú de consola:</p>
+		    	<h2><a id="index_12"></a>Implementación de la Clase `Main`</h2>
+				    	<h3><a id="index_13"></a>Lógica Principal del Programa</h3>
+						<p>La clase <code>Main</code> contendrá el punto de entrada de la aplicación y gestionará la interacción con el usuario a través de un menú de consola:</p>
 <ul>
 <li>Métodos:
 <ul>
@@ -238,7 +226,7 @@ public class PersistenciaTareas {
 </li>
 </ul>
 
-												<pre>import java.util.Scanner;
+				<pre>import java.util.Scanner;
 
 public class Main {
     private static GestorTareas gestor = new GestorTareas();
@@ -310,29 +298,29 @@ public class Main {
         }
     }
 }</pre>
-								            	<h2><a id="index_14"></a>Revisión y Mejora del Proyecto</h2>
-												            	<h3><a id="index_15"></a>Pruebas y Depuración</h3>
-																<p>Una vez que hayas implementado la aplicación, es fundamental probar cada funcionalidad para asegurarte de que todo funcione como se espera. Además, revisa el código para identificar posibles mejoras, como la optimización del manejo de excepciones y la mejora de la interfaz de usuario.</p>
+		    	<h2><a id="index_14"></a>Revisión y Mejora del Proyecto</h2>
+				    	<h3><a id="index_15"></a>Pruebas y Depuración</h3>
+						<p>Una vez que hayas implementado la aplicación, es fundamental probar cada funcionalidad para asegurarte de que todo funcione como se espera. Además, revisa el código para identificar posibles mejoras, como la optimización del manejo de excepciones y la mejora de la interfaz de usuario.</p>
 
-								            	<h3><a id="index_16"></a>Extensiones Sugeridas</h3>
-																<p>Para llevar tu proyecto al siguiente nivel, puedes considerar agregar funcionalidades adicionales, como:</p>
+		    	<h3><a id="index_16"></a>Extensiones Sugeridas</h3>
+						<p>Para llevar tu proyecto al siguiente nivel, puedes considerar agregar funcionalidades adicionales, como:</p>
 <ul>
 <li><strong>Prioridades en las tareas</strong>: Permitir que los usuarios asignen una prioridad a cada tarea.</li>
 <li><strong>Fechas de vencimiento</strong>: Agregar fechas de vencimiento a las tareas y mostrar avisos para tareas vencidas.</li>
 <li><strong>Interfaz gráfica</strong>: Migrar la aplicación de consola a una interfaz gráfica utilizando JavaFX o Swing.</li>
 </ul>
 
-												<p>¡Felicitaciones! Has completado el proyecto final del curso &quot;Java para principiantes&quot;. Este proyecto no solo te permite consolidar los conocimientos adquiridos, sino que también te proporciona una base sólida para continuar explorando y desarrollando en el mundo de la programación en Java.</p>
+				<p>¡Felicitaciones! Has completado el proyecto final del curso &quot;Java para principiantes&quot;. Este proyecto no solo te permite consolidar los conocimientos adquiridos, sino que también te proporciona una base sólida para continuar explorando y desarrollando en el mundo de la programación en Java.</p>
 <p><strong>Recursos adicionales:</strong></p>
 <ul>
 <li><a href="https://docs.oracle.com/en/java/">Documentación oficial de Java</a></li>
 </ul>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -351,7 +339,7 @@ public class Main {
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

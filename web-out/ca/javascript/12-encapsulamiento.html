@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encapsulamiento</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encapsulamiento</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/javascript\12-encapsulamiento.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/javascript\12-encapsulamiento.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="javascript\12-encapsulamiento.stxt" target="javascript\12-encapsulamiento" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,21 +49,21 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="11-herencia-polimorfismo" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="13-manipulacion-dom" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Encapsulamiento en JavaScript</h2>
-												            	<h3><a id="index_1"></a>¿Qué es el encapsulamiento?</h3>
-																<p>El encapsulamiento es uno de los pilares de la programación orientada a objetos.
+		
+		
+
+		    	<h2><a id="index_0"></a>Encapsulamiento en JavaScript</h2>
+				    	<h3><a id="index_1"></a>¿Qué es el encapsulamiento?</h3>
+						<p>El encapsulamiento es uno de los pilares de la programación orientada a objetos.
 Se refiere a la práctica de ocultar los detalles internos de un objeto y exponer solo lo necesario para interactuar con él.
 En JavaScript, el encapsulamiento se logra controlando qué partes de un objeto son accesibles desde el exterior y cuáles no.</p>
 
-												<pre>// Ejemplo b&aacute;sico de encapsulamiento con funciones
+				<pre>// Ejemplo b&aacute;sico de encapsulamiento con funciones
 function Persona(nombre, edad) {
     let _nombre = nombre; // Variable privada
     let _edad = edad; // Variable privada
@@ -99,11 +87,11 @@ let persona = new Persona(&quot;Carlos&quot;, 30);
 console.log(persona.getNombre()); // Output: Carlos
 persona.setEdad(35);
 console.log(persona.getEdad()); // Output: 35</pre>
-								            	<h3><a id="index_2"></a>Encapsulamiento con clases</h3>
-																<p>Con la introducción de ES6, el uso de clases en JavaScript facilita el encapsulamiento.
+		    	<h3><a id="index_2"></a>Encapsulamiento con clases</h3>
+						<p>Con la introducción de ES6, el uso de clases en JavaScript facilita el encapsulamiento.
 Las propiedades privadas se pueden simular utilizando convenciones como el uso del guion bajo (<code>_</code>) para indicar que una propiedad o método no debe ser accedido directamente desde fuera de la clase.</p>
 
-												<pre>// Ejemplo de encapsulamiento con clases
+				<pre>// Ejemplo de encapsulamiento con clases
 class CuentaBancaria {
     constructor(saldoInicial) {
         this._saldo = saldoInicial; // Propiedad privada simulada
@@ -134,11 +122,11 @@ cuenta.depositar(500);
 console.log(cuenta.getSaldo()); // Output: 1500
 cuenta.retirar(200);
 console.log(cuenta.getSaldo()); // Output: 1300</pre>
-								            	<h3><a id="index_3"></a>Campos privados en ES2021</h3>
-																<p>A partir de ES2021, JavaScript introdujo una nueva sintaxis para definir campos privados usando el prefijo <code>#</code>.
+		    	<h3><a id="index_3"></a>Campos privados en ES2021</h3>
+						<p>A partir de ES2021, JavaScript introdujo una nueva sintaxis para definir campos privados usando el prefijo <code>#</code>.
 Los campos privados no pueden ser accedidos o modificados directamente desde fuera de la clase.</p>
 
-												<pre>// Ejemplo de campos privados con ES2021
+				<pre>// Ejemplo de campos privados con ES2021
 class Vehiculo {
     #velocidad; // Campo privado
 
@@ -161,11 +149,11 @@ let miVehiculo = new Vehiculo(50);
 console.log(miVehiculo.getVelocidad()); // Output: 50
 miVehiculo.acelerar(20);
 console.log(miVehiculo.getVelocidad()); // Output: 70</pre>
-								            	<h3><a id="index_4"></a>Métodos accesores: getters y setters</h3>
-																<p>En JavaScript, los métodos accesores (getters y setters) se utilizan para obtener o modificar el valor de una propiedad de manera controlada.
+		    	<h3><a id="index_4"></a>Métodos accesores: getters y setters</h3>
+						<p>En JavaScript, los métodos accesores (getters y setters) se utilizan para obtener o modificar el valor de una propiedad de manera controlada.
 Esto es especialmente útil cuando se quiere aplicar lógica adicional al leer o escribir en una propiedad.</p>
 
-												<pre>// Ejemplo de getters y setters
+				<pre>// Ejemplo de getters y setters
 class Persona {
     constructor(nombre) {
         this._nombre = nombre;
@@ -188,8 +176,8 @@ let persona = new Persona(&quot;Luis&quot;);
 console.log(persona.nombre); // Output: Luis
 persona.nombre = &quot;Carlos&quot;;
 console.log(persona.nombre); // Output: Carlos</pre>
-								            	<h3><a id="index_5"></a>Beneficios del encapsulamiento</h3>
-																<p>El encapsulamiento ofrece varios beneficios clave:</p>
+		    	<h3><a id="index_5"></a>Beneficios del encapsulamiento</h3>
+						<p>El encapsulamiento ofrece varios beneficios clave:</p>
 <ul>
 <li><strong>Control sobre el acceso a los datos</strong>: Los datos sensibles están protegidos y solo se puede acceder a ellos a través de métodos públicos.</li>
 <li><strong>Modularidad</strong>: Permite cambiar la implementación interna de una clase sin afectar otras partes del código.</li>
@@ -197,7 +185,7 @@ console.log(persona.nombre); // Output: Carlos</pre>
 <li><strong>Seguridad</strong>: Evita que se manipulen directamente las propiedades críticas de los objetos.</li>
 </ul>
 
-												<pre>// Ejemplo final mostrando los beneficios del encapsulamiento
+				<pre>// Ejemplo final mostrando los beneficios del encapsulamiento
 class Usuario {
     constructor(nombre, contrasena) {
         this._nombre = nombre;
@@ -219,11 +207,11 @@ let usuario = new Usuario(&quot;Ana&quot;, &quot;123456&quot;);
 console.log(usuario.nombre); // Output: Ana
 console.log(usuario.verificarContrasena(&quot;123456&quot;)); // Output: true
 console.log(usuario.verificarContrasena(&quot;abcdef&quot;)); // Output: false</pre>
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -242,7 +230,7 @@ console.log(usuario.verificarContrasena(&quot;abcdef&quot;)); // Output: false</
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

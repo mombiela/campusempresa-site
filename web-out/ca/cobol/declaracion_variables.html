@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cómo declarar variables y constantes en COBOL</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo declarar variables y constantes en COBOL</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/cobol\declaracion_variables.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/cobol\declaracion_variables.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="cobol\declaracion_variables.stxt" target="cobol\declaracion_variables" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,22 +49,22 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>Declarar variables y constantes en COBOL es una parte fundamental del desarrollo de programas. Estas declaraciones se realizan principalmente en la sección <code>WORKING-STORAGE</code> de la División de Datos. A continuación se describen los pasos y la sintaxis para declarar variables y constantes.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Declaración de Variables</h2>
-																<p>Las variables se declaran utilizando la cláusula <code>PIC</code> (Picture), que especifica el tipo y el formato de los datos. Aquí hay algunos ejemplos de cómo declarar diferentes tipos de variables:</p>
+			<p>Declarar variables y constantes en COBOL es una parte fundamental del desarrollo de programas. Estas declaraciones se realizan principalmente en la sección <code>WORKING-STORAGE</code> de la División de Datos. A continuación se describen los pasos y la sintaxis para declarar variables y constantes.</p>
 
-												<pre>WORKING-STORAGE SECTION.
+		    	<h2><a id="index_0"></a>Declaración de Variables</h2>
+						<p>Las variables se declaran utilizando la cláusula <code>PIC</code> (Picture), que especifica el tipo y el formato de los datos. Aquí hay algunos ejemplos de cómo declarar diferentes tipos de variables:</p>
+
+				<pre>WORKING-STORAGE SECTION.
 01 WS-EmployeeName PIC X(30).
 01 WS-EmployeeID PIC 9(5).
 01 WS-EmployeeSalary PIC 9(7)V99.
 01 WS-EmployeeAge PIC S9(3).
 01 WS-PackedNumber PIC 9(6) COMP-3.
 01 WS-BinaryNumber PIC 9(4) COMP.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>WS-EmployeeName</code>: Una variable de texto de 30 caracteres.</li>
 <li><code>WS-EmployeeID</code>: Una variable numérica de 5 dígitos.</li>
@@ -86,36 +74,36 @@
 <li><code>WS-BinaryNumber</code>: Una variable numérica binaria de 4 dígitos.</li>
 </ul>
 
-								            	<h2><a id="index_1"></a>Declaración de Constantes</h2>
-																<p>Las constantes en COBOL se declaran utilizando la cláusula <code>VALUE</code> para asignar un valor fijo a una variable en el momento de su declaración. Aquí hay algunos ejemplos de cómo declarar constantes:</p>
+		    	<h2><a id="index_1"></a>Declaración de Constantes</h2>
+						<p>Las constantes en COBOL se declaran utilizando la cláusula <code>VALUE</code> para asignar un valor fijo a una variable en el momento de su declaración. Aquí hay algunos ejemplos de cómo declarar constantes:</p>
 
-												<pre>WORKING-STORAGE SECTION.
+				<pre>WORKING-STORAGE SECTION.
 01 WS-CompanyName PIC X(20) VALUE 'ACME Corp'.
 01 WS-TaxRate PIC 9(2)V99 VALUE 0.15.
 01 WS-MaxEmployees PIC 9(3) VALUE 100.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>WS-CompanyName</code>: Una constante de texto con el valor 'ACME Corp'.</li>
 <li><code>WS-TaxRate</code>: Una constante numérica con el valor 0.15.</li>
 <li><code>WS-MaxEmployees</code>: Una constante numérica con el valor 100.</li>
 </ul>
 
-								            	<h2><a id="index_2"></a>Subniveles en Declaraciones</h2>
-																<p>COBOL permite declarar variables en varios niveles jerárquicos, lo que es útil para definir estructuras de datos complejas. Los subniveles se indican con niveles numéricos (01, 05, 10, etc.). Aquí hay un ejemplo:</p>
+		    	<h2><a id="index_2"></a>Subniveles en Declaraciones</h2>
+						<p>COBOL permite declarar variables en varios niveles jerárquicos, lo que es útil para definir estructuras de datos complejas. Los subniveles se indican con niveles numéricos (01, 05, 10, etc.). Aquí hay un ejemplo:</p>
 
-												<pre>WORKING-STORAGE SECTION.
+				<pre>WORKING-STORAGE SECTION.
 01 WS-EmployeeRecord.
 05 EmployeeID PIC 9(5).
 05 EmployeeName PIC X(30).
 05 EmployeeSalary PIC 9(7)V99.</pre>
-												<p>En este ejemplo, <code>WS-EmployeeRecord</code> es una estructura que contiene tres campos: <code>EmployeeID</code>, <code>EmployeeName</code>, y <code>EmployeeSalary</code>.</p>
+				<p>En este ejemplo, <code>WS-EmployeeRecord</code> es una estructura que contiene tres campos: <code>EmployeeID</code>, <code>EmployeeName</code>, y <code>EmployeeSalary</code>.</p>
 <p>La declaración adecuada de variables y constantes en COBOL es crucial para gestionar datos de manera eficiente y asegurar la claridad y mantenibilidad del código.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -134,7 +122,7 @@
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

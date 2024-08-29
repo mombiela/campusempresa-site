@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papel de los servidores backend</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papel de los servidores backend</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/apps-web\servidores_backend.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/apps-web\servidores_backend.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="apps-web\servidores_backend.stxt" target="apps-web\servidores_backend" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,13 +49,13 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>Los servidores backend juegan un papel crucial en el desarrollo y funcionamiento de aplicaciones web y móviles. A continuación se detallan las responsabilidades y funciones principales de los servidores backend.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Procesamiento y lógica de negocio</h2>
-																<p>Los servidores backend son responsables de la lógica de negocio de una aplicación. Esto incluye:</p>
+			<p>Los servidores backend juegan un papel crucial en el desarrollo y funcionamiento de aplicaciones web y móviles. A continuación se detallan las responsabilidades y funciones principales de los servidores backend.</p>
+
+		    	<h2><a id="index_0"></a>Procesamiento y lógica de negocio</h2>
+						<p>Los servidores backend son responsables de la lógica de negocio de una aplicación. Esto incluye:</p>
 <ul>
 <li>Procesamiento de datos: Transformación, validación y procesamiento de datos recibidos del frontend antes de almacenarlos o devolverlos.</li>
 <li>Reglas de negocio: Implementación de las reglas específicas que rigen el funcionamiento de la aplicación. Ejemplo: cálculo de impuestos, validación de formularios, etc.</li>
@@ -75,7 +63,7 @@
 </ul>
 <p>Ejemplo de lógica de negocio en Java:</p>
 
-												<pre>public class OrderService {
+				<pre>public class OrderService {
 public double calculateTotal(Order order) {
 double total = order.getSubtotal();
 if (order.isTaxable()) {
@@ -84,9 +72,9 @@ total += order.getSubtotal() * 0.1;
 return total;
 }
 }</pre>
-												
-								            	<h2><a id="index_1"></a>Gestión de bases de datos</h2>
-																<p>Una de las funciones más importantes del backend es la interacción con las bases de datos:</p>
+				
+		    	<h2><a id="index_1"></a>Gestión de bases de datos</h2>
+						<p>Una de las funciones más importantes del backend es la interacción con las bases de datos:</p>
 <ul>
 <li>CRUD: Crear, leer, actualizar y eliminar datos en la base de datos.</li>
 <li>Consultas y optimización: Realización de consultas eficientes y optimización del acceso a los datos.</li>
@@ -94,7 +82,7 @@ return total;
 </ul>
 <p>Ejemplo de consulta SQL en PHP:</p>
 
-												<pre>
+				<pre>
 &lt;?php
 $conn = new mysqli(&quot;localhost&quot;, &quot;user&quot;, &quot;password&quot;, &quot;database&quot;);
 
@@ -115,16 +103,16 @@ echo &quot;0 results&quot;;
 
 $conn-&gt;close();
 ?&gt;</pre>
-												
-								            	<h2><a id="index_2"></a>Autenticación y autorización</h2>
-																<p>Los servidores backend gestionan la seguridad de la aplicación mediante la autenticación y autorización de usuarios:</p>
+				
+		    	<h2><a id="index_2"></a>Autenticación y autorización</h2>
+						<p>Los servidores backend gestionan la seguridad de la aplicación mediante la autenticación y autorización de usuarios:</p>
 <ul>
 <li>Autenticación: Verificación de la identidad de los usuarios mediante credenciales como nombre de usuario y contraseña, tokens, etc.</li>
 <li>Autorización: Determinación de los permisos y accesos que tiene un usuario autenticado a ciertos recursos o acciones en la aplicación.</li>
 </ul>
 <p>Ejemplo de autenticación en Node.js con JWT:</p>
 
-												<pre>const express = require('express');
+				<pre>const express = require('express');
 const jwt = require('jsonwebtoken');
 
 const app = express();
@@ -165,9 +153,9 @@ res.sendStatus(403);
 app.listen(3000, () =&gt; {
 console.log('Server started on port 3000');
 });</pre>
-												
-								            	<h2><a id="index_3"></a>Comunicación con el frontend</h2>
-																<p>El backend se comunica con el frontend principalmente a través de APIs:</p>
+				
+		    	<h2><a id="index_3"></a>Comunicación con el frontend</h2>
+						<p>El backend se comunica con el frontend principalmente a través de APIs:</p>
 <ul>
 <li>RESTful APIs: Utiliza HTTP para realizar operaciones CRUD mediante métodos como GET, POST, PUT y DELETE.</li>
 <li>GraphQL: Proporciona una manera flexible de consultar y manipular datos mediante un único endpoint.</li>
@@ -175,7 +163,7 @@ console.log('Server started on port 3000');
 </ul>
 <p>Ejemplo de endpoint REST en Express.js:</p>
 
-												<pre>const express = require('express');
+				<pre>const express = require('express');
 const app = express();
 const port = 3000;
 
@@ -186,16 +174,16 @@ res.json({ message: &quot;Hello, World!&quot; });
 app.listen(port, () =&gt; {
 console.log(Server running at http://localhost:${port}/);
 });</pre>
-												
-								            	<h2><a id="index_4"></a>Manejo de archivos y recursos</h2>
-																<p>El backend también gestiona la subida, descarga y almacenamiento de archivos:</p>
+				
+		    	<h2><a id="index_4"></a>Manejo de archivos y recursos</h2>
+						<p>El backend también gestiona la subida, descarga y almacenamiento de archivos:</p>
 <ul>
 <li>Almacenamiento local: Guardar archivos en el servidor.</li>
 <li>Almacenamiento en la nube: Utilizar servicios como Amazon S3 o Google Cloud Storage para almacenar archivos de forma escalable.</li>
 </ul>
 <p>Ejemplo de subida de archivos en Python Flask:</p>
 
-												<pre>from flask import Flask, request, redirect, url_for
+				<pre>from flask import Flask, request, redirect, url_for
 import os
 
 app = Flask(name)
@@ -216,15 +204,15 @@ return 'file uploaded successfully'
 
 if name == 'main':
 app.run(debug=True)</pre>
-												
-								            	<h2><a id="index_5"></a>Conclusión</h2>
-																<p>El papel de los servidores backend es esencial para el correcto funcionamiento de una aplicación web o móvil. Desde el procesamiento de datos y lógica de negocio hasta la gestión de bases de datos y la autenticación, el backend soporta y habilita las funcionalidades críticas de una aplicación. Con tecnologías como Java, COBOL, Node.js, Python, entre otras, los desarrolladores pueden construir soluciones robustas y escalables para satisfacer diversas necesidades empresariales y de usuario.</p>
+				
+		    	<h2><a id="index_5"></a>Conclusión</h2>
+						<p>El papel de los servidores backend es esencial para el correcto funcionamiento de una aplicación web o móvil. Desde el procesamiento de datos y lógica de negocio hasta la gestión de bases de datos y la autenticación, el backend soporta y habilita las funcionalidades críticas de una aplicación. Con tecnologías como Java, COBOL, Node.js, Python, entre otras, los desarrolladores pueden construir soluciones robustas y escalables para satisfacer diversas necesidades empresariales y de usuario.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -243,7 +231,7 @@ app.run(debug=True)</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

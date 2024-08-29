@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polimorfismo</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polimorfismo</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/python\oop_polimorfismo.html" />
-		
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprendizaje continuo, uniendo la sociedad</a></h2>
+		<h2><a href="index.html"><i>Aprendiendo juntos, uniendo la sociedad</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 							<li><b>Castellano</b></li>
 				<li><a href="../ca/python\oop_polimorfismo.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
 						    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="python\oop_polimorfismo.stxt" target="python\oop_polimorfismo" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,18 +49,18 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>El polimorfismo es uno de los principios fundamentales de la programación orientada a objetos (OOP) y se refiere a la capacidad de diferentes clases para ser tratadas como instancias de una misma clase a través de una interfaz común. En otras palabras, permite que una función o un método trabaje con diferentes tipos de objetos de una manera uniforme.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Polimorfismo en Python</h2>
-																<p>En Python, el polimorfismo se puede lograr a través de la herencia y la implementación de métodos comunes en diferentes clases. Python es un lenguaje dinámico, lo que significa que no es necesario que las clases compartan una relación de herencia explícita para ser polimórficas; simplemente deben implementar los mismos métodos.</p>
+			<p>El polimorfismo es uno de los principios fundamentales de la programación orientada a objetos (OOP) y se refiere a la capacidad de diferentes clases para ser tratadas como instancias de una misma clase a través de una interfaz común. En otras palabras, permite que una función o un método trabaje con diferentes tipos de objetos de una manera uniforme.</p>
 
-								            	<h2><a id="index_1"></a>Polimorfismo con Herencia</h2>
-																<p>Veamos un ejemplo simple usando herencia:</p>
+		    	<h2><a id="index_0"></a>Polimorfismo en Python</h2>
+						<p>En Python, el polimorfismo se puede lograr a través de la herencia y la implementación de métodos comunes en diferentes clases. Python es un lenguaje dinámico, lo que significa que no es necesario que las clases compartan una relación de herencia explícita para ser polimórficas; simplemente deben implementar los mismos métodos.</p>
 
-												<pre>class Animal:
+		    	<h2><a id="index_1"></a>Polimorfismo con Herencia</h2>
+						<p>Veamos un ejemplo simple usando herencia:</p>
+
+				<pre>class Animal:
 def hacer_sonido(self):
 raise NotImplementedError(&quot;Este m&eacute;todo debe ser implementado por la subclase&quot;)
 
@@ -92,12 +80,12 @@ gato = Gato()
 
 hacer_sonido_animal(perro)  # Output: Guau
 hacer_sonido_animal(gato)   # Output: Miau</pre>
-												<p>En este ejemplo, tanto <code>Perro</code> como <code>Gato</code> son subclases de <code>Animal</code> y ambos implementan el método <code>hacer_sonido</code>. La función <code>hacer_sonido_animal</code> puede aceptar cualquier objeto que sea una instancia de <code>Animal</code> o sus subclases.</p>
+				<p>En este ejemplo, tanto <code>Perro</code> como <code>Gato</code> son subclases de <code>Animal</code> y ambos implementan el método <code>hacer_sonido</code>. La función <code>hacer_sonido_animal</code> puede aceptar cualquier objeto que sea una instancia de <code>Animal</code> o sus subclases.</p>
 
-								            	<h2><a id="index_2"></a>Polimorfismo sin Herencia (Duck Typing)</h2>
-																<p>Python es conocido por su enfoque de &quot;duck typing&quot;, que permite el polimorfismo sin necesidad de una jerarquía de clases explícita. Si un objeto implementa los métodos necesarios, se puede usar de manera polimórfica.</p>
+		    	<h2><a id="index_2"></a>Polimorfismo sin Herencia (Duck Typing)</h2>
+						<p>Python es conocido por su enfoque de &quot;duck typing&quot;, que permite el polimorfismo sin necesidad de una jerarquía de clases explícita. Si un objeto implementa los métodos necesarios, se puede usar de manera polimórfica.</p>
 
-												<pre>class Perro:
+				<pre>class Perro:
 def hacer_sonido(self):
 return &quot;Guau&quot;
 
@@ -119,20 +107,20 @@ vaca = Vaca()
 hacer_sonido_animal(perro)  # Output: Guau
 hacer_sonido_animal(gato)   # Output: Miau
 hacer_sonido_animal(vaca)   # Output: Muu</pre>
-												<p>Aquí, <code>Perro</code>, <code>Gato</code> y <code>Vaca</code> no comparten una clase base común, pero todos tienen el método <code>hacer_sonido</code>. La función <code>hacer_sonido_animal</code> puede trabajar con cualquier objeto que implemente este método.</p>
+				<p>Aquí, <code>Perro</code>, <code>Gato</code> y <code>Vaca</code> no comparten una clase base común, pero todos tienen el método <code>hacer_sonido</code>. La función <code>hacer_sonido_animal</code> puede trabajar con cualquier objeto que implemente este método.</p>
 
-								            	<h2><a id="index_3"></a>Ejemplo de Polimorfismo en Funciones y Métodos</h2>
-																<p>El polimorfismo también se puede observar en funciones y métodos que aceptan parámetros de diferentes tipos.</p>
+		    	<h2><a id="index_3"></a>Ejemplo de Polimorfismo en Funciones y Métodos</h2>
+						<p>El polimorfismo también se puede observar en funciones y métodos que aceptan parámetros de diferentes tipos.</p>
 
-												<pre>def agregar(a, b):
+				<pre>def agregar(a, b):
 return a + b
 
 print(agregar(5, 3))           # Output: 8
 print(agregar(&quot;Hola, &quot;, &quot;mundo&quot;))  # Output: Hola, mundo</pre>
-												<p>En este caso, la función <code>agregar</code> se comporta de manera polimórfica porque puede sumar tanto números como concatenar cadenas de texto, dependiendo del tipo de los argumentos.</p>
+				<p>En este caso, la función <code>agregar</code> se comporta de manera polimórfica porque puede sumar tanto números como concatenar cadenas de texto, dependiendo del tipo de los argumentos.</p>
 
-								            	<h2><a id="index_4"></a>Resumen</h2>
-																<ul>
+		    	<h2><a id="index_4"></a>Resumen</h2>
+						<ul>
 <li><strong>Polimorfismo</strong>: Permite que diferentes clases sean tratadas de manera uniforme a través de una interfaz común.</li>
 <li><strong>Herencia</strong>: Facilita el polimorfismo al permitir que las subclases implementen métodos de una clase base.</li>
 <li><strong>Duck Typing</strong>: Permite el polimorfismo sin una jerarquía de clases explícita, basándose en la presencia de métodos específicos.</li>
@@ -140,11 +128,11 @@ print(agregar(&quot;Hola, &quot;, &quot;mundo&quot;))  # Output: Hola, mundo</pr
 </ul>
 <p>El polimorfismo es una herramienta poderosa en OOP que permite escribir código más flexible y reutilizable, al permitir que funciones y métodos operen sobre diferentes tipos de objetos de manera uniforme.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -163,7 +151,7 @@ print(agregar(&quot;Hola, &quot;, &quot;mundo&quot;))  # Output: Hola, mundo</pr
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplos prácticos con CSS Grid</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplos prácticos con CSS Grid</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/css\ejemplos_grid.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/css\ejemplos_grid.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="css\ejemplos_grid.stxt" target="css\ejemplos_grid" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,14 +49,14 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>Los ejemplos prácticos de CSS Grid muestran cómo se pueden utilizar las propiedades de Grid para crear diseños flexibles y adaptables. A continuación, se presentan algunos ejemplos comunes:</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Ejemplo 1: Diseño de una página básica</h2>
-																
-												<pre>.container {
+			<p>Los ejemplos prácticos de CSS Grid muestran cómo se pueden utilizar las propiedades de Grid para crear diseños flexibles y adaptables. A continuación, se presentan algunos ejemplos comunes:</p>
+
+		    	<h2><a id="index_0"></a>Ejemplo 1: Diseño de una página básica</h2>
+						
+				<pre>.container {
 display: grid;
 grid-template-columns: 1fr 3fr;
 grid-template-rows: auto 1fr auto;
@@ -94,16 +82,16 @@ background-color: lightcoral;
 grid-area: footer;
 background-color: lightgray;
 }</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>El contenedor de cuadrícula define tres columnas y tres filas.</li>
 <li>Se utiliza <code>grid-template-areas</code> para nombrar las áreas de la cuadrícula.</li>
 <li>Los ítems se posicionan utilizando <code>grid-area</code>.</li>
 </ul>
 
-								            	<h2><a id="index_1"></a>Ejemplo 2: Galería de imágenes responsiva</h2>
-																
-												<pre>.gallery {
+		    	<h2><a id="index_1"></a>Ejemplo 2: Galería de imágenes responsiva</h2>
+						
+				<pre>.gallery {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 grid-gap: 10px;
@@ -112,15 +100,15 @@ grid-gap: 10px;
 width: 100%;
 height: auto;
 }</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>El contenedor de cuadrícula crea una galería de imágenes responsiva.</li>
 <li>Las columnas se ajustan automáticamente para llenar el espacio disponible, con un ancho mínimo de 200px.</li>
 </ul>
 
-								            	<h2><a id="index_2"></a>Ejemplo 3: Diseño de una tarjeta de perfil</h2>
-																
-												<pre>.profile-card {
+		    	<h2><a id="index_2"></a>Ejemplo 3: Diseño de una tarjeta de perfil</h2>
+						
+				<pre>.profile-card {
 display: grid;
 grid-template-columns: 150px 1fr;
 grid-template-rows: auto 1fr auto;
@@ -146,15 +134,15 @@ grid-area: bio;
 grid-area: footer;
 text-align: right;
 }</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>El contenedor de cuadrícula define un diseño para una tarjeta de perfil.</li>
 <li>Las áreas de la cuadrícula se nombran para incluir un avatar, nombre, biografía y pie de página.</li>
 </ul>
 
-								            	<h2><a id="index_3"></a>Ejemplo 4: Diseño de una página de revista</h2>
-																
-												<pre>.magazine {
+		    	<h2><a id="index_3"></a>Ejemplo 4: Diseño de una página de revista</h2>
+						
+				<pre>.magazine {
 display: grid;
 grid-template-columns: 2fr 1fr;
 grid-template-rows: repeat(4, auto);
@@ -185,15 +173,15 @@ background-color: lightyellow;
 grid-area: footer;
 background-color: lightgray;
 }</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>El contenedor de cuadrícula define un diseño para una página de revista.</li>
 <li>Las áreas de la cuadrícula incluyen un artículo destacado, barra lateral, dos artículos adicionales y un pie de página.</li>
 </ul>
 
-								            	<h2><a id="index_4"></a>Ejemplo 5: Diseño de un formulario complejo</h2>
-																
-												<pre>.form {
+		    	<h2><a id="index_4"></a>Ejemplo 5: Diseño de un formulario complejo</h2>
+						
+				<pre>.form {
 display: grid;
 grid-template-columns: 150px 1fr;
 grid-gap: 10px;
@@ -232,14 +220,14 @@ grid-area: input4;
 grid-area: submit;
 text-align: center;
 }</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>El contenedor de cuadrícula define un diseño para un formulario complejo.</li>
 <li>Las áreas de la cuadrícula incluyen etiquetas e inputs para cada campo del formulario y un botón de envío.</li>
 </ul>
 
-								            	<h2><a id="index_5"></a>Diagramas de ejemplos prácticos con CSS Grid</h2>
-																<p><strong>Ejemplo 1: Diseño de una página básica</strong></p>
+		    	<h2><a id="index_5"></a>Diagramas de ejemplos prácticos con CSS Grid</h2>
+						<p><strong>Ejemplo 1: Diseño de una página básica</strong></p>
 <p><code>startuml</code>
 +---------------------------------------------------+
 | Contenedor (display: grid)                         |
@@ -340,11 +328,11 @@ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); |
 <li>[[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout|Documentación sobre CSS Grid en CSS]]</li>
 </ul>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -363,7 +351,7 @@ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); |
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

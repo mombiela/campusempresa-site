@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema 8: Estilizar texto y elementos en CSS</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 8: Estilizar texto y elementos en CSS</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/html\tema-08.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/html\tema-08.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="html\tema-08.stxt" target="html\tema-08" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,17 +49,17 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="tema-07" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="tema-09" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Estilización de texto en CSS</h2>
-												            	<h3><a id="index_1"></a>Propiedades de fuente</h3>
-																<p>CSS proporciona diversas propiedades para controlar la apariencia del texto en tus páginas web. Las más importantes relacionadas con las fuentes son:</p>
+		
+		
+
+		    	<h2><a id="index_0"></a>Estilización de texto en CSS</h2>
+				    	<h3><a id="index_1"></a>Propiedades de fuente</h3>
+						<p>CSS proporciona diversas propiedades para controlar la apariencia del texto en tus páginas web. Las más importantes relacionadas con las fuentes son:</p>
 <ol>
 <li><strong><code>font-family</code></strong>: Define la fuente que se utilizará para el texto. Es común especificar una lista de fuentes como respaldo en caso de que la primera no esté disponible.</li>
 <li><strong><code>font-size</code></strong>: Define el tamaño del texto. Puede ser especificado en unidades relativas (como <code>em</code>, <code>%</code>) o absolutas (como <code>px</code>).</li>
@@ -80,7 +68,7 @@
 <li><strong><code>line-height</code></strong>: Controla el espaciado entre líneas de texto.</li>
 </ol>
 
-												<pre>/* Ejemplo de propiedades de fuente */
+				<pre>/* Ejemplo de propiedades de fuente */
 p {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
@@ -88,8 +76,8 @@ p {
     font-style: italic;
     line-height: 1.5;
 }</pre>
-								            	<h3><a id="index_2"></a>Alineación y decoración del texto</h3>
-																<p>Además de las propiedades de fuente, CSS permite controlar la alineación y decoración del texto mediante:</p>
+		    	<h3><a id="index_2"></a>Alineación y decoración del texto</h3>
+						<p>Además de las propiedades de fuente, CSS permite controlar la alineación y decoración del texto mediante:</p>
 <ol>
 <li><strong><code>text-align</code></strong>: Define la alineación horizontal del texto dentro de un elemento (<code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code>).</li>
 <li><strong><code>text-decoration</code></strong>: Añade decoraciones al texto como <code>underline</code>, <code>overline</code>, <code>line-through</code>, o <code>none</code>.</li>
@@ -98,7 +86,7 @@ p {
 <li><strong><code>word-spacing</code></strong>: Define el espaciado entre palabras.</li>
 </ol>
 
-												<pre>/* Ejemplo de alineaci&oacute;n y decoraci&oacute;n de texto */
+				<pre>/* Ejemplo de alineaci&oacute;n y decoraci&oacute;n de texto */
 h1 {
     text-align: center;
     text-decoration: underline;
@@ -106,8 +94,8 @@ h1 {
     letter-spacing: 2px;
     word-spacing: 4px;
 }</pre>
-								            	<h3><a id="index_3"></a>Control de color y fondo</h3>
-																<p>El color del texto y el fondo de los elementos son aspectos cruciales del diseño visual. CSS te permite definir estos aspectos mediante:</p>
+		    	<h3><a id="index_3"></a>Control de color y fondo</h3>
+						<p>El color del texto y el fondo de los elementos son aspectos cruciales del diseño visual. CSS te permite definir estos aspectos mediante:</p>
 <ol>
 <li><strong><code>color</code></strong>: Define el color del texto.</li>
 <li><strong><code>background-color</code></strong>: Establece el color de fondo de un elemento.</li>
@@ -116,7 +104,7 @@ h1 {
 <li><strong><code>background-repeat</code></strong>: Define si la imagen de fondo se repite y cómo lo hace (<code>repeat</code>, <code>no-repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>).</li>
 </ol>
 
-												<pre>/* Ejemplo de control de color y fondo */
+				<pre>/* Ejemplo de control de color y fondo */
 .body-text {
     color: #333;
     background-color: #f0f0f0;
@@ -124,14 +112,14 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
 }</pre>
-								            	<h3><a id="index_4"></a>Margen y relleno</h3>
-																<p>El margen y el relleno son propiedades CSS que permiten controlar el espaciado alrededor y dentro de un elemento, respectivamente:</p>
+		    	<h3><a id="index_4"></a>Margen y relleno</h3>
+						<p>El margen y el relleno son propiedades CSS que permiten controlar el espaciado alrededor y dentro de un elemento, respectivamente:</p>
 <ol>
 <li><strong><code>margin</code></strong>: Define el espacio exterior de un elemento, separándolo de otros elementos. Puede especificarse para cada lado del elemento (arriba, derecha, abajo, izquierda) o de manera global.</li>
 <li><strong><code>padding</code></strong>: Define el espacio interior de un elemento, entre el borde del elemento y su contenido. Al igual que <code>margin</code>, puede especificarse para cada lado del elemento.</li>
 </ol>
 
-												<pre>/* Ejemplo de margen y relleno */
+				<pre>/* Ejemplo de margen y relleno */
 .container {
     margin: 20px;
     padding: 15px;
@@ -145,15 +133,15 @@ h1 {
     padding-left: 20px;
     padding-right: 20px;
 }</pre>
-								            	<h2><a id="index_5"></a>Estilización avanzada de elementos</h2>
-																<p>El CSS ofrece un control detallado sobre cómo se presentan los elementos en una página web, no solo en términos de texto sino también en cómo los elementos se organizan y visualizan. Además de las propiedades básicas que hemos discutido, CSS permite:</p>
+		    	<h2><a id="index_5"></a>Estilización avanzada de elementos</h2>
+						<p>El CSS ofrece un control detallado sobre cómo se presentan los elementos en una página web, no solo en términos de texto sino también en cómo los elementos se organizan y visualizan. Además de las propiedades básicas que hemos discutido, CSS permite:</p>
 <ol>
 <li><strong>Aplicar sombras</strong>: Con <code>text-shadow</code> y <code>box-shadow</code>, puedes añadir sombras a texto y a bloques de elementos.</li>
 <li><strong>Manipular bordes</strong>: Usando <code>border</code>, puedes definir el estilo, grosor, y color de los bordes de los elementos.</li>
 <li><strong>Aplicar gradientes</strong>: CSS te permite crear fondos con transiciones suaves entre colores mediante <code>background-image</code> con <code>linear-gradient</code> o <code>radial-gradient</code>.</li>
 </ol>
 
-												<pre>/* Ejemplo de sombra y bordes */
+				<pre>/* Ejemplo de sombra y bordes */
 .box-shadow {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     border: 2px solid #333;
@@ -163,15 +151,15 @@ h1 {
 .gradient-background {
     background-image: linear-gradient(to right, #ff7e5f, #feb47b);
 }</pre>
-								            	<h2><a id="index_6"></a>Conclusión sobre la estilización en CSS</h2>
-																<p>Estilizar texto y elementos es una parte esencial del diseño web que permite crear interfaces atractivas y fáciles de usar. El uso correcto de propiedades como <code>font-family</code>, <code>color</code>, <code>margin</code>, y <code>padding</code> te dará las herramientas necesarias para transformar un documento HTML básico en una experiencia visual rica y coherente.</p>
+		    	<h2><a id="index_6"></a>Conclusión sobre la estilización en CSS</h2>
+						<p>Estilizar texto y elementos es una parte esencial del diseño web que permite crear interfaces atractivas y fáciles de usar. El uso correcto de propiedades como <code>font-family</code>, <code>color</code>, <code>margin</code>, y <code>padding</code> te dará las herramientas necesarias para transformar un documento HTML básico en una experiencia visual rica y coherente.</p>
 <p>Con práctica y experimentación, podrás combinar estas propiedades de CSS para desarrollar diseños que no solo sean estéticamente agradables, sino también funcionales y accesibles.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -190,7 +178,7 @@ h1 {
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

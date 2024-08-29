@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formas de aplicar CSS a un documento HTML</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formas de aplicar CSS a un documento HTML</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/css\aplicacion_css.html" />
-		
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprendizaje continuo, uniendo la sociedad</a></h2>
+		<h2><a href="index.html"><i>Aprendiendo juntos, uniendo la sociedad</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 							<li><b>Castellano</b></li>
 				<li><a href="../ca/css\aplicacion_css.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
 						    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="css\aplicacion_css.stxt" target="css\aplicacion_css" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,12 +49,12 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
+				
+		
+
 			
-			
-									
-								            	<h2><a id="index_0"></a>Formas de aplicar CSS a un documento HTML</h2>
-																<ul>
+		    	<h2><a id="index_0"></a>Formas de aplicar CSS a un documento HTML</h2>
+						<ul>
 <li>
 <p><strong>Introducción</strong>
 CSS se puede aplicar a documentos HTML de varias formas, permitiendo flexibilidad en cómo se gestionan y organizan los estilos. Las tres formas principales de aplicar CSS son: en línea, en el encabezado del documento y a través de hojas de estilo externas.</p>
@@ -77,13 +65,13 @@ El CSS en línea se aplica directamente a los elementos HTML usando el atributo 
 </li>
 </ul>
 
-												<pre>&lt;p style=&quot;color: red; font-size: 16px;&quot;&gt;Este es un p&aacute;rrafo estilizado en l&iacute;nea.&lt;/p&gt;</pre>
-												<ul>
+				<pre>&lt;p style=&quot;color: red; font-size: 16px;&quot;&gt;Este es un p&aacute;rrafo estilizado en l&iacute;nea.&lt;/p&gt;</pre>
+				<ul>
 <li><strong>CSS en el encabezado del documento</strong>
 El CSS se puede definir dentro del elemento <code>&lt;style&gt;</code> en la sección <code>&lt;head&gt;</code> del documento HTML. Este método permite centralizar los estilos en un solo lugar dentro del documento.</li>
 </ul>
 
-												<pre>&lt;!DOCTYPE html&gt;
+				<pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;style&gt;
@@ -97,12 +85,12 @@ font-size: 14px;
 &lt;p&gt;Este es un p&aacute;rrafo con estilos definidos en el encabezado.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-												<ul>
+				<ul>
 <li><strong>CSS externo</strong>
 El CSS externo se coloca en un archivo separado con extensión <code>.css</code> y se enlaza al documento HTML mediante el elemento <code>&lt;link&gt;</code> en la sección <code>&lt;head&gt;</code>. Este es el método más eficiente y organizado, especialmente para sitios web con múltiples páginas.</li>
 </ul>
 
-												<pre>&lt;!-- Archivo HTML --&gt;
+				<pre>&lt;!-- Archivo HTML --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -112,22 +100,22 @@ El CSS externo se coloca en un archivo separado con extensión <code>.css</code>
 &lt;p&gt;Este es un p&aacute;rrafo con estilos de una hoja de estilo externa.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-												
-												<pre>/* Archivo styles.css */
+				
+				<pre>/* Archivo styles.css */
 p {
 color: green;
 font-size: 18px;
 }</pre>
-												<ul>
+				<ul>
 <li><strong>Conclusión</strong>
 Cada método tiene sus usos y ventajas. El CSS en línea es útil para estilos rápidos y únicos, el CSS en el encabezado es bueno para pequeños proyectos o páginas únicas, y las hojas de estilo externas son ideales para proyectos más grandes y para mantener un código limpio y reutilizable.</li>
 </ul>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -146,7 +134,7 @@ Cada método tiene sus usos y ventajas. El CSS en línea es útil para estilos r
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

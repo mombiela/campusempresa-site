@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulos en JavaScript</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulos en JavaScript</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/javascript\18-modulos-javascript.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/javascript\18-modulos-javascript.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="javascript\18-modulos-javascript.stxt" target="javascript\18-modulos-javascript" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,21 +49,21 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="17-ajax-fetch-api" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="../index" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Módulos en JavaScript</h2>
-												            	<h3><a id="index_1"></a>¿Qué es un módulo?</h3>
-																<p>Un <strong>módulo</strong> en JavaScript es un archivo que contiene código que puede ser reutilizado y compartido entre diferentes partes de una aplicación.
+		
+		
+
+		    	<h2><a id="index_0"></a>Módulos en JavaScript</h2>
+				    	<h3><a id="index_1"></a>¿Qué es un módulo?</h3>
+						<p>Un <strong>módulo</strong> en JavaScript es un archivo que contiene código que puede ser reutilizado y compartido entre diferentes partes de una aplicación.
 Los módulos permiten organizar y estructurar mejor el código, manteniéndolo limpio, reutilizable y mantenible.</p>
 <p>Con la introducción de los módulos en ECMAScript 6 (ES6), JavaScript ofrece una forma nativa de importar y exportar código entre diferentes archivos.</p>
 
-												<pre>// Ejemplo b&aacute;sico de un m&oacute;dulo
+				<pre>// Ejemplo b&aacute;sico de un m&oacute;dulo
 // archivo: math.js
 export function sumar(a, b) {
     return a + b;
@@ -84,8 +72,8 @@ export function sumar(a, b) {
 export function restar(a, b) {
     return a - b;
 }</pre>
-								            	<h3><a id="index_2"></a>Exportación de módulos</h3>
-																<p>La exportación de módulos se realiza utilizando la palabra clave <code>export</code>.
+		    	<h3><a id="index_2"></a>Exportación de módulos</h3>
+						<p>La exportación de módulos se realiza utilizando la palabra clave <code>export</code>.
 Se pueden exportar funciones, variables, objetos o clases, para que puedan ser utilizados en otros archivos.</p>
 <p>Existen dos formas de exportar módulos en JavaScript:</p>
 <ul>
@@ -93,7 +81,7 @@ Se pueden exportar funciones, variables, objetos o clases, para que puedan ser u
 <li><strong>Exportación por defecto</strong>: Se exporta un único valor o una única entidad predeterminada del módulo.</li>
 </ul>
 
-												<pre>// Exportaci&oacute;n nombrada
+				<pre>// Exportaci&oacute;n nombrada
 export const nombre = &quot;Juan&quot;;
 export function saludar() {
     console.log(&quot;&iexcl;Hola!&quot;);
@@ -103,11 +91,11 @@ export function saludar() {
 export default function multiplicar(a, b) {
     return a * b;
 }</pre>
-								            	<h3><a id="index_3"></a>Importación de módulos</h3>
-																<p>Para utilizar un módulo en otro archivo, se utiliza la palabra clave <code>import</code>.
+		    	<h3><a id="index_3"></a>Importación de módulos</h3>
+						<p>Para utilizar un módulo en otro archivo, se utiliza la palabra clave <code>import</code>.
 Dependiendo de cómo fue exportado el módulo, se utiliza una sintaxis diferente para la importación.</p>
 
-												<pre>// Importaci&oacute;n nombrada
+				<pre>// Importaci&oacute;n nombrada
 import { sumar, restar } from './math.js';
 
 console.log(sumar(5, 3)); // Output: 8
@@ -117,11 +105,11 @@ console.log(restar(5, 3)); // Output: 2
 import multiplicar from './math.js';
 
 console.log(multiplicar(4, 2)); // Output: 8</pre>
-								            	<h3><a id="index_4"></a>Reexportación de módulos</h3>
-																<p>En algunos casos, es posible que desees reexportar módulos de otro archivo.
+		    	<h3><a id="index_4"></a>Reexportación de módulos</h3>
+						<p>En algunos casos, es posible que desees reexportar módulos de otro archivo.
 Esto es útil para crear un punto central de acceso a varios módulos.</p>
 
-												<pre>// archivo: operaciones.js
+				<pre>// archivo: operaciones.js
 export { sumar, restar } from './math.js';
 export { dividir } from './divisiones.js';
 
@@ -130,17 +118,17 @@ import { sumar, restar, dividir } from './operaciones.js';
 
 console.log(sumar(10, 5)); // Output: 15
 console.log(dividir(10, 2)); // Output: 5</pre>
-								            	<h3><a id="index_5"></a>Módulos dinámicos</h3>
-																<p>JavaScript también permite la importación dinámica de módulos utilizando la función <code>import()</code>.
+		    	<h3><a id="index_5"></a>Módulos dinámicos</h3>
+						<p>JavaScript también permite la importación dinámica de módulos utilizando la función <code>import()</code>.
 Esto es útil cuando necesitas cargar un módulo bajo demanda o en respuesta a una acción del usuario.</p>
 
-												<pre>// Ejemplo de importaci&oacute;n din&aacute;mica
+				<pre>// Ejemplo de importaci&oacute;n din&aacute;mica
 document.getElementById('cargarModulo').addEventListener('click', async () =&gt; {
     const { saludar } = await import('./saludos.js');
     saludar();
 });</pre>
-								            	<h3><a id="index_6"></a>Ventajas de usar módulos</h3>
-																<p>El uso de módulos en JavaScript ofrece varias ventajas:</p>
+		    	<h3><a id="index_6"></a>Ventajas de usar módulos</h3>
+						<p>El uso de módulos en JavaScript ofrece varias ventajas:</p>
 <ul>
 <li><strong>Organización</strong>: Mantiene el código organizado y separado en archivos lógicos.</li>
 <li><strong>Reutilización</strong>: Facilita la reutilización de código en diferentes partes de la aplicación.</li>
@@ -148,7 +136,7 @@ document.getElementById('cargarModulo').addEventListener('click', async () =&gt;
 <li><strong>Encapsulamiento</strong>: Los módulos encapsulan su código, evitando conflictos con otras partes del programa.</li>
 </ul>
 
-												<pre>// Ejemplo final: combinaci&oacute;n de todo
+				<pre>// Ejemplo final: combinaci&oacute;n de todo
 // archivo: utilidades.js
 export function convertirMayusculas(texto) {
     return texto.toUpperCase();
@@ -165,11 +153,11 @@ const texto = &quot;Hola Mundo&quot;;
 
 console.log(convertirMayusculas(texto)); // Output: HOLA MUNDO
 console.log(convertirMinusculas(texto)); // Output: hola mundo</pre>
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -188,7 +176,7 @@ console.log(convertirMinusculas(texto)); // Output: hola mundo</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

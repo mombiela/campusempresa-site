@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Importación de módulos</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Importación de módulos</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/python\mod_import.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/python\mod_import.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="python\mod_import.stxt" target="python\mod_import" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,40 +49,40 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									
-								            	<h2><a id="index_0"></a>Módulos y paquetes. Importación de módulos</h2>
-																<p>Python tiene un sistema muy potente para organizar y reutilizar el código: los módulos y los paquetes. Estos permiten dividir el código en componentes más pequeños y manejables, facilitando la organización y el mantenimiento de proyectos grandes.</p>
+				
+		
 
-								            	<h2><a id="index_1"></a>Módulos</h2>
-																<p>Un módulo en Python es simplemente un archivo con extensión <code>.py</code> que contiene definiciones y declaraciones de Python. Estos archivos pueden contener funciones, clases y variables, y pueden incluir código ejecutable.</p>
+			
+		    	<h2><a id="index_0"></a>Módulos y paquetes. Importación de módulos</h2>
+						<p>Python tiene un sistema muy potente para organizar y reutilizar el código: los módulos y los paquetes. Estos permiten dividir el código en componentes más pequeños y manejables, facilitando la organización y el mantenimiento de proyectos grandes.</p>
+
+		    	<h2><a id="index_1"></a>Módulos</h2>
+						<p>Un módulo en Python es simplemente un archivo con extensión <code>.py</code> que contiene definiciones y declaraciones de Python. Estos archivos pueden contener funciones, clases y variables, y pueden incluir código ejecutable.</p>
 <p>Ejemplo de un módulo simple (archivo llamado <code>mimodulo.py</code>):</p>
 
-												<pre># mimodulo.py
+				<pre># mimodulo.py
 def saludar():
 print(&quot;&iexcl;Hola, mundo!&quot;)
 
 pi = 3.14159</pre>
-												
-								            	<h2><a id="index_2"></a>Importación de Módulos</h2>
-																<p>Para usar el código definido en un módulo, se debe importar dicho módulo en el script o en otro módulo. Esto se hace usando la palabra clave <code>import</code>.</p>
+				
+		    	<h2><a id="index_2"></a>Importación de Módulos</h2>
+						<p>Para usar el código definido en un módulo, se debe importar dicho módulo en el script o en otro módulo. Esto se hace usando la palabra clave <code>import</code>.</p>
 <p>Ejemplo de importación y uso de un módulo:</p>
 
-												<pre>import mimodulo
+				<pre>import mimodulo
 
 mimodulo.saludar()
 print(mimodulo.pi)</pre>
-												<p>También se pueden importar partes específicas de un módulo usando <code>from</code> ... <code>import</code>.</p>
+				<p>También se pueden importar partes específicas de un módulo usando <code>from</code> ... <code>import</code>.</p>
 
-												<pre>from mimodulo import saludar, pi
+				<pre>from mimodulo import saludar, pi
 
 saludar()
 print(pi)</pre>
-												
-								            	<h2><a id="index_3"></a>Paquetes</h2>
-																<p>Un paquete es una forma de estructurar la jerarquía de los módulos de Python usando directorios. Un paquete es un directorio que contiene un archivo especial llamado <code>init.py</code>, el cual puede estar vacío o puede ejecutar algún código de inicialización para el paquete.</p>
+				
+		    	<h2><a id="index_3"></a>Paquetes</h2>
+						<p>Un paquete es una forma de estructurar la jerarquía de los módulos de Python usando directorios. Un paquete es un directorio que contiene un archivo especial llamado <code>init.py</code>, el cual puede estar vacío o puede ejecutar algún código de inicialización para el paquete.</p>
 <p>Ejemplo de estructura de un paquete:
 <code>startuml</code>
 package paquete {
@@ -106,50 +94,50 @@ modulo2.py
 <p>Para importar módulos desde un paquete, se puede usar la sintaxis de punto.</p>
 <p>Ejemplo:</p>
 
-												<pre>from paquete import modulo1, modulo2
+				<pre>from paquete import modulo1, modulo2
 
 modulo1.funcion()
 modulo2.otrafuncion()</pre>
-												
-								            	<h2><a id="index_4"></a>Importación de Submódulos</h2>
-																<p>También se pueden importar submódulos específicos de un paquete.</p>
+				
+		    	<h2><a id="index_4"></a>Importación de Submódulos</h2>
+						<p>También se pueden importar submódulos específicos de un paquete.</p>
 
-												<pre>from paquete.modulo1 import funcion
+				<pre>from paquete.modulo1 import funcion
 
 funcion()</pre>
-												
-								            	<h2><a id="index_5"></a>Importación Renombrada</h2>
-																<p>Para evitar conflictos de nombres o simplemente por conveniencia, se pueden renombrar módulos durante la importación usando <code>as</code>.</p>
+				
+		    	<h2><a id="index_5"></a>Importación Renombrada</h2>
+						<p>Para evitar conflictos de nombres o simplemente por conveniencia, se pueden renombrar módulos durante la importación usando <code>as</code>.</p>
 
-												<pre>import mimodulo as mm
+				<pre>import mimodulo as mm
 
 mm.saludar()
 print(mm.pi)</pre>
-												
-								            	<h2><a id="index_6"></a>Importación de Todos los Nombres de un Módulo</h2>
-																<p>Se pueden importar todos los nombres de un módulo usando el asterisco (``````). Esto no es recomendado porque puede llevar a un código menos claro.</p>
+				
+		    	<h2><a id="index_6"></a>Importación de Todos los Nombres de un Módulo</h2>
+						<p>Se pueden importar todos los nombres de un módulo usando el asterisco (``````). Esto no es recomendado porque puede llevar a un código menos claro.</p>
 
-												<pre>from mimodulo import
+				<pre>from mimodulo import
 
 saludar()
 print(pi)</pre>
-												
-								            	<h2><a id="index_7"></a>Funciones Importantes</h2>
-																<ul>
+				
+		    	<h2><a id="index_7"></a>Funciones Importantes</h2>
+						<ul>
 <li><code>dir()</code>: Devuelve una lista de nombres definidos en un módulo.</li>
 </ul>
 
-												<pre>import mimodulo
+				<pre>import mimodulo
 print(dir(mimodulo))</pre>
-												<ul>
+				<ul>
 <li><code>help()</code>: Muestra la documentación del módulo.</li>
 </ul>
 
-												<pre>import mimodulo
+				<pre>import mimodulo
 help(mimodulo)</pre>
-												
-								            	<h2><a id="index_8"></a>Creación y Uso de Paquetes</h2>
-																<p>Para crear un paquete, simplemente se crea un directorio con un archivo <code>init.py</code> dentro de él. Luego, se pueden añadir módulos adicionales a este directorio.</p>
+				
+		    	<h2><a id="index_8"></a>Creación y Uso de Paquetes</h2>
+						<p>Para crear un paquete, simplemente se crea un directorio con un archivo <code>init.py</code> dentro de él. Luego, se pueden añadir módulos adicionales a este directorio.</p>
 <p>Estructura de ejemplo:
 <code>startuml</code>
 package mipaquete {
@@ -160,38 +148,38 @@ saludos.py
 <code>enduml</code></p>
 <p>Contenido de <code>init.py</code>:</p>
 
-												<pre># init.py
+				<pre># init.py
 from .matematica import suma
 from .saludos import saludar</pre>
-												<p>Ahora se puede importar y usar el paquete completo:</p>
+				<p>Ahora se puede importar y usar el paquete completo:</p>
 
-												<pre>import mipaquete
+				<pre>import mipaquete
 
 mipaquete.saludar()
 print(mipaquete.suma(1, 2))</pre>
-												
-								            	<h2><a id="index_9"></a>Instalación de Paquetes Externos</h2>
-																<p>Python tiene un sistema de gestión de paquetes llamado <code>pip</code>, que permite instalar paquetes externos desde el Python Package Index (PyPI).</p>
+				
+		    	<h2><a id="index_9"></a>Instalación de Paquetes Externos</h2>
+						<p>Python tiene un sistema de gestión de paquetes llamado <code>pip</code>, que permite instalar paquetes externos desde el Python Package Index (PyPI).</p>
 <p>Para instalar un paquete:</p>
 
-												<pre>pip install nombre_paquete</pre>
-												<p>Para usar un paquete instalado:</p>
+				<pre>pip install nombre_paquete</pre>
+				<p>Para usar un paquete instalado:</p>
 
-												<pre>import nombre_paquete</pre>
-												
-								            	<h2><a id="index_10"></a>Ventajas del Uso de Módulos y Paquetes</h2>
-																<ul>
+				<pre>import nombre_paquete</pre>
+				
+		    	<h2><a id="index_10"></a>Ventajas del Uso de Módulos y Paquetes</h2>
+						<ul>
 <li><strong>Organización</strong>: Permiten estructurar el código en componentes más pequeños y manejables.</li>
 <li><strong>Reutilización</strong>: Facilitan la reutilización del código en diferentes proyectos.</li>
 <li><strong>Mantenimiento</strong>: Hacen que el código sea más fácil de mantener y actualizar.</li>
 <li><strong>Colaboración</strong>: Facilitan la colaboración entre varios desarrolladores.</li>
 </ul>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -210,7 +198,7 @@ print(mipaquete.suma(1, 2))</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

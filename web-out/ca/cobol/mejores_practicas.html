@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mejores prácticas de programación en COBOL</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mejores prácticas de programación en COBOL</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/cobol\mejores_practicas.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/cobol\mejores_practicas.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="cobol\mejores_practicas.stxt" target="cobol\mejores_practicas" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,13 +49,13 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>La programación en COBOL, un lenguaje robusto y ampliamente utilizado en sistemas financieros y de negocios, se beneficia enormemente de seguir ciertas mejores prácticas. Estas prácticas aseguran que el código sea eficiente, mantenible y libre de errores. A continuación, se describen algunas de las mejores prácticas esenciales para la programación en COBOL.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Estructura y Organización del Código</h2>
-																<p>Una estructura clara y bien organizada del código facilita la comprensión y el mantenimiento.</p>
+			<p>La programación en COBOL, un lenguaje robusto y ampliamente utilizado en sistemas financieros y de negocios, se beneficia enormemente de seguir ciertas mejores prácticas. Estas prácticas aseguran que el código sea eficiente, mantenible y libre de errores. A continuación, se describen algunas de las mejores prácticas esenciales para la programación en COBOL.</p>
+
+		    	<h2><a id="index_0"></a>Estructura y Organización del Código</h2>
+						<p>Una estructura clara y bien organizada del código facilita la comprensión y el mantenimiento.</p>
 <ul>
 <li>
 <p><strong>Divisiones claramente definidas</strong>: Asegúrate de que las divisiones IDENTIFICATION, ENVIRONMENT, DATA y PROCEDURE estén claramente definidas y comentadas.</p>
@@ -77,7 +65,7 @@
 </li>
 </ul>
 
-												<pre>IDENTIFICATION DIVISION.
+				<pre>IDENTIFICATION DIVISION.
 PROGRAM-ID. MiPrograma.
 AUTHOR. Juan Perez.
 
@@ -98,14 +86,14 @@ Contar-Hasta-Diez.
 PERFORM VARYING Contador FROM 1 BY 1 UNTIL Contador &gt; 10
 DISPLAY 'Contador: ' Contador
 END-PERFORM.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>Las divisiones están claramente definidas.</li>
 <li>Se utilizan comentarios para describir la inicialización del contador.</li>
 </ul>
 
-								            	<h2><a id="index_1"></a>Nombres Significativos y Consistentes</h2>
-																<p>Utiliza nombres significativos y consistentes para variables, secciones y parágrafos.</p>
+		    	<h2><a id="index_1"></a>Nombres Significativos y Consistentes</h2>
+						<p>Utiliza nombres significativos y consistentes para variables, secciones y parágrafos.</p>
 <ul>
 <li>
 <p><strong>Nombres descriptivos</strong>: Los nombres deben reflejar claramente el propósito de la variable o sección.</p>
@@ -115,17 +103,17 @@ END-PERFORM.</pre>
 </li>
 </ul>
 
-												<pre>WORKING-STORAGE SECTION.
+				<pre>WORKING-STORAGE SECTION.
 01 WS-Total-Ventas PIC 9(9)V99.
 01 WS-Contador-Clientes PIC 9(4).
 01 WS-Nombre-Cliente PIC X(50).</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>Los nombres de las variables son descriptivos y siguen una convención consistente.</li>
 </ul>
 
-								            	<h2><a id="index_2"></a>Modularización del Código</h2>
-																<p>Dividir el código en módulos más pequeños y manejables mejora la claridad y la reutilización.</p>
+		    	<h2><a id="index_2"></a>Modularización del Código</h2>
+						<p>Dividir el código en módulos más pequeños y manejables mejora la claridad y la reutilización.</p>
 <ul>
 <li>
 <p><strong>Uso de subprogramas</strong>: Crea subprogramas para realizar tareas específicas y llamarlos desde el programa principal.</p>
@@ -135,7 +123,7 @@ END-PERFORM.</pre>
 </li>
 </ul>
 
-												<pre>PROCEDURE DIVISION.
+				<pre>PROCEDURE DIVISION.
 MAIN-PROCEDURE.
 PERFORM Inicializar.
 PERFORM Procesar-Ventas.
@@ -157,13 +145,13 @@ END-READ.
 
 Finalizar.
 DISPLAY 'Finalizando programa...'.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>El código está dividido en secciones lógicas para inicialización, procesamiento y finalización.</li>
 </ul>
 
-								            	<h2><a id="index_3"></a>Manejo Eficiente de Errores</h2>
-																<p>Implementar un manejo adecuado de errores es crucial para la robustez del programa.</p>
+		    	<h2><a id="index_3"></a>Manejo Eficiente de Errores</h2>
+						<p>Implementar un manejo adecuado de errores es crucial para la robustez del programa.</p>
 <ul>
 <li>
 <p><strong>Verificación de estados de archivos</strong>: Utiliza <code>FILE STATUS</code> para verificar el estado de las operaciones de archivo.</p>
@@ -173,7 +161,7 @@ DISPLAY 'Finalizando programa...'.</pre>
 </li>
 </ul>
 
-												<pre>FILE CONTROL.
+				<pre>FILE CONTROL.
 SELECT Clientes ASSIGN TO 'CLIENTES.DAT'
 ORGANIZATION IS INDEXED
 ACCESS MODE IS DYNAMIC
@@ -190,14 +178,14 @@ DISPLAY 'Error abriendo archivo: ' WS-File-Status.
 END-IF.
 CLOSE Clientes.
 STOP RUN.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>FILE STATUS IS WS-File-Status</code> se utiliza para verificar el estado del archivo.</li>
 <li>Se muestra un mensaje de error si hay un problema al abrir el archivo.</li>
 </ul>
 
-								            	<h2><a id="index_4"></a>Optimización del Rendimiento</h2>
-																<p>Optimiza el rendimiento del programa mediante técnicas eficientes de manejo de datos y algoritmos.</p>
+		    	<h2><a id="index_4"></a>Optimización del Rendimiento</h2>
+						<p>Optimiza el rendimiento del programa mediante técnicas eficientes de manejo de datos y algoritmos.</p>
 <ul>
 <li>
 <p><strong>Lectura y escritura eficientes</strong>: Minimiza las operaciones de I/O innecesarias.</p>
@@ -207,7 +195,7 @@ STOP RUN.</pre>
 </li>
 </ul>
 
-												<pre>PROCEDURE DIVISION.
+				<pre>PROCEDURE DIVISION.
 Leer-Todos-Los-Registros.
 PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index &gt; WS-Num-Registros
 READ Clientes INTO WS-Cliente-Record KEY IS Cliente-ID
@@ -217,13 +205,13 @@ NOT INVALID KEY
 DISPLAY Cliente-Nombre Cliente-Direccion
 END-READ
 END-PERFORM.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>Se utiliza un bucle eficiente para leer todos los registros de un archivo indexado.</li>
 </ul>
 
-								            	<h2><a id="index_5"></a>Mantenimiento de la Seguridad</h2>
-																<p>Asegura que el programa maneje adecuadamente la seguridad y privacidad de los datos.</p>
+		    	<h2><a id="index_5"></a>Mantenimiento de la Seguridad</h2>
+						<p>Asegura que el programa maneje adecuadamente la seguridad y privacidad de los datos.</p>
 <ul>
 <li>
 <p><strong>Enmascaramiento de datos</strong>: Enmascara o cifra datos sensibles.</p>
@@ -233,7 +221,7 @@ END-PERFORM.</pre>
 </li>
 </ul>
 
-												<pre>WORKING-STORAGE SECTION.
+				<pre>WORKING-STORAGE SECTION.
 01 WS-Password PIC X(20).
 01 WS-Encrypted-Password PIC X(50).
 
@@ -242,13 +230,13 @@ Encriptar-Contrase&ntilde;a.
 MOVE 'contrase&ntilde;a-secreta' TO WS-Password.
 CALL 'Encrypt-Function' USING WS-Password GIVING WS-Encrypted-Password.
 DISPLAY 'Contrase&ntilde;a encriptada: ' WS-Encrypted-Password.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>La contraseña se encripta antes de ser utilizada o almacenada.</li>
 </ul>
 
-								            	<h2><a id="index_6"></a>Documentación y Comentarios</h2>
-																<p>Documenta adecuadamente el código para facilitar su mantenimiento y comprensión futura.</p>
+		    	<h2><a id="index_6"></a>Documentación y Comentarios</h2>
+						<p>Documenta adecuadamente el código para facilitar su mantenimiento y comprensión futura.</p>
 <ul>
 <li>
 <p><strong>Comentarios explicativos</strong>: Incluye comentarios que expliquen la lógica y el propósito de secciones clave del código.</p>
@@ -258,25 +246,25 @@ DISPLAY 'Contrase&ntilde;a encriptada: ' WS-Encrypted-Password.</pre>
 </li>
 </ul>
 
-												<pre>PROCEDURE DIVISION.
+				<pre>PROCEDURE DIVISION.
 * Este procedimiento inicializa las variables principales
 Inicializar.
 DISPLAY 'Inicializando variables...'.
 MOVE 0 TO WS-Contador.
 MOVE 'N/A' TO WS-Estado.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>Se incluye un comentario explicativo sobre el propósito del procedimiento de inicialización.</li>
 </ul>
 
-								            	<h2><a id="index_7"></a>Conclusión</h2>
-																<p>Seguir estas mejores prácticas en la programación en COBOL no solo mejora la calidad del código, sino que también facilita su mantenimiento, escalabilidad y seguridad. La claridad en la estructura, la modularización adecuada, el manejo eficiente de errores y el rendimiento optimizado son esenciales para desarrollar aplicaciones COBOL robustas y eficientes.</p>
+		    	<h2><a id="index_7"></a>Conclusión</h2>
+						<p>Seguir estas mejores prácticas en la programación en COBOL no solo mejora la calidad del código, sino que también facilita su mantenimiento, escalabilidad y seguridad. La claridad en la estructura, la modularización adecuada, el manejo eficiente de errores y el rendimiento optimizado son esenciales para desarrollar aplicaciones COBOL robustas y eficientes.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -295,7 +283,7 @@ MOVE 'N/A' TO WS-Estado.</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

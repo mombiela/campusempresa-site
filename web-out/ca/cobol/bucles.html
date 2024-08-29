@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Implementación de bucles y repetición de tareas en COBOL</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Implementación de bucles y repetición de tareas en COBOL</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/cobol\bucles.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/cobol\bucles.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="cobol\bucles.stxt" target="cobol\bucles" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,91 +49,91 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>En COBOL, los bucles y la repetición de tareas son esenciales para ejecutar bloques de código múltiples veces de manera controlada. Las sentencias más utilizadas para implementar bucles son <code>PERFORM</code> y <code>PERFORM VARYING</code>. A continuación, se describen estas sentencias y su uso.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>PERFORM</h2>
-																<p>La sentencia <code>PERFORM</code> se utiliza para ejecutar un bloque de código o llamar a un párrafo o sección repetidamente. Hay varias formas de utilizar <code>PERFORM</code> para controlar la repetición.</p>
+			<p>En COBOL, los bucles y la repetición de tareas son esenciales para ejecutar bloques de código múltiples veces de manera controlada. Las sentencias más utilizadas para implementar bucles son <code>PERFORM</code> y <code>PERFORM VARYING</code>. A continuación, se describen estas sentencias y su uso.</p>
 
-								            	<h3><a id="index_1"></a>PERFORM UNTIL</h3>
-																<p>Esta forma de <code>PERFORM</code> ejecuta el bloque de código hasta que se cumpla una condición.</p>
+		    	<h2><a id="index_0"></a>PERFORM</h2>
+						<p>La sentencia <code>PERFORM</code> se utiliza para ejecutar un bloque de código o llamar a un párrafo o sección repetidamente. Hay varias formas de utilizar <code>PERFORM</code> para controlar la repetición.</p>
 
-												<pre>PERFORM UNTIL WS-Index &gt; 10
+		    	<h3><a id="index_1"></a>PERFORM UNTIL</h3>
+						<p>Esta forma de <code>PERFORM</code> ejecuta el bloque de código hasta que se cumpla una condición.</p>
+
+				<pre>PERFORM UNTIL WS-Index &gt; 10
 DISPLAY 'Index: ' WS-Index
 ADD 1 TO WS-Index
 END-PERFORM.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>PERFORM UNTIL WS-Index &gt; 10</code> ejecuta el bloque de código mientras <code>WS-Index</code> sea menor o igual a 10.</li>
 <li>Durante cada iteración, se muestra el valor de <code>WS-Index</code> y se incrementa en 1.</li>
 </ul>
 
-								            	<h3><a id="index_2"></a>PERFORM TIMES</h3>
-																<p>Esta forma de <code>PERFORM</code> ejecuta el bloque de código un número específico de veces.</p>
+		    	<h3><a id="index_2"></a>PERFORM TIMES</h3>
+						<p>Esta forma de <code>PERFORM</code> ejecuta el bloque de código un número específico de veces.</p>
 
-												<pre>PERFORM 10 TIMES
+				<pre>PERFORM 10 TIMES
 DISPLAY 'Hello, World!'
 END-PERFORM.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>PERFORM 10 TIMES</code> ejecuta el bloque de código 10 veces.</li>
 <li>Durante cada iteración, se muestra 'Hello, World!'.</li>
 </ul>
 
-								            	<h2><a id="index_3"></a>PERFORM VARYING</h2>
-																<p>La sentencia <code>PERFORM VARYING</code> se utiliza para implementar bucles con un control más fino, permitiendo variar un índice o una variable de control.</p>
+		    	<h2><a id="index_3"></a>PERFORM VARYING</h2>
+						<p>La sentencia <code>PERFORM VARYING</code> se utiliza para implementar bucles con un control más fino, permitiendo variar un índice o una variable de control.</p>
 
-								            	<h3><a id="index_4"></a>PERFORM VARYING UNTIL</h3>
-																<p>Esta forma de <code>PERFORM VARYING</code> es útil para iterar sobre un rango de valores.</p>
+		    	<h3><a id="index_4"></a>PERFORM VARYING UNTIL</h3>
+						<p>Esta forma de <code>PERFORM VARYING</code> es útil para iterar sobre un rango de valores.</p>
 
-												<pre>PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index &gt; 10
+				<pre>PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index &gt; 10
 DISPLAY 'Index: ' WS-Index
 END-PERFORM.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index &gt; 10</code> inicia <code>WS-Index</code> en 1, incrementa en 1 en cada iteración, y se detiene cuando <code>WS-Index</code> es mayor que 10.</li>
 <li>Durante cada iteración, se muestra el valor de <code>WS-Index</code>.</li>
 </ul>
 
-								            	<h3><a id="index_5"></a>PERFORM VARYING WITH NESTED LOOPS</h3>
-																<p>COBOL permite anidar bucles utilizando <code>PERFORM VARYING</code>, lo que es útil para manejar tablas bidimensionales o realizar operaciones más complejas.</p>
+		    	<h3><a id="index_5"></a>PERFORM VARYING WITH NESTED LOOPS</h3>
+						<p>COBOL permite anidar bucles utilizando <code>PERFORM VARYING</code>, lo que es útil para manejar tablas bidimensionales o realizar operaciones más complejas.</p>
 
-												<pre>PERFORM VARYING WS-Outer-Index FROM 1 BY 1 UNTIL WS-Outer-Index &gt; 5
+				<pre>PERFORM VARYING WS-Outer-Index FROM 1 BY 1 UNTIL WS-Outer-Index &gt; 5
 PERFORM VARYING WS-Inner-Index FROM 1 BY 1 UNTIL WS-Inner-Index &gt; 10
 DISPLAY 'Outer Index: ' WS-Outer-Index ' Inner Index: ' WS-Inner-Index
 END-PERFORM
 END-PERFORM.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li>El bucle externo <code>PERFORM VARYING WS-Outer-Index FROM 1 BY 1 UNTIL WS-Outer-Index &gt; 5</code> controla <code>WS-Outer-Index</code>.</li>
 <li>Dentro del bucle externo, el bucle interno <code>PERFORM VARYING WS-Inner-Index FROM 1 BY 1 UNTIL WS-Inner-Index &gt; 10</code> controla <code>WS-Inner-Index</code>.</li>
 <li>Durante cada iteración del bucle interno, se muestran los valores de <code>WS-Outer-Index</code> y <code>WS-Inner-Index</code>.</li>
 </ul>
 
-								            	<h2><a id="index_6"></a>PERFORM THRU</h2>
-																<p>La sentencia <code>PERFORM THRU</code> se utiliza para ejecutar una serie de párrafos en secuencia.</p>
+		    	<h2><a id="index_6"></a>PERFORM THRU</h2>
+						<p>La sentencia <code>PERFORM THRU</code> se utiliza para ejecutar una serie de párrafos en secuencia.</p>
 
-												<pre>PERFORM Initialize-Values THRU Finalize-Values.
+				<pre>PERFORM Initialize-Values THRU Finalize-Values.
 
 Initialize-Values.
 DISPLAY 'Initializing values...'.
 
 Finalize-Values.
 DISPLAY 'Finalizing values...'.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>PERFORM Initialize-Values THRU Finalize-Values</code> ejecuta todos los párrafos desde <code>Initialize-Values</code> hasta <code>Finalize-Values</code>.</li>
 <li>Se muestran los mensajes de inicialización y finalización.</li>
 </ul>
 <p>Las estructuras de bucles y repetición de tareas en COBOL son herramientas poderosas para controlar la ejecución de programas. Utilizando las diferentes formas de <code>PERFORM</code>, es posible crear bucles eficientes y claros, mejorando así la legibilidad y mantenibilidad del código.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -164,7 +152,7 @@ DISPLAY 'Finalizing values...'.</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

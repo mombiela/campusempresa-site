@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manejo de Excepciones</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manejo de Excepciones</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/java\12-manejo-excepciones.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/java\12-manejo-excepciones.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="java\12-manejo-excepciones.stxt" target="java\12-manejo-excepciones" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,23 +49,23 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="11-cadenas-texto" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="13-concurrencia" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Introducción al Manejo de Excepciones</h2>
-												            	<h3><a id="index_1"></a>¿Qué es una excepción en Java?</h3>
-																<p>Una excepción en Java es un evento que ocurre durante la ejecución de un programa y que interrumpe el flujo normal de las instrucciones. Las excepciones suelen indicar condiciones de error o situaciones inesperadas, como intentar dividir por cero o acceder a un archivo que no existe.</p>
+		
+		
 
-								            	<h2><a id="index_2"></a>Tipos de Excepciones</h2>
-												            	<h3><a id="index_3"></a>Excepciones Verificadas (`Checked Exceptions`)</h3>
-																<p>Las excepciones verificadas son aquellas que el compilador obliga a manejar. Estas excepciones deben ser capturadas o declaradas en el método que las lanza. Ejemplos comunes incluyen <code>IOException</code> y <code>SQLException</code>.</p>
+		    	<h2><a id="index_0"></a>Introducción al Manejo de Excepciones</h2>
+				    	<h3><a id="index_1"></a>¿Qué es una excepción en Java?</h3>
+						<p>Una excepción en Java es un evento que ocurre durante la ejecución de un programa y que interrumpe el flujo normal de las instrucciones. Las excepciones suelen indicar condiciones de error o situaciones inesperadas, como intentar dividir por cero o acceder a un archivo que no existe.</p>
 
-												<pre>import java.io.File;
+		    	<h2><a id="index_2"></a>Tipos de Excepciones</h2>
+				    	<h3><a id="index_3"></a>Excepciones Verificadas (`Checked Exceptions`)</h3>
+						<p>Las excepciones verificadas son aquellas que el compilador obliga a manejar. Estas excepciones deben ser capturadas o declaradas en el método que las lanza. Ejemplos comunes incluyen <code>IOException</code> y <code>SQLException</code>.</p>
+
+				<pre>import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -91,24 +79,24 @@ public class EjemploCheckedException {
         }
     }
 }</pre>
-												<p>En este ejemplo, <code>FileNotFoundException</code> es una excepción verificada que debe manejarse con un bloque <code>try-catch</code> o declararse con <code>throws</code>.</p>
+				<p>En este ejemplo, <code>FileNotFoundException</code> es una excepción verificada que debe manejarse con un bloque <code>try-catch</code> o declararse con <code>throws</code>.</p>
 
-								            	<h3><a id="index_4"></a>Excepciones No Verificadas (`Unchecked Exceptions`)</h3>
-																<p>Las excepciones no verificadas son aquellas que no requieren ser manejadas o declaradas por el compilador. Son subclases de <code>RuntimeException</code> y suelen ser el resultado de errores de programación, como <code>NullPointerException</code> y <code>ArrayIndexOutOfBoundsException</code>.</p>
+		    	<h3><a id="index_4"></a>Excepciones No Verificadas (`Unchecked Exceptions`)</h3>
+						<p>Las excepciones no verificadas son aquellas que no requieren ser manejadas o declaradas por el compilador. Son subclases de <code>RuntimeException</code> y suelen ser el resultado de errores de programación, como <code>NullPointerException</code> y <code>ArrayIndexOutOfBoundsException</code>.</p>
 
-												<pre>public class EjemploUncheckedException {
+				<pre>public class EjemploUncheckedException {
     public static void main(String[] args) {
         String texto = null;
         System.out.println(texto.length());  // Lanza NullPointerException
     }
 }</pre>
-												<p>En este ejemplo, <code>NullPointerException</code> es una excepción no verificada que ocurre cuando se intenta acceder a un método de un objeto que es <code>null</code>.</p>
+				<p>En este ejemplo, <code>NullPointerException</code> es una excepción no verificada que ocurre cuando se intenta acceder a un método de un objeto que es <code>null</code>.</p>
 
-								            	<h2><a id="index_5"></a>Manejo de Excepciones en Java</h2>
-												            	<h3><a id="index_6"></a>Uso de `try`, `catch`, y `finally`</h3>
-																<p>Java proporciona las palabras clave <code>try</code>, <code>catch</code>, y <code>finally</code> para manejar excepciones. El bloque <code>try</code> contiene el código que puede lanzar una excepción, el bloque <code>catch</code> maneja la excepción, y el bloque <code>finally</code> se ejecuta siempre, ocurra o no una excepción.</p>
+		    	<h2><a id="index_5"></a>Manejo de Excepciones en Java</h2>
+				    	<h3><a id="index_6"></a>Uso de `try`, `catch`, y `finally`</h3>
+						<p>Java proporciona las palabras clave <code>try</code>, <code>catch</code>, y <code>finally</code> para manejar excepciones. El bloque <code>try</code> contiene el código que puede lanzar una excepción, el bloque <code>catch</code> maneja la excepción, y el bloque <code>finally</code> se ejecuta siempre, ocurra o no una excepción.</p>
 
-												<pre>public class EjemploTryCatchFinally {
+				<pre>public class EjemploTryCatchFinally {
     public static void main(String[] args) {
         try {
             int resultado = 10 / 0;  // Lanza ArithmeticException
@@ -119,12 +107,12 @@ public class EjemploCheckedException {
         }
     }
 }</pre>
-												<p>En este ejemplo, el bloque <code>catch</code> maneja la excepción <code>ArithmeticException</code> y el bloque <code>finally</code> se ejecuta sin importar si se lanza o no una excepción.</p>
+				<p>En este ejemplo, el bloque <code>catch</code> maneja la excepción <code>ArithmeticException</code> y el bloque <code>finally</code> se ejecuta sin importar si se lanza o no una excepción.</p>
 
-								            	<h3><a id="index_7"></a>Propagación de Excepciones</h3>
-																<p>En lugar de manejar una excepción donde ocurre, a veces es útil propagarla a un método superior utilizando la palabra clave <code>throws</code>. Esto permite que el método llamador maneje la excepción.</p>
+		    	<h3><a id="index_7"></a>Propagación de Excepciones</h3>
+						<p>En lugar de manejar una excepción donde ocurre, a veces es útil propagarla a un método superior utilizando la palabra clave <code>throws</code>. Esto permite que el método llamador maneje la excepción.</p>
 
-												<pre>public class EjemploPropagacion {
+				<pre>public class EjemploPropagacion {
     public static void main(String[] args) {
         try {
             metodoA();
@@ -141,13 +129,13 @@ public class EjemploCheckedException {
         throw new Exception(&quot;Ocurri&oacute; un error en metodoB&quot;);
     }
 }</pre>
-												<p>En este ejemplo, la excepción lanzada en <code>metodoB</code> se propaga a través de <code>metodoA</code> hasta ser capturada en <code>main</code>.</p>
+				<p>En este ejemplo, la excepción lanzada en <code>metodoB</code> se propaga a través de <code>metodoA</code> hasta ser capturada en <code>main</code>.</p>
 
-								            	<h2><a id="index_8"></a>Creación de Excepciones Personalizadas</h2>
-												            	<h3><a id="index_9"></a>Definición de Excepciones Personalizadas</h3>
-																<p>Java permite crear excepciones personalizadas extendiendo la clase <code>Exception</code>. Esto es útil para representar condiciones de error específicas de la lógica de tu aplicación.</p>
+		    	<h2><a id="index_8"></a>Creación de Excepciones Personalizadas</h2>
+				    	<h3><a id="index_9"></a>Definición de Excepciones Personalizadas</h3>
+						<p>Java permite crear excepciones personalizadas extendiendo la clase <code>Exception</code>. Esto es útil para representar condiciones de error específicas de la lógica de tu aplicación.</p>
 
-												<pre>public class MiExcepcion extends Exception {
+				<pre>public class MiExcepcion extends Exception {
     public MiExcepcion(String mensaje) {
         super(mensaje);
     }
@@ -166,26 +154,26 @@ public class EjemploExcepcionPersonalizada {
         throw new MiExcepcion(&quot;Este es un mensaje de error personalizado&quot;);
     }
 }</pre>
-												<p>En este ejemplo, <code>MiExcepcion</code> es una excepción personalizada que se lanza y captura en <code>main</code>, demostrando cómo crear y utilizar excepciones específicas de la aplicación.</p>
+				<p>En este ejemplo, <code>MiExcepcion</code> es una excepción personalizada que se lanza y captura en <code>main</code>, demostrando cómo crear y utilizar excepciones específicas de la aplicación.</p>
 
-								            	<h2><a id="index_10"></a>Buenas Prácticas en el Manejo de Excepciones</h2>
-												            	<h3><a id="index_11"></a>Captura de Excepciones Específicas</h3>
-																<p>Es una buena práctica capturar excepciones específicas en lugar de utilizar <code>catch (Exception e)</code>, ya que esto permite manejar cada tipo de excepción de manera adecuada y hace que el código sea más claro y fácil de mantener.</p>
+		    	<h2><a id="index_10"></a>Buenas Prácticas en el Manejo de Excepciones</h2>
+				    	<h3><a id="index_11"></a>Captura de Excepciones Específicas</h3>
+						<p>Es una buena práctica capturar excepciones específicas en lugar de utilizar <code>catch (Exception e)</code>, ya que esto permite manejar cada tipo de excepción de manera adecuada y hace que el código sea más claro y fácil de mantener.</p>
 
-								            	<h3><a id="index_12"></a>Uso del Bloque `finally`</h3>
-																<p>El bloque <code>finally</code> debe utilizarse para realizar la limpieza de recursos como cerrar archivos o conexiones a bases de datos. Dado que el bloque <code>finally</code> siempre se ejecuta, es el lugar ideal para liberar recursos que necesitan ser cerrados sin importar si ocurre una excepción.</p>
+		    	<h3><a id="index_12"></a>Uso del Bloque `finally`</h3>
+						<p>El bloque <code>finally</code> debe utilizarse para realizar la limpieza de recursos como cerrar archivos o conexiones a bases de datos. Dado que el bloque <code>finally</code> siempre se ejecuta, es el lugar ideal para liberar recursos que necesitan ser cerrados sin importar si ocurre una excepción.</p>
 
-												<p>El manejo adecuado de excepciones es crucial para crear aplicaciones robustas y resistentes a fallos. Con el conocimiento de cómo capturar, propagar y personalizar excepciones, estás bien preparado para manejar situaciones inesperadas en tus programas Java. En el siguiente tema, exploraremos la concurrencia en Java, que es esencial para manejar múltiples tareas de manera simultánea.</p>
+				<p>El manejo adecuado de excepciones es crucial para crear aplicaciones robustas y resistentes a fallos. Con el conocimiento de cómo capturar, propagar y personalizar excepciones, estás bien preparado para manejar situaciones inesperadas en tus programas Java. En el siguiente tema, exploraremos la concurrencia en Java, que es esencial para manejar múltiples tareas de manera simultánea.</p>
 <p><strong>Recursos adicionales:</strong></p>
 <ul>
 <li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/">Documentación oficial de Java sobre excepciones</a></li>
 </ul>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -204,7 +192,7 @@ public class EjemploExcepcionPersonalizada {
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

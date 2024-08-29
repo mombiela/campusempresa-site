@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema 16: Buenas prácticas y optimización en HTML</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 16: Buenas prácticas y optimización en HTML</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/html\tema-16.html" />
-		
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprendizaje continuo, uniendo la sociedad</a></h2>
+		<h2><a href="index.html"><i>Aprendiendo juntos, uniendo la sociedad</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 							<li><b>Castellano</b></li>
 				<li><a href="../ca/html\tema-16.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
 						    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="html\tema-16.stxt" target="html\tema-16" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,17 +49,17 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="tema-15" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="tema-17" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Introducción a las buenas prácticas en HTML</h2>
-												            	<h3><a id="index_1"></a>Mantén el código limpio y semántico</h3>
-																<p>Escribir código HTML limpio y semántico es una de las mejores prácticas más importantes en el desarrollo web. Un código bien estructurado es más fácil de mantener, comprender y depurar. Además, ayuda a que los motores de búsqueda y las tecnologías de asistencia interpreten correctamente el contenido de la página.</p>
+		
+		
+
+		    	<h2><a id="index_0"></a>Introducción a las buenas prácticas en HTML</h2>
+				    	<h3><a id="index_1"></a>Mantén el código limpio y semántico</h3>
+						<p>Escribir código HTML limpio y semántico es una de las mejores prácticas más importantes en el desarrollo web. Un código bien estructurado es más fácil de mantener, comprender y depurar. Además, ayuda a que los motores de búsqueda y las tecnologías de asistencia interpreten correctamente el contenido de la página.</p>
 <p><strong>Consejos para un código HTML limpio</strong>:</p>
 <ol>
 <li><strong>Utiliza etiquetas semánticas</strong>: Usa etiquetas como <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, y <code>&lt;footer&gt;</code> para estructurar el contenido de manera lógica.</li>
@@ -79,7 +67,7 @@
 <li><strong>Indentación adecuada</strong>: Asegúrate de que tu código esté correctamente indentado para mejorar la legibilidad.</li>
 </ol>
 
-												<pre>&lt;!-- Ejemplo de HTML sem&aacute;ntico --&gt;
+				<pre>&lt;!-- Ejemplo de HTML sem&aacute;ntico --&gt;
 &lt;article&gt;
     &lt;header&gt;
         &lt;h1&gt;T&iacute;tulo del art&iacute;culo&lt;/h1&gt;
@@ -92,8 +80,8 @@
         &lt;p&gt;Autor: Juan P&eacute;rez&lt;/p&gt;
     &lt;/footer&gt;
 &lt;/article&gt;</pre>
-								            	<h3><a id="index_2"></a>Optimización del rendimiento</h3>
-																<p>La optimización del rendimiento es crucial para mejorar la velocidad de carga de las páginas y proporcionar una mejor experiencia de usuario. Un sitio web rápido y eficiente también tiene un mejor posicionamiento en los motores de búsqueda.</p>
+		    	<h3><a id="index_2"></a>Optimización del rendimiento</h3>
+						<p>La optimización del rendimiento es crucial para mejorar la velocidad de carga de las páginas y proporcionar una mejor experiencia de usuario. Un sitio web rápido y eficiente también tiene un mejor posicionamiento en los motores de búsqueda.</p>
 <p><strong>Consejos para optimizar el rendimiento</strong>:</p>
 <ol>
 <li><strong>Minimiza los archivos</strong>: Reduce el tamaño de los archivos HTML, CSS y JavaScript minificándolos.</li>
@@ -102,10 +90,10 @@
 <li><strong>Reduce las solicitudes HTTP</strong>: Combina archivos CSS y JavaScript cuando sea posible y utiliza sprites para las imágenes pequeñas.</li>
 </ol>
 
-												<pre>&lt;!-- Ejemplo de carga diferida de im&aacute;genes --&gt;
+				<pre>&lt;!-- Ejemplo de carga diferida de im&aacute;genes --&gt;
 &lt;img src=&quot;imagen-placeholder.jpg&quot; data-src=&quot;imagen-real.jpg&quot; alt=&quot;Descripci&oacute;n de la imagen&quot; loading=&quot;lazy&quot;&gt;</pre>
-								            	<h3><a id="index_3"></a>Mejora la accesibilidad y SEO</h3>
-																<p>La accesibilidad y la optimización para motores de búsqueda (SEO) están estrechamente relacionadas, ya que ambos dependen de la correcta estructuración del contenido y del uso adecuado de etiquetas. Al seguir buenas prácticas de accesibilidad, también mejoras el SEO de tu sitio.</p>
+		    	<h3><a id="index_3"></a>Mejora la accesibilidad y SEO</h3>
+						<p>La accesibilidad y la optimización para motores de búsqueda (SEO) están estrechamente relacionadas, ya que ambos dependen de la correcta estructuración del contenido y del uso adecuado de etiquetas. Al seguir buenas prácticas de accesibilidad, también mejoras el SEO de tu sitio.</p>
 <p><strong>Consejos para mejorar la accesibilidad y SEO</strong>:</p>
 <ol>
 <li><strong>Usa títulos jerárquicos (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>)</strong>: Estructura el contenido con títulos apropiados, lo que facilita la navegación para los usuarios y los motores de búsqueda.</li>
@@ -113,12 +101,12 @@
 <li><strong>Proporciona descripciones significativas en los enlaces</strong>: Evita usar &quot;haz clic aquí&quot; como texto de enlace y usa descripciones claras del destino del enlace.</li>
 </ol>
 
-												<pre>&lt;!-- Ejemplo de buena pr&aacute;ctica de SEO y accesibilidad --&gt;
+				<pre>&lt;!-- Ejemplo de buena pr&aacute;ctica de SEO y accesibilidad --&gt;
 &lt;h1&gt;Gu&iacute;a de optimizaci&oacute;n web&lt;/h1&gt;
 &lt;p&gt;Aprende a optimizar tu sitio web para mejorar el rendimiento y la accesibilidad.&lt;/p&gt;
 &lt;a href=&quot;guia-seo.html&quot;&gt;Lee nuestra gu&iacute;a completa de SEO&lt;/a&gt;</pre>
-								            	<h3><a id="index_4"></a>Evita los elementos obsoletos y malas prácticas</h3>
-																<p>HTML ha evolucionado significativamente y algunas etiquetas y atributos han quedado obsoletos. Usar elementos obsoletos puede afectar negativamente la accesibilidad, el rendimiento y la compatibilidad futura del sitio.</p>
+		    	<h3><a id="index_4"></a>Evita los elementos obsoletos y malas prácticas</h3>
+						<p>HTML ha evolucionado significativamente y algunas etiquetas y atributos han quedado obsoletos. Usar elementos obsoletos puede afectar negativamente la accesibilidad, el rendimiento y la compatibilidad futura del sitio.</p>
 <p><strong>Elementos y prácticas a evitar</strong>:</p>
 <ol>
 <li><strong>Evita las tablas para el diseño</strong>: Las tablas deben utilizarse solo para organizar datos tabulares, no para estructurar el diseño de la página.</li>
@@ -126,7 +114,7 @@
 <li><strong>No sobrecargues tu HTML con JavaScript</strong>: Mantén el código JavaScript separado en archivos externos y evita el uso excesivo de scripts en línea.</li>
 </ol>
 
-												<pre>&lt;!-- Ejemplo de malas pr&aacute;cticas a evitar --&gt;
+				<pre>&lt;!-- Ejemplo de malas pr&aacute;cticas a evitar --&gt;
 &lt;!-- Mal uso de tablas para dise&ntilde;o --&gt;
 &lt;table&gt;
     &lt;tr&gt;
@@ -137,8 +125,8 @@
 
 &lt;!-- Uso obsoleto de la etiqueta &lt;font&gt; --&gt;
 &lt;font color=&quot;red&quot;&gt;Este es un texto en rojo&lt;/font&gt;</pre>
-								            	<h3><a id="index_5"></a>Uso correcto de formularios</h3>
-																<p>Los formularios son una parte integral de muchas páginas web y deben seguir ciertas buenas prácticas para ser efectivos, accesibles y seguros.</p>
+		    	<h3><a id="index_5"></a>Uso correcto de formularios</h3>
+						<p>Los formularios son una parte integral de muchas páginas web y deben seguir ciertas buenas prácticas para ser efectivos, accesibles y seguros.</p>
 <p><strong>Consejos para formularios</strong>:</p>
 <ol>
 <li><strong>Usa etiquetas <code>&lt;label&gt;</code> correctamente</strong>: Asegúrate de que todos los campos del formulario estén asociados con una etiqueta.</li>
@@ -146,7 +134,7 @@
 <li><strong>Simplifica la experiencia del usuario</strong>: Utiliza atributos como <code>placeholder</code>, <code>required</code>, y <code>autofocus</code> para guiar al usuario en la interacción con el formulario.</li>
 </ol>
 
-												<pre>&lt;!-- Ejemplo de formulario con buenas pr&aacute;cticas --&gt;
+				<pre>&lt;!-- Ejemplo de formulario con buenas pr&aacute;cticas --&gt;
 &lt;form action=&quot;/submit-form&quot; method=&quot;POST&quot;&gt;
     &lt;label for=&quot;email&quot;&gt;Correo electr&oacute;nico:&lt;/label&gt;
     &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;ejemplo@correo.com&quot; required&gt;
@@ -156,14 +144,14 @@
 
     &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
 &lt;/form&gt;</pre>
-								            	<h2><a id="index_6"></a>Conclusión sobre buenas prácticas y optimización en HTML</h2>
-																<p>Seguir buenas prácticas de HTML no solo mejora la legibilidad y mantenibilidad del código, sino que también optimiza el rendimiento, la accesibilidad y el SEO del sitio web. Asegurarse de que el código esté limpio, semántico y eficiente es clave para ofrecer una mejor experiencia de usuario y para asegurar que el sitio esté preparado para futuras actualizaciones y tecnologías.</p>
+		    	<h2><a id="index_6"></a>Conclusión sobre buenas prácticas y optimización en HTML</h2>
+						<p>Seguir buenas prácticas de HTML no solo mejora la legibilidad y mantenibilidad del código, sino que también optimiza el rendimiento, la accesibilidad y el SEO del sitio web. Asegurarse de que el código esté limpio, semántico y eficiente es clave para ofrecer una mejor experiencia de usuario y para asegurar que el sitio esté preparado para futuras actualizaciones y tecnologías.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -182,7 +170,7 @@
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

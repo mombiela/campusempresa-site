@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajo con archivos relacionales</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trabajo con archivos relacionales</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/cobol\archivos_relacionales.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/cobol\archivos_relacionales.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="cobol\archivos_relacionales.stxt" target="cobol\archivos_relacionales" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,28 +49,28 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>En COBOL, los archivos relacionales no son nativos, pero es posible interactuar con bases de datos relacionales mediante el uso de Embedded SQL (SQL embebido) o interfaces de programación específicas de la base de datos. A continuación, se detallan los conceptos y operaciones básicas para trabajar con bases de datos relacionales en COBOL utilizando Embedded SQL.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Configuración de Embedded SQL</h2>
-																<p>Antes de usar SQL embebido en COBOL, se debe incluir el preprocesador de SQL específico del sistema de bases de datos que se esté utilizando (por ejemplo, DB2, Oracle). Este preprocesador convierte las sentencias SQL embebidas en llamadas apropiadas a la base de datos.</p>
+			<p>En COBOL, los archivos relacionales no son nativos, pero es posible interactuar con bases de datos relacionales mediante el uso de Embedded SQL (SQL embebido) o interfaces de programación específicas de la base de datos. A continuación, se detallan los conceptos y operaciones básicas para trabajar con bases de datos relacionales en COBOL utilizando Embedded SQL.</p>
 
-								            	<h3><a id="index_1"></a>Ejemplo de configuración básica</h3>
-																
-												<pre>EXEC SQL INCLUDE SQLCA END-EXEC.</pre>
-												<p>En este ejemplo:</p>
+		    	<h2><a id="index_0"></a>Configuración de Embedded SQL</h2>
+						<p>Antes de usar SQL embebido en COBOL, se debe incluir el preprocesador de SQL específico del sistema de bases de datos que se esté utilizando (por ejemplo, DB2, Oracle). Este preprocesador convierte las sentencias SQL embebidas en llamadas apropiadas a la base de datos.</p>
+
+		    	<h3><a id="index_1"></a>Ejemplo de configuración básica</h3>
+						
+				<pre>EXEC SQL INCLUDE SQLCA END-EXEC.</pre>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>EXEC SQL INCLUDE SQLCA END-EXEC</code> incluye la estructura SQLCA (SQL Communication Area), que es utilizada para manejar errores y condiciones SQL.</li>
 </ul>
 
-								            	<h2><a id="index_2"></a>Conexión a la base de datos</h2>
-																<p>Para trabajar con una base de datos relacional, primero es necesario establecer una conexión.</p>
+		    	<h2><a id="index_2"></a>Conexión a la base de datos</h2>
+						<p>Para trabajar con una base de datos relacional, primero es necesario establecer una conexión.</p>
 
-								            	<h3><a id="index_3"></a>Ejemplo de conexión a la base de datos</h3>
-																
-												<pre>WORKING-STORAGE SECTION.
+		    	<h3><a id="index_3"></a>Ejemplo de conexión a la base de datos</h3>
+						
+				<pre>WORKING-STORAGE SECTION.
 01 DB-CONNECTION-INFO.
 05 DB-USER PIC X(20) VALUE 'usuario'.
 05 DB-PASSWORD PIC X(20) VALUE 'contrase&ntilde;a'.
@@ -98,18 +86,18 @@ END-EXEC.
 IF SQLCODE &lt;&gt; 0
 DISPLAY 'Error conectando a la base de datos: ' SQLCODE.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>EXEC SQL CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD USING :DB-NAME END-EXEC</code> establece la conexión a la base de datos utilizando las credenciales proporcionadas.</li>
 <li><code>SQLCODE</code> se verifica para asegurar que la conexión fue exitosa.</li>
 </ul>
 
-								            	<h2><a id="index_4"></a>Consultas a la base de datos</h2>
-																<p>Para realizar consultas en la base de datos, se utilizan sentencias <code>SELECT</code> embebidas.</p>
+		    	<h2><a id="index_4"></a>Consultas a la base de datos</h2>
+						<p>Para realizar consultas en la base de datos, se utilizan sentencias <code>SELECT</code> embebidas.</p>
 
-								            	<h3><a id="index_5"></a>Ejemplo de consulta a la base de datos</h3>
-																
-												<pre>WORKING-STORAGE SECTION.
+		    	<h3><a id="index_5"></a>Ejemplo de consulta a la base de datos</h3>
+						
+				<pre>WORKING-STORAGE SECTION.
 01 CLIENTE-ID PIC 9(5).
 01 CLIENTE-NOMBRE PIC X(30).
 01 CLIENTE-DIRECCION PIC X(50).
@@ -130,18 +118,18 @@ DISPLAY 'Cliente Direcci&oacute;n: ' CLIENTE-DIRECCION.
 ELSE
 DISPLAY 'Error en consulta: ' SQLCODE.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>EXEC SQL SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION FROM CLIENTES WHERE CLIENTE_ID = 12345 END-EXEC</code> ejecuta una consulta SQL que selecciona los datos del cliente con <code>CLIENTE_ID</code> igual a 12345.</li>
 <li>Los resultados se almacenan en las variables definidas en la sección <code>WORKING-STORAGE</code>.</li>
 </ul>
 
-								            	<h2><a id="index_6"></a>Inserción de datos en la base de datos</h2>
-																<p>Para insertar nuevos registros en la base de datos, se utiliza la sentencia <code>INSERT</code>.</p>
+		    	<h2><a id="index_6"></a>Inserción de datos en la base de datos</h2>
+						<p>Para insertar nuevos registros en la base de datos, se utiliza la sentencia <code>INSERT</code>.</p>
 
-								            	<h3><a id="index_7"></a>Ejemplo de inserción de datos</h3>
-																
-												<pre>PROCEDURE DIVISION.
+		    	<h3><a id="index_7"></a>Ejemplo de inserción de datos</h3>
+						
+				<pre>PROCEDURE DIVISION.
 Insertar-En-Base-De-Datos.
 EXEC SQL
 INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION)
@@ -153,18 +141,18 @@ DISPLAY 'Error insertando datos: ' SQLCODE.
 ELSE
 DISPLAY 'Datos insertados correctamente'.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC</code> inserta un nuevo registro en la tabla CLIENTES.</li>
 <li><code>SQLCODE</code> se verifica para asegurar que la inserción fue exitosa.</li>
 </ul>
 
-								            	<h2><a id="index_8"></a>Actualización de datos en la base de datos</h2>
-																<p>Para actualizar registros existentes, se utiliza la sentencia <code>UPDATE</code>.</p>
+		    	<h2><a id="index_8"></a>Actualización de datos en la base de datos</h2>
+						<p>Para actualizar registros existentes, se utiliza la sentencia <code>UPDATE</code>.</p>
 
-								            	<h3><a id="index_9"></a>Ejemplo de actualización de datos</h3>
-																
-												<pre>PROCEDURE DIVISION.
+		    	<h3><a id="index_9"></a>Ejemplo de actualización de datos</h3>
+						
+				<pre>PROCEDURE DIVISION.
 Actualizar-En-Base-De-Datos.
 EXEC SQL
 UPDATE CLIENTES
@@ -177,18 +165,18 @@ DISPLAY 'Error actualizando datos: ' SQLCODE.
 ELSE
 DISPLAY 'Datos actualizados correctamente'.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>EXEC SQL UPDATE CLIENTES SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC</code> actualiza la dirección del cliente con el ID especificado.</li>
 <li><code>SQLCODE</code> se verifica para asegurar que la actualización fue exitosa.</li>
 </ul>
 
-								            	<h2><a id="index_10"></a>Eliminación de datos en la base de datos</h2>
-																<p>Para eliminar registros, se utiliza la sentencia <code>DELETE</code>.</p>
+		    	<h2><a id="index_10"></a>Eliminación de datos en la base de datos</h2>
+						<p>Para eliminar registros, se utiliza la sentencia <code>DELETE</code>.</p>
 
-								            	<h3><a id="index_11"></a>Ejemplo de eliminación de datos</h3>
-																
-												<pre>PROCEDURE DIVISION.
+		    	<h3><a id="index_11"></a>Ejemplo de eliminación de datos</h3>
+						
+				<pre>PROCEDURE DIVISION.
 Eliminar-En-Base-De-Datos.
 EXEC SQL
 DELETE FROM CLIENTES
@@ -200,18 +188,18 @@ DISPLAY 'Error eliminando datos: ' SQLCODE.
 ELSE
 DISPLAY 'Datos eliminados correctamente'.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>EXEC SQL DELETE FROM CLIENTES WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC</code> elimina el registro del cliente con el ID especificado.</li>
 <li><code>SQLCODE</code> se verifica para asegurar que la eliminación fue exitosa.</li>
 </ul>
 
-								            	<h2><a id="index_12"></a>Manejo de errores y excepciones</h2>
-																<p>El manejo de errores en operaciones con bases de datos se realiza mediante la verificación del <code>SQLCODE</code> y el uso de la estructura <code>SQLCA</code>.</p>
+		    	<h2><a id="index_12"></a>Manejo de errores y excepciones</h2>
+						<p>El manejo de errores en operaciones con bases de datos se realiza mediante la verificación del <code>SQLCODE</code> y el uso de la estructura <code>SQLCA</code>.</p>
 
-								            	<h3><a id="index_13"></a>Ejemplo de manejo de errores</h3>
-																
-												<pre>WORKING-STORAGE SECTION.
+		    	<h3><a id="index_13"></a>Ejemplo de manejo de errores</h3>
+						
+				<pre>WORKING-STORAGE SECTION.
 EXEC SQL INCLUDE SQLCA END-EXEC.
 
 PROCEDURE DIVISION.
@@ -225,19 +213,19 @@ IF SQLCODE &lt;&gt; 0
 DISPLAY 'Error conectando a la base de datos: ' SQLCODE.
 DISPLAY SQLERRMC.
 END-IF.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>SQLCODE</code> y <code>SQLERRMC</code> se utilizan para verificar y mostrar mensajes de error en operaciones de base de datos.</li>
 </ul>
 
-								            	<h2><a id="index_14"></a>Conclusión</h2>
-																<p>El trabajo con archivos relacionales en COBOL mediante Embedded SQL permite la interacción con bases de datos modernas, facilitando la gestión de datos de manera eficiente. Comprender cómo conectarse a la base de datos, realizar consultas, insertar, actualizar y eliminar datos, así como manejar errores, es esencial para desarrollar aplicaciones COBOL robustas y eficientes.</p>
+		    	<h2><a id="index_14"></a>Conclusión</h2>
+						<p>El trabajo con archivos relacionales en COBOL mediante Embedded SQL permite la interacción con bases de datos modernas, facilitando la gestión de datos de manera eficiente. Comprender cómo conectarse a la base de datos, realizar consultas, insertar, actualizar y eliminar datos, así como manejar errores, es esencial para desarrollar aplicaciones COBOL robustas y eficientes.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -256,7 +244,7 @@ END-IF.</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

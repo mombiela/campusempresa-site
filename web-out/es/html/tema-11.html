@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema 11: Variables y tipos de datos en JavaScript</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 11: Variables y tipos de datos en JavaScript</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/html\tema-11.html" />
-		
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprendizaje continuo, uniendo la sociedad</a></h2>
+		<h2><a href="index.html"><i>Aprendiendo juntos, uniendo la sociedad</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 							<li><b>Castellano</b></li>
 				<li><a href="../ca/html\tema-11.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
 						    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="html\tema-11.stxt" target="html\tema-11" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,17 +49,17 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="tema-10" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="tema-12" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Introducción a las variables en JavaScript</h2>
-												            	<h3><a id="index_1"></a>¿Qué es una variable?</h3>
-																<p>En JavaScript, una variable es un contenedor que se utiliza para almacenar datos o valores que pueden ser utilizados y manipulados en el código. Las variables permiten a los desarrolladores crear programas dinámicos que pueden trabajar con datos que cambian con el tiempo.</p>
+		
+		
+
+		    	<h2><a id="index_0"></a>Introducción a las variables en JavaScript</h2>
+				    	<h3><a id="index_1"></a>¿Qué es una variable?</h3>
+						<p>En JavaScript, una variable es un contenedor que se utiliza para almacenar datos o valores que pueden ser utilizados y manipulados en el código. Las variables permiten a los desarrolladores crear programas dinámicos que pueden trabajar con datos que cambian con el tiempo.</p>
 <p>JavaScript proporciona diferentes maneras de declarar variables, y cada una tiene características específicas:</p>
 <ol>
 <li><strong><code>var</code></strong>: El método más antiguo para declarar variables. Tiene un alcance global o de función, y permite la redeclaración.</li>
@@ -79,7 +67,7 @@
 <li><strong><code>const</code></strong>: También introducido en ES6, se utiliza para declarar variables cuyo valor no debe cambiar. Tiene un alcance de bloque, al igual que <code>let</code>.</li>
 </ol>
 
-												<pre>&lt;!-- Ejemplo de declaraci&oacute;n de variables --&gt;
+				<pre>&lt;!-- Ejemplo de declaraci&oacute;n de variables --&gt;
 &lt;script&gt;
     var nombre = &quot;Juan&quot;;
     let edad = 30;
@@ -89,8 +77,8 @@
     console.log(edad);   // 30
     console.log(PI);     // 3.14159
 &lt;/script&gt;</pre>
-								            	<h3><a id="index_2"></a>Tipos de datos en JavaScript</h3>
-																<p>JavaScript soporta varios tipos de datos, que se pueden agrupar en dos categorías principales: <strong>primitivos</strong> y <strong>objetos</strong>.</p>
+		    	<h3><a id="index_2"></a>Tipos de datos en JavaScript</h3>
+						<p>JavaScript soporta varios tipos de datos, que se pueden agrupar en dos categorías principales: <strong>primitivos</strong> y <strong>objetos</strong>.</p>
 <p><strong>Tipos de datos primitivos</strong>:</p>
 <ol>
 <li><strong><code>number</code></strong>: Para representar números, tanto enteros como decimales.</li>
@@ -105,7 +93,7 @@
 <li><strong><code>object</code></strong>: Utilizado para almacenar colecciones de datos y más complejas entidades, como arreglos, funciones, y otros objetos.</li>
 </ul>
 
-												<pre>&lt;!-- Ejemplo de diferentes tipos de datos --&gt;
+				<pre>&lt;!-- Ejemplo de diferentes tipos de datos --&gt;
 &lt;script&gt;
     let numero = 42;               // number
     let texto = &quot;Hola, Mundo!&quot;;     // string
@@ -124,8 +112,8 @@
     console.log(simbolo);
     console.log(objeto);
 &lt;/script&gt;</pre>
-								            	<h3><a id="index_3"></a>Operaciones con variables</h3>
-																<p>En JavaScript, las variables se pueden utilizar en una variedad de operaciones, como la aritmética, la concatenación de cadenas, y las comparaciones lógicas. Es fundamental entender cómo interactúan las variables en estas operaciones para poder escribir código efectivo.</p>
+		    	<h3><a id="index_3"></a>Operaciones con variables</h3>
+						<p>En JavaScript, las variables se pueden utilizar en una variedad de operaciones, como la aritmética, la concatenación de cadenas, y las comparaciones lógicas. Es fundamental entender cómo interactúan las variables en estas operaciones para poder escribir código efectivo.</p>
 <p><strong>Operaciones comunes</strong>:</p>
 <ol>
 <li><strong>Aritmética</strong>: Suma (<code>+</code>), resta (<code>-</code>), multiplicación (<code>*</code>), división (<code>/</code>), y módulo (<code>%</code>).</li>
@@ -134,7 +122,7 @@
 <li><strong>Comparación</strong>: Compara valores usando <code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>.</li>
 </ol>
 
-												<pre>&lt;!-- Ejemplo de operaciones con variables --&gt;
+				<pre>&lt;!-- Ejemplo de operaciones con variables --&gt;
 &lt;script&gt;
     let a = 10;
     let b = 20;
@@ -156,12 +144,12 @@
     console.log(esIgual);
     console.log(esEstrictamenteIgual);
 &lt;/script&gt;</pre>
-								            	<h3><a id="index_4"></a>Conversión de tipos</h3>
-																<p>JavaScript permite convertir variables de un tipo a otro. Esto puede ocurrir de forma automática (coerción de tipos) o explícitamente mediante funciones de conversión.</p>
+		    	<h3><a id="index_4"></a>Conversión de tipos</h3>
+						<p>JavaScript permite convertir variables de un tipo a otro. Esto puede ocurrir de forma automática (coerción de tipos) o explícitamente mediante funciones de conversión.</p>
 <p><strong>Conversión automática</strong>: Ocurre cuando JavaScript necesita que un tipo de dato se convierta a otro para completar una operación.
 <strong>Conversión explícita</strong>: Se realiza usando funciones como <code>String()</code>, <code>Number()</code>, y <code>Boolean()</code>.</p>
 
-												<pre>&lt;!-- Ejemplo de conversi&oacute;n de tipos --&gt;
+				<pre>&lt;!-- Ejemplo de conversi&oacute;n de tipos --&gt;
 &lt;script&gt;
     let num = &quot;42&quot;;  // string
     let convertidoANumero = Number(num); // 42
@@ -172,15 +160,15 @@
     console.log(convertidoANumero);
     console.log(convertidoABooleano);
 &lt;/script&gt;</pre>
-								            	<h2><a id="index_5"></a>Conclusión sobre variables y tipos de datos en JavaScript</h2>
-																<p>Comprender las variables y los tipos de datos es esencial para escribir código JavaScript efectivo. Las variables actúan como contenedores para almacenar y manipular datos, mientras que los tipos de datos determinan cómo se comportarán esos datos en las operaciones.</p>
+		    	<h2><a id="index_5"></a>Conclusión sobre variables y tipos de datos en JavaScript</h2>
+						<p>Comprender las variables y los tipos de datos es esencial para escribir código JavaScript efectivo. Las variables actúan como contenedores para almacenar y manipular datos, mientras que los tipos de datos determinan cómo se comportarán esos datos en las operaciones.</p>
 <p>Con un buen manejo de estos conceptos, podrás crear programas más dinámicos y eficientes, aprovechando al máximo las capacidades de JavaScript.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -199,7 +187,7 @@
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

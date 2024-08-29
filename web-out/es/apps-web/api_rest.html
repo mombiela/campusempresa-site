@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APIs RESTful</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APIs RESTful</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/apps-web\api_rest.html" />
-		
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprendizaje continuo, uniendo la sociedad</a></h2>
+		<h2><a href="index.html"><i>Aprendiendo juntos, uniendo la sociedad</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 							<li><b>Castellano</b></li>
 				<li><a href="../ca/apps-web\api_rest.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
 						    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="apps-web\api_rest.stxt" target="apps-web\api_rest" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,13 +49,13 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>Las APIs RESTful (Representational State Transfer) son un estilo de arquitectura para diseñar servicios web que permiten la comunicación entre diferentes sistemas a través de HTTP. Son ampliamente utilizadas debido a su simplicidad y escalabilidad.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>Principios de las APIs RESTful</h2>
-																<p>Las APIs RESTful se basan en varios principios clave:</p>
+			<p>Las APIs RESTful (Representational State Transfer) son un estilo de arquitectura para diseñar servicios web que permiten la comunicación entre diferentes sistemas a través de HTTP. Son ampliamente utilizadas debido a su simplicidad y escalabilidad.</p>
+
+		    	<h2><a id="index_0"></a>Principios de las APIs RESTful</h2>
+						<p>Las APIs RESTful se basan en varios principios clave:</p>
 <ul>
 <li>Cliente-Servidor: Separación de responsabilidades entre el cliente y el servidor, lo que mejora la portabilidad y escalabilidad.</li>
 <li>Stateless (Sin Estado): Cada solicitud del cliente al servidor debe contener toda la información necesaria para entender y procesar la solicitud. El servidor no almacena el estado de las sesiones del cliente.</li>
@@ -77,8 +65,8 @@
 <li>Código Bajo Demanda (Opcional): Permite enviar código ejecutable al cliente bajo demanda para extender la funcionalidad (por ejemplo, JavaScript).</li>
 </ul>
 
-								            	<h2><a id="index_1"></a>Componentes de las APIs RESTful</h2>
-																<p>Las APIs RESTful operan sobre recursos que se identifican mediante URIs (Uniform Resource Identifiers). Los componentes básicos incluyen:</p>
+		    	<h2><a id="index_1"></a>Componentes de las APIs RESTful</h2>
+						<p>Las APIs RESTful operan sobre recursos que se identifican mediante URIs (Uniform Resource Identifiers). Los componentes básicos incluyen:</p>
 <ul>
 <li>Recursos: Entidades del sistema que se exponen a través de la API. Ejemplos: usuarios, productos, órdenes.</li>
 <li>URIs: Direcciones que identifican de forma única a cada recurso. Ejemplo: [[http://api.ejemplo.com/usuarios/1]]</li>
@@ -90,8 +78,8 @@
 <h1>DELETE: Eliminar un recurso.</h1>
 <h1>PATCH: Actualizar parcialmente un recurso.</h1>
 
-								            	<h2><a id="index_2"></a>Ejemplo de Diseño de API RESTful</h2>
-																<p>Supongamos que estamos diseñando una API para gestionar usuarios.</p>
+		    	<h2><a id="index_2"></a>Ejemplo de Diseño de API RESTful</h2>
+						<p>Supongamos que estamos diseñando una API para gestionar usuarios.</p>
 <ul>
 <li>GET /usuarios: Recuperar una lista de usuarios.</li>
 <li>GET /usuarios/{id}: Recuperar un usuario específico por ID.</li>
@@ -100,10 +88,10 @@
 <li>DELETE /usuarios/{id}: Eliminar un usuario por ID.</li>
 </ul>
 
-								            	<h2><a id="index_3"></a>Ejemplo Práctico en Node.js con Express</h2>
-																<p>A continuación, un ejemplo práctico de cómo implementar una API RESTful en Node.js utilizando Express.</p>
+		    	<h2><a id="index_3"></a>Ejemplo Práctico en Node.js con Express</h2>
+						<p>A continuación, un ejemplo práctico de cómo implementar una API RESTful en Node.js utilizando Express.</p>
 
-												<pre>const express = require('express');
+				<pre>const express = require('express');
 const app = express();
 app.use(express.json());
 
@@ -155,9 +143,9 @@ res.json(usuario);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () =&gt; console.log(Servidor escuchando en el puerto ${port}...));</pre>
-												
-								            	<h2><a id="index_4"></a>Ventajas de las APIs RESTful</h2>
-																<p>Las APIs RESTful ofrecen varias ventajas:</p>
+				
+		    	<h2><a id="index_4"></a>Ventajas de las APIs RESTful</h2>
+						<p>Las APIs RESTful ofrecen varias ventajas:</p>
 <ul>
 <li>Simplicidad: Son fáciles de entender y utilizar, ya que se basan en HTTP estándar.</li>
 <li>Escalabilidad: Permiten una arquitectura en capas que facilita la escalabilidad horizontal.</li>
@@ -165,22 +153,22 @@ app.listen(port, () =&gt; console.log(Servidor escuchando en el puerto ${port}..
 <li>Interoperabilidad: Facilitan la comunicación entre diferentes sistemas y plataformas.</li>
 </ul>
 
-								            	<h2><a id="index_5"></a>Desafíos de las APIs RESTful</h2>
-																<p>A pesar de sus ventajas, las APIs RESTful también presentan algunos desafíos:</p>
+		    	<h2><a id="index_5"></a>Desafíos de las APIs RESTful</h2>
+						<p>A pesar de sus ventajas, las APIs RESTful también presentan algunos desafíos:</p>
 <ul>
 <li>Manejo de estados complejos: Las aplicaciones que requieren mantener estados complejos pueden encontrar REST limitante debido a su naturaleza sin estado.</li>
 <li>Paginación y filtrado: Implementar paginación y filtrado eficiente puede ser complejo.</li>
 <li>Seguridad: Asegurar las APIs RESTful contra ataques como la inyección SQL, CSRF, y XSS es crucial.</li>
 </ul>
 
-								            	<h2><a id="index_6"></a>Conclusión</h2>
-																<p>Las APIs RESTful son una herramienta poderosa para construir servicios web escalables y eficientes. Con una buena comprensión de sus principios y componentes, los desarrolladores pueden crear interfaces de programación de aplicaciones que sean robustas, flexibles y fáciles de mantener.</p>
+		    	<h2><a id="index_6"></a>Conclusión</h2>
+						<p>Las APIs RESTful son una herramienta poderosa para construir servicios web escalables y eficientes. Con una buena comprensión de sus principios y componentes, los desarrolladores pueden crear interfaces de programación de aplicaciones que sean robustas, flexibles y fáciles de mantener.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -199,7 +187,7 @@ app.listen(port, () =&gt; console.log(Servidor escuchando en el puerto ${port}..
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

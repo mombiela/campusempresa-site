@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propiedades de los ítems Flexbox</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propiedades de los ítems Flexbox</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/css\items_flexbox.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/css\items_flexbox.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="css\items_flexbox.stxt" target="css\items_flexbox" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,12 +49,12 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
+				
+		
+
 			
-			
-									
-								            	<h2><a id="index_0"></a>Propiedades de los ítems Flexbox</h2>
-																<p>Las propiedades de los ítems Flexbox controlan cómo se comportan y se distribuyen los elementos hijos dentro de un contenedor flexible (flex container). Estas propiedades permiten ajustar el crecimiento, la contracción, la alineación y el orden de los elementos flexibles.</p>
+		    	<h2><a id="index_0"></a>Propiedades de los ítems Flexbox</h2>
+						<p>Las propiedades de los ítems Flexbox controlan cómo se comportan y se distribuyen los elementos hijos dentro de un contenedor flexible (flex container). Estas propiedades permiten ajustar el crecimiento, la contracción, la alineación y el orden de los elementos flexibles.</p>
 <ul>
 <li>
 <p><strong>order</strong>:</p>
@@ -157,9 +145,9 @@
 </li>
 </ul>
 
-								            	<h2><a id="index_1"></a>Ejemplo de código CSS para ítems Flexbox</h2>
-																
-												<pre>.container {
+		    	<h2><a id="index_1"></a>Ejemplo de código CSS para ítems Flexbox</h2>
+						
+				<pre>.container {
 display: flex;
 }
 .item1 {
@@ -177,15 +165,15 @@ align-self: flex-end;
 order: 3;
 flex: 1 0 auto;
 }</pre>
-												<p>En este ejemplo, tres ítems flexibles dentro de un contenedor Flexbox tienen diferentes propiedades aplicadas:</p>
+				<p>En este ejemplo, tres ítems flexibles dentro de un contenedor Flexbox tienen diferentes propiedades aplicadas:</p>
 <ul>
 <li><code>.item1</code> tiene un orden de 2, puede crecer y no encogerse, y tiene una base de 100px.</li>
 <li><code>.item2</code> tiene un orden de 1, no puede crecer pero puede encogerse con una base de 150px, y se alinea al final del contenedor.</li>
 <li><code>.item3</code> tiene un orden de 3, puede crecer y no encogerse, y tiene una base automática.</li>
 </ul>
 
-								            	<h2><a id="index_2"></a>Diagrama de ítems Flexbox con propiedades aplicadas</h2>
-																<p><code>startuml</code>
+		    	<h2><a id="index_2"></a>Diagrama de ítems Flexbox con propiedades aplicadas</h2>
+						<p><code>startuml</code>
 +-------------------------------------+
 | Contenedor (display: flex)           |
 | +---------+ +---------+ +---------+ |
@@ -199,11 +187,11 @@ flex: 1 0 auto;
 </ul>
 <p>Si necesitas más detalles sobre algún punto específico, házmelo saber.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -222,7 +210,7 @@ flex: 1 0 auto;
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

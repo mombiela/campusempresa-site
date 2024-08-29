@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentencias básicas: MOVE, COMPUTE, etc.</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentencias básicas: MOVE, COMPUTE, etc.</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/cobol\sentencias_basicas.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/cobol\sentencias_basicas.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="cobol\sentencias_basicas.stxt" target="cobol\sentencias_basicas" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,39 +49,39 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
-			
-			
-									<p>COBOL proporciona un conjunto de sentencias básicas que permiten realizar operaciones fundamentales en un programa. Entre las más utilizadas se encuentran <code>MOVE</code>, <code>COMPUTE</code>, <code>ADD</code>, <code>SUBTRACT</code>, <code>MULTIPLY</code>, <code>DIVIDE</code>, y <code>DISPLAY</code>. A continuación, se describen estas sentencias y su uso.</p>
+				
+		
 
-								            	<h2><a id="index_0"></a>MOVE</h2>
-																<p>La sentencia <code>MOVE</code> se utiliza para asignar valores a variables. Permite copiar datos de una variable o literal a otra variable.</p>
+			<p>COBOL proporciona un conjunto de sentencias básicas que permiten realizar operaciones fundamentales en un programa. Entre las más utilizadas se encuentran <code>MOVE</code>, <code>COMPUTE</code>, <code>ADD</code>, <code>SUBTRACT</code>, <code>MULTIPLY</code>, <code>DIVIDE</code>, y <code>DISPLAY</code>. A continuación, se describen estas sentencias y su uso.</p>
 
-												<pre>MOVE 100 TO WS-Number.
+		    	<h2><a id="index_0"></a>MOVE</h2>
+						<p>La sentencia <code>MOVE</code> se utiliza para asignar valores a variables. Permite copiar datos de una variable o literal a otra variable.</p>
+
+				<pre>MOVE 100 TO WS-Number.
 MOVE 'John Doe' TO WS-Name.
 MOVE WS-Source TO WS-Destination.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>MOVE 100 TO WS-Number</code> asigna el valor 100 a la variable <code>WS-Number</code>.</li>
 <li><code>MOVE 'John Doe' TO WS-Name</code> asigna el texto 'John Doe' a la variable <code>WS-Name</code>.</li>
 <li><code>MOVE WS-Source TO WS-Destination</code> copia el valor de <code>WS-Source</code> a <code>WS-Destination</code>.</li>
 </ul>
 
-								            	<h2><a id="index_1"></a>COMPUTE</h2>
-																<p>La sentencia <code>COMPUTE</code> se utiliza para realizar cálculos aritméticos y asignar el resultado a una variable. Soporta operaciones como suma, resta, multiplicación y división.</p>
+		    	<h2><a id="index_1"></a>COMPUTE</h2>
+						<p>La sentencia <code>COMPUTE</code> se utiliza para realizar cálculos aritméticos y asignar el resultado a una variable. Soporta operaciones como suma, resta, multiplicación y división.</p>
 
-												<pre>COMPUTE WS-Total = WS-Price * WS-Quantity.
+				<pre>COMPUTE WS-Total = WS-Price * WS-Quantity.
 COMPUTE WS-Average = WS-Sum / WS-Count.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>COMPUTE WS-Total = WS-Price * WS-Quantity</code> calcula el total multiplicando <code>WS-Price</code> por <code>WS-Quantity</code>.</li>
 <li><code>COMPUTE WS-Average = WS-Sum / WS-Count</code> calcula el promedio dividiendo <code>WS-Sum</code> entre <code>WS-Count</code>.</li>
 </ul>
 
-								            	<h2><a id="index_2"></a>ADD, SUBTRACT, MULTIPLY, DIVIDE</h2>
-																<p>Estas sentencias se utilizan para realizar operaciones aritméticas básicas.</p>
+		    	<h2><a id="index_2"></a>ADD, SUBTRACT, MULTIPLY, DIVIDE</h2>
+						<p>Estas sentencias se utilizan para realizar operaciones aritméticas básicas.</p>
 
-												<pre>ADD 5 TO WS-Count.
+				<pre>ADD 5 TO WS-Count.
 ADD WS-Value1 WS-Value2 GIVING WS-Total.
 
 SUBTRACT 2 FROM WS-Total.
@@ -104,7 +92,7 @@ MULTIPLY WS-Length BY WS-Width GIVING WS-Area.
 
 DIVIDE WS-Sum BY WS-Count.
 DIVIDE WS-Dividend BY WS-Divisor GIVING WS-Quotient.</pre>
-												<p>En estos ejemplos:</p>
+				<p>En estos ejemplos:</p>
 <ul>
 <li><code>ADD 5 TO WS-Count</code> suma 5 a <code>WS-Count</code>.</li>
 <li><code>ADD WS-Value1 WS-Value2 GIVING WS-Total</code> suma <code>WS-Value1</code> y <code>WS-Value2</code>, y asigna el resultado a <code>WS-Total</code>.</li>
@@ -116,13 +104,13 @@ DIVIDE WS-Dividend BY WS-Divisor GIVING WS-Quotient.</pre>
 <li><code>DIVIDE WS-Dividend BY WS-Divisor GIVING WS-Quotient</code> divide <code>WS-Dividend</code> entre <code>WS-Divisor</code>, y asigna el resultado a <code>WS-Quotient</code>.</li>
 </ul>
 
-								            	<h2><a id="index_3"></a>DISPLAY</h2>
-																<p>La sentencia <code>DISPLAY</code> se utiliza para mostrar información en la pantalla. Es útil para depuración y para proporcionar información al usuario.</p>
+		    	<h2><a id="index_3"></a>DISPLAY</h2>
+						<p>La sentencia <code>DISPLAY</code> se utiliza para mostrar información en la pantalla. Es útil para depuración y para proporcionar información al usuario.</p>
 
-												<pre>DISPLAY 'Hello, World!'.
+				<pre>DISPLAY 'Hello, World!'.
 DISPLAY WS-Total.
 DISPLAY 'The result is: ' WS-Result.</pre>
-												<p>En este ejemplo:</p>
+				<p>En este ejemplo:</p>
 <ul>
 <li><code>DISPLAY 'Hello, World!'</code> muestra el texto 'Hello, World!' en la pantalla.</li>
 <li><code>DISPLAY WS-Total</code> muestra el valor de <code>WS-Total</code> en la pantalla.</li>
@@ -130,11 +118,11 @@ DISPLAY 'The result is: ' WS-Result.</pre>
 </ul>
 <p>Las sentencias básicas en COBOL son esenciales para manipular datos y controlar el flujo del programa. Su correcta utilización permite escribir programas eficientes y fáciles de entender.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -153,7 +141,7 @@ DISPLAY 'The result is: ' WS-Result.</pre>
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

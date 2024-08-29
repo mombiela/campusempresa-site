@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Render Props</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Render Props</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/react\tema-19.html" />
-		
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprendizaje continuo, uniendo la sociedad</a></h2>
+		<h2><a href="index.html"><i>Aprendiendo juntos, uniendo la sociedad</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 							<li><b>Castellano</b></li>
 				<li><a href="../ca/react\tema-19.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
 						    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="react\tema-19.stxt" target="react\tema-19" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,23 +49,23 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				<div class="column row book_nav clearfix">
+			<div class="column row book_nav clearfix">
 		
 		           	<a style="float:left;"	href="tema-18" title="Anterior">&#x25C4; Anterior</a>
 				           	<a style="float:right;" href="tema-20" title="Siguiente">Siguiente &#x25BA;</a>
 			</div>
-	
-			
-			
-										            	<h2><a id="index_0"></a>Introducción</h2>
-												            	<h3><a id="index_1"></a>¿Qué son las Render Props?</h3>
-																<p>Las Render Props son un patrón en React para compartir lógica entre componentes mediante el uso de una función que un componente pasa a otro. Esta función, denominada &quot;render prop&quot;, es utilizada por el componente receptor para controlar lo que se renderiza. Este patrón es útil para situaciones en las que se necesita reutilizar lógica o comportamiento entre diferentes componentes.</p>
+		
+		
 
-								            	<h2><a id="index_2"></a>Creación de Componentes con Render Props</h2>
-												            	<h3><a id="index_3"></a>Ejemplo Básico de Render Props</h3>
-																<p>Para implementar Render Props, un componente recibe una función como prop y la ejecuta para determinar qué se debe renderizar. Esta función puede recibir datos o estado del componente que la invoca.</p>
+		    	<h2><a id="index_0"></a>Introducción</h2>
+				    	<h3><a id="index_1"></a>¿Qué son las Render Props?</h3>
+						<p>Las Render Props son un patrón en React para compartir lógica entre componentes mediante el uso de una función que un componente pasa a otro. Esta función, denominada &quot;render prop&quot;, es utilizada por el componente receptor para controlar lo que se renderiza. Este patrón es útil para situaciones en las que se necesita reutilizar lógica o comportamiento entre diferentes componentes.</p>
 
-												<pre>// Ejemplo b&aacute;sico de Render Props
+		    	<h2><a id="index_2"></a>Creación de Componentes con Render Props</h2>
+				    	<h3><a id="index_3"></a>Ejemplo Básico de Render Props</h3>
+						<p>Para implementar Render Props, un componente recibe una función como prop y la ejecuta para determinar qué se debe renderizar. Esta función puede recibir datos o estado del componente que la invoca.</p>
+
+				<pre>// Ejemplo b&aacute;sico de Render Props
 class MouseTracker extends React.Component {
     constructor(props) {
         super(props);
@@ -107,13 +95,13 @@ function App() {
         )} /&gt;
     );
 }</pre>
-												<p>En este ejemplo, <code>MouseTracker</code> es un componente que utiliza una render prop llamada <code>render</code>. La función que se pasa como prop se usa para renderizar la posición del ratón dentro del componente <code>App</code>.</p>
+				<p>En este ejemplo, <code>MouseTracker</code> es un componente que utiliza una render prop llamada <code>render</code>. La función que se pasa como prop se usa para renderizar la posición del ratón dentro del componente <code>App</code>.</p>
 
-								            	<h2><a id="index_4"></a>Uso de Render Props para Compartir Lógica</h2>
-												            	<h3><a id="index_5"></a>Reutilización de Lógica con Render Props</h3>
-																<p>Las Render Props son particularmente útiles cuando se necesita compartir lógica entre componentes que pueden renderizarse de manera diferente pero requieren la misma funcionalidad subyacente.</p>
+		    	<h2><a id="index_4"></a>Uso de Render Props para Compartir Lógica</h2>
+				    	<h3><a id="index_5"></a>Reutilización de Lógica con Render Props</h3>
+						<p>Las Render Props son particularmente útiles cuando se necesita compartir lógica entre componentes que pueden renderizarse de manera diferente pero requieren la misma funcionalidad subyacente.</p>
 
-												<pre>// Ejemplo de reutilizaci&oacute;n de l&oacute;gica con Render Props
+				<pre>// Ejemplo de reutilizaci&oacute;n de l&oacute;gica con Render Props
 class Contador extends React.Component {
     constructor(props) {
         super(props);
@@ -142,13 +130,13 @@ function App() {
         &lt;/div&gt;
     );
 }</pre>
-												<p>En este ejemplo, el componente <code>Contador</code> maneja la lógica del contador, pero diferentes partes de la aplicación pueden renderizar este valor de distintas maneras utilizando la misma lógica de incremento.</p>
+				<p>En este ejemplo, el componente <code>Contador</code> maneja la lógica del contador, pero diferentes partes de la aplicación pueden renderizar este valor de distintas maneras utilizando la misma lógica de incremento.</p>
 
-								            	<h2><a id="index_6"></a>Composición de Render Props</h2>
-												            	<h3><a id="index_7"></a>Uso de Múltiples Render Props</h3>
-																<p>Es posible combinar varias Render Props para manejar múltiples aspectos del estado o comportamiento en un componente, proporcionando una mayor flexibilidad.</p>
+		    	<h2><a id="index_6"></a>Composición de Render Props</h2>
+				    	<h3><a id="index_7"></a>Uso de Múltiples Render Props</h3>
+						<p>Es posible combinar varias Render Props para manejar múltiples aspectos del estado o comportamiento en un componente, proporcionando una mayor flexibilidad.</p>
 
-												<pre>// Ejemplo de combinaci&oacute;n de m&uacute;ltiples Render Props
+				<pre>// Ejemplo de combinaci&oacute;n de m&uacute;ltiples Render Props
 class DataFetcher extends React.Component {
     constructor(props) {
         super(props);
@@ -175,16 +163,16 @@ function App() {
         )} /&gt;
     );
 }</pre>
-												<p>En este ejemplo, el componente <code>DataFetcher</code> maneja la lógica de obtención de datos y permite a otros componentes determinar cómo deben renderizarse los datos o el estado de carga.</p>
+				<p>En este ejemplo, el componente <code>DataFetcher</code> maneja la lógica de obtención de datos y permite a otros componentes determinar cómo deben renderizarse los datos o el estado de carga.</p>
 
-								            	<h2><a id="index_8"></a>Limitaciones y Alternativas a Render Props</h2>
-												            	<h3><a id="index_9"></a>Complejidad de las Render Props</h3>
-																<p>Las Render Props pueden aumentar la complejidad del código, especialmente cuando se anidan múltiples Render Props. Esto puede llevar a dificultades en la lectura y mantenimiento del código.</p>
+		    	<h2><a id="index_8"></a>Limitaciones y Alternativas a Render Props</h2>
+				    	<h3><a id="index_9"></a>Complejidad de las Render Props</h3>
+						<p>Las Render Props pueden aumentar la complejidad del código, especialmente cuando se anidan múltiples Render Props. Esto puede llevar a dificultades en la lectura y mantenimiento del código.</p>
 
-								            	<h3><a id="index_10"></a>Hooks como Alternativa a Render Props</h3>
-																<p>Con la introducción de los hooks en React, muchas de las necesidades resueltas por Render Props ahora se pueden manejar mediante hooks personalizados, que proporcionan una sintaxis más limpia y directa para compartir lógica.</p>
+		    	<h3><a id="index_10"></a>Hooks como Alternativa a Render Props</h3>
+						<p>Con la introducción de los hooks en React, muchas de las necesidades resueltas por Render Props ahora se pueden manejar mediante hooks personalizados, que proporcionan una sintaxis más limpia y directa para compartir lógica.</p>
 
-												<pre>// Ejemplo de hook personalizado como alternativa a Render Props
+				<pre>// Ejemplo de hook personalizado como alternativa a Render Props
 function useContador() {
     const [contador, setContador] = useState(0);
     const incrementar = () =&gt; setContador(contador + 1);
@@ -201,17 +189,17 @@ function App() {
         &lt;/div&gt;
     );
 }</pre>
-												<p>En este ejemplo, el hook <code>useContador</code> encapsula la lógica del contador, y el componente <code>App</code> lo utiliza directamente, simplificando la estructura del código en comparación con el uso de Render Props.</p>
+				<p>En este ejemplo, el hook <code>useContador</code> encapsula la lógica del contador, y el componente <code>App</code> lo utiliza directamente, simplificando la estructura del código en comparación con el uso de Render Props.</p>
 
-								            	<h2><a id="index_11"></a>Conclusión</h2>
-												            	<h3><a id="index_12"></a>Resumen sobre Render Props</h3>
-																<p>Las Render Props son una técnica poderosa para compartir lógica entre componentes en React, ofreciendo flexibilidad para manejar diferentes casos de uso en una aplicación. Sin embargo, con la introducción de hooks, muchas de las funcionalidades que anteriormente se manejaban con Render Props ahora se pueden implementar de manera más simple y directa. Comprender ambos patrones y cuándo utilizarlos es esencial para desarrollar aplicaciones React limpias y mantenibles. En los próximos temas, exploraremos más patrones y técnicas avanzadas en React.</p>
+		    	<h2><a id="index_11"></a>Conclusión</h2>
+				    	<h3><a id="index_12"></a>Resumen sobre Render Props</h3>
+						<p>Las Render Props son una técnica poderosa para compartir lógica entre componentes en React, ofreciendo flexibilidad para manejar diferentes casos de uso en una aplicación. Sin embargo, con la introducción de hooks, muchas de las funcionalidades que anteriormente se manejaban con Render Props ahora se pueden implementar de manera más simple y directa. Comprender ambos patrones y cuándo utilizarlos es esencial para desarrollar aplicaciones React limpias y mantenibles. En los próximos temas, exploraremos más patrones y técnicas avanzadas en React.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -230,7 +218,7 @@ function App() {
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses

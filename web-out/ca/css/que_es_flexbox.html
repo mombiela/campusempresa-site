@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introducción a Flexbox</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introducción a Flexbox</title>
+<meta name="description" content="${meta.getChild("description").text}">
+<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=2">
-		
-		
-		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/css\que_es_flexbox.html" />
-			
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
+<link rel="stylesheet" href="/css/site.css">
+<script src="/js/cookie.js?v=1"></script>
+<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -25,15 +21,10 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html"><b>CampusEmpresa</b></a>
+			<a href="index.html">CampusEmpresa</a>
 		</h1>
-		<h2><a href="index.html">Aprenentatge continu, unint la societat</a></h2>
+		<h2><a href="index.html"><i>Aprenent juns, unint la societat</i></a></h2>
 		<ul>
-			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
-			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
-			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
-			<li><a href="licence.html" title="Licencia">Licencia</a></li>
-			<li><b> | </b></li>
 										<li><a href="../es/css\que_es_flexbox.html" onclick="setLang('es'); return false;" title="Castellano"><i>Castellano</i></a></li>
 				<li><b>Català</b></li>
 			    	</ul>
@@ -45,13 +36,10 @@
 	
     <div class="top-bar">
     	<ul>
-			<li class="link_src"><a href="css\que_es_flexbox.stxt" target="css\que_es_flexbox" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
-			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
-			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
-			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
-			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
-			<li><a href="stxt" title="CampusEmpresa">CampusEmpresa</a></li>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
     	</ul>
     </div>
 	
@@ -61,12 +49,12 @@
 	
     <div id="main_content" class="clearfix">
       <article>
-      				
+				
+		
+
 			
-			
-									
-								            	<h2><a id="index_0"></a>Introducción a Flexbox</h2>
-																<p>Flexbox, o &quot;Flexible Box Layout&quot;, es un modelo de diseño en CSS que facilita la creación de estructuras de diseño complejas y adaptables. Flexbox permite alinear y distribuir espacio entre los elementos de un contenedor de manera eficiente, incluso cuando su tamaño es desconocido o dinámico.</p>
+		    	<h2><a id="index_0"></a>Introducción a Flexbox</h2>
+						<p>Flexbox, o &quot;Flexible Box Layout&quot;, es un modelo de diseño en CSS que facilita la creación de estructuras de diseño complejas y adaptables. Flexbox permite alinear y distribuir espacio entre los elementos de un contenedor de manera eficiente, incluso cuando su tamaño es desconocido o dinámico.</p>
 <ul>
 <li><strong>Características principales de Flexbox</strong>:</li>
 <li>Proporciona un diseño unidimensional, alineando elementos en una sola dirección: fila o columna.</li>
@@ -74,8 +62,8 @@
 <li>Ofrece mayor control sobre el tamaño y el espacio de los elementos dentro de un contenedor flexible (flex container).</li>
 </ul>
 
-								            	<h2><a id="index_1"></a>Componentes de Flexbox</h2>
-																<ul>
+		    	<h2><a id="index_1"></a>Componentes de Flexbox</h2>
+						<ul>
 <li>
 <p><strong>Flex Container</strong>:</p>
 </li>
@@ -90,8 +78,8 @@
 </li>
 </ul>
 
-								            	<h2><a id="index_2"></a>Propiedades del contenedor Flexbox</h2>
-																<ul>
+		    	<h2><a id="index_2"></a>Propiedades del contenedor Flexbox</h2>
+						<ul>
 <li>
 <p><strong>display</strong>:</p>
 </li>
@@ -148,9 +136,9 @@
 </li>
 </ul>
 
-								            	<h2><a id="index_3"></a>Ejemplo básico de Flexbox</h2>
-																
-												<pre>.container {
+		    	<h2><a id="index_3"></a>Ejemplo básico de Flexbox</h2>
+						
+				<pre>.container {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -161,10 +149,10 @@ background-color: lightcoral;
 padding: 10px;
 margin: 5px;
 }</pre>
-												<p>En este ejemplo, un contenedor flexible tiene elementos distribuidos en una fila con espacio entre ellos, y los elementos se alinean al centro del eje transversal.</p>
+				<p>En este ejemplo, un contenedor flexible tiene elementos distribuidos en una fila con espacio entre ellos, y los elementos se alinean al centro del eje transversal.</p>
 
-								            	<h2><a id="index_4"></a>Diagrama de Flexbox</h2>
-																<p><code>startuml</code>
+		    	<h2><a id="index_4"></a>Diagrama de Flexbox</h2>
+						<p><code>startuml</code>
 +--------------------------------------+
 | Contenedor (display: flex)            |
 | +--------+ +--------+ +--------+    |
@@ -178,11 +166,11 @@ margin: 5px;
 </ul>
 <p>Si necesitas más detalles sobre algún punto específico, házmelo saber.</p>
 
-						
+		
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
+    	<h2>Anuncios</h2>
     	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
     	<p>Este espacio está reservado para este fin.</p>
     	
@@ -201,7 +189,7 @@ margin: 5px;
 	  </aside>
 	</div>
 	
-	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	<footer><p>&copy; 2024 - Todos els drets reservats.</p></footer>
 	
 	<div id="cookies_adv">
 		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
