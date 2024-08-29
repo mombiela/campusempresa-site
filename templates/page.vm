@@ -7,8 +7,8 @@
 
 <body>
     <header id="main_header">
-	    <h1><a href="index.html">CampusEmpresa</a></h1>
-		<h2><a href="index.html">${lang.get("title")}</h2>
+	    <h1><a href="/index.html">CampusEmpresa</a></h1>
+		<h2>${lang.get("title")}</h2>
 		<div>#parse("idioma.vm")</div>
     </header>
 
@@ -18,7 +18,6 @@
 	
     <div id="main_content" class="clearfix">
     	<article>
-			#parse("/navigation.vm")
 			#parse("/doc.vm")	
 	  	</article>
 		<aside id="advertisement">

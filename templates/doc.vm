@@ -1,3 +1,5 @@
+#parse("/navigation.vm")
+
 #if(${doc.name} == "chapter")
 	#if(${doc.getChild("title")})
 		<h1>${doc.getChild("title").text}</h1>
