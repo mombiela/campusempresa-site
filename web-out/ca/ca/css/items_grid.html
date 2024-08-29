@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades de los ítems Grid</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\css\items_grid.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\css\items_grid.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\css\items_grid.stxt" target="ca\css\items_grid" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<p>Las propiedades de los ítems Grid controlan cómo se comportan y se posicionan los elementos hijos dentro de un contenedor de cuadrícula. Estas propiedades permiten ajustar la posición, el tamaño y la alineación de los ítems en la cuadrícula.</p>
+<ul>
+<li>
+<p><strong>grid-column</strong>:</p>
+</li>
+<li>
+<p>Define la posición y el tamaño del ítem en las columnas.</p>
+</li>
+<li>
+<p>Ejemplo: <code>grid-column: 1 / 3;</code> (el ítem se extiende desde la columna 1 hasta la 3)</p>
+</li>
+<li>
+<p><strong>grid-row</strong>:</p>
+</li>
+<li>
+<p>Define la posición y el tamaño del ítem en las filas.</p>
+</li>
+<li>
+<p>Ejemplo: <code>grid-row: 2 / 4;</code> (el ítem se extiende desde la fila 2 hasta la 4)</p>
+</li>
+<li>
+<p><strong>grid-area</strong>:</p>
+</li>
+<li>
+<p>Asigna un ítem a un área nombrada definida por <code>grid-template-areas</code>.</p>
+</li>
+<li>
+<p>Ejemplo: <code>grid-area: header;</code></p>
+</li>
+<li>
+<p><strong>justify-self</strong>:</p>
+</li>
+<li>
+<p>Controla la alineación de un ítem a lo largo del eje horizontal dentro de su celda.</p>
+</li>
+<li>
+<p>Valores: <code>start</code>, <code>end</code>, <code>center</code>, <code>stretch</code></p>
+</li>
+<li>
+<p>Ejemplo: <code>justify-self: center;</code></p>
+</li>
+<li>
+<p><strong>align-self</strong>:</p>
+</li>
+<li>
+<p>Controla la alineación de un ítem a lo largo del eje vertical dentro de su celda.</p>
+</li>
+<li>
+<p>Valores: <code>start</code>, <code>end</code>, <code>center</code>, <code>stretch</code></p>
+</li>
+<li>
+<p>Ejemplo: <code>align-self: end;</code></p>
+</li>
+<li>
+<p><strong>place-self</strong>:</p>
+</li>
+<li>
+<p>Propiedad abreviada para <code>align-self</code> y <code>justify-self</code>.</p>
+</li>
+<li>
+<p>Ejemplo: <code>place-self: center start;</code> (centra el ítem verticalmente y lo alinea al inicio horizontalmente)</p>
+</li>
+</ul>
+
+								            	<h2><a id="index_0"></a>Ejemplo de código CSS para ítems Grid</h2>
+																
+												<pre>.container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(3, 100px);
+gap: 10px;
+}
+.item1 {
+grid-column: 1 / 3;
+grid-row: 1 / 2;
+background-color: lightcoral;
+}
+.item2 {
+grid-column: 3 / 5;
+grid-row: 1 / 3;
+background-color: lightblue;
+justify-self: center;
+align-self: center;
+}
+.item3 {
+grid-column: 1 / 2;
+grid-row: 2 / 4;
+background-color: lightgreen;
+place-self: end center;
+}</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li>El contenedor de cuadrícula tiene cuatro columnas y tres filas definidas con <code>grid-template-columns</code> y <code>grid-template-rows</code>.</li>
+<li><code>item1</code> se extiende desde la columna 1 hasta la 3 y ocupa la fila 1.</li>
+<li><code>item2</code> se extiende desde la columna 3 hasta la 5 y desde la fila 1 hasta la 3, y se centra tanto horizontal como verticalmente.</li>
+<li><code>item3</code> se extiende desde la columna 1 hasta la 2 y desde la fila 2 hasta la 4, y se alinea al final verticalmente y al centro horizontalmente.</li>
+</ul>
+
+								            	<h2><a id="index_1"></a>Diagrama de ítems Grid con propiedades aplicadas</h2>
+																<p><code>startuml</code>
++----------------------------------------------------+
+| Contenedor (display: grid)                          |
+|          grid-template-columns: repeat(4, 1fr);      |
+|          grid-template-rows: repeat(3, 100px);      |
+|          gap: 10px;                                 |
+| +-----------------------+---------------+--------+|
+| |     item1             |      item2            |      |
+| +-----------------------+---------------+--------+|
+| |                       |                        |      |
+| |          item3          |      item2            |      |
+| |                       |                        |      |
+| +-----------------------+---------------+--------+|
++----------------------------------------------------+
+<code>enduml</code></p>
+<p>En este diagrama, se muestra cómo los ítems se posicionan y se distribuyen dentro del contenedor de cuadrícula utilizando las propiedades mencionadas.</p>
+<ul>
+<li>[[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout|Documentación sobre CSS Grid en CSS]]</li>
+</ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

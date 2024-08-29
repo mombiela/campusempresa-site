@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles (for, while)</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/es\python\control_bucle.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/es\python\control_bucle.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="es\python\control_bucle.stxt" target="es\python\control_bucle" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<p>Los bucles en Python se utilizan para repetir un bloque de código varias veces.
+Python soporta principalmente dos tipos de bucles: <strong>for</strong> y <strong>while</strong>.</p>
+
+								            	<h2><a id="index_0"></a>Bucle for</h2>
+																<p>El bucle <code>for</code> en Python se utiliza para iterar sobre
+una secuencia (como una lista, una tupla, un diccionario,
+un conjunto o una cadena de caracteres). A medida que itera,
+el bucle ejecuta el bloque de código para cada elemento en la secuencia.</p>
+
+								            	<h2><a id="index_1"></a>Sintaxis:</h2>
+																
+												<pre>for variable in secuencia:
+# bloque de c&oacute;digo</pre>
+												
+								            	<h2><a id="index_2"></a>Ejemplo:</h2>
+																
+												<pre>frutas = [&quot;manzana&quot;, &quot;banana&quot;, &quot;cereza&quot;]
+for fruta in frutas:
+print(fruta)</pre>
+												<p>En este ejemplo, el bucle <code>for</code> iterará sobre
+cada elemento de la lista <code>frutas</code> y imprimirá cada fruta.</p>
+
+								            	<h2><a id="index_3"></a>Uso de range() en for:</h2>
+																<p>El método <code>range()</code> se usa a menudo
+con <code>for</code> para generar una secuencia de números.</p>
+
+								            	<h2><a id="index_4"></a>Ejemplo:</h2>
+																
+												<pre>for i in range(5):
+print(i)</pre>
+												<p>Este bucle imprimirá los números del 0 al 4.</p>
+
+								            	<h2><a id="index_5"></a>Bucle while</h2>
+																<p>El bucle <code>while</code> ejecuta el bloque de código
+mientras la condición especificada sea verdadera (<code>True</code>).</p>
+
+								            	<h2><a id="index_6"></a>Sintaxis:</h2>
+																
+												<pre>while condici&oacute;n:
+# bloque de c&oacute;digo</pre>
+												
+								            	<h2><a id="index_7"></a>Ejemplo:</h2>
+																
+												<pre>i = 0
+while i &lt; 5:
+print(i)
+i += 1</pre>
+												<p>En este ejemplo, el bucle <code>while</code> continuará
+ejecutándose mientras <code>i</code> sea menor que <code>5</code>.
+Después de cada iteración, <code>i</code> se incrementa en 1.</p>
+
+								            	<h2><a id="index_8"></a>Control de bucles</h2>
+																<p>Python proporciona varias sentencias
+para controlar el flujo de los bucles:</p>
+<ul>
+<li><strong>break</strong>: Termina el bucle inmediatamente.</li>
+<li><strong>continue</strong>: Salta a la siguiente iteración del bucle.</li>
+<li><strong>else</strong>: Ejecuta un bloque de código
+al final del bucle, a menos que se haya terminado con <code>break</code>.</li>
+</ul>
+
+								            	<h2><a id="index_9"></a>Ejemplo de break:</h2>
+																
+												<pre>for i in range(10):
+if i == 5:
+break
+print(i)</pre>
+												<p>Este bucle imprimirá los números del 0 al 4
+y luego se detendrá cuando <code>i</code> sea igual a 5.</p>
+
+								            	<h2><a id="index_10"></a>Ejemplo de continue:</h2>
+																
+												<pre>for i in range(10):
+if i % 2 == 0:
+continue
+print(i)</pre>
+												<p>Este bucle imprimirá los números impares del 0 al 9,
+ya que <code>continue</code> hace que el bucle salte a la
+siguiente iteración cuando <code>i</code> es par.</p>
+
+								            	<h2><a id="index_11"></a>Ejemplo de else en bucles:</h2>
+																
+												<pre>for i in range(5):
+print(i)
+else:
+print(&quot;El bucle ha terminado&quot;)</pre>
+												<p>Este bucle imprimirá los números del 0 al 4 y
+luego imprimirá &quot;El bucle ha terminado&quot;.</p>
+
+								            	<h2><a id="index_12"></a>Combinando bucles for y while:</h2>
+																<p>A veces, puedes necesitar combinar bucles <code>for</code>
+y <code>while</code> para resolver problemas más complejos.</p>
+
+								            	<h2><a id="index_13"></a>Ejemplo:</h2>
+																
+												<pre>while True:
+entrada = input(&quot;Escribe 'salir' para terminar: &quot;)
+if entrada == 'salir':
+break
+for letra in entrada:
+print(letra)</pre>
+												<p>En este ejemplo, el bucle <code>while</code> continuará
+ejecutándose hasta que el usuario escriba &quot;salir&quot;.
+Para cada entrada del usuario, el bucle <code>for</code>
+imprimirá cada letra de la entrada.</p>
+
+								            	<h2><a id="index_14"></a>Importancia de la indentación</h2>
+																<p>Es crucial recordar que Python usa la indentación para
+definir bloques de código. Asegúrate de que todas las
+líneas de código dentro de un bucle estén correctamente indentadas.</p>
+
+												<pre>for i in range(5):
+print(&quot;Inicio del bucle&quot;)
+if i % 2 == 0:
+print(f&quot;{i} es par&quot;)
+print(&quot;Fin del bucle&quot;)</pre>
+												<p>En resumen, los bucles <code>for</code> y <code>while</code> en Python son
+herramientas poderosas para repetir la ejecución de bloques de código.
+Entender cómo y cuándo usarlos es esencial para
+escribir programas efectivos y eficientes.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

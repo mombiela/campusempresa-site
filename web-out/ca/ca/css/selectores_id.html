@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de selectores por ID</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\css\selectores_id.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\css\selectores_id.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\css\selectores_id.stxt" target="ca\css\selectores_id" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<ul>
+<li>
+<p><strong>Introducción</strong>
+Los selectores por ID en CSS permiten aplicar estilos a un único elemento que tiene un identificador específico. Este método es útil para estilizar elementos únicos en una página, como un encabezado o una sección específica.</p>
+</li>
+<li>
+<p><strong>Definición y sintaxis</strong>
+Un ID se define en HTML utilizando el atributo <code>id</code>. En CSS, el selector por ID se denota con un símbolo de almohadilla (#) seguido del nombre del ID.</p>
+</li>
+</ul>
+
+												<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#miID {
+color: blue;
+font-size: 20px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p id=&quot;miID&quot;&gt;Este es un p&aacute;rrafo con el ID &quot;miID&quot;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+												<ul>
+<li>
+<p><strong>Ventajas de usar selectores por ID</strong>
+<code>startalert</code></p>
+</li>
+<li>
+<p><strong>Unicidad</strong>: Los IDs son únicos dentro de un documento HTML, asegurando que el estilo se aplique solo a un elemento específico.</p>
+</li>
+<li>
+<p><strong>Alta especificidad</strong>: Los selectores por ID tienen una mayor especificidad que los selectores de tipo y de clase, lo que permite un control más preciso sobre los estilos.</p>
+</li>
+<li>
+<p><strong>Facilidad de uso</strong>: Los IDs son fáciles de identificar y utilizar tanto en CSS como en JavaScript, facilitando la manipulación de elementos.
+<code>endalert</code></p>
+</li>
+<li>
+<p><strong>Limitaciones de los selectores por ID</strong>
+<code>startalert</code></p>
+</li>
+<li>
+<p><strong>Reutilización limitada</strong>: Los IDs no se pueden reutilizar en la misma página, lo que limita su uso para estilos comunes.</p>
+</li>
+<li>
+<p><strong>Especificidad alta</strong>: La alta especificidad de los selectores por ID puede dificultar la sobreescritura de estilos en cascada.
+<code>endalert</code></p>
+</li>
+<li>
+<p><strong>Buenas prácticas</strong></p>
+</li>
+<li>
+<p>//Unicidad//: Asegúrate de que cada ID sea único dentro de la página para evitar conflictos y comportamientos inesperados.</p>
+</li>
+<li>
+<p>//Uso limitado//: Utiliza selectores por ID para elementos únicos y recurre a clases para estilos reutilizables.</p>
+</li>
+<li>
+<p><strong>Combinación de selectores por ID con otros selectores</strong>
+Puedes combinar selectores por ID con otros selectores para aplicar estilos de manera más específica. Por ejemplo, combinar un ID con un selector de tipo o de clase.</p>
+</li>
+</ul>
+
+												<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#miID .especial {
+color: green;
+font-style: italic;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p id=&quot;miID&quot; class=&quot;especial&quot;&gt;Este es un p&aacute;rrafo verde e it&aacute;lico con el ID &quot;miID&quot;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+												<ul>
+<li><strong>Conclusión</strong>
+El uso de selectores por ID en CSS es ideal para aplicar estilos a elementos únicos en un documento HTML. Aunque los IDs ofrecen alta especificidad y control, es importante usarlos con moderación y combinarlos adecuadamente con otros selectores para mantener un código CSS limpio y manejable.</li>
+</ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

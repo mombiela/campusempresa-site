@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos y uso de peticiones HTTP.</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\apps-web\peticiones_http.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\apps-web\peticiones_http.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\apps-web\peticiones_http.stxt" target="ca\apps-web\peticiones_http" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<p>HTTP (Hypertext Transfer Protocol) es el protocolo fundamental utilizado en la web para la comunicación entre clientes y servidores. Los métodos HTTP especifican la acción que se desea realizar sobre un recurso. Cada método tiene un propósito específico y se utiliza en diferentes contextos.</p>
+
+								            	<h2><a id="index_0"></a>Métodos HTTP principales</h2>
+																<p>A continuación se presentan los métodos HTTP más utilizados:</p>
+<ul>
+<li><strong>GET</strong>: El método <code>GET</code> solicita un recurso específico del servidor. Es el método más común y se utiliza principalmente para recuperar datos. Las solicitudes <code>GET</code> no deben tener efectos secundarios (es decir, deben ser seguras y no alterar el estado del servidor).</li>
+</ul>
+
+												<pre>GET /recurso HTTP/1.1
+Host: www.ejemplo.com</pre>
+												<ul>
+<li><strong>POST</strong>: El método <code>POST</code> se utiliza para enviar datos al servidor, generalmente para crear o actualizar un recurso. A diferencia de <code>GET</code>, las solicitudes <code>POST</code> pueden tener efectos secundarios y no son idempotentes (pueden causar cambios en el servidor cada vez que se ejecutan).</li>
+</ul>
+
+												<pre>POST /recurso HTTP/1.1
+Host: www.ejemplo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+nombre=Juan&amp;edad=30</pre>
+												<ul>
+<li><strong>PUT</strong>: El método <code>PUT</code> se utiliza para actualizar un recurso existente o crear uno nuevo si no existe. Las solicitudes <code>PUT</code> son idempotentes, lo que significa que aplicar la misma solicitud varias veces no debería cambiar el resultado.</li>
+</ul>
+
+												<pre>PUT /recurso/123 HTTP/1.1
+Host: www.ejemplo.com
+Content-Type: application/json
+Content-Length: 49
+
+{&quot;nombre&quot;:&quot;Juan&quot;,&quot;edad&quot;:30,&quot;email&quot;:&quot;juan@ejemplo.com&quot;}</pre>
+												<ul>
+<li><strong>DELETE</strong>: El método <code>DELETE</code> se utiliza para eliminar un recurso específico del servidor. Al igual que <code>PUT</code>, las solicitudes <code>DELETE</code> son idempotentes.</li>
+</ul>
+
+												<pre>DELETE /recurso/123 HTTP/1.1
+Host: www.ejemplo.com</pre>
+												<ul>
+<li><strong>HEAD</strong>: El método <code>HEAD</code> es similar a <code>GET</code>, pero solo solicita los encabezados de la respuesta, sin el cuerpo. Se utiliza principalmente para obtener metadatos sobre un recurso, como su tamaño o tipo, sin transferir el contenido completo.</li>
+</ul>
+
+												<pre>HEAD /recurso HTTP/1.1
+Host: www.ejemplo.com</pre>
+												<ul>
+<li><strong>OPTIONS</strong>: El método <code>OPTIONS</code> se utiliza para describir las opciones de comunicación disponibles para el recurso objetivo. Es útil para determinar las capacidades del servidor o las políticas de CORS (Cross-Origin Resource Sharing).</li>
+</ul>
+
+												<pre>OPTIONS /recurso HTTP/1.1
+Host: www.ejemplo.com</pre>
+												
+								            	<h2><a id="index_1"></a>Códigos de respuesta HTTP más habituales</h2>
+																<p>Los códigos de respuesta HTTP indican el resultado de la solicitud realizada por el cliente al servidor. Estos códigos se agrupan en cinco categorías principales: informativos, éxitos, redirecciones, errores del cliente y errores del servidor. A continuación, se presentan los códigos de respuesta más habituales en una tabla:</p>
+<p>|= Código |= Significado |= Descripción
+| 200 | OK | La solicitud ha tenido éxito y el servidor ha devuelto el recurso solicitado.
+| 201 | Created | La solicitud ha sido completada y ha resultado en la creación de un nuevo recurso.
+| 204 | No Content | La solicitud ha tenido éxito, pero el servidor no devuelve ningún contenido en la respuesta.
+| 301 | Moved Permanently | El recurso solicitado ha sido movido permanentemente a una nueva URL.
+| 302 | Found | El recurso solicitado se encuentra temporalmente en una URL diferente.
+| 304 | Not Modified | El recurso no ha sido modificado desde la última solicitud. Se puede usar la versión en caché.
+| 400 | Bad Request | La solicitud no puede ser procesada debido a un error del cliente (por ejemplo, sintaxis incorrecta).
+| 401 | Unauthorized | La solicitud requiere autenticación del usuario.
+| 403 | Forbidden | El servidor ha entendido la solicitud, pero se niega a autorizarla.
+| 404 | Not Found | El recurso solicitado no ha sido encontrado en el servidor.
+| 405 | Method Not Allowed | El método HTTP utilizado no está permitido para el recurso solicitado.
+| 500 | Internal Server Error | El servidor encontró una condición inesperada que le impidió completar la solicitud.
+| 501 | Not Implemented | El servidor no reconoce el método de la solicitud o carece de la capacidad para completarla.
+| 502 | Bad Gateway | El servidor, actuando como una puerta de enlace o proxy, recibió una respuesta inválida del servidor de respaldo.
+| 503 | Service Unavailable | El servidor no puede manejar la solicitud en este momento, generalmente debido a mantenimiento o sobrecarga.</p>
+<p>Estos códigos de respuesta proporcionan información importante sobre el estado de la solicitud y ayudan a diagnosticar y resolver problemas en la comunicación entre clientes y servidores en la web.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

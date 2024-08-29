@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades del contenedor Flexbox</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/es\css\contenedor_flexbox.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/es\css\contenedor_flexbox.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="es\css\contenedor_flexbox.stxt" target="es\css\contenedor_flexbox" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<p>El contenedor Flexbox es el elemento padre al que se le aplica la propiedad <code>display: flex</code> o <code>display: inline-flex</code>. Estas propiedades permiten utilizar un conjunto de propiedades adicionales que controlan el comportamiento y la distribución de los elementos flexibles (flex items) dentro del contenedor.</p>
+<ul>
+<li>
+<p><strong>display</strong>:</p>
+</li>
+<li>
+<p>Define el elemento como un contenedor flexible.</p>
+</li>
+<li>
+<p>Ejemplos:</p>
+</li>
+<li>
+<p><code>display: flex;</code></p>
+</li>
+<li>
+<p><code>display: inline-flex;</code></p>
+</li>
+<li>
+<p><strong>flex-direction</strong>:</p>
+</li>
+<li>
+<p>Define la dirección principal en la que se colocan los elementos flexibles.</p>
+</li>
+<li>
+<p>Valores:</p>
+</li>
+<li>
+<p><code>row</code>: Los elementos se colocan en una fila horizontal (valor predeterminado).</p>
+</li>
+<li>
+<p><code>row-reverse</code>: Los elementos se colocan en una fila horizontal, pero en orden inverso.</p>
+</li>
+<li>
+<p><code>column</code>: Los elementos se colocan en una columna vertical.</p>
+</li>
+<li>
+<p><code>column-reverse</code>: Los elementos se colocan en una columna vertical, pero en orden inverso.</p>
+</li>
+<li>
+<p><strong>flex-wrap</strong>:</p>
+</li>
+<li>
+<p>Controla si los elementos flexibles se envuelven o no dentro del contenedor.</p>
+</li>
+<li>
+<p>Valores:</p>
+</li>
+<li>
+<p><code>nowrap</code>: Todos los elementos se colocan en una sola línea (valor predeterminado).</p>
+</li>
+<li>
+<p><code>wrap</code>: Los elementos se envuelven en varias líneas según sea necesario.</p>
+</li>
+<li>
+<p><code>wrap-reverse</code>: Los elementos se envuelven en varias líneas, pero en orden inverso.</p>
+</li>
+<li>
+<p><strong>flex-flow</strong>:</p>
+</li>
+<li>
+<p>Es una propiedad abreviada para <code>flex-direction</code> y <code>flex-wrap</code>.</p>
+</li>
+<li>
+<p>Ejemplo:</p>
+</li>
+<li>
+<p><code>flex-flow: row wrap;</code></p>
+</li>
+<li>
+<p><strong>justify-content</strong>:</p>
+</li>
+<li>
+<p>Define cómo se distribuye el espacio entre los elementos a lo largo de la dirección principal.</p>
+</li>
+<li>
+<p>Valores:</p>
+</li>
+<li>
+<p><code>flex-start</code>: Los elementos se alinean al inicio del contenedor (valor predeterminado).</p>
+</li>
+<li>
+<p><code>flex-end</code>: Los elementos se alinean al final del contenedor.</p>
+</li>
+<li>
+<p><code>center</code>: Los elementos se alinean al centro del contenedor.</p>
+</li>
+<li>
+<p><code>space-between</code>: El espacio entre los elementos se distribuye uniformemente.</p>
+</li>
+<li>
+<p><code>space-around</code>: El espacio alrededor de los elementos se distribuye uniformemente.</p>
+</li>
+<li>
+<p><code>space-evenly</code>: El espacio entre los elementos se distribuye uniformemente con igual espacio antes, entre y después de ellos.</p>
+</li>
+<li>
+<p><strong>align-items</strong>:</p>
+</li>
+<li>
+<p>Define cómo se alinean los elementos a lo largo del eje transversal (perpendicular al eje principal).</p>
+</li>
+<li>
+<p>Valores:</p>
+</li>
+<li>
+<p><code>flex-start</code>: Los elementos se alinean al inicio del contenedor.</p>
+</li>
+<li>
+<p><code>flex-end</code>: Los elementos se alinean al final del contenedor.</p>
+</li>
+<li>
+<p><code>center</code>: Los elementos se alinean al centro del contenedor.</p>
+</li>
+<li>
+<p><code>baseline</code>: Los elementos se alinean según la línea base del texto.</p>
+</li>
+<li>
+<p><code>stretch</code>: Los elementos se estiran para llenar el contenedor (valor predeterminado).</p>
+</li>
+<li>
+<p><strong>align-content</strong>:</p>
+</li>
+<li>
+<p>Define cómo se distribuye el espacio entre las líneas cuando hay múltiples líneas de elementos flexibles.</p>
+</li>
+<li>
+<p>Solo tiene efecto cuando hay múltiples líneas de elementos flexibles.</p>
+</li>
+<li>
+<p>Valores:</p>
+</li>
+<li>
+<p><code>flex-start</code>: Las líneas se alinean al inicio del contenedor.</p>
+</li>
+<li>
+<p><code>flex-end</code>: Las líneas se alinean al final del contenedor.</p>
+</li>
+<li>
+<p><code>center</code>: Las líneas se alinean al centro del contenedor.</p>
+</li>
+<li>
+<p><code>space-between</code>: El espacio entre las líneas se distribuye uniformemente.</p>
+</li>
+<li>
+<p><code>space-around</code>: El espacio alrededor de las líneas se distribuye uniformemente.</p>
+</li>
+<li>
+<p><code>stretch</code>: Las líneas se estiran para llenar el contenedor (valor predeterminado).</p>
+</li>
+</ul>
+
+								            	<h2><a id="index_0"></a>Ejemplo de código CSS para un contenedor Flexbox</h2>
+																
+												<pre>.container {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+align-content: space-around;
+}</pre>
+												<p>En este ejemplo, el contenedor Flexbox:</p>
+<ul>
+<li>Se define como un contenedor flexible con <code>display: flex;</code>.</li>
+<li>Los elementos flexibles se colocan en una fila con <code>flex-direction: row;</code>.</li>
+<li>Los elementos flexibles se envuelven en varias líneas con <code>flex-wrap: wrap;</code>.</li>
+<li>El espacio entre los elementos se distribuye uniformemente con <code>justify-content: space-between;</code>.</li>
+<li>Los elementos se alinean al centro del eje transversal con <code>align-items: center;</code>.</li>
+<li>El espacio entre las líneas se distribuye uniformemente con <code>align-content: space-around;</code>.</li>
+</ul>
+
+								            	<h2><a id="index_1"></a>Diagrama de un contenedor Flexbox con propiedades aplicadas</h2>
+																<p><code>startuml</code>
++------------------------------------------------+
+| Contenedor (display: flex)                      |
+| +----------------+ +----------------+          |
+| | Item 1         | | Item 2         |          |
+| +----------------+ +----------------+          |
+| +----------------+ +----------------+          |
+| | Item 3         | | Item 4         |          |
+| +----------------+ +----------------+          |
++------------------------------------------------+
+<code>enduml</code></p>
+<p>En este diagrama, se muestra cómo se distribuyen y alinean los elementos dentro del contenedor Flexbox utilizando las propiedades mencionadas.</p>
+<ul>
+<li>[[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes|Guía completa sobre el uso de Flexbox en CSS]]</li>
+</ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

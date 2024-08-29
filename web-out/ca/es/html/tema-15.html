@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 15: Accesibilidad en HTML</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/es\html\tema-15.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/es\html\tema-15.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="es\html\tema-15.stxt" target="es\html\tema-15" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="tema-14" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="tema-16" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Introducción a la accesibilidad en la web</h2>
+												            	<h3><a id="index_1"></a>¿Qué es la accesibilidad web?</h3>
+																<p>La accesibilidad web se refiere a la práctica de diseñar y desarrollar sitios web de manera que todas las personas, incluidas aquellas con discapacidades, puedan utilizarlos. Esto implica crear contenido que sea accesible para usuarios con diversas capacidades, incluyendo aquellos con discapacidades visuales, auditivas, motoras o cognitivas.</p>
+<p>La accesibilidad no solo es un requisito legal en muchos países, sino que también es una buena práctica que mejora la usabilidad para todos los usuarios. Además, sitios web accesibles suelen ser más fáciles de mantener y más compatibles con diferentes dispositivos.</p>
+
+												<pre>&lt;!-- Ejemplo de texto alternativo para im&aacute;genes --&gt;
+&lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripci&oacute;n de la imagen&quot; /&gt;</pre>
+								            	<h3><a id="index_2"></a>Principios básicos de accesibilidad</h3>
+																<p>La accesibilidad se basa en cuatro principios fundamentales conocidos como <strong>POUR</strong>:</p>
+<ol>
+<li><strong>Perceptible</strong>: La información y los componentes de la interfaz deben ser presentados de manera que puedan ser percibidos por todos los usuarios, incluso aquellos con discapacidades sensoriales.</li>
+<li><strong>Operable</strong>: Los usuarios deben poder interactuar con la interfaz de manera eficaz, independientemente de sus habilidades motoras.</li>
+<li><strong>Comprensible</strong>: La información y el funcionamiento de la interfaz deben ser comprensibles para todos los usuarios.</li>
+<li><strong>Robusto</strong>: El contenido debe ser robusto y compatible con una amplia variedad de tecnologías de asistencia, así como con navegadores y dispositivos actuales y futuros.</li>
+</ol>
+
+												<pre>&lt;!-- Ejemplo de accesibilidad b&aacute;sica con etiquetas ARIA --&gt;
+&lt;button aria-label=&quot;Cerrar ventana&quot;&gt;X&lt;/button&gt;</pre>
+								            	<h3><a id="index_3"></a>Uso de etiquetas semánticas para mejorar la accesibilidad</h3>
+																<p>El uso de etiquetas HTML semánticas es clave para mejorar la accesibilidad de un sitio web. Estas etiquetas ayudan a los usuarios que dependen de tecnologías de asistencia, como lectores de pantalla, a navegar y comprender mejor el contenido.</p>
+<p><strong>Ejemplos de etiquetas semánticas útiles</strong>:</p>
+<ul>
+<li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>: Ayudan a estructurar el contenido de manera lógica.</li>
+<li><code>&lt;label&gt;</code>: Asocia texto con un elemento de formulario, lo que mejora la usabilidad para todos los usuarios.</li>
+<li><code>&lt;alt&gt;</code>: Proporciona texto alternativo para imágenes, esencial para usuarios con discapacidades visuales.</li>
+</ul>
+
+												<pre>&lt;!-- Ejemplo de un formulario accesible --&gt;
+&lt;form&gt;
+    &lt;label for=&quot;nombre&quot;&gt;Nombre:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;nombre&quot; name=&quot;nombre&quot;&gt;
+
+    &lt;label for=&quot;email&quot;&gt;Correo electr&oacute;nico:&lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;
+
+    &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</pre>
+								            	<h3><a id="index_4"></a>Implementación de ARIA (Accessible Rich Internet Applications)</h3>
+																<p>ARIA es un conjunto de atributos que se pueden añadir a las etiquetas HTML para mejorar la accesibilidad de las aplicaciones web ricas. ARIA permite describir elementos y estados dinámicos, asegurando que las tecnologías de asistencia puedan interpretar y comunicar correctamente la información al usuario.</p>
+<p><strong>Atributos ARIA comunes</strong>:</p>
+<ul>
+<li><code>aria-label</code>: Proporciona una etiqueta accesible para un elemento.</li>
+<li><code>aria-hidden</code>: Indica que un elemento no es visible o no debe ser anunciado por las tecnologías de asistencia.</li>
+<li><code>role</code>: Define el rol del elemento (por ejemplo, <code>button</code>, <code>dialog</code>, <code>alert</code>).</li>
+</ul>
+
+												<pre>&lt;!-- Ejemplo de uso de atributos ARIA --&gt;
+&lt;div role=&quot;dialog&quot; aria-labelledby=&quot;dialogTitle&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;h2 id=&quot;dialogTitle&quot;&gt;T&iacute;tulo del di&aacute;logo&lt;/h2&gt;
+    &lt;p&gt;Contenido del di&aacute;logo.&lt;/p&gt;
+    &lt;button aria-label=&quot;Cerrar di&aacute;logo&quot;&gt;Cerrar&lt;/button&gt;
+&lt;/div&gt;</pre>
+								            	<h3><a id="index_5"></a>Buenas prácticas para formularios accesibles</h3>
+																<p>Los formularios son una parte crítica de la interacción del usuario en la web, y su accesibilidad es fundamental. Algunas buenas prácticas incluyen:</p>
+<ol>
+<li><strong>Etiquetas claras</strong>: Usa etiquetas <code>&lt;label&gt;</code> para cada campo de formulario.</li>
+<li><strong>Texto alternativo para botones</strong>: Asegúrate de que todos los botones tengan un texto alternativo descriptivo.</li>
+<li><strong>Instrucciones claras</strong>: Proporciona instrucciones claras y accesibles para los usuarios que puedan necesitar asistencia adicional.</li>
+<li><strong>Orden de tabulación lógico</strong>: Configura el orden de tabulación de manera que sea natural y lógico para los usuarios que navegan con el teclado.</li>
+</ol>
+
+												<pre>&lt;!-- Ejemplo de formulario con buenas pr&aacute;cticas de accesibilidad --&gt;
+&lt;form&gt;
+    &lt;label for=&quot;username&quot;&gt;Nombre de usuario:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; required&gt;
+
+    &lt;label for=&quot;password&quot;&gt;Contrase&ntilde;a:&lt;/label&gt;
+    &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; required&gt;
+
+    &lt;button type=&quot;submit&quot; aria-label=&quot;Enviar formulario&quot;&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</pre>
+								            	<h2><a id="index_6"></a>Conclusión sobre accesibilidad en HTML</h2>
+																<p>La accesibilidad web es un aspecto crucial del desarrollo web moderno. Al seguir las mejores prácticas y utilizar las herramientas proporcionadas por HTML5 y ARIA, puedes asegurarte de que tu sitio web sea inclusivo y accesible para todos los usuarios, independientemente de sus capacidades.</p>
+<p>Implementar accesibilidad no solo cumple con los estándares y regulaciones, sino que también mejora la experiencia general del usuario, haciéndola más intuitiva y fácil de usar.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

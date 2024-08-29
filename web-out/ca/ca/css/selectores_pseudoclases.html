@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a las pseudoclases</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\css\selectores_pseudoclases.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\css\selectores_pseudoclases.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\css\selectores_pseudoclases.stxt" target="ca\css\selectores_pseudoclases" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									
+								            	<h2><a id="index_0"></a>Introducción a las pseudoclases</h2>
+																<ul>
+<li>
+<p><strong>Definición y propósito</strong>
+Las pseudoclases en CSS son palabras clave que se añaden a los selectores para especificar un estado especial del elemento seleccionado. Permiten aplicar estilos en función de la interacción del usuario o del estado del documento.</p>
+</li>
+<li>
+<p><strong>Sintaxis básica</strong>
+Las pseudoclases se denotan con un signo de dos puntos (:) seguido del nombre de la pseudoclase. Se añaden directamente después del selector al que se aplican.</p>
+</li>
+</ul>
+
+												<pre>selector:pseudoclase {
+propiedad: valor;
+}</pre>
+												<ul>
+<li><strong>Tipos comunes de pseudoclases</strong>
+<code>startalert</code></li>
+<li><strong>:hover</strong>: Aplica estilos cuando el usuario coloca el puntero sobre un elemento.</li>
+</ul>
+
+												<pre>a:hover {
+color: red;
+}</pre>
+												<ul>
+<li><strong>:active</strong>: Aplica estilos cuando un elemento está siendo activamente pulsado por el usuario.</li>
+</ul>
+
+												<pre>a:active {
+color: blue;
+}</pre>
+												<ul>
+<li><strong>:focus</strong>: Aplica estilos cuando un elemento ha recibido el foco, como cuando se selecciona un campo de formulario.</li>
+</ul>
+
+												<pre>input:focus {
+border-color: green;
+}</pre>
+												<ul>
+<li><strong>:nth-child()</strong>: Aplica estilos a elementos que son el n-ésimo hijo de su padre, donde n puede ser un número, una palabra clave o una fórmula.</li>
+</ul>
+
+												<pre>p:nth-child(2) {
+color: purple;
+}</pre>
+												<ul>
+<li><strong>:not()</strong>: Aplica estilos a todos los elementos que no coinciden con el selector dado.</li>
+</ul>
+
+												<pre>input:not([type=&quot;text&quot;]) {
+background-color: yellow;
+}</pre>
+												<p><code>endalert</code></p>
+<ul>
+<li>
+<p><strong>Ventajas del uso de pseudoclases</strong>
+<code>startalert</code></p>
+</li>
+<li>
+<p><strong>Interactividad</strong>: Permiten cambiar el estilo de un elemento en respuesta a la interacción del usuario sin necesidad de JavaScript.</p>
+</li>
+<li>
+<p><strong>Flexibilidad</strong>: Ofrecen una forma flexible de apuntar a elementos en función de su estado dentro del documento.</p>
+</li>
+<li>
+<p><strong>Mantenimiento</strong>: Facilitan el mantenimiento del CSS al permitir la especificación de estados especiales directamente en los estilos.
+<code>endalert</code></p>
+</li>
+<li>
+<p><strong>Ejemplos prácticos</strong></p>
+</li>
+</ul>
+
+												<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+button:hover {
+background-color: lightblue;
+}
+button:active {
+background-color: darkblue;
+}
+input:focus {
+outline: none;
+border: 2px solid blue;
+}
+li:nth-child(even) {
+background-color: #f2f2f2;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button&gt;Haz clic aqu&iacute;&lt;/button&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;Escribe aqu&iacute;&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;Elemento 1&lt;/li&gt;
+&lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;li&gt;Elemento 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+												<ul>
+<li><strong>Conclusión</strong>
+Las pseudoclases en CSS son esenciales para mejorar la interactividad y la usabilidad de las páginas web. Proporcionan una forma eficiente de aplicar estilos en función del estado del elemento y las interacciones del usuario, permitiendo diseños más dinámicos y receptivos.</li>
+</ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

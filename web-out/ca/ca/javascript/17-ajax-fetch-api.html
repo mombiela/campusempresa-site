@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX y Fetch API</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\javascript\17-ajax-fetch-api.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\javascript\17-ajax-fetch-api.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\javascript\17-ajax-fetch-api.stxt" target="ca\javascript\17-ajax-fetch-api" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="16-promesas-asincronia" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="18-modulos-javascript" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>AJAX y Fetch API en JavaScript</h2>
+												            	<h3><a id="index_1"></a>Introducción a AJAX</h3>
+																<p><strong>AJAX</strong> (Asynchronous JavaScript and XML) es una técnica que permite actualizar partes de una página web sin tener que recargarla por completo.
+AJAX combina varias tecnologías, incluyendo JavaScript, XML (aunque hoy en día es más común usar JSON), y el objeto <code>XMLHttpRequest</code>, para realizar solicitudes asíncronas al servidor.</p>
+<p>AJAX es fundamental para construir aplicaciones web dinámicas que pueden interactuar con servidores de manera eficiente.</p>
+
+												<pre>// Ejemplo b&aacute;sico de AJAX con XMLHttpRequest
+let xhr = new XMLHttpRequest();
+xhr.open(&quot;GET&quot;, &quot;https://api.example.com/datos&quot;, true);
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+        console.log(&quot;Datos recibidos:&quot;, xhr.responseText);
+    }
+};
+xhr.send();</pre>
+								            	<h3><a id="index_2"></a>Uso de la Fetch API</h3>
+																<p>La <strong>Fetch API</strong> es una interfaz moderna que reemplaza a <code>XMLHttpRequest</code> para realizar solicitudes HTTP.
+Es más fácil de usar y se basa en promesas, lo que la hace más compatible con código asincrónico moderno.</p>
+<p>La Fetch API permite hacer solicitudes con el método <code>fetch()</code>, que devuelve una promesa que se resuelve en un objeto <code>Response</code>.</p>
+
+												<pre>// Ejemplo b&aacute;sico de Fetch API
+fetch(&quot;https://api.example.com/datos&quot;)
+    .then(response =&gt; {
+        if (!response.ok) {
+            throw new Error(&quot;Error en la solicitud: &quot; + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data =&gt; {
+        console.log(&quot;Datos recibidos:&quot;, data);
+    })
+    .catch(error =&gt; {
+        console.error(&quot;Error:&quot;, error);
+    });</pre>
+								            	<h3><a id="index_3"></a>Envío de datos con Fetch</h3>
+																<p>Fetch API también permite enviar datos al servidor utilizando métodos como <code>POST</code>.
+Para enviar datos, se debe incluir un objeto de configuración que especifique el método HTTP, encabezados y el cuerpo de la solicitud.</p>
+
+												<pre>// Ejemplo de env&iacute;o de datos con Fetch API
+let datos = {
+    nombre: &quot;Juan&quot;,
+    edad: 30
+};
+
+fetch(&quot;https://api.example.com/usuarios&quot;, {
+    method: &quot;POST&quot;,
+    headers: {
+        &quot;Content-Type&quot;: &quot;application/json&quot;
+    },
+    body: JSON.stringify(datos)
+})
+    .then(response =&gt; {
+        if (!response.ok) {
+            throw new Error(&quot;Error en la solicitud: &quot; + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data =&gt; {
+        console.log(&quot;Respuesta del servidor:&quot;, data);
+    })
+    .catch(error =&gt; {
+        console.error(&quot;Error:&quot;, error);
+    });</pre>
+								            	<h3><a id="index_4"></a>Manejo de respuestas con Fetch</h3>
+																<p>El objeto <code>Response</code> devuelto por <code>fetch()</code> incluye varios métodos para manejar la respuesta del servidor:</p>
+<ul>
+<li><code>text()</code> - Devuelve la respuesta como una cadena de texto.</li>
+<li><code>json()</code> - Analiza la respuesta como JSON y devuelve un objeto JavaScript.</li>
+<li><code>blob()</code> - Devuelve la respuesta como un objeto Blob.</li>
+<li><code>formData()</code> - Devuelve la respuesta como un objeto FormData.</li>
+<li><code>arrayBuffer()</code> - Devuelve la respuesta como un ArrayBuffer.</li>
+</ul>
+
+												<pre>// Ejemplo de manejo de respuestas con Fetch API
+fetch(&quot;https://api.example.com/datos&quot;)
+    .then(response =&gt; {
+        if (!response.ok) {
+            throw new Error(&quot;Error en la solicitud: &quot; + response.statusText);
+        }
+        return response.text();
+    })
+    .then(data =&gt; {
+        console.log(&quot;Datos recibidos como texto:&quot;, data);
+    })
+    .catch(error =&gt; {
+        console.error(&quot;Error:&quot;, error);
+    });</pre>
+								            	<h3><a id="index_5"></a>Comparación entre Fetch API y XMLHttpRequest</h3>
+																<p>Aunque <code>XMLHttpRequest</code> ha sido la forma tradicional de hacer solicitudes AJAX, la Fetch API ofrece varias ventajas:</p>
+<ul>
+<li><strong>Simplicidad</strong>: Fetch tiene una sintaxis más sencilla y limpia, basada en promesas.</li>
+<li><strong>Manejo de errores</strong>: Fetch maneja los errores de manera más consistente.</li>
+<li><strong>Manejo de respuestas</strong>: Fetch facilita el manejo de diferentes tipos de respuesta (texto, JSON, blobs, etc.).</li>
+<li><strong>Desventajas</strong>: Fetch no maneja automáticamente los errores de red como <code>XMLHttpRequest</code>, que debe manejarse explícitamente con <code>catch()</code>.</li>
+</ul>
+
+												<pre>// Comparaci&oacute;n simple
+// XMLHttpRequest
+let xhr = new XMLHttpRequest();
+xhr.open(&quot;GET&quot;, &quot;https://api.example.com/datos&quot;, true);
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+        console.log(&quot;Datos recibidos con XMLHttpRequest:&quot;, xhr.responseText);
+    }
+};
+xhr.send();
+
+// Fetch API
+fetch(&quot;https://api.example.com/datos&quot;)
+    .then(response =&gt; response.json())
+    .then(data =&gt; console.log(&quot;Datos recibidos con Fetch:&quot;, data))
+    .catch(error =&gt; console.error(&quot;Error:&quot;, error));</pre>
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

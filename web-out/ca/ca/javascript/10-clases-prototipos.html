@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases y Prototipos</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\javascript\10-clases-prototipos.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\javascript\10-clases-prototipos.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\javascript\10-clases-prototipos.stxt" target="ca\javascript\10-clases-prototipos" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="09-manejo-cadenas" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="11-herencia-polimorfismo" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Clases y Prototipos en JavaScript</h2>
+												            	<h3><a id="index_1"></a>Introducción a Clases y Prototipos</h3>
+																<p>En JavaScript, los objetos pueden ser creados y organizados a través de <strong>clases</strong> y <strong>prototipos</strong>.
+Estos conceptos son fundamentales en la programación orientada a objetos en JavaScript.</p>
+<p><strong>Prototipos</strong>: Son la base para la herencia en JavaScript. Cada objeto tiene un enlace interno a otro objeto, llamado su prototipo.
+Cuando intentas acceder a una propiedad que no existe en un objeto, JavaScript busca en el prototipo de ese objeto, y así sucesivamente.</p>
+<p><strong>Clases</strong>: Introducidas en ES6, las clases son una forma sintácticamente más conveniente de crear objetos y manejar herencia en JavaScript,
+basándose en el sistema de prototipos subyacente.</p>
+
+												<pre>// Ejemplo b&aacute;sico de clase en JavaScript
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    saludar() {
+        console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.edad} a&ntilde;os.`);
+    }
+}
+
+// Crear una instancia de la clase Persona
+let persona1 = new Persona(&quot;Juan&quot;, 30);
+persona1.saludar(); // Output: Hola, mi nombre es Juan y tengo 30 a&ntilde;os.</pre>
+								            	<h3><a id="index_2"></a>Prototipos en JavaScript</h3>
+																<p>En JavaScript, cada objeto tiene una propiedad interna llamada <code>[[Prototype]]</code>, que se puede acceder usando <code>__proto__</code> o
+a través de métodos como <code>Object.getPrototypeOf()</code> y <code>Object.setPrototypeOf()</code>.</p>
+<p>El prototipo de un objeto es otro objeto del cual el primero hereda propiedades y métodos.
+Esta es la base del modelo de herencia prototípica en JavaScript.</p>
+
+												<pre>// Ejemplo de prototipo en JavaScript
+function Animal(nombre) {
+    this.nombre = nombre;
+}
+
+Animal.prototype.hablar = function() {
+    console.log(`${this.nombre} hace un sonido.`);
+};
+
+let perro = new Animal(&quot;Rex&quot;);
+perro.hablar(); // Output: Rex hace un sonido.</pre>
+								            	<h3><a id="index_3"></a>Creación de clases en JavaScript</h3>
+																<p>Las clases en JavaScript son plantillas para crear objetos.
+Se definen utilizando la palabra clave <code>class</code>, seguida del nombre de la clase.
+El constructor de la clase se define en el método <code>constructor()</code>, y las funciones se definen como métodos dentro de la clase.</p>
+
+												<pre>// Ejemplo de clase con constructor y m&eacute;todos
+class Coche {
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    arrancar() {
+        console.log(`El ${this.marca} ${this.modelo} est&aacute; arrancando.`);
+    }
+}
+
+// Crear una instancia de la clase Coche
+let miCoche = new Coche(&quot;Toyota&quot;, &quot;Corolla&quot;);
+miCoche.arrancar(); // Output: El Toyota Corolla est&aacute; arrancando.</pre>
+								            	<h3><a id="index_4"></a>Métodos estáticos y de instancia</h3>
+																<p>En JavaScript, los métodos de clase pueden ser <strong>métodos de instancia</strong> o <strong>métodos estáticos</strong>:</p>
+<ul>
+<li><strong>Métodos de instancia</strong>: Definidos dentro de la clase y disponibles en las instancias de la clase.</li>
+<li><strong>Métodos estáticos</strong>: Definidos usando la palabra clave <code>static</code>, y no son accesibles desde instancias de la clase, sino directamente desde la clase misma.</li>
+</ul>
+
+												<pre>// Ejemplo de m&eacute;todos de instancia y est&aacute;ticos
+class Calculadora {
+    // M&eacute;todo est&aacute;tico
+    static sumar(a, b) {
+        return a + b;
+    }
+
+    // M&eacute;todo de instancia
+    restar(a, b) {
+        return a - b;
+    }
+}
+
+// Usar el m&eacute;todo est&aacute;tico
+let resultadoSuma = Calculadora.sumar(5, 3);
+console.log(&quot;Resultado de la suma:&quot;, resultadoSuma); // Output: Resultado de la suma: 8
+
+// Usar el m&eacute;todo de instancia
+let calc = new Calculadora();
+let resultadoResta = calc.restar(5, 3);
+console.log(&quot;Resultado de la resta:&quot;, resultadoResta); // Output: Resultado de la resta: 2</pre>
+								            	<h3><a id="index_5"></a>Prototipos vs Clases</h3>
+																<p>Antes de la introducción de las clases en ES6, JavaScript utilizaba exclusivamente prototipos para manejar la herencia y la creación de objetos.
+Con las clases, JavaScript proporciona una sintaxis más familiar para los programadores acostumbrados a lenguajes orientados a objetos como Java o C++.</p>
+<p>Sin embargo, debajo de las clases, JavaScript sigue utilizando el sistema de prototipos para implementar la herencia.</p>
+
+												<pre>// Ejemplo de herencia protot&iacute;pica
+function Vehiculo(marca, modelo) {
+    this.marca = marca;
+    this.modelo = modelo;
+}
+
+Vehiculo.prototype.arrancar = function() {
+    console.log(`El ${this.marca} ${this.modelo} est&aacute; arrancando.`);
+};
+
+// Herencia de prototipos
+function Moto(marca, modelo, tipo) {
+    Vehiculo.call(this, marca, modelo);
+    this.tipo = tipo;
+}
+
+Moto.prototype = Object.create(Vehiculo.prototype);
+Moto.prototype.constructor = Moto;
+
+let miMoto = new Moto(&quot;Yamaha&quot;, &quot;MT-07&quot;, &quot;Deportiva&quot;);
+miMoto.arrancar(); // Output: El Yamaha MT-07 est&aacute; arrancando.</pre>
+								            	<h2><a id="index_6"></a>Beneficios de usar clases</h2>
+																<p>Las clases en JavaScript ofrecen varias ventajas:</p>
+<ul>
+<li><strong>Claridad y organización</strong>: El código es más fácil de leer y entender, especialmente para aquellos con experiencia en lenguajes orientados a objetos.</li>
+<li><strong>Encapsulación</strong>: Permite agrupar datos y métodos relacionados dentro de una misma estructura.</li>
+<li><strong>Reutilización</strong>: Facilita la creación de nuevos objetos basados en plantillas comunes, reduciendo la repetición de código.</li>
+<li><strong>Herencia simplificada</strong>: Proporciona una forma más clara y directa de implementar la herencia y extender la funcionalidad de clases existentes.</li>
+</ul>
+
+												<pre>// Ejemplo de herencia con clases
+class Animal {
+    constructor(nombre) {
+        this.nombre = nombre;
+    }
+
+    hacerSonido() {
+        console.log(`${this.nombre} hace un sonido.`);
+    }
+}
+
+class Perro extends Animal {
+    ladrar() {
+        console.log(`${this.nombre} dice guau.`);
+    }
+}
+
+let miPerro = new Perro(&quot;Max&quot;);
+miPerro.hacerSonido(); // Output: Max hace un sonido.
+miPerro.ladrar(); // Output: Max dice guau.</pre>
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

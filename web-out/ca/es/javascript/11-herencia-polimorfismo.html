@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia y Polimorfismo</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/es\javascript\11-herencia-polimorfismo.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/es\javascript\11-herencia-polimorfismo.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="es\javascript\11-herencia-polimorfismo.stxt" target="es\javascript\11-herencia-polimorfismo" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="10-clases-prototipos" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="12-encapsulamiento" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Herencia y Polimorfismo en JavaScript</h2>
+												            	<h3><a id="index_1"></a>Introducción a la Herencia</h3>
+																<p>La herencia es un concepto fundamental en la programación orientada a objetos, que permite crear nuevas clases a partir de clases existentes.
+En JavaScript, esto se logra utilizando clases y prototipos. La herencia permite que las nuevas clases hereden propiedades y métodos de las clases padres,
+lo que facilita la reutilización de código y la creación de jerarquías de clases.</p>
+
+												<pre>// Ejemplo b&aacute;sico de herencia en JavaScript
+class Animal {
+    constructor(nombre) {
+        this.nombre = nombre;
+    }
+
+    hacerSonido() {
+        console.log(`${this.nombre} hace un sonido.`);
+    }
+}
+
+class Perro extends Animal {
+    ladrar() {
+        console.log(`${this.nombre} dice guau.`);
+    }
+}
+
+let miPerro = new Perro(&quot;Rex&quot;);
+miPerro.hacerSonido(); // Output: Rex hace un sonido.
+miPerro.ladrar(); // Output: Rex dice guau.</pre>
+								            	<h3><a id="index_2"></a>Clases base y clases derivadas</h3>
+																<p>Una <strong>clase base</strong> es la clase de la cual heredan otras clases. Las <strong>clases derivadas</strong> son aquellas que extienden la funcionalidad de la clase base,
+añadiendo nuevos métodos o sobreescribiendo los existentes.</p>
+
+												<pre>// Ejemplo de clase base y clase derivada
+class Vehiculo {
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    arrancar() {
+        console.log(`El ${this.marca} ${this.modelo} est&aacute; arrancando.`);
+    }
+}
+
+class Coche extends Vehiculo {
+    encenderRadio() {
+        console.log(`La radio del ${this.marca} ${this.modelo} est&aacute; encendida.`);
+    }
+}
+
+let miCoche = new Coche(&quot;Toyota&quot;, &quot;Corolla&quot;);
+miCoche.arrancar(); // Output: El Toyota Corolla est&aacute; arrancando.
+miCoche.encenderRadio(); // Output: La radio del Toyota Corolla est&aacute; encendida.</pre>
+								            	<h3><a id="index_3"></a>Uso de la palabra clave `super`</h3>
+																<p>La palabra clave <code>super</code> se utiliza en las clases derivadas para llamar al constructor de la clase base.
+También se puede utilizar para acceder a métodos y propiedades de la clase base.</p>
+
+												<pre>// Ejemplo de uso de super
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    presentarse() {
+        console.log(`Hola, me llamo ${this.nombre} y tengo ${this.edad} a&ntilde;os.`);
+    }
+}
+
+class Estudiante extends Persona {
+    constructor(nombre, edad, curso) {
+        super(nombre, edad);
+        this.curso = curso;
+    }
+
+    presentarse() {
+        super.presentarse();
+        console.log(`Estoy en el curso de ${this.curso}.`);
+    }
+}
+
+let estudiante = new Estudiante(&quot;Ana&quot;, 20, &quot;Matem&aacute;ticas&quot;);
+estudiante.presentarse();
+// Output:
+// Hola, me llamo Ana y tengo 20 a&ntilde;os.
+// Estoy en el curso de Matem&aacute;ticas.</pre>
+								            	<h3><a id="index_4"></a>Polimorfismo</h3>
+																<p>El polimorfismo es la capacidad de un método para tomar diferentes formas. En JavaScript, esto se refiere a la capacidad de sobrescribir métodos en las clases derivadas,
+permitiendo que un mismo método actúe de manera diferente en diferentes contextos.</p>
+
+												<pre>// Ejemplo de polimorfismo
+class Empleado {
+    constructor(nombre, salario) {
+        this.nombre = nombre;
+        this.salario = salario;
+    }
+
+    mostrarInfo() {
+        console.log(`Empleado: ${this.nombre}, Salario: ${this.salario}`);
+    }
+}
+
+class Gerente extends Empleado {
+    constructor(nombre, salario, departamento) {
+        super(nombre, salario);
+        this.departamento = departamento;
+    }
+
+    mostrarInfo() {
+        console.log(`Gerente: ${this.nombre}, Salario: ${this.salario}, Departamento: ${this.departamento}`);
+    }
+}
+
+let empleado = new Empleado(&quot;Luis&quot;, 50000);
+let gerente = new Gerente(&quot;Carla&quot;, 80000, &quot;Ventas&quot;);
+
+empleado.mostrarInfo(); // Output: Empleado: Luis, Salario: 50000
+gerente.mostrarInfo(); // Output: Gerente: Carla, Salario: 80000, Departamento: Ventas</pre>
+								            	<h3><a id="index_5"></a>Herencia y composición</h3>
+																<p>Además de la herencia, otro patrón común en la programación orientada a objetos es la <strong>composición</strong>.
+La composición implica construir objetos complejos a partir de otros objetos, lo que permite reutilizar código sin crear una jerarquía rígida.</p>
+<p>La herencia se basa en un &quot;es un&quot; (is-a) relación, mientras que la composición se basa en un &quot;tiene un&quot; (has-a) relación.</p>
+
+												<pre>// Ejemplo de composici&oacute;n
+class Motor {
+    encender() {
+        console.log(&quot;El motor est&aacute; encendido.&quot;);
+    }
+}
+
+class Ventanas {
+    abrir() {
+        console.log(&quot;Las ventanas est&aacute;n abiertas.&quot;);
+    }
+}
+
+class Coche {
+    constructor() {
+        this.motor = new Motor();
+        this.ventanas = new Ventanas();
+    }
+
+    arrancar() {
+        this.motor.encender();
+        this.ventanas.abrir();
+    }
+}
+
+let miCoche = new Coche();
+miCoche.arrancar();
+// Output:
+// El motor est&aacute; encendido.
+// Las ventanas est&aacute;n abiertas.</pre>
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>
