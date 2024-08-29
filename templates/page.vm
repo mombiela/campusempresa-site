@@ -9,11 +9,11 @@
     <header id="main_header">
 	    <h1><a href="/index.html">CampusEmpresa<small>.com</small></a></h1>
 		<h2>${lang.get("title")}</h2>
-		<div>#parse("idioma.vm")</div>
+		<div>#parse("menu_idioma.vm")</div>
     </header>
 
     <div class="top-bar">
-    	#parse("/menu.vm")
+    	#parse("/menu_top.vm")
     </div>
 	
     <div id="main_content" class="clearfix">
