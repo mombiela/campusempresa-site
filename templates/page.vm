@@ -31,11 +31,7 @@
 	
     <header id="main_header">
 	    <h1>
-			<a href="index.html">
-			#if(${doc.getChild("default")})	<span class="color1"><b>S</b></span>TxT: ${lang.get("title_book")}
-			#else                  			<span class="color1"><b>S</b></span>TxT: Semantic text
-			#end
-    	    </a>
+			<a href="index.html"><b>CampusEmpresa</b></a>
 		</h1>
 		<h2><a href="index.html">${lang.get("title")}</a></h2>
 		<ul>
