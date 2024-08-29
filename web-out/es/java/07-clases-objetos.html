@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases y Objetos</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/es\java\07-clases-objetos.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/es\java\07-clases-objetos.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="es\java\07-clases-objetos.stxt" target="es\java\07-clases-objetos" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="06-ciclos" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="08-herencia-polimorfismo" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Introducción a la Programación Orientada a Objetos (POO)</h2>
+												            	<h3><a id="index_1"></a>¿Qué es la POO?</h3>
+																<p>La Programación Orientada a Objetos (POO) es un paradigma de programación que utiliza &quot;objetos&quot; para modelar conceptos del mundo real y las relaciones entre ellos. Java es un lenguaje de programación que sigue este paradigma, lo que facilita la creación de software modular, reutilizable y fácil de mantener.</p>
+
+								            	<h2><a id="index_2"></a>Clases en Java</h2>
+												            	<h3><a id="index_3"></a>Definición de una Clase</h3>
+																<p>Una clase es un molde o plantilla que define las propiedades (atributos) y comportamientos (métodos) de los objetos. En Java, una clase se define utilizando la palabra clave <code>class</code> seguida del nombre de la clase.</p>
+
+												<pre>public class Persona {
+    // Atributos
+    String nombre;
+    int edad;
+
+    // M&eacute;todos
+    void mostrarInformacion() {
+        System.out.println(&quot;Nombre: &quot; + nombre);
+        System.out.println(&quot;Edad: &quot; + edad);
+    }
+}</pre>
+												<p>En este ejemplo, la clase <code>Persona</code> tiene dos atributos (<code>nombre</code> y <code>edad</code>) y un método (<code>mostrarInformacion</code>) que imprime los valores de esos atributos.</p>
+
+								            	<h3><a id="index_4"></a>Creación de Objetos</h3>
+																<p>Un objeto es una instancia de una clase. Para crear un objeto en Java, se utiliza la palabra clave <code>new</code> seguida del constructor de la clase.</p>
+
+												<pre>public class Principal {
+    public static void main(String[] args) {
+        // Crear un objeto de la clase Persona
+        Persona persona1 = new Persona();
+        persona1.nombre = &quot;Juan&quot;;
+        persona1.edad = 30;
+
+        // Llamar al m&eacute;todo de la clase
+        persona1.mostrarInformacion();
+    }
+}</pre>
+												<p>En este ejemplo, se crea un objeto <code>persona1</code> de la clase <code>Persona</code>, se le asignan valores a sus atributos, y se llama al método <code>mostrarInformacion</code> para mostrar esos valores.</p>
+
+								            	<h2><a id="index_5"></a>Atributos y Métodos</h2>
+												            	<h3><a id="index_6"></a>Atributos de una Clase</h3>
+																<p>Los atributos son variables que representan las propiedades de un objeto. Pueden ser de cualquier tipo de dato, incluidos tipos primitivos y referencias a otros objetos.</p>
+
+												<pre>public class Coche {
+    String marca;
+    String modelo;
+    int a&ntilde;o;
+}</pre>
+												<p>En la clase <code>Coche</code>, los atributos <code>marca</code>, <code>modelo</code> y <code>año</code> definen las propiedades de un coche.</p>
+
+								            	<h3><a id="index_7"></a>Métodos de una Clase</h3>
+																<p>Los métodos son funciones que definen los comportamientos de los objetos. Un método puede realizar acciones y puede devolver un valor.</p>
+
+												<pre>public class Coche {
+    String marca;
+    String modelo;
+    int a&ntilde;o;
+
+    void arrancar() {
+        System.out.println(&quot;El coche ha arrancado.&quot;);
+    }
+
+    void frenar() {
+        System.out.println(&quot;El coche est&aacute; frenando.&quot;);
+    }
+}</pre>
+												<p>En la clase <code>Coche</code>, los métodos <code>arrancar</code> y <code>frenar</code> definen comportamientos que un coche puede realizar.</p>
+
+								            	<h2><a id="index_8"></a>Constructores</h2>
+												            	<h3><a id="index_9"></a>¿Qué es un Constructor?</h3>
+																<p>Un constructor es un método especial que se llama automáticamente cuando se crea un nuevo objeto de una clase. Los constructores se utilizan para inicializar los atributos de un objeto.</p>
+
+												<pre>public class Persona {
+    String nombre;
+    int edad;
+
+    // Constructor
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    void mostrarInformacion() {
+        System.out.println(&quot;Nombre: &quot; + nombre);
+        System.out.println(&quot;Edad: &quot; + edad);
+    }
+}</pre>
+												<p>En este ejemplo, el constructor <code>Persona</code> inicializa los atributos <code>nombre</code> y <code>edad</code> cuando se crea un nuevo objeto de la clase.</p>
+
+								            	<h3><a id="index_10"></a>Sobrecarga de Constructores</h3>
+																<p>Java permite tener múltiples constructores en una clase, siempre y cuando tengan diferentes listas de parámetros. Esto se conoce como sobrecarga de constructores.</p>
+
+												<pre>public class Persona {
+    String nombre;
+    int edad;
+
+    // Constructor 1
+    public Persona(String nombre) {
+        this.nombre = nombre;
+        this.edad = 0; // Edad por defecto
+    }
+
+    // Constructor 2
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    void mostrarInformacion() {
+        System.out.println(&quot;Nombre: &quot; + nombre);
+        System.out.println(&quot;Edad: &quot; + edad);
+    }
+}</pre>
+												<p>En este ejemplo, hay dos constructores en la clase <code>Persona</code>. Uno acepta solo el nombre, mientras que el otro acepta tanto el nombre como la edad.</p>
+
+								            	<h2><a id="index_11"></a>Encapsulamiento</h2>
+												            	<h3><a id="index_12"></a>Control de Acceso con Modificadores</h3>
+																<p>El encapsulamiento es un principio de la POO que restringe el acceso a los detalles internos de un objeto y sólo permite su modificación a través de métodos públicos. En Java, se logra mediante modificadores de acceso como <code>private</code>, <code>public</code>, y <code>protected</code>.</p>
+
+												<pre>public class Persona {
+    private String nombre;
+    private int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+}</pre>
+												<p>En este ejemplo, los atributos <code>nombre</code> y <code>edad</code> son privados y solo se pueden acceder y modificar a través de los métodos <code>getNombre</code>, <code>setNombre</code>, <code>getEdad</code>, y <code>setEdad</code>.</p>
+
+												<p>Con este conocimiento sobre clases, objetos, constructores y encapsulamiento, has aprendido los fundamentos de la Programación Orientada a Objetos en Java. En el siguiente tema, exploraremos dos conceptos fundamentales adicionales: herencia y polimorfismo.</p>
+<p><strong>Recursos adicionales:</strong></p>
+<ul>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/concepts/class.html">Documentación oficial de Java sobre clases y objetos</a></li>
+</ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

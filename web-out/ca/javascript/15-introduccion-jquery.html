@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a jQuery</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\javascript\15-introduccion-jquery.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\javascript\15-introduccion-jquery.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\javascript\15-introduccion-jquery.stxt" target="ca\javascript\15-introduccion-jquery" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="14-eventos" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="16-promesas-asincronia" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Introducción a jQuery</h2>
+												            	<h3><a id="index_1"></a>¿Qué es jQuery?</h3>
+																<p><strong>jQuery</strong> es una biblioteca de JavaScript rápida, pequeña y rica en funciones que facilita la manipulación del DOM, el manejo de eventos, la creación de animaciones, y la interacción con servidores mediante AJAX.
+Fue una de las primeras bibliotecas en simplificar enormemente la escritura de JavaScript, y sigue siendo popular en muchos proyectos.</p>
+<p>jQuery utiliza una sintaxis que permite realizar tareas comunes con menos código y de manera más eficiente.</p>
+
+												<pre>// Ejemplo b&aacute;sico de jQuery
+$(document).ready(function() {
+    $(&quot;button&quot;).click(function() {
+        alert(&quot;&iexcl;Bot&oacute;n clickeado!&quot;);
+    });
+});</pre>
+								            	<h3><a id="index_2"></a>Selección de elementos con jQuery</h3>
+																<p>Una de las características más poderosas de jQuery es su capacidad para seleccionar elementos del DOM utilizando selectores CSS.
+jQuery proporciona un método unificado (<code>$</code>) que se utiliza para seleccionar elementos y realizar acciones sobre ellos.</p>
+
+												<pre>// Selecci&oacute;n de elementos en jQuery
+$(document).ready(function() {
+    // Seleccionar todos los p&aacute;rrafos
+    $(&quot;p&quot;).css(&quot;color&quot;, &quot;blue&quot;);
+
+    // Seleccionar por ID
+    $(&quot;#miElemento&quot;).hide();
+
+    // Seleccionar por clase
+    $(&quot;.miClase&quot;).fadeIn();
+});</pre>
+								            	<h3><a id="index_3"></a>Manipulación del DOM con jQuery</h3>
+																<p>jQuery facilita la manipulación del DOM, permitiendo agregar, eliminar, o modificar elementos HTML con métodos simples.</p>
+<ul>
+<li><code>html()</code> - Obtiene o establece el contenido HTML de un elemento.</li>
+<li><code>text()</code> - Obtiene o establece el contenido de texto de un elemento.</li>
+<li><code>attr()</code> - Obtiene o establece atributos de un elemento.</li>
+<li><code>append()</code> - Añade contenido al final de un elemento.</li>
+<li><code>prepend()</code> - Añade contenido al principio de un elemento.</li>
+<li><code>remove()</code> - Elimina un elemento del DOM.</li>
+</ul>
+
+												<pre>// Manipulaci&oacute;n del DOM con jQuery
+$(document).ready(function() {
+    // Cambiar el HTML de un elemento
+    $(&quot;#miElemento&quot;).html(&quot;&lt;strong&gt;Nuevo contenido&lt;/strong&gt;&quot;);
+
+    // A&ntilde;adir un nuevo p&aacute;rrafo al final de un div
+    $(&quot;#miDiv&quot;).append(&quot;&lt;p&gt;Este es un nuevo p&aacute;rrafo a&ntilde;adido al final.&lt;/p&gt;&quot;);
+
+    // Eliminar un elemento
+    $(&quot;.miClase&quot;).remove();
+});</pre>
+								            	<h3><a id="index_4"></a>Manejo de eventos con jQuery</h3>
+																<p>El manejo de eventos en jQuery es sencillo y eficiente.
+jQuery ofrece métodos para registrar eventos, como <code>click()</code>, <code>dblclick()</code>, <code>hover()</code>, <code>focus()</code>, y <code>blur()</code>.</p>
+
+												<pre>// Ejemplo de manejo de eventos en jQuery
+$(document).ready(function() {
+    // Evento de clic
+    $(&quot;#miBoton&quot;).click(function() {
+        alert(&quot;&iexcl;Bot&oacute;n clickeado con jQuery!&quot;);
+    });
+
+    // Evento de doble clic
+    $(&quot;#miDiv&quot;).dblclick(function() {
+        $(this).css(&quot;background-color&quot;, &quot;yellow&quot;);
+    });
+
+    // Evento hover
+    $(&quot;#miDiv&quot;).hover(
+        function() {
+            $(this).css(&quot;background-color&quot;, &quot;lightgray&quot;);
+        },
+        function() {
+            $(this).css(&quot;background-color&quot;, &quot;&quot;);
+        }
+    );
+});</pre>
+								            	<h3><a id="index_5"></a>Animaciones con jQuery</h3>
+																<p>jQuery incluye métodos para crear animaciones simples, como mostrar, ocultar, desvanecer, y deslizar elementos.</p>
+<ul>
+<li><code>show()</code> - Muestra un elemento oculto.</li>
+<li><code>hide()</code> - Oculta un elemento.</li>
+<li><code>fadeIn()</code> - Desvanece un elemento de oculto a visible.</li>
+<li><code>fadeOut()</code> - Desvanece un elemento de visible a oculto.</li>
+<li><code>slideUp()</code> - Desliza un elemento hacia arriba para ocultarlo.</li>
+<li><code>slideDown()</code> - Desliza un elemento hacia abajo para mostrarlo.</li>
+</ul>
+
+												<pre>// Ejemplo de animaciones en jQuery
+$(document).ready(function() {
+    $(&quot;#mostrar&quot;).click(function() {
+        $(&quot;#miDiv&quot;).fadeIn();
+    });
+
+    $(&quot;#ocultar&quot;).click(function() {
+        $(&quot;#miDiv&quot;).fadeOut();
+    });
+
+    $(&quot;#deslizar&quot;).click(function() {
+        $(&quot;#miDiv&quot;).slideToggle();
+    });
+});</pre>
+								            	<h3><a id="index_6"></a>AJAX con jQuery</h3>
+																<p>Una de las características más potentes de jQuery es su capacidad para manejar solicitudes AJAX de manera sencilla.
+El método <code>$.ajax()</code> permite enviar y recibir datos de servidores de manera asíncrona.</p>
+
+												<pre>// Ejemplo b&aacute;sico de AJAX con jQuery
+$(document).ready(function() {
+    $(&quot;#cargarDatos&quot;).click(function() {
+        $.ajax({
+            url: &quot;datos.json&quot;,
+            method: &quot;GET&quot;,
+            success: function(data) {
+                $(&quot;#contenido&quot;).html(data);
+            },
+            error: function() {
+                alert(&quot;Error al cargar los datos.&quot;);
+            }
+        });
+    });
+});</pre>
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

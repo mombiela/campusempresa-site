@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\python\cont_listas.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\python\cont_listas.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\python\cont_listas.stxt" target="ca\python\cont_listas" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									
+								            	<h2><a id="index_0"></a>Listas en Python</h2>
+																<p>Las listas en Python son uno de los tipos de datos más versátiles y utilizados. Son contenedores ordenados y mutables que pueden almacenar elementos de diferentes tipos. A continuación, se detallan las características, métodos y usos comunes de las listas en Python.</p>
+
+								            	<h2><a id="index_1"></a>Creación de Listas</h2>
+																<p>Las listas se crean usando corchetes <code>[]</code>.</p>
+<p>Ejemplo:</p>
+
+												<pre>mi_lista = [1, 2, 3, 4]</pre>
+												<p>También se pueden crear listas vacías:</p>
+
+												<pre>lista_vacia = []</pre>
+												
+								            	<h2><a id="index_2"></a>Acceso a Elementos</h2>
+																<p>Los elementos de una lista se pueden acceder mediante índices, comenzando desde 0.</p>
+<p>Ejemplo:</p>
+
+												<pre>primer_elemento = mi_lista[0]
+segundo_elemento = mi_lista[1]</pre>
+												<p>Para acceder a los elementos desde el final, se pueden usar índices negativos.</p>
+<p>Ejemplo:</p>
+
+												<pre>ultimo_elemento = mi_lista[-1]
+penultimo_elemento = mi_lista[-2]</pre>
+												
+								            	<h2><a id="index_3"></a>Modificación de Elementos</h2>
+																<p>Las listas son mutables, lo que significa que se pueden cambiar sus elementos después de la creación.</p>
+<p>Ejemplo:</p>
+
+												<pre>mi_lista[1] = 20 # Modifica el segundo elemento</pre>
+												
+								            	<h2><a id="index_4"></a>Añadir Elementos</h2>
+																<ul>
+<li><strong><code>append</code></strong>: Añade un elemento al final de la lista.</li>
+</ul>
+
+												<pre>mi_lista.append(5)</pre>
+												<ul>
+<li><strong><code>insert</code></strong>: Inserta un elemento en una posición específica.</li>
+</ul>
+
+												<pre>mi_lista.insert(1, 15) # Inserta 15 en la posici&oacute;n 1</pre>
+												<ul>
+<li><strong><code>extend</code></strong>: Añade múltiples elementos al final de la lista.</li>
+</ul>
+
+												<pre>mi_lista.extend([6, 7])</pre>
+												
+								            	<h2><a id="index_5"></a>Eliminar Elementos</h2>
+																<ul>
+<li><strong><code>remove</code></strong>: Elimina la primera ocurrencia de un valor.</li>
+</ul>
+
+												<pre>mi_lista.remove(3)</pre>
+												<ul>
+<li><strong><code>pop</code></strong>: Elimina y devuelve un elemento en una posición específica.</li>
+</ul>
+
+												<pre>elemento = mi_lista.pop(1) # Elimina y devuelve el elemento en la posici&oacute;n 1</pre>
+												<ul>
+<li><strong><code>clear</code></strong>: Elimina todos los elementos de la lista.</li>
+</ul>
+
+												<pre>mi_lista.clear()</pre>
+												
+								            	<h2><a id="index_6"></a>Operaciones con Listas</h2>
+																<ul>
+<li><strong>Concatenación</strong>: Se pueden concatenar listas usando el operador <code>+</code>.</li>
+</ul>
+
+												<pre>lista1 = [1, 2]
+lista2 = [3, 4]
+lista_concatenada = lista1 + lista2 # [1, 2, 3, 4]</pre>
+												<ul>
+<li><strong>Repetición</strong>: Se pueden repetir los elementos de una lista usando el operador ``````.</li>
+</ul>
+
+												<pre>lista_repetida = lista1  3 # [1, 2, 1, 2, 1, 2]</pre>
+												<ul>
+<li><strong>Comprobación de Membresía</strong>: Se puede verificar si un elemento está en una lista usando <code>in</code>.</li>
+</ul>
+
+												<pre>existe = 3 in mi_lista</pre>
+												
+								            	<h2><a id="index_7"></a>Métodos de Listas</h2>
+																<ul>
+<li><strong><code>sort</code></strong>: Ordena los elementos de la lista.</li>
+</ul>
+
+												<pre>mi_lista.sort()</pre>
+												<ul>
+<li><strong><code>reverse</code></strong>: Invierte el orden de los elementos de la lista.</li>
+</ul>
+
+												<pre>mi_lista.reverse()</pre>
+												<ul>
+<li><strong><code>index</code></strong>: Devuelve el índice de la primera ocurrencia de un valor.</li>
+</ul>
+
+												<pre>indice = mi_lista.index(20)</pre>
+												<ul>
+<li><strong><code>count</code></strong>: Devuelve el número de ocurrencias de un valor.</li>
+</ul>
+
+												<pre>contador = mi_lista.count(20)</pre>
+												
+								            	<h2><a id="index_8"></a>Comprensión de Listas</h2>
+																<p>La comprensión de listas es una forma concisa de crear listas.</p>
+<p>Ejemplo:</p>
+
+												<pre>cuadrados = [x**2 for x in range(10)]</pre>
+												<p>Esto crea una lista de los cuadrados de los números del 0 al 9.</p>
+
+								            	<h2><a id="index_9"></a>Iteración sobre Listas</h2>
+																<p>Se puede iterar sobre los elementos de una lista usando un bucle <code>for</code>.</p>
+
+												<pre>for elemento in mi_lista:
+print(elemento)</pre>
+												
+								            	<h2><a id="index_10"></a>Copiar Listas</h2>
+																<p>Para copiar una lista, se puede usar el método <code>copy</code> o la notación de rebanado.</p>
+<p>Ejemplo con <code>copy</code>:</p>
+
+												<pre>lista_copiada = mi_lista.copy()</pre>
+												<p>Ejemplo con rebanado:</p>
+
+												<pre>lista_copiada = mi_lista[:]</pre>
+												
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

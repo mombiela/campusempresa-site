@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading y Code Splitting</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/es\react\tema-20.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/es\react\tema-20.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="es\react\tema-20.stxt" target="es\react\tema-20" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="tema-19" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="tema-21" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Introducción</h2>
+												            	<h3><a id="index_1"></a>¿Qué es Lazy Loading y Code Splitting?</h3>
+																<p>Lazy Loading (carga perezosa) y Code Splitting (división de código) son técnicas utilizadas en React para optimizar el rendimiento de las aplicaciones. Lazy Loading permite cargar componentes o recursos solo cuando son necesarios, en lugar de cargarlos todos al inicio. Code Splitting divide el código de la aplicación en fragmentos más pequeños, lo que permite que solo se carguen los fragmentos necesarios en un momento dado, mejorando los tiempos de carga y la experiencia del usuario.</p>
+
+								            	<h2><a id="index_2"></a>Conceptos Fundamentales de Lazy Loading</h2>
+												            	<h3><a id="index_3"></a>Uso de React.lazy</h3>
+																<p><code>React.lazy</code> es una función que permite cargar dinámicamente un componente solo cuando se necesita. Esto es especialmente útil para componentes grandes o aquellos que no se utilizan de inmediato, ya que reduce el tamaño inicial del paquete de la aplicación.</p>
+
+												<pre>// Ejemplo b&aacute;sico de Lazy Loading con React.lazy
+import React, { Suspense } from 'react';
+
+// Carga perezosa del componente
+const ComponentePesado = React.lazy(() =&gt; import('./ComponentePesado'));
+
+function App() {
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;Mi Aplicaci&oacute;n&lt;/h1&gt;
+            &lt;Suspense fallback={&lt;div&gt;Cargando...&lt;/div&gt;}&gt;
+                &lt;ComponentePesado /&gt;
+            &lt;/Suspense&gt;
+        &lt;/div&gt;
+    );
+}</pre>
+												<p>En este ejemplo, <code>ComponentePesado</code> se carga solo cuando es necesario. El componente <code>Suspense</code> se utiliza para mostrar un indicador de carga mientras el componente se está cargando.</p>
+
+								            	<h2><a id="index_4"></a>Implementación de Code Splitting</h2>
+												            	<h3><a id="index_5"></a>División de Código Automática con Webpack</h3>
+																<p>React utiliza Webpack por defecto, que incluye soporte para la división automática de código. Cuando se utiliza <code>import()</code> para cargar componentes de manera dinámica, Webpack divide automáticamente el código en fragmentos, lo que reduce el tamaño del paquete inicial.</p>
+
+												<pre>// Ejemplo de Code Splitting autom&aacute;tico
+const OtroComponente = React.lazy(() =&gt; import('./OtroComponente'));
+
+function App() {
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;Mi Aplicaci&oacute;n&lt;/h1&gt;
+            &lt;Suspense fallback={&lt;div&gt;Cargando...&lt;/div&gt;}&gt;
+                &lt;OtroComponente /&gt;
+            &lt;/Suspense&gt;
+        &lt;/div&gt;
+    );
+}</pre>
+												<p>En este ejemplo, <code>OtroComponente</code> se carga de manera perezosa y Webpack divide automáticamente el código en un fragmento separado, mejorando el rendimiento de la aplicación.</p>
+
+								            	<h2><a id="index_6"></a>Uso de Suspense para la Carga Condicional</h2>
+												            	<h3><a id="index_7"></a>Suspense y su Rol en Lazy Loading</h3>
+																<p>El componente <code>Suspense</code> es esencial cuando se implementa Lazy Loading. Permite especificar un contenido de reserva (fallback) que se mostrará mientras el componente o recurso se carga. Esto proporciona una mejor experiencia de usuario al indicar que algo está ocurriendo en segundo plano.</p>
+
+												<pre>// Ejemplo de uso de Suspense con fallback
+const ComponenteLento = React.lazy(() =&gt; import('./ComponenteLento'));
+
+function App() {
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;Mi Aplicaci&oacute;n&lt;/h1&gt;
+            &lt;Suspense fallback={&lt;div&gt;Cargando el componente...&lt;/div&gt;}&gt;
+                &lt;ComponenteLento /&gt;
+            &lt;/Suspense&gt;
+        &lt;/div&gt;
+    );
+}</pre>
+												<p>En este ejemplo, mientras <code>ComponenteLento</code> se carga, se muestra el texto &quot;Cargando el componente...&quot; al usuario, mejorando la percepción de la velocidad de la aplicación.</p>
+
+								            	<h2><a id="index_8"></a>Code Splitting en React Router</h2>
+												            	<h3><a id="index_9"></a>Implementación de Code Splitting en Rutas</h3>
+																<p>React Router se integra fácilmente con Lazy Loading y Code Splitting, lo que permite cargar componentes de ruta solo cuando se navega a ellos. Esto es ideal para aplicaciones con muchas rutas, ya que cada ruta solo carga los componentes necesarios.</p>
+
+												<pre>// Ejemplo de Code Splitting en React Router
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+const Inicio = React.lazy(() =&gt; import('./Inicio'));
+const Sobre = React.lazy(() =&gt; import('./Sobre'));
+const Contacto = React.lazy(() =&gt; import('./Contacto'));
+
+function App() {
+    return (
+        &lt;Router&gt;
+            &lt;Suspense fallback={&lt;div&gt;Cargando...&lt;/div&gt;}&gt;
+                &lt;Routes&gt;
+                    &lt;Route path=&quot;/&quot; element={&lt;Inicio /&gt;} /&gt;
+                    &lt;Route path=&quot;/sobre&quot; element={&lt;Sobre /&gt;} /&gt;
+                    &lt;Route path=&quot;/contacto&quot; element={&lt;Contacto /&gt;} /&gt;
+                &lt;/Routes&gt;
+            &lt;/Suspense&gt;
+        &lt;/Router&gt;
+    );
+}</pre>
+												<p>En este ejemplo, las rutas <code>Inicio</code>, <code>Sobre</code> y <code>Contacto</code> se cargan de manera perezosa, lo que significa que los componentes correspondientes solo se cargan cuando el usuario navega a esas rutas.</p>
+
+								            	<h2><a id="index_10"></a>Ventajas y Consideraciones de Lazy Loading y Code Splitting</h2>
+												            	<h3><a id="index_11"></a>Beneficios del Lazy Loading</h3>
+																<ul>
+<li><strong>Reducción del tiempo de carga inicial:</strong> Solo se cargan los componentes necesarios, lo que reduce el tamaño inicial del paquete.</li>
+<li><strong>Mejora en la experiencia del usuario:</strong> Al cargar componentes de manera condicional, la aplicación parece más rápida y receptiva.</li>
+<li><strong>Optimización de recursos:</strong> Menos carga en el navegador y menos uso de memoria al evitar cargar componentes innecesarios desde el inicio.</li>
+</ul>
+
+								            	<h3><a id="index_12"></a>Consideraciones y Desafíos</h3>
+																<ul>
+<li><strong>Gestión de estados intermedios:</strong> Es importante proporcionar una buena experiencia de usuario mientras se cargan los componentes, utilizando <code>Suspense</code> y fallbacks apropiados.</li>
+<li><strong>Complejidad en la depuración:</strong> El código dividido puede ser más difícil de depurar debido a la fragmentación en múltiples archivos.</li>
+<li><strong>Problemas de SEO:</strong> En aplicaciones donde el SEO es crítico, la carga perezosa puede requerir soluciones adicionales para asegurarse de que los motores de búsqueda puedan indexar todo el contenido correctamente.</li>
+</ul>
+
+								            	<h2><a id="index_13"></a>Conclusión</h2>
+												            	<h3><a id="index_14"></a>Resumen sobre Lazy Loading y Code Splitting</h3>
+																<p>Lazy Loading y Code Splitting son técnicas esenciales para optimizar el rendimiento de aplicaciones React, especialmente a medida que estas aplicaciones crecen en tamaño y complejidad. Estas técnicas permiten reducir los tiempos de carga iniciales y mejorar la experiencia del usuario al cargar solo los componentes necesarios cuando se necesitan. Con herramientas como <code>React.lazy</code>, <code>Suspense</code>, y la integración con React Router, estas optimizaciones se pueden implementar de manera efectiva y con relativa facilidad. En los próximos temas, exploraremos otras técnicas avanzadas para mejorar aún más el rendimiento y la escalabilidad de las aplicaciones React.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

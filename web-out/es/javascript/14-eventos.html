@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/es\javascript\14-eventos.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/es\javascript\14-eventos.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="es\javascript\14-eventos.stxt" target="es\javascript\14-eventos" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="13-manipulacion-dom" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="15-introduccion-jquery" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Eventos en JavaScript</h2>
+												            	<h3><a id="index_1"></a>¿Qué es un evento?</h3>
+																<p>En JavaScript, un <strong>evento</strong> es cualquier interacción del usuario o acción del navegador que se puede detectar y manejar mediante código.
+Algunos ejemplos de eventos comunes son clics de botones, cambios en campos de texto, desplazamiento de la página, y carga de la página.</p>
+<p>Los eventos permiten crear aplicaciones interactivas y dinámicas al responder a las acciones del usuario en tiempo real.</p>
+
+												<pre>// Ejemplo b&aacute;sico de un evento de clic
+let boton = document.getElementById(&quot;miBoton&quot;);
+
+boton.addEventListener(&quot;click&quot;, function() {
+    alert(&quot;&iexcl;Bot&oacute;n clickeado!&quot;);
+});</pre>
+								            	<h3><a id="index_2"></a>Manejo de eventos</h3>
+																<p>Para manejar eventos en JavaScript, se pueden usar los métodos <code>addEventListener</code> y <code>removeEventListener</code>.
+El método <code>addEventListener</code> permite registrar una función que se ejecutará cuando ocurra un evento específico.</p>
+<ul>
+<li><code>addEventListener(tipoDeEvento, función)</code> - Asocia una función a un evento específico.</li>
+<li><code>removeEventListener(tipoDeEvento, función)</code> - Elimina un manejador de eventos previamente registrado.</li>
+</ul>
+
+												<pre>// Ejemplo de manejo de eventos
+let inputTexto = document.getElementById(&quot;miInput&quot;);
+
+// A&ntilde;adir un evento de cambio
+inputTexto.addEventListener(&quot;change&quot;, function() {
+    console.log(&quot;El valor ha cambiado a: &quot; + inputTexto.value);
+});
+
+// Remover el evento
+let manejarEvento = function() {
+    console.log(&quot;Evento removido&quot;);
+};
+
+inputTexto.addEventListener(&quot;input&quot;, manejarEvento);
+inputTexto.removeEventListener(&quot;input&quot;, manejarEvento);</pre>
+								            	<h3><a id="index_3"></a>Eventos de ratón</h3>
+																<p>Los eventos de ratón son aquellos que responden a las acciones del usuario con el ratón, como clics, doble clics, y movimientos.</p>
+<ul>
+<li><code>click</code> - Se activa cuando el usuario hace clic en un elemento.</li>
+<li><code>dblclick</code> - Se activa cuando el usuario hace doble clic en un elemento.</li>
+<li><code>mouseover</code> - Se activa cuando el ratón se mueve sobre un elemento.</li>
+<li><code>mouseout</code> - Se activa cuando el ratón sale de un elemento.</li>
+<li><code>mousemove</code> - Se activa cuando el ratón se mueve dentro de un elemento.</li>
+</ul>
+
+												<pre>// Ejemplo de eventos de rat&oacute;n
+let caja = document.getElementById(&quot;miCaja&quot;);
+
+caja.addEventListener(&quot;mouseover&quot;, function() {
+    caja.style.backgroundColor = &quot;lightblue&quot;;
+});
+
+caja.addEventListener(&quot;mouseout&quot;, function() {
+    caja.style.backgroundColor = &quot;&quot;;
+});
+
+caja.addEventListener(&quot;click&quot;, function() {
+    alert(&quot;Caja clickeada&quot;);
+});</pre>
+								            	<h3><a id="index_4"></a>Eventos de teclado</h3>
+																<p>Los eventos de teclado responden a las interacciones del usuario con el teclado.</p>
+<ul>
+<li><code>keydown</code> - Se activa cuando una tecla es presionada.</li>
+<li><code>keyup</code> - Se activa cuando una tecla es liberada.</li>
+<li><code>keypress</code> - Se activa cuando una tecla es presionada y liberada. Este evento está en desuso y <code>keydown</code> o <code>keyup</code> suelen ser preferidos.</li>
+</ul>
+
+												<pre>// Ejemplo de eventos de teclado
+document.addEventListener(&quot;keydown&quot;, function(event) {
+    console.log(&quot;Tecla presionada: &quot; + event.key);
+});
+
+document.addEventListener(&quot;keyup&quot;, function(event) {
+    console.log(&quot;Tecla liberada: &quot; + event.key);
+});</pre>
+								            	<h3><a id="index_5"></a>Eventos de formulario</h3>
+																<p>Los eventos de formulario están relacionados con la interacción del usuario con elementos de formulario, como campos de entrada, botones y selects.</p>
+<ul>
+<li><code>submit</code> - Se activa cuando se envía un formulario.</li>
+<li><code>focus</code> - Se activa cuando un elemento de formulario recibe el foco.</li>
+<li><code>blur</code> - Se activa cuando un elemento de formulario pierde el foco.</li>
+<li><code>change</code> - Se activa cuando el valor de un elemento de formulario cambia.</li>
+</ul>
+
+												<pre>// Ejemplo de evento de env&iacute;o de formulario
+let formulario = document.getElementById(&quot;miFormulario&quot;);
+
+formulario.addEventListener(&quot;submit&quot;, function(event) {
+    event.preventDefault(); // Evitar el env&iacute;o del formulario
+    alert(&quot;Formulario enviado&quot;);
+});</pre>
+								            	<h3><a id="index_6"></a>Propagación de eventos</h3>
+																<p>La propagación de eventos es el proceso por el cual un evento se propaga a través del DOM.
+JavaScript permite controlar la propagación de eventos a través de la fase de burbujeo (bubble) y la fase de captura (capture).</p>
+<ul>
+<li><strong>Fase de burbujeo</strong>: El evento comienza desde el elemento objetivo y se propaga hacia arriba en la jerarquía del DOM.</li>
+<li><strong>Fase de captura</strong>: El evento se propaga desde el documento raíz hacia el elemento objetivo.</li>
+</ul>
+<p>La propagación se puede controlar usando <code>event.stopPropagation()</code> para detenerla en cualquier punto.</p>
+
+												<pre>// Ejemplo de propagaci&oacute;n de eventos
+let contenedor = document.getElementById(&quot;contenedor&quot;);
+
+contenedor.addEventListener(&quot;click&quot;, function() {
+    alert(&quot;Contenedor clickeado&quot;);
+});
+
+let botonInterno = document.getElementById(&quot;botonInterno&quot;);
+
+botonInterno.addEventListener(&quot;click&quot;, function(event) {
+    alert(&quot;Bot&oacute;n clickeado&quot;);
+    event.stopPropagation(); // Detener la propagaci&oacute;n
+});</pre>
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

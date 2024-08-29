@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores y Expresiones</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/es\java\04-operadores-expresiones.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/es\java\04-operadores-expresiones.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="es\java\04-operadores-expresiones.stxt" target="es\java\04-operadores-expresiones" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="03-sintaxis-basica" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="05-estructuras-control" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Introducción a los Operadores en Java</h2>
+												            	<h3><a id="index_1"></a>¿Qué son los operadores?</h3>
+																<p>En Java, los operadores son símbolos que realizan operaciones en uno o más operandos. Los operandos son valores o variables sobre los cuales se aplica el operador, y el resultado es un nuevo valor. Los operadores son fundamentales para construir expresiones que forman la lógica de los programas.</p>
+
+								            	<h2><a id="index_2"></a>Tipos de Operadores en Java</h2>
+												            	<h3><a id="index_3"></a>Operadores Aritméticos</h3>
+																<p>Los operadores aritméticos se utilizan para realizar operaciones matemáticas básicas como suma, resta, multiplicación, división y módulo.</p>
+<ul>
+<li><strong>Suma</strong>: <code>+</code></li>
+<li><strong>Resta</strong>: <code>-</code></li>
+<li><strong>Multiplicación</strong>: <code>*</code></li>
+<li><strong>División</strong>: <code>/</code></li>
+<li><strong>Módulo</strong>: <code>%</code></li>
+</ul>
+
+												<pre>int a = 10;
+int b = 3;
+int suma = a + b;        // 13
+int resta = a - b;       // 7
+int multiplicacion = a * b; // 30
+int division = a / b;    // 3
+int modulo = a % b;      // 1</pre>
+								            	<h3><a id="index_4"></a>Operadores de Asignación</h3>
+																<p>Los operadores de asignación se utilizan para asignar valores a las variables. El más básico es el operador <code>=</code>, pero también existen operadores compuestos que combinan asignación con otra operación.</p>
+<ul>
+<li><strong>Asignación simple</strong>: <code>=</code></li>
+<li><strong>Asignación y suma</strong>: <code>+=</code></li>
+<li><strong>Asignación y resta</strong>: <code>-=</code></li>
+<li><strong>Asignación y multiplicación</strong>: <code>*=</code></li>
+<li><strong>Asignación y división</strong>: <code>/=</code></li>
+<li><strong>Asignación y módulo</strong>: <code>%=</code></li>
+</ul>
+
+												<pre>int x = 5;
+x += 3;  // x es ahora 8
+x -= 2;  // x es ahora 6
+x *= 4;  // x es ahora 24
+x /= 3;  // x es ahora 8
+x %= 5;  // x es ahora 3</pre>
+								            	<h3><a id="index_5"></a>Operadores Relacionales</h3>
+																<p>Los operadores relacionales comparan dos valores y devuelven un valor booleano (<code>true</code> o <code>false</code>). Se utilizan para tomar decisiones dentro del código.</p>
+<ul>
+<li><strong>Igual a</strong>: <code>==</code></li>
+<li><strong>No igual a</strong>: <code>!=</code></li>
+<li><strong>Mayor que</strong>: <code>&gt;</code></li>
+<li><strong>Menor que</strong>: <code>&lt;</code></li>
+<li><strong>Mayor o igual que</strong>: <code>&gt;=</code></li>
+<li><strong>Menor o igual que</strong>: <code>&lt;=</code></li>
+</ul>
+
+												<pre>int m = 10;
+int n = 20;
+boolean esIgual = (m == n);     // false
+boolean noEsIgual = (m != n);   // true
+boolean mayorQue = (m &gt; n);     // false
+boolean menorQue = (m &lt; n);     // true
+boolean mayorOIgual = (m &gt;= n); // false
+boolean menorOIgual = (m &lt;= n); // true</pre>
+								            	<h3><a id="index_6"></a>Operadores Lógicos</h3>
+																<p>Los operadores lógicos se utilizan para combinar expresiones booleanas:</p>
+<ul>
+<li><strong>Y lógico</strong>: <code>&amp;&amp;</code> - Devuelve <code>true</code> si ambas expresiones son <code>true</code>.</li>
+<li><strong>O lógico</strong>: <code>||</code> - Devuelve <code>true</code> si al menos una expresión es <code>true</code>.</li>
+<li><strong>No lógico</strong>: <code>!</code> - Invierte el valor booleano de la expresión.</li>
+</ul>
+
+												<pre>boolean p = true;
+boolean q = false;
+boolean resultado1 = p &amp;&amp; q;  // false
+boolean resultado2 = p || q;  // true
+boolean resultado3 = !p;      // false</pre>
+								            	<h2><a id="index_7"></a>Precedencia de Operadores</h2>
+												            	<h3><a id="index_8"></a>Orden de Evaluación</h3>
+																<p>La precedencia de operadores determina el orden en que se evalúan los operadores en una expresión compleja. Los operadores con mayor precedencia se evalúan antes que los de menor precedencia.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Code:
+int resultado = 10 + 2 * 5;  // resultado es 20, no 60</p>
+<p>Content:
+En el ejemplo anterior, la multiplicación se realiza antes que la suma debido a la precedencia de operadores. Si deseas cambiar el orden, puedes usar paréntesis:</p>
+
+												<pre>int resultado = (10 + 2) * 5;  // resultado es 60</pre>
+								            	<h2><a id="index_9"></a>Operadores de Incremento y Decremento</h2>
+												            	<h3><a id="index_10"></a>Incremento (`++`) y Decremento (`--`)</h3>
+																<p>Los operadores de incremento y decremento se utilizan para aumentar o disminuir el valor de una variable en 1. Pueden usarse en forma prefija o posfija:</p>
+<ul>
+<li><strong>Prefijo</strong>: <code>++x</code> o <code>--x</code> - Incrementa o decrementa antes de usar el valor en la expresión.</li>
+<li><strong>Posfijo</strong>: <code>x++</code> o <code>x--</code> - Usa el valor en la expresión y luego incrementa o decrementa.</li>
+</ul>
+
+												<pre>int y = 5;
+int z = ++y;  // y es 6, z es 6
+int w = y--;  // y es 5, w es 6</pre>
+												<p>El uso correcto de estos operadores es fundamental para evitar errores lógicos en el código.</p>
+
+												<p>Con este conocimiento de operadores y expresiones, estás listo para construir lógica más compleja en tus programas Java. En el siguiente tema, exploraremos las estructuras de control de flujo que te permitirán tomar decisiones y repetir acciones en tu código.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

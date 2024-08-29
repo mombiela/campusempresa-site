@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apertura y cierre de archivos</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\python\file_open.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\python\file_open.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\python\file_open.stxt" target="ca\python\file_open" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									
+								            	<h2><a id="index_0"></a>Apertura y cierre de archivos</h2>
+																<p>Trabajar con archivos en Python implica principalmente abrirlos, leer o escribir datos en ellos y luego cerrarlos. Python proporciona funciones y métodos específicos para estas operaciones, permitiendo un manejo seguro y eficiente de los archivos.</p>
+
+								            	<h2><a id="index_1"></a>Apertura de Archivos</h2>
+																<p>Para abrir un archivo en Python, se utiliza la función <code>open()</code>, que devuelve un objeto de archivo. Esta función toma dos argumentos principales: el nombre del archivo y el modo en el que se quiere abrir.</p>
+<p>Modos comunes de apertura:</p>
+<ul>
+<li><code>'r'</code>: Lectura (modo predeterminado). El archivo debe existir.</li>
+<li><code>'w'</code>: Escritura. Crea un archivo nuevo o sobrescribe el existente.</li>
+<li><code>'a'</code>: Añadir. Abre el archivo para añadir datos al final sin sobrescribir.</li>
+<li><code>'b'</code>: Modo binario. Se usa junto con otros modos (por ejemplo, <code>'rb'</code>, <code>'wb'</code>).</li>
+</ul>
+<p>Ejemplo:</p>
+
+												<pre>archivo = open(&quot;ejemplo.txt&quot;, &quot;r&quot;)</pre>
+												
+								            	<h2><a id="index_2"></a>Lectura de Archivos</h2>
+																<p>Existen varias formas de leer datos desde un archivo.</p>
+<ul>
+<li><code>read()</code>: Lee todo el contenido del archivo.</li>
+</ul>
+
+												<pre>contenido = archivo.read()</pre>
+												<ul>
+<li><code>readline()</code>: Lee una sola línea del archivo.</li>
+</ul>
+
+												<pre>linea = archivo.readline()</pre>
+												<ul>
+<li><code>readlines()</code>: Lee todas las líneas del archivo y devuelve una lista.</li>
+</ul>
+
+												<pre>lineas = archivo.readlines()</pre>
+												
+								            	<h2><a id="index_3"></a>Escritura en Archivos</h2>
+																<p>Para escribir datos en un archivo, se puede usar el modo <code>'w'</code> o <code>'a'</code> y los métodos de escritura.</p>
+<ul>
+<li><code>write()</code>: Escribe una cadena en el archivo.</li>
+</ul>
+
+												<pre>archivo = open(&quot;ejemplo.txt&quot;, &quot;w&quot;)
+archivo.write(&quot;Hola, mundo!&quot;)</pre>
+												<ul>
+<li><code>writelines()</code>: Escribe una lista de cadenas en el archivo.</li>
+</ul>
+
+												<pre>lineas = [&quot;Primera l&iacute;nea\n&quot;, &quot;Segunda l&iacute;nea\n&quot;]
+archivo.writelines(lineas)</pre>
+												
+								            	<h2><a id="index_4"></a>Cierre de Archivos</h2>
+																<p>Es importante cerrar los archivos después de haber terminado de trabajar con ellos para liberar recursos.</p>
+<p>Se cierra un archivo usando el método <code>close()</code>.</p>
+
+												<pre>archivo.close()</pre>
+												
+								            	<h2><a id="index_5"></a>Gestión de Archivos con @@with@@</h2>
+																<p>El uso de <code>with</code> asegura que los archivos se cierren correctamente después de su uso, incluso si ocurre una excepción. Esta es la forma recomendada de manejar archivos.</p>
+<p>Ejemplo:</p>
+
+												<pre>with open(&quot;ejemplo.txt&quot;, &quot;r&quot;) as archivo:
+contenido = archivo.read()
+# No es necesario cerrar el archivo</pre>
+												
+								            	<h2><a id="index_6"></a>Modos Adicionales de Apertura</h2>
+																<ul>
+<li><code>'r+'</code>: Lectura y escritura. El archivo debe existir.</li>
+<li><code>'w+'</code>: Escritura y lectura. Sobrescribe el archivo existente o crea uno nuevo.</li>
+<li><code>'a+'</code>: Añadir y lectura. Crea el archivo si no existe.</li>
+</ul>
+<p>Ejemplo:</p>
+
+												<pre># Lectura y escritura
+archivo = open(&quot;ejemplo.txt&quot;, &quot;r+&quot;)
+contenido = archivo.read()
+archivo.write(&quot;Nueva l&iacute;nea&quot;)
+archivo.close()</pre>
+												
+								            	<h2><a id="index_7"></a>Lectura y Escritura de Archivos Binarios</h2>
+																<p>Para trabajar con archivos binarios, se utilizan los modos <code>'rb'</code> y <code>'wb'</code>.</p>
+<p>Ejemplo de lectura binaria:</p>
+
+												<pre>with open(&quot;imagen.png&quot;, &quot;rb&quot;) as archivo:
+contenido = archivo.read()</pre>
+												<p>Ejemplo de escritura binaria:</p>
+
+												<pre>with open(&quot;copia_imagen.png&quot;, &quot;wb&quot;) as archivo:
+archivo.write(contenido)</pre>
+												
+								            	<h2><a id="index_8"></a>Ventajas de la Gestión de Archivos</h2>
+																<ul>
+<li><strong>Eficiencia y Seguridad</strong>: El uso de <code>with</code> asegura que los archivos se cierren adecuadamente, evitando pérdidas de datos y liberando recursos.</li>
+<li><strong>Flexibilidad</strong>: Diferentes modos de apertura permiten una gran variedad de operaciones de lectura y escritura.</li>
+<li><strong>Compatibilidad</strong>: Python permite trabajar con archivos de texto y binarios de manera sencilla.</li>
+</ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a la Concurrencia en Java</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/es\java\13-concurrencia.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/es\java\13-concurrencia.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="es\java\13-concurrencia.stxt" target="es\java\13-concurrencia" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="12-manejo-excepciones" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="14-buenas-practicas" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Introducción a la Concurrencia</h2>
+												            	<h3><a id="index_1"></a>¿Qué es la concurrencia en Java?</h3>
+																<p>La concurrencia en Java se refiere a la capacidad de ejecutar múltiples hilos de manera simultánea dentro de un programa. Esto es fundamental para aprovechar al máximo los procesadores modernos y para mejorar el rendimiento de las aplicaciones, especialmente aquellas que requieren realizar múltiples tareas al mismo tiempo, como manejar múltiples conexiones de red o procesar grandes volúmenes de datos en paralelo.</p>
+
+								            	<h2><a id="index_2"></a>Hilos en Java</h2>
+												            	<h3><a id="index_3"></a>Creación de Hilos</h3>
+																<p>En Java, un hilo (<code>Thread</code>) es una unidad de ejecución dentro de un programa. Puedes crear un hilo de dos maneras principales: extendiendo la clase <code>Thread</code> o implementando la interfaz <code>Runnable</code>.</p>
+
+												<pre>// Creaci&oacute;n de un hilo extendiendo la clase Thread
+public class MiHilo extends Thread {
+    public void run() {
+        System.out.println(&quot;El hilo est&aacute; corriendo.&quot;);
+    }
+
+    public static void main(String[] args) {
+        MiHilo hilo = new MiHilo();
+        hilo.start();  // Inicia el hilo
+    }
+}</pre>
+												<p>En este ejemplo, la clase <code>MiHilo</code> extiende <code>Thread</code> y sobreescribe el método <code>run()</code>. El hilo se inicia llamando al método <code>start()</code>, que a su vez llama a <code>run()</code>.</p>
+
+								            	<h3><a id="index_4"></a>Implementación de `Runnable`</h3>
+																<p>Otra forma de crear un hilo es implementando la interfaz <code>Runnable</code>, que permite separar la lógica de la ejecución del hilo de la clase principal.</p>
+
+												<pre>// Creaci&oacute;n de un hilo implementando Runnable
+public class MiRunnable implements Runnable {
+    public void run() {
+        System.out.println(&quot;El hilo Runnable est&aacute; corriendo.&quot;);
+    }
+
+    public static void main(String[] args) {
+        MiRunnable runnable = new MiRunnable();
+        Thread hilo = new Thread(runnable);
+        hilo.start();  // Inicia el hilo
+    }
+}</pre>
+												<p>En este ejemplo, <code>MiRunnable</code> implementa <code>Runnable</code> y proporciona la implementación de <code>run()</code>. El hilo se inicia creando una instancia de <code>Thread</code> y pasando la instancia de <code>MiRunnable</code> como argumento.</p>
+
+								            	<h2><a id="index_5"></a>Sincronización de Hilos</h2>
+												            	<h3><a id="index_6"></a>Problemas de concurrencia</h3>
+																<p>Cuando varios hilos acceden a un recurso compartido, como una variable o un objeto, pueden ocurrir problemas de concurrencia. Esto sucede cuando los hilos interfieren entre sí, lo que puede resultar en comportamientos impredecibles o datos corruptos.</p>
+
+								            	<h3><a id="index_7"></a>Uso de la palabra clave `synchronized`</h3>
+																<p>Java proporciona la palabra clave <code>synchronized</code> para evitar que múltiples hilos accedan simultáneamente a un recurso compartido. Esto asegura que solo un hilo pueda ejecutar un bloque de código sincronizado a la vez.</p>
+
+												<pre>// Ejemplo de sincronizaci&oacute;n de m&eacute;todos
+public class Contador {
+    private int cuenta = 0;
+
+    public synchronized void incrementar() {
+        cuenta++;
+    }
+
+    public int getCuenta() {
+        return cuenta;
+    }
+
+    public static void main(String[] args) {
+        Contador contador = new Contador();
+
+        // Creaci&oacute;n de dos hilos que incrementan la cuenta
+        Thread hilo1 = new Thread(() -&gt; {
+            for (int i = 0; i &lt; 1000; i++) {
+                contador.incrementar();
+            }
+        });
+
+        Thread hilo2 = new Thread(() -&gt; {
+            for (int i = 0; i &lt; 1000; i++) {
+                contador.incrementar();
+            }
+        });
+
+        hilo1.start();
+        hilo2.start();
+
+        try {
+            hilo1.join();
+            hilo2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(&quot;Cuenta final: &quot; + contador.getCuenta());  // Deber&iacute;a ser 2000
+    }
+}</pre>
+												<p>En este ejemplo, el método <code>incrementar()</code> está sincronizado, lo que evita que varios hilos modifiquen la variable <code>cuenta</code> al mismo tiempo. Sin la sincronización, el valor final de <code>cuenta</code> podría ser incorrecto debido a condiciones de carrera.</p>
+
+								            	<h2><a id="index_8"></a>Bloqueo de Hilos</h2>
+												            	<h3><a id="index_9"></a>Deadlock (Bloqueo Mutuo)</h3>
+																<p>Un <code>deadlock</code> ocurre cuando dos o más hilos quedan bloqueados permanentemente esperando recursos que están siendo retenidos por los otros hilos. Esto suele ocurrir cuando los hilos intentan adquirir varios bloqueos en diferente orden.</p>
+
+												<pre>// Ejemplo simple de posible deadlock
+public class DeadlockEjemplo {
+    public static void main(String[] args) {
+        final String recurso1 = &quot;Recurso 1&quot;;
+        final String recurso2 = &quot;Recurso 2&quot;;
+
+        // Hilo 1
+        Thread hilo1 = new Thread(() -&gt; {
+            synchronized (recurso1) {
+                System.out.println(&quot;Hilo 1: bloque&oacute; &quot; + recurso1);
+
+                try { Thread.sleep(100); } catch (Exception e) {}
+
+                synchronized (recurso2) {
+                    System.out.println(&quot;Hilo 1: bloque&oacute; &quot; + recurso2);
+                }
+            }
+        });
+
+        // Hilo 2
+        Thread hilo2 = new Thread(() -&gt; {
+            synchronized (recurso2) {
+                System.out.println(&quot;Hilo 2: bloque&oacute; &quot; + recurso2);
+
+                try { Thread.sleep(100); } catch (Exception e) {}
+
+                synchronized (recurso1) {
+                    System.out.println(&quot;Hilo 2: bloque&oacute; &quot; + recurso1);
+                }
+            }
+        });
+
+        hilo1.start();
+        hilo2.start();
+    }
+}</pre>
+												<p>En este ejemplo, <code>hilo1</code> bloquea <code>recurso1</code> y espera para bloquear <code>recurso2</code>, mientras que <code>hilo2</code> bloquea <code>recurso2</code> y espera para bloquear <code>recurso1</code>. Esto causa un deadlock, ya que ambos hilos esperan indefinidamente.</p>
+
+								            	<h2><a id="index_10"></a>Uso de Ejecutores (`Executors`)</h2>
+												            	<h3><a id="index_11"></a>Introducción a los `Executors`</h3>
+																<p>El framework <code>Executor</code> en Java proporciona una forma más avanzada de gestionar hilos. En lugar de crear y gestionar manualmente los hilos, <code>Executor</code> maneja un grupo de hilos y se encarga de la asignación de tareas a esos hilos.</p>
+
+												<pre>import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class EjemploExecutor {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(3);
+
+        for (int i = 0; i &lt; 5; i++) {
+            Runnable tarea = new Tarea();
+            executor.execute(tarea);
+        }
+
+        executor.shutdown();
+    }
+}
+
+class Tarea implements Runnable {
+    public void run() {
+        System.out.println(&quot;Ejecutando tarea en el hilo: &quot; + Thread.currentThread().getName());
+    }
+}</pre>
+												<p>En este ejemplo, se utiliza un <code>ExecutorService</code> con un grupo de hilos de tamaño fijo (<code>newFixedThreadPool</code>). Se asignan varias tareas al <code>executor</code>, que las ejecuta en los hilos disponibles.</p>
+
+												<p>La concurrencia es una herramienta poderosa que permite a los programas Java realizar múltiples tareas simultáneamente, mejorando la eficiencia y el rendimiento. Sin embargo, también introduce complejidad, como la necesidad de sincronización y la posibilidad de deadlocks. En el siguiente tema, discutiremos buenas prácticas de programación, incluyendo cómo manejar adecuadamente la concurrencia para evitar problemas comunes.</p>
+<p><strong>Recursos adicionales:</strong></p>
+<ul>
+<li><a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/">Documentación oficial de Java sobre concurrencia</a></li>
+</ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

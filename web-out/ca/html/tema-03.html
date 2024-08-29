@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3: Etiquetas y elementos</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\html\tema-03.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\html\tema-03.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\html\tema-03.stxt" target="ca\html\tema-03" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="tema-02" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="tema-04" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Introducción a las etiquetas y elementos en HTML</h2>
+												            	<h3><a id="index_1"></a>¿Qué es una etiqueta?</h3>
+																<p>En HTML, las etiquetas son la base de la estructura del documento. Una etiqueta es un componente que se utiliza para definir la naturaleza de un fragmento de contenido. Las etiquetas están escritas entre corchetes angulares (<code>&lt; &gt;</code>) y suelen aparecer en pares: una etiqueta de apertura y una etiqueta de cierre.</p>
+<p>Ejemplo básico:</p>
+<ul>
+<li>Etiqueta de apertura: <code>&lt;p&gt;</code></li>
+<li>Etiqueta de cierre: <code>&lt;/p&gt;</code></li>
+<li>Contenido: <code>Este es un párrafo de texto.</code></li>
+</ul>
+
+												<pre>&lt;p&gt;Este es un p&aacute;rrafo de texto.&lt;/p&gt;</pre>
+								            	<h3><a id="index_2"></a>Elementos HTML</h3>
+																<p>Un elemento HTML se compone de una etiqueta de apertura, contenido y una etiqueta de cierre. Los elementos pueden contener texto, otros elementos o ambos. Los elementos son los bloques básicos que componen una página web.</p>
+<p>Ejemplo de un elemento:</p>
+<ul>
+<li>Elemento <code>&lt;h1&gt;</code>: Define un encabezado de primer nivel.</li>
+</ul>
+
+												<pre>&lt;h1&gt;Este es un encabezado de primer nivel&lt;/h1&gt;</pre>
+								            	<h3><a id="index_3"></a>Atributos de las etiquetas</h3>
+																<p>Las etiquetas HTML pueden tener atributos, que son valores adicionales que proporcionan información sobre el elemento. Los atributos se escriben dentro de la etiqueta de apertura y siempre consisten en un nombre y un valor.</p>
+<p><strong>Ejemplo de atributo:</strong></p>
+<ul>
+<li>La etiqueta <code>&lt;a&gt;</code> se utiliza para crear enlaces. Uno de sus atributos es <code>href</code>, que define la URL a la que apunta el enlace.</li>
+</ul>
+
+												<pre>&lt;a href=&quot;https://example.com&quot;&gt;Visita nuestro sitio web&lt;/a&gt;</pre>
+								            	<h3><a id="index_4"></a>Etiquetas auto-cerradas</h3>
+																<p>Algunas etiquetas HTML no tienen contenido y se cierran en la misma etiqueta de apertura. Estas se conocen como etiquetas auto-cerradas.</p>
+<p><strong>Ejemplo de etiqueta auto-cerrada:</strong></p>
+<ul>
+<li>La etiqueta <code>&lt;img&gt;</code> se utiliza para insertar imágenes y no tiene una etiqueta de cierre separada.</li>
+</ul>
+
+												<pre>&lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripci&oacute;n de la imagen&quot; /&gt;</pre>
+								            	<h2><a id="index_5"></a>Clasificación de elementos HTML</h2>
+																<p>Los elementos HTML se pueden clasificar en dos categorías principales:</p>
+<ol>
+<li><strong>Elementos de bloque</strong>: Ocupan todo el ancho disponible y siempre comienzan en una nueva línea. Ejemplos incluyen <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>.</li>
+<li><strong>Elementos en línea</strong>: Solo ocupan el ancho necesario para su contenido y no interrumpen el flujo del texto. Ejemplos incluyen <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>.</li>
+</ol>
+
+												<pre>&lt;!-- Ejemplo de elemento de bloque --&gt;
+&lt;div&gt;
+    &lt;p&gt;Este es un p&aacute;rrafo dentro de un div.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Ejemplo de elemento en l&iacute;nea --&gt;
+&lt;span&gt;Este es un texto dentro de un span.&lt;/span&gt;</pre>
+								            	<h2><a id="index_6"></a>Resumen sobre etiquetas y elementos</h2>
+																<p>Comprender las etiquetas y elementos es fundamental para dominar HTML. Saber cómo utilizar correctamente las etiquetas, aplicar atributos y distinguir entre elementos de bloque</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

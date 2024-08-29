@@ -11,14 +11,14 @@
 
     <link rel="stylesheet" href="/css/site.css?v=2">
 		
-	#if(${lang.get("lang")} == "en")
+	#if(${lang.get("lang")} == "es")
+	<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/${doc_name}.html" />
+	#end
+	
+	#if(${lang.get("lang")} == "ca")
 	<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/${doc_name}.html" />
 	#end
 		
-	#if(${lang.get("lang")} == "es")
-	<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/${doc_name}.html" />
-	#end
-	
 	<script src="/js/cookie.js?v=1"></script>
 	<script src="/js/page.js?v=1"></script>
 </head>
@@ -46,11 +46,11 @@
 			<li><b> | </b></li>
 			#if(${lang.get("lang")} == "es")
 				<li><b>${lang.get("menu.lang.es")}</b></li>
-				<li><a href="../en/${doc_name}.html" onclick="setLang('en'); return false;"  title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.en")}</i></a></li>
+				<li><a href="../ca/${doc_name}.html" onclick="setLang('ca'); return false;"  title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.ca")}</i></a></li>
 			#end
-			#if(${lang.get("lang")} == "en")
+			#if(${lang.get("lang")} == "ca")
 				<li><a href="../es/${doc_name}.html" onclick="setLang('es'); return false;" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.es")}</i></a></li>
-				<li><b>${lang.get("menu.lang.en")}</b></li>
+				<li><b>${lang.get("menu.lang.ca")}</b></li>
 			#end
     	</ul>
     </header>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas y Asincronía</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="ca" href="http://www.semantictext.info/ca/ca\javascript\16-promesas-asincronia.html" />
+		
+			
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Castellano</b></li>
+				<li><a href="../ca/ca\javascript\16-promesas-asincronia.html" onclick="setLang('ca'); return false;"  title="Castellano"><i>Català</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="ca\javascript\16-promesas-asincronia.stxt" target="ca\javascript\16-promesas-asincronia" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="15-introduccion-jquery" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="17-ajax-fetch-api" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Promesas y Asincronía en JavaScript</h2>
+												            	<h3><a id="index_1"></a>Introducción a la programación asincrónica</h3>
+																<p>La programación asincrónica permite que las operaciones que toman tiempo, como solicitudes de red o lecturas de archivos,
+no bloqueen la ejecución del programa. En lugar de esperar a que estas operaciones se completen, JavaScript continúa ejecutando el código,
+y maneja el resultado de las operaciones asincrónicas cuando están listas.</p>
+<p>JavaScript utiliza varios enfoques para manejar la asincronía, siendo las <strong>promesas</strong> y la sintaxis <code>async/await</code> las más comunes.</p>
+
+												<pre>// Ejemplo b&aacute;sico de c&oacute;digo asincr&oacute;nico usando setTimeout
+console.log(&quot;Inicio&quot;);
+
+setTimeout(() =&gt; {
+    console.log(&quot;Esto se ejecuta despu&eacute;s de 2 segundos&quot;);
+}, 2000);
+
+console.log(&quot;Fin&quot;);
+// Output:
+// Inicio
+// Fin
+// Esto se ejecuta despu&eacute;s de 2 segundos</pre>
+								            	<h3><a id="index_2"></a>¿Qué es una promesa?</h3>
+																<p>Una <strong>promesa</strong> es un objeto que representa la eventual finalización (o falla) de una operación asincrónica y su valor resultante.
+Una promesa puede estar en uno de los siguientes estados:</p>
+<ul>
+<li><strong>Pending</strong> (pendiente): Estado inicial, ni cumplida ni rechazada.</li>
+<li><strong>Fulfilled</strong> (cumplida): La operación se completó con éxito.</li>
+<li><strong>Rejected</strong> (rechazada): La operación falló.</li>
+</ul>
+<p>Las promesas proporcionan métodos <code>then()</code> y <code>catch()</code> para manejar los resultados cuando la promesa se cumple o se rechaza, respectivamente.</p>
+
+												<pre>// Ejemplo b&aacute;sico de una promesa
+let miPromesa = new Promise((resolve, reject) =&gt; {
+    let exito = true;
+
+    if (exito) {
+        resolve(&quot;&iexcl;Operaci&oacute;n exitosa!&quot;);
+    } else {
+        reject(&quot;Algo sali&oacute; mal.&quot;);
+    }
+});
+
+miPromesa
+    .then((mensaje) =&gt; {
+        console.log(mensaje); // Output: &iexcl;Operaci&oacute;n exitosa!
+    })
+    .catch((error) =&gt; {
+        console.log(error);
+    });</pre>
+								            	<h3><a id="index_3"></a>Encadenamiento de promesas</h3>
+																<p>Las promesas pueden ser encadenadas para manejar secuencias de operaciones asincrónicas.
+Cada <code>then()</code> devuelve una nueva promesa, lo que permite continuar la cadena de operaciones.</p>
+
+												<pre>// Ejemplo de encadenamiento de promesas
+let promesaEncadenada = new Promise((resolve, reject) =&gt; {
+    resolve(5);
+});
+
+promesaEncadenada
+    .then((numero) =&gt; {
+        console.log(numero); // Output: 5
+        return numero * 2;
+    })
+    .then((doble) =&gt; {
+        console.log(doble); // Output: 10
+        return doble * 3;
+    })
+    .then((triple) =&gt; {
+        console.log(triple); // Output: 30
+    });</pre>
+								            	<h3><a id="index_4"></a>Manejo de errores con promesas</h3>
+																<p>El manejo de errores en las promesas se realiza utilizando el método <code>catch()</code>.
+Si alguna promesa en la cadena falla, el control pasa al primer <code>catch()</code> encontrado.</p>
+
+												<pre>// Ejemplo de manejo de errores con promesas
+let promesaConError = new Promise((resolve, reject) =&gt; {
+    let exito = false;
+
+    if (exito) {
+        resolve(&quot;&iexcl;Todo sali&oacute; bien!&quot;);
+    } else {
+        reject(&quot;Hubo un error.&quot;);
+    }
+});
+
+promesaConError
+    .then((mensaje) =&gt; {
+        console.log(mensaje);
+    })
+    .catch((error) =&gt; {
+        console.log(&quot;Error:&quot;, error); // Output: Error: Hubo un error.
+    });</pre>
+								            	<h3><a id="index_5"></a>Async y Await</h3>
+																<p>La sintaxis <code>async/await</code> es una forma más limpia y legible de trabajar con código asincrónico,
+basada en promesas. Cuando se declara una función como <code>async</code>, se puede usar <code>await</code> dentro de esa función para pausar la ejecución
+hasta que una promesa sea resuelta o rechazada.</p>
+
+												<pre>// Ejemplo de async/await
+async function obtenerDatos() {
+    try {
+        let respuesta = await fetch(&quot;https://api.example.com/datos&quot;);
+        let datos = await respuesta.json();
+        console.log(datos);
+    } catch (error) {
+        console.error(&quot;Error al obtener los datos:&quot;, error);
+    }
+}
+
+obtenerDatos();</pre>
+								            	<h3><a id="index_6"></a>Beneficios de usar promesas y async/await</h3>
+																<p>El uso de promesas y <code>async/await</code> ofrece varios beneficios clave:</p>
+<ul>
+<li><strong>Legibilidad</strong>: Hace que el código asincrónico sea más fácil de leer y entender.</li>
+<li><strong>Manejo de errores</strong>: Proporciona un manejo de errores más robusto y centralizado.</li>
+<li><strong>Evita el &quot;callback hell&quot;</strong>: Permite evitar la anidación excesiva de callbacks, manteniendo el código limpio.</li>
+</ul>
+
+												<pre>// Ejemplo que combina promesas y async/await
+function esperar(ms) {
+    return new Promise((resolve) =&gt; setTimeout(resolve, ms));
+}
+
+async function ejecutarTareas() {
+    await esperar(1000);
+    console.log(&quot;Tarea 1 completada despu&eacute;s de 1 segundo&quot;);
+
+    await esperar(2000);
+    console.log(&quot;Tarea 2 completada despu&eacute;s de 2 segundos&quot;);
+}
+
+ejecutarTareas();
+// Output:
+// Tarea 1 completada despu&eacute;s de 1 segundo
+// Tarea 2 completada despu&eacute;s de 2 segundos</pre>
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>
