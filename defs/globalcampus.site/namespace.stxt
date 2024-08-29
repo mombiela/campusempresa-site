@@ -30,4 +30,5 @@ Namespace: globalcampus.site/namespace.stxt
 		Right menu: (?)
 		Display src: (?) BOOLEAN
 		Display edit: (?) BOOLEAN
+		Lang: (?)
 
