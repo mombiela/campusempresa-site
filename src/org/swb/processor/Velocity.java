@@ -74,10 +74,15 @@ public class Velocity extends AbstractDirProcessor
                 {
                     String result = render(context, inMap.get(key), key);
                     if (outMap != null) outMap.put(key, result);
-                    if (todir != null) FileUtils.writeStringToFile(new File(todir, key + '.' + extension), result, encoding); 
+                    if (todir != null) 
+                    {
+                        File f = new File(todir, key + '.' + extension);
+                        System.out.println("Creating file " + f.getAbsolutePath());
+                        FileUtils.writeStringToFile(f, result, encoding); 
+                    }
                 }
                 
-                // Si había salida la insertamos en contexto
+                // Si habï¿½a salida la insertamos en contexto
                 if (out != null) context.put(out, outMap);
             }
             else

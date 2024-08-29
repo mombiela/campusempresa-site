@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos y tecnologías del backend</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/apps-web\backend_vision_general.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/apps-web\backend_vision_general.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="apps-web\backend_vision_general.stxt" target="apps-web\backend_vision_general" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<p>El desarrollo backend se refiere a la parte del desarrollo web que se enfoca en lo que sucede en el servidor. Incluye la gestión de bases de datos, autenticación de usuarios, lógica de negocio, y la comunicación con el frontend. A continuación, se presentan algunos conceptos y tecnologías clave del backend, incluyendo Java y COBOL.</p>
+
+								            	<h2><a id="index_0"></a>Conceptos Clave</h2>
+																<ul>
+<li>Servidor: Una máquina o programa que proporciona servicios a otros programas o dispositivos. Ejemplo: un servidor web que entrega páginas HTML a los navegadores.</li>
+<li>API (Interfaz de Programación de Aplicaciones): Un conjunto de reglas que permiten a diferentes aplicaciones comunicarse entre sí. Ejemplo: RESTful APIs.</li>
+<li>Base de Datos: Un sistema para almacenar y recuperar datos. Ejemplo: MySQL, PostgreSQL, MongoDB.</li>
+<li>Autenticación y Autorización: Procesos de verificar la identidad de un usuario (autenticación) y determinar sus permisos (autorización). Ejemplo: OAuth, JWT.</li>
+<li>Frameworks y Librerías: Herramientas que facilitan el desarrollo backend. Ejemplo: Spring Boot para Java, Express.js para Node.js.</li>
+<li>DevOps: Un enfoque que combina desarrollo de software y operaciones de TI para mejorar la colaboración y productividad mediante la automatización de procesos de infraestructura y despliegue.</li>
+</ul>
+
+								            	<h2><a id="index_1"></a>Java</h2>
+																<p>Java es un lenguaje de programación ampliamente utilizado en el desarrollo backend debido a su robustez, escalabilidad y seguridad.</p>
+<ul>
+<li>Características de Java:</li>
+</ul>
+<h1>Portabilidad: El código Java puede ejecutarse en cualquier plataforma que tenga una Máquina Virtual Java (JVM).</h1>
+<h1>Orientado a Objetos: Java está diseñado en torno a objetos, lo que facilita la reutilización del código y el mantenimiento.</h1>
+<h1>Seguridad: Java tiene varias características de seguridad integradas, como la gestión automática de memoria y la comprobación de bytecode en tiempo de ejecución.</h1>
+<ul>
+<li>Frameworks populares en Java:</li>
+</ul>
+<h1>Spring Boot: Facilita la creación de aplicaciones Java independientes y productivas.</h1>
+<h1>Hibernate: Un framework de mapeo objeto-relacional (ORM) que facilita la interacción con bases de datos.</h1>
+<p>Ejemplo básico de un controlador en Spring Boot:</p>
+
+												<pre>import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+
+@GetMapping(&quot;/hello&quot;)
+public String sayHello() {
+return &quot;Hello, World!&quot;;
+}
+}</pre>
+												
+								            	<h2><a id="index_2"></a>COBOL</h2>
+																<p>COBOL (Common Business Oriented Language) es un lenguaje de programación veterano, especialmente utilizado en sistemas de negocios y financieros.</p>
+<ul>
+<li>Características de COBOL:</li>
+</ul>
+<h1>Orientado a Negocios: Diseñado específicamente para aplicaciones de gestión y procesamiento de datos comerciales.</h1>
+<h1>Legibilidad: Su sintaxis es similar al inglés, lo que facilita la lectura y comprensión del código.</h1>
+<h1>Manejo de Transacciones: Ideal para aplicaciones que requieren procesamiento de grandes volúmenes de transacciones, como sistemas bancarios y financieros.</h1>
+<p>Ejemplo básico de un programa COBOL:</p>
+
+												<pre>IDENTIFICATION DIVISION.
+PROGRAM-ID. HelloWorld.
+PROCEDURE DIVISION.
+DISPLAY 'Hello, World!'.
+STOP RUN.</pre>
+												
+								            	<h2><a id="index_3"></a>Otras Tecnologías del Backend</h2>
+																<h1>Node.js: Un entorno de ejecución para JavaScript en el servidor, conocido por su eficiencia en aplicaciones de I/O intensivas.</h1>
+<h1>Python: Utilizado ampliamente con frameworks como Django y Flask para el desarrollo web.</h1>
+<h1>Ruby: Popularizado por el framework Ruby on Rails, conocido por su facilidad de uso y rapidez en el desarrollo.</h1>
+<h1>PHP: Un lenguaje de scripting ampliamente utilizado para el desarrollo web con frameworks como Laravel y Symfony.</h1>
+<p>Ejemplo básico en Node.js:</p>
+
+												<pre>const http = require('http');
+
+const server = http.createServer((req, res) =&gt; {
+res.statusCode = 200;
+res.setHeader('Content-Type', 'text/plain');
+res.end('Hello, World!\n');
+});
+
+server.listen(3000, '127.0.0.1', () =&gt; {
+console.log('Server running at http://127.0.0.1:3000/');
+});</pre>
+												
+								            	<h2><a id="index_4"></a>Conclusión</h2>
+																<p>El desarrollo backend es crucial para crear aplicaciones web robustas y eficientes. Java y COBOL son dos lenguajes que, aunque diferentes en su enfoque y uso, han demostrado ser indispensables en diversos sectores. Junto con otras tecnologías modernas como Node.js, Python, Ruby y PHP, forman la columna vertebral del desarrollo de aplicaciones web y servicios empresariales.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

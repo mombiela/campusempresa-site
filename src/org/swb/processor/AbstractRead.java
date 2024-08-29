@@ -9,7 +9,7 @@ import java.util.Properties;
 public abstract class AbstractRead extends AbstractDirProcessor
 {
     // -------------
-    // Configuración
+    // Configuraciï¿½n
     // -------------
     
     private String outName = "out";
@@ -23,7 +23,7 @@ public abstract class AbstractRead extends AbstractDirProcessor
     }
     
     // ------------------------------------------------
-    // Finalización del proceso -> insertamos resultado
+    // Finalizaciï¿½n del proceso -> insertamos resultado
     // ------------------------------------------------
     
     protected void endProcess(Map context)
@@ -36,13 +36,13 @@ public abstract class AbstractRead extends AbstractDirProcessor
     // ------------------------------------ 
     
     @Override
-    protected void process(Map context, File srcFile) throws IOException, Exception
+    protected void process(Map context, File srcFile, File dirOrigin) throws IOException, Exception
     {
         final String EXTENSION = getExtension();
         final int EXTENSION_SIZE = EXTENSION.length();
         
         // Creamos fichero
-        String name = srcFile.getName();
+        String name = srcFile.getCanonicalPath().substring(dirOrigin.getCanonicalPath().length()+1);
         if (!name.endsWith(EXTENSION)) return;
         name = name.substring(0, name.length()-EXTENSION_SIZE);
         

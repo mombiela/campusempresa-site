@@ -10,7 +10,7 @@ import org.apache.commons.io.FileUtils;
 public class CopyFiles extends AbstractDirProcessor
 {
     // --------------------------
-    // Variables de configuración
+    // Variables de configuraciï¿½n
     // --------------------------
     
     private int lengthBaseDir = 0;
@@ -23,7 +23,7 @@ public class CopyFiles extends AbstractDirProcessor
     @Override
     public void init(String name, Properties config) throws Exception
     {
-        // Configuración super()
+        // Configuraciï¿½n super()
         super.init(name, config);
         
         // Validamos directorio de salida
@@ -59,11 +59,11 @@ public class CopyFiles extends AbstractDirProcessor
     }    
     
     // ----------------
-    // Método principal
+    // Mï¿½todo principal
     // ----------------
     
     @Override
-    protected void process(Map context, File srcFile) throws IOException, Exception
+    protected void process(Map context, File srcFile, File dirOrigen) throws IOException, Exception
     {
         File dstFile = new File(todir, srcFile.getCanonicalPath().substring(lengthBaseDir));
         if (dstFile.exists() && !overwrite) return;

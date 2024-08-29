@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de selectores en CSS</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/css\selectores_tipos.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/css\selectores_tipos.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="css\selectores_tipos.stxt" target="css\selectores_tipos" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<ul>
+<li>
+<p><strong>Introducción</strong>
+Los selectores en CSS permiten a los desarrolladores apuntar a elementos específicos dentro de un documento HTML para aplicarles estilos. Existen varios tipos de selectores, cada uno con sus propias características y usos.</p>
+</li>
+<li>
+<p><strong>Selectores básicos</strong>
+<code>startalert</code></p>
+</li>
+<li>
+<p><strong>Selector de tipo</strong>: Selecciona todos los elementos de un tipo específico.</p>
+</li>
+</ul>
+
+												<pre>p {
+color: blue;
+}</pre>
+												<ul>
+<li><strong>Selector de clase</strong>: Selecciona todos los elementos que tienen una clase específica.</li>
+</ul>
+
+												<pre>.intro {
+font-size: 14px;
+color: green;
+}</pre>
+												<ul>
+<li><strong>Selector de ID</strong>: Selecciona un único elemento que tiene un ID específico.</li>
+</ul>
+
+												<pre>#header {
+background-color: yellow;
+}</pre>
+												<ul>
+<li><strong>Selector universal</strong>: Selecciona todos los elementos en la página.</li>
+</ul>
+
+												<pre>* {
+margin: 0;
+padding: 0;
+}</pre>
+												<ul>
+<li><strong>Selector de atributo</strong>: Selecciona elementos que tienen un atributo específico.</li>
+</ul>
+
+												<pre>a[href] {
+color: red;
+}</pre>
+												<p><code>endalert</code></p>
+<ul>
+<li><strong>Selectores de combinadores</strong>
+<code>startalert</code></li>
+<li><strong>Selector descendiente</strong>: Selecciona elementos que son descendientes de otro elemento.</li>
+</ul>
+
+												<pre>div p {
+color: blue;
+}</pre>
+												<ul>
+<li><strong>Selector hijo</strong>: Selecciona elementos que son hijos directos de otro elemento.</li>
+</ul>
+
+												<pre>div &gt; p {
+color: green;
+}</pre>
+												<ul>
+<li><strong>Selector de adyacente inmediato</strong>: Selecciona el elemento que está inmediatamente después de otro.</li>
+</ul>
+
+												<pre>h1 + p {
+margin-top: 0;
+}</pre>
+												<ul>
+<li><strong>Selector de hermanos generales</strong>: Selecciona todos los elementos que son hermanos de un elemento especificado.</li>
+</ul>
+
+												<pre>h1 ~ p {
+color: red;
+}</pre>
+												<p><code>endalert</code></p>
+<ul>
+<li><strong>Selectores de pseudoclases</strong>
+<code>startalert</code></li>
+<li><strong>:hover</strong>: Selecciona elementos cuando el usuario pasa el cursor sobre ellos.</li>
+</ul>
+
+												<pre>a:hover {
+color: red;
+}</pre>
+												<ul>
+<li><strong>:first-child</strong>: Selecciona el primer hijo de su elemento padre.</li>
+</ul>
+
+												<pre>p:first-child {
+font-weight: bold;
+}</pre>
+												<ul>
+<li><strong>:nth-child(n)</strong>: Selecciona el enésimo hijo de su elemento padre.</li>
+</ul>
+
+												<pre>li:nth-child(2) {
+color: blue;
+}</pre>
+												<ul>
+<li><strong>:not(selector)</strong>: Selecciona todos los elementos que no coinciden con el selector dado.</li>
+</ul>
+
+												<pre>:not(p) {
+color: gray;
+}</pre>
+												<p><code>endalert</code></p>
+<ul>
+<li><strong>Selectores de pseudoelementos</strong>
+<code>startalert</code></li>
+<li><strong>::before</strong>: Inserta contenido antes del contenido de un elemento.</li>
+</ul>
+
+												<pre>p::before {
+content: &quot;Nota: &quot;;
+color: red;
+}</pre>
+												<ul>
+<li><strong>::after</strong>: Inserta contenido después del contenido de un elemento.</li>
+</ul>
+
+												<pre>p::after {
+content: &quot; (Le&iacute;do)&quot;;
+color: blue;
+}</pre>
+												<ul>
+<li><strong>::first-letter</strong>: Selecciona la primera letra de un elemento.</li>
+</ul>
+
+												<pre>p::first-letter {
+font-size: 2em;
+color: green;
+}</pre>
+												<ul>
+<li><strong>::first-line</strong>: Selecciona la primera línea de un elemento.</li>
+</ul>
+
+												<pre>p::first-line {
+font-weight: bold;
+}</pre>
+												<p><code>endalert</code></p>
+<ul>
+<li><strong>Conclusión</strong>
+Conocer los distintos tipos de selectores en CSS es crucial para aplicar estilos de manera eficiente y precisa. Cada tipo de selector tiene su propósito y uso específicos, permitiendo una gran flexibilidad en el diseño y desarrollo de sitios web.</li>
+</ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

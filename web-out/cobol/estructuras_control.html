@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de control de flujo: IF, PERFORM, etc.</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/cobol\estructuras_control.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/cobol\estructuras_control.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="cobol\estructuras_control.stxt" target="cobol\estructuras_control" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<p>COBOL proporciona varias estructuras de control de flujo que permiten dirigir la ejecución del programa basándose en condiciones y repeticiones. Entre las más comunes se encuentran <code>IF</code>, <code>PERFORM</code>, <code>EVALUATE</code> y <code>GO TO</code>. A continuación, se explican estas estructuras y su uso.</p>
+
+								            	<h2><a id="index_0"></a>IF</h2>
+																<p>La sentencia <code>IF</code> se utiliza para tomar decisiones basadas en condiciones. Si la condición es verdadera, se ejecutan las sentencias especificadas; de lo contrario, se pueden ejecutar sentencias alternativas usando <code>ELSE</code>.</p>
+
+												<pre>IF WS-Total &gt; 1000
+DISPLAY 'Total exceeds threshold'.
+ELSE
+DISPLAY 'Total is within limit'.
+END-IF.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>IF WS-Total &gt; 1000</code> verifica si <code>WS-Total</code> es mayor que 1000.</li>
+<li>Si la condición es verdadera, se muestra 'Total exceeds threshold'.</li>
+<li>Si la condición es falsa, se muestra 'Total is within limit'.</li>
+</ul>
+
+								            	<h2><a id="index_1"></a>PERFORM</h2>
+																<p>La sentencia <code>PERFORM</code> se utiliza para ejecutar bloques de código repetidamente o para llamar a párrafos o secciones de código.</p>
+
+												<pre>PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index &gt; 10
+DISPLAY EmployeeID(WS-Index)
+DISPLAY EmployeeName(WS-Index)
+DISPLAY EmployeeSalary(WS-Index)
+END-PERFORM.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index &gt; 10</code> ejecuta el bloque de código mientras <code>WS-Index</code> sea menor o igual a 10.</li>
+<li>Durante cada iteración, se muestran el <code>EmployeeID</code>, <code>EmployeeName</code> y <code>EmployeeSalary</code> correspondientes al índice actual.</li>
+</ul>
+<p>La sentencia <code>PERFORM</code> también se puede usar para llamar a párrafos específicos:</p>
+
+												<pre>PERFORM Process-Records.
+
+Process-Records.
+DISPLAY 'Processing records...'.
+PERFORM READ-RECORD.
+
+READ-RECORD.
+DISPLAY 'Reading record...'.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>PERFORM Process-Records</code> llama al párrafo <code>Process-Records</code>, que a su vez llama al párrafo <code>READ-RECORD</code>.</li>
+</ul>
+
+								            	<h2><a id="index_2"></a>EVALUATE</h2>
+																<p>La sentencia <code>EVALUATE</code> es similar a un <code>CASE</code> o <code>SWITCH</code> en otros lenguajes de programación. Permite evaluar una expresión y ejecutar diferentes bloques de código basados en el valor de la expresión.</p>
+
+												<pre>EVALUATE WS-Grade
+WHEN 'A'
+DISPLAY 'Excellent'.
+WHEN 'B'
+DISPLAY 'Good'.
+WHEN 'C'
+DISPLAY 'Average'.
+WHEN OTHER
+DISPLAY 'Other grade'.
+END-EVALUATE.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>EVALUATE WS-Grade</code> evalúa el valor de <code>WS-Grade</code>.</li>
+<li>Dependiendo del valor, se muestra un mensaje correspondiente ('Excellent', 'Good', 'Average', o 'Other grade').</li>
+</ul>
+
+								            	<h2><a id="index_3"></a>GO TO</h2>
+																<p>La sentencia <code>GO TO</code> transfiere el control del programa a un párrafo o sección específica. Su uso se desaconseja en programación estructurada, ya que puede dificultar la comprensión y el mantenimiento del código.</p>
+
+												<pre>IF WS-Error = 'Y'
+GO TO Error-Handler.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li>Si <code>WS-Error</code> es igual a 'Y', el control se transfiere al párrafo <code>Error-Handler</code>.</li>
+</ul>
+
+								            	<h2><a id="index_4"></a>EXIT</h2>
+																<p>La sentencia <code>EXIT</code> se utiliza para finalizar un bloque de código o un bucle. Es especialmente útil en programas anidados o complejos.</p>
+
+												<pre>PERFORM UNTIL WS-Done
+IF WS-Condition = 'TRUE'
+SET WS-Done TO TRUE
+END-IF
+END-PERFORM.
+EXIT.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li>El bucle <code>PERFORM UNTIL WS-Done</code> continúa ejecutándose hasta que <code>WS-Done</code> sea verdadero.</li>
+<li>La sentencia <code>EXIT</code> finaliza el bloque de código.</li>
+</ul>
+<p>Las estructuras de control de flujo en COBOL son fundamentales para dirigir la ejecución del programa basándose en condiciones y repeticiones. Su uso adecuado permite escribir programas claros, eficientes y fáciles de mantener.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

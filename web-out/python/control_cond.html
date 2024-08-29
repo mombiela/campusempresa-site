@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales (if, elif, else)</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/python\control_cond.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/python\control_cond.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="python\control_cond.stxt" target="python\control_cond" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<p>Las estructuras condicionales en Python permiten ejecutar bloques de código específicos basados en condiciones dadas.
+Estas estructuras son fundamentales para la toma de decisiones en programación.</p>
+
+								            	<h2><a id="index_0"></a>Sentencia if</h2>
+																<p>La sentencia <code>if</code> evalúa una condición. Si la condición es verdadera (<code>True</code>), se ejecuta el bloque de código indentado bajo el <code>if</code>.</p>
+
+												<pre>x = 10
+if x &gt; 5:
+print(&quot;x es mayor que 5&quot;)</pre>
+												<p>En este ejemplo, <code>x</code> es mayor que <code>5</code>, por lo tanto,
+la condición es verdadera y se imprime &quot;x es mayor que 5&quot;.</p>
+
+								            	<h2><a id="index_1"></a>Sentencia elif</h2>
+																<p>La sentencia <code>elif</code> (abreviatura de &quot;else if&quot;) permite verificar múltiples condiciones.
+Si la condición <code>if</code> inicial es falsa, Python evalúa la siguiente condición <code>elif</code>.</p>
+
+												<pre>x = 10
+if x &gt; 15:
+print(&quot;x es mayor que 15&quot;)
+elif x &gt; 5:
+print(&quot;x es mayor que 5 pero menor o igual a 15&quot;)</pre>
+												<p>En este caso, la primera condición <code>if</code> es falsa (<code>x</code> no es mayor que <code>15</code>),
+pero la segunda condición <code>elif</code> es verdadera (<code>x</code> es mayor que <code>5</code>),
+por lo que se imprime &quot;x es mayor que 5 pero menor o igual a 15&quot;.</p>
+
+								            	<h2><a id="index_2"></a>Sentencia else</h2>
+																<p>La sentencia <code>else</code> se usa para ejecutar un bloque de código
+si todas las condiciones anteriores (<code>if</code> y <code>elif</code>) son falsas.</p>
+
+												<pre>x = 3
+if x &gt; 15:
+print(&quot;x es mayor que 15&quot;)
+elif x &gt; 5:
+print(&quot;x es mayor que 5 pero menor o igual a 15&quot;)
+else:
+print(&quot;x es 5 o menor&quot;)</pre>
+												<p>Aquí, ambas condiciones (<code>if</code> y <code>elif</code>) son falsas,
+por lo que se ejecuta el bloque <code>else</code> y se imprime &quot;x es 5 o menor&quot;.</p>
+
+								            	<h2><a id="index_3"></a>Ejemplo Completo</h2>
+																<p>Un ejemplo completo utilizando <code>if</code>, <code>elif</code>, y <code>else</code>:</p>
+
+												<pre>edad = int(input(&quot;Introduce tu edad: &quot;))
+
+if edad &lt; 18:
+print(&quot;Eres menor de edad&quot;)
+elif edad &lt; 65:
+print(&quot;Eres adulto&quot;)
+else:
+print(&quot;Eres mayor de 65 a&ntilde;os&quot;)</pre>
+												<p>En este ejemplo:</p>
+<h1>Se solicita al usuario que introduzca su edad.</h1>
+<h1>Si la edad es menor que 18, se imprime &quot;Eres menor de edad&quot;.</h1>
+<h1>Si la edad es mayor o igual a 18 pero menor que 65, se imprime &quot;Eres adulto&quot;.</h1>
+<h1>Si la edad es 65 o mayor, se imprime &quot;Eres mayor de 65 años&quot;.</h1>
+
+								            	<h2><a id="index_4"></a>Uso de operadores lógicos en condiciones</h2>
+																<p>Puedes combinar múltiples condiciones en una sola sentencia
+<code>if</code> usando operadores lógicos como <code>and</code>, <code>or</code>, y <code>not</code>.</p>
+
+												<pre>x = 20
+if x &gt; 10 and x &lt; 30:
+print(&quot;x est&aacute; entre 10 y 30&quot;)</pre>
+												<p>En este ejemplo, ambas condiciones (<code>x &gt; 10</code> y <code>x &lt; 30</code>) deben
+ser verdaderas para que el bloque de código se ejecute.</p>
+
+								            	<h2><a id="index_5"></a>Importancia de la indentación</h2>
+																<p>Es crucial recordar que Python usa la indentación para definir bloques de código.
+Asegúrate de que todas las líneas de código dentro de una
+estructura condicional estén correctamente indentadas.</p>
+
+												<pre>if x &gt; 5:
+print(&quot;x es mayor que 5&quot;)
+if x &gt; 10:
+print(&quot;x es tambi&eacute;n mayor que 10&quot;)
+print(&quot;Esta l&iacute;nea se ejecuta si x es mayor que 5, independientemente de x &gt; 10&quot;)</pre>
+												<p>En resumen, las estructuras condicionales (<code>if</code>, <code>elif</code>, <code>else</code>) en Python
+permiten ejecutar diferentes bloques de código basados en condiciones,
+facilitando la toma de decisiones en tus programas.
+La correcta comprensión y uso de estas estructuras es esencial para cualquier programador.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

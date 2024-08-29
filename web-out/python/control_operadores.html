@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores en Python</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/python\control_operadores.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/python\control_operadores.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="python\control_operadores.stxt" target="python\control_operadores" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+					            	<h2><a id="index_0"></a>Operadores Aritméticos</h2>
+																<p>Estos operadores se utilizan para realizar operaciones matemáticas comunes.</p>
+<p>| Operador     | Descripción     |Ejemplo    |
+| -------------|-----------------|-----------|
+| <code>+</code>   | Suma            | <code>a + b</code> |
+| <code>-</code>   | Resta           | <code>a - b</code> |
+| <code>*</code>   | Multiplicación  | <code>a * b</code> |
+| <code>/</code>   | División        | <code>a / b</code> |
+| <code>%</code>   | Módulo          | <code>a % b</code> |
+| <code>**</code>  | Exponenciación  | <code>a ** b</code> |
+| <code>//</code>  | División entera | <code>a // b</code> |</p>
+
+								            	<h3><a id="index_1"></a>Ejemplo:</h3>
+																<pre>a = 10
+b = 3
+print(a + b)  # 13
+print(a - b)  # 7
+print(a * b)  # 30
+print(a / b)  # 3.3333333333333335
+print(a % b)  # 1
+print(a ** b) # 1000
+print(a // b) # 3</pre>
+								            	<h2><a id="index_2"></a>Operadores de Asignación</h2>
+																<p>Estos operadores se utilizan para asignar valores a las variables.</p>
+<p>| Operador    | Descripción                 | Ejemplo |
+| -------------|-----------------|-----------|
+| <code>=</code>   | Asignación                   | <code>a = 5</code> |
+| <code>+=</code>  | Suma y asignación            | <code>a += 3</code> |
+| <code>-=</code>  | Resta y asignación           | <code>a -= 3</code> |
+| <code>*=</code>  | Multiplicación y asignación  | <code>a *= 3</code> |
+| <code>/=</code>  | División y asignación        | <code>a /= 3</code> |
+| <code>%=</code>  | Módulo y asignación          | <code>a %= 3</code> |
+| <code>//=</code> | División entera y asignación | <code>a //= 3</code> |
+| <code>**=</code> | Exponenciación y asignación  | <code>a **= 3</code> |</p>
+
+								            	<h3><a id="index_3"></a>Ejemplo:</h3>
+																<pre>a = 5
+a += 2  # a = a + 2
+print(a)  # 7
+a *= 3  # a = a * 3
+print(a)  # 21</pre>
+								            	<h2><a id="index_4"></a>Operadores de Comparación</h2>
+																<p>Estos operadores se utilizan para comparar dos valores.</p>
+<p>| Operador    | Descripción     | Ejemplo |
+| -------------|-----------------|-----------|
+| <code>==</code> | Igual a           | <code>a == b</code> |
+| <code>!=</code> | No igual a        | <code>a != b</code> |
+| <code>&gt;</code>  | Mayor que         | <code>a &gt; b</code> |
+| <code>&lt;</code>  | Menor que         | <code>a &lt; b</code> |
+| <code>&gt;=</code> | Mayor o igual que | <code>a &gt;= b</code> |
+| <code>&lt;=</code> | Menor o igual que | <code>a &lt;= b</code> |</p>
+
+								            	<h3><a id="index_5"></a>Ejemplo:</h3>
+																<pre>a = 5
+b = 3
+print(a == b)  # False
+print(a != b)  # True
+print(a &gt; b)   # True
+print(a &lt; b)   # False</pre>
+								            	<h2><a id="index_6"></a>Operadores Lógicos</h2>
+																<p>Estos operadores se utilizan para combinar sentencias condicionales.</p>
+<p>| Operador    | Descripción                 | Ejemplo |
+| -------------|-----------------|-----------|
+| <code>and</code> | Y lógico        | <code>a and b</code> |
+| <code>or</code>  | O lógico        | <code>a or b</code> |
+| <code>not</code> | Negación lógica | <code>not a</code> |</p>
+
+								            	<h3><a id="index_7"></a>Ejemplo:</h3>
+																<pre>a = True
+b = False
+print(a and b)  # False
+print(a or b)   # True
+print(not a)    # False</pre>
+								            	<h2><a id="index_8"></a>Operadores de Identidad</h2>
+																<p>Estos operadores se utilizan para comparar objetos.</p>
+<p>| Operador    | Descripción                 | Ejemplo |
+| -------------|-----------------|-----------|
+| <code>is</code>     | Es el mismo objeto    | <code>a is b</code> |
+| <code>is not</code> | No es el mismo objeto | <code>a is not b</code> |</p>
+
+								            	<h3><a id="index_9"></a>Ejemplo:</h3>
+																<pre>a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+print(a is b)    # True
+print(a is c)    # False
+print(a is not c) # True</pre>
+								            	<h2><a id="index_10"></a>Operadores de Pertenencia</h2>
+																<p>Estos operadores se utilizan para verificar si un valor o variable está presente en una secuencia (como una lista, tupla, diccionario, etc.).</p>
+<p>| Operador    | Descripción                 | Ejemplo |
+| -------------|-----------------|-----------|
+| <code>in</code>     | Está presente en    | <code>a in b</code> |
+| <code>not</code> in | No está presente en | <code>a not in b</code> |</p>
+
+								            	<h3><a id="index_11"></a>Ejemplo:</h3>
+																<pre>a = [1, 2, 3]
+print(2 in a)     # True
+print(4 not in a) # True</pre>
+								            	<h2><a id="index_12"></a>Operadores Bit a Bit</h2>
+																<p>Estos operadores se utilizan para comparar (operar) los números a nivel de bits.</p>
+<p>| Operador    | Descripción       | Ejemplo |
+| -------------|-----------------|-----------|
+| <code>&amp;</code>   | AND bit a bit      | <code>a &amp; b</code> |
+| <code>|</code>   | OR bit a bit       | <code>a | b</code> |
+| <code>^</code>   | XOR bit a bit      | <code>a ^ b</code> |
+| <code>~</code> | NOT bit a bit      | <code>~a</code> |
+| <code>&lt;&lt;</code>  | Desplazamiento izq | <code>a &lt;&lt; b</code> |
+| <code>&gt;&gt;</code>  | Desplazamiento der | <code>a &gt;&gt; b</code> |</p>
+
+								            	<h3><a id="index_13"></a>Ejemplo:</h3>
+																<pre>a = 60    # 60 = 0011 1100
+b = 13    # 13 = 0000 1101
+print(a &amp; b)  # 12 = 0000 1100
+print(a | b)  # 61 = 0011 1101
+print(a ^ b)  # 49 = 0011 0001
+print(~a)     # -61 = 1100 0011
+print(a &lt;&lt; 2) # 240 = 1111 0000
+print(a &gt;&gt; 2) # 15 = 0000 1111</pre>
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

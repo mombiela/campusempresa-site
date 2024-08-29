@@ -74,7 +74,7 @@ public abstract class AbstractDirProcessor implements Processor
     		            //System.out.println("Match: " + filter + " -> " + path);
     		        }
     		    }
-    			process(context, srcFile);
+    			process(context, srcFile, dir);
     		}
     		
     		// Log
@@ -90,7 +90,7 @@ public abstract class AbstractDirProcessor implements Processor
     {
         System.out.println("End processing: " + dir.getAbsolutePath());
     }
-    protected void process(Map context, File srcFile) throws IOException, Exception
+    protected void process(Map context, File srcFile, File dirOrigin) throws IOException, Exception
     {
         System.out.println("Processing: " + srcFile.getCanonicalPath());
     }

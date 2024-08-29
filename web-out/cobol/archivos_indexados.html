@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo con archivos indexados</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/cobol\archivos_indexados.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/cobol\archivos_indexados.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="cobol\archivos_indexados.stxt" target="cobol\archivos_indexados" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<p>En COBOL, los archivos indexados permiten el acceso rápido a registros mediante el uso de claves. Este tipo de archivos es útil cuando se necesita acceder a datos de manera no secuencial o buscar registros específicos. A continuación, se detallan los conceptos y operaciones básicas para trabajar con archivos indexados en COBOL.</p>
+
+								            	<h2><a id="index_0"></a>Definición de la División de Archivo para archivos indexados</h2>
+																<p>La División de Archivo en COBOL se utiliza para definir los archivos indexados, especificando la clave primaria y cualquier clave secundaria.</p>
+
+								            	<h3><a id="index_1"></a>Ejemplo de definición de archivo indexado</h3>
+																
+												<pre>FILE CONTROL.
+SELECT Clientes ASSIGN TO 'CLIENTES.DAT'
+ORGANIZATION IS INDEXED
+ACCESS MODE IS DYNAMIC
+RECORD KEY IS Cliente-ID
+ALTERNATE RECORD KEY IS Cliente-Nombre WITH DUPLICATES.
+
+DATA DIVISION.
+FILE SECTION.
+FD Clientes.
+01 Registro-Cliente.
+05 Cliente-ID PIC 9(5).
+05 Cliente-Nombre PIC X(30).
+05 Cliente-Direccion PIC X(50).</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>SELECT Clientes ASSIGN TO 'CLIENTES.DAT'</code> define el archivo lógico y lo asigna a un archivo físico.</li>
+<li><code>ORGANIZATION IS INDEXED</code> indica que el archivo es indexado.</li>
+<li><code>ACCESS MODE IS DYNAMIC</code> permite el acceso tanto secuencial como aleatorio.</li>
+<li><code>RECORD KEY IS Cliente-ID</code> define la clave primaria.</li>
+<li><code>ALTERNATE RECORD KEY IS Cliente-Nombre WITH DUPLICATES</code> define una clave secundaria permitiendo duplicados.</li>
+</ul>
+
+								            	<h2><a id="index_2"></a>Apertura y cierre de archivos indexados</h2>
+																<p>Los archivos indexados deben ser abiertos y cerrados adecuadamente utilizando las sentencias <code>OPEN</code> y <code>CLOSE</code>.</p>
+
+								            	<h3><a id="index_3"></a>Ejemplo de apertura y cierre de archivos indexados</h3>
+																
+												<pre>PROCEDURE DIVISION.
+OPEN I-O Clientes.
+IF WS-File-Status NOT = '00'
+DISPLAY 'Error abriendo archivo: ' WS-File-Status.
+END-IF.
+
+CLOSE Clientes.
+STOP RUN.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>OPEN I-O Clientes</code> abre el archivo para operaciones de entrada y salida.</li>
+<li>Se verifica <code>WS-File-Status</code> para manejar errores al abrir el archivo.</li>
+<li><code>CLOSE Clientes</code> cierra el archivo al finalizar.</li>
+</ul>
+
+								            	<h2><a id="index_4"></a>Lectura de registros en archivos indexados</h2>
+																<p>La lectura de registros en archivos indexados se puede hacer de manera secuencial o aleatoria. Para acceso aleatorio, se utiliza la sentencia <code>READ</code> con la clave de registro.</p>
+
+								            	<h3><a id="index_5"></a>Ejemplo de lectura secuencial y aleatoria</h3>
+																
+												<pre>PROCEDURE DIVISION.
+Lectura-Secuencial.
+READ Clientes NEXT RECORD INTO Registro-Cliente
+AT END SET Fin-De-Archivo TO TRUE
+NOT AT END
+DISPLAY Cliente-ID Cliente-Nombre Cliente-Direccion
+END-READ
+PERFORM UNTIL Fin-De-Archivo
+READ Clientes NEXT RECORD INTO Registro-Cliente
+AT END SET Fin-De-Archivo TO TRUE
+NOT AT END
+DISPLAY Cliente-ID Cliente-Nombre Cliente-Direccion
+END-READ
+END-PERFORM.
+
+Lectura-Aleatoria.
+MOVE 12345 TO Cliente-ID.
+READ Clientes INTO Registro-Cliente KEY IS Cliente-ID
+INVALID KEY
+DISPLAY 'Cliente no encontrado'
+NOT INVALID KEY
+DISPLAY Cliente-ID Cliente-Nombre Cliente-Direccion
+END-READ.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>READ Clientes NEXT RECORD INTO Registro-Cliente</code> lee el siguiente registro en orden secuencial.</li>
+<li><code>READ Clientes INTO Registro-Cliente KEY IS Cliente-ID</code> lee un registro específico usando la clave primaria.</li>
+<li><code>INVALID KEY</code> maneja la situación en la que un registro no se encuentra.</li>
+</ul>
+
+								            	<h2><a id="index_6"></a>Escritura y actualización de registros en archivos indexados</h2>
+																<p>Para escribir y actualizar registros en archivos indexados, se utilizan las sentencias <code>WRITE</code> y <code>REWRITE</code>.</p>
+
+								            	<h3><a id="index_7"></a>Ejemplo de escritura y actualización de registros</h3>
+																
+												<pre>PROCEDURE DIVISION.
+Escribir-Registro.
+MOVE 12345 TO Cliente-ID.
+MOVE 'Juan P&eacute;rez' TO Cliente-Nombre.
+MOVE 'Calle Falsa 123' TO Cliente-Direccion.
+WRITE Registro-Cliente.
+IF WS-File-Status NOT = '00'
+DISPLAY 'Error escribiendo registro: ' WS-File-Status.
+END-IF.
+
+Actualizar-Registro.
+MOVE 'Avenida Siempre Viva 742' TO Cliente-Direccion.
+REWRITE Registro-Cliente.
+IF WS-File-Status NOT = '00'
+DISPLAY 'Error actualizando registro: ' WS-File-Status.
+END-IF.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>WRITE Registro-Cliente</code> escribe un nuevo registro en el archivo.</li>
+<li><code>REWRITE Registro-Cliente</code> actualiza el registro actual en el archivo.</li>
+<li>Se verifica <code>WS-File-Status</code> para manejar errores durante las operaciones.</li>
+</ul>
+
+								            	<h2><a id="index_8"></a>Eliminación de registros en archivos indexados</h2>
+																<p>La eliminación de registros se realiza utilizando la sentencia <code>DELETE</code>.</p>
+
+								            	<h3><a id="index_9"></a>Ejemplo de eliminación de registros</h3>
+																
+												<pre>PROCEDURE DIVISION.
+Eliminar-Registro.
+MOVE 12345 TO Cliente-ID.
+DELETE Clientes RECORD KEY IS Cliente-ID.
+IF WS-File-Status NOT = '00'
+DISPLAY 'Error eliminando registro: ' WS-File-Status.
+END-IF.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>DELETE Clientes RECORD KEY IS Cliente-ID</code> elimina el registro con la clave especificada.</li>
+<li>Se verifica <code>WS-File-Status</code> para manejar errores durante la eliminación.</li>
+</ul>
+
+								            	<h2><a id="index_10"></a>Manejo de errores en operaciones con archivos indexados</h2>
+																<p>Es importante capturar y manejar los posibles errores durante las operaciones con archivos indexados utilizando <code>FILE STATUS</code>.</p>
+
+								            	<h3><a id="index_11"></a>Ejemplo de manejo de errores con FILE STATUS</h3>
+																
+												<pre>FILE CONTROL.
+SELECT Clientes ASSIGN TO 'CLIENTES.DAT'
+ORGANIZATION IS INDEXED
+ACCESS MODE IS DYNAMIC
+RECORD KEY IS Cliente-ID
+FILE STATUS IS WS-File-Status.
+
+WORKING-STORAGE SECTION.
+01 WS-File-Status PIC XX.
+
+PROCEDURE DIVISION.
+OPEN I-O Clientes.
+IF WS-File-Status NOT = '00'
+DISPLAY 'Error abriendo archivo: ' WS-File-Status.
+END-IF.
+CLOSE Clientes.
+STOP RUN.</pre>
+												<p>En este ejemplo:</p>
+<ul>
+<li><code>FILE STATUS IS WS-File-Status</code> define una variable para capturar el estado del archivo.</li>
+<li>Se verifica <code>WS-File-Status</code> para manejar errores en las operaciones de archivo.</li>
+</ul>
+
+								            	<h2><a id="index_12"></a>Conclusión</h2>
+																<p>El trabajo con archivos indexados en COBOL permite una gestión eficiente y rápida de datos mediante el uso de claves. Comprender cómo definir, abrir, cerrar, leer, escribir, actualizar y eliminar registros, así como manejar errores, es esencial para desarrollar aplicaciones COBOL robustas y eficientes.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

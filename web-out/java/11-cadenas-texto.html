@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Cadenas de Texto</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/java\11-cadenas-texto.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/java\11-cadenas-texto.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="java\11-cadenas-texto.stxt" target="java\11-cadenas-texto" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="10-arrays-colecciones" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="12-manejo-excepciones" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Introducción al Manejo de Cadenas de Texto en Java</h2>
+												            	<h3><a id="index_1"></a>¿Qué son las cadenas de texto en Java?</h3>
+																<p>En Java, una cadena de texto se representa con la clase <code>String</code>. Las cadenas son secuencias de caracteres que se utilizan comúnmente para almacenar y manipular texto. En Java, las cadenas son inmutables, lo que significa que una vez creada una cadena, no se puede modificar.</p>
+
+								            	<h2><a id="index_2"></a>Creación y Asignación de Cadenas</h2>
+												            	<h3><a id="index_3"></a>Inicialización de Cadenas</h3>
+																<p>Las cadenas en Java se pueden crear de varias maneras. La forma más común es asignar un literal de cadena directamente a una variable de tipo <code>String</code>.</p>
+
+												<pre>String saludo = &quot;Hola, mundo!&quot;;
+String otraCadena = new String(&quot;Java es divertido&quot;);</pre>
+												<p>En el primer ejemplo, la cadena <code>&quot;Hola, mundo!&quot;</code> se asigna directamente a la variable <code>saludo</code>. En el segundo ejemplo, se utiliza el constructor de la clase <code>String</code> para crear una nueva instancia.</p>
+
+								            	<h3><a id="index_4"></a>Concatenación de Cadenas</h3>
+																<p>La concatenación es el proceso de unir dos o más cadenas. En Java, se puede hacer utilizando el operador <code>+</code> o el método <code>concat</code>.</p>
+
+												<pre>String nombre = &quot;Juan&quot;;
+String saludo = &quot;Hola, &quot; + nombre + &quot;!&quot;;
+System.out.println(saludo);  // Salida: Hola, Juan!
+
+String parte1 = &quot;Java &quot;;
+String parte2 = &quot;es divertido&quot;;
+String frase = parte1.concat(parte2);
+System.out.println(frase);  // Salida: Java es divertido</pre>
+												<p>En estos ejemplos, se muestran dos formas de concatenar cadenas: utilizando el operador <code>+</code> y el método <code>concat</code>.</p>
+
+								            	<h2><a id="index_5"></a>Métodos Comunes de la Clase `String`</h2>
+												            	<h3><a id="index_6"></a>Longitud de una Cadena</h3>
+																<p>El método <code>length()</code> devuelve el número de caracteres en una cadena.</p>
+
+												<pre>String texto = &quot;Aprendiendo Java&quot;;
+int longitud = texto.length();
+System.out.println(&quot;La longitud de la cadena es: &quot; + longitud);  // Salida: 16</pre>
+								            	<h3><a id="index_7"></a>Acceso a Caracteres Individuales</h3>
+																<p>Se puede acceder a un carácter específico en una cadena utilizando el método <code>charAt()</code>, que recibe como parámetro el índice del carácter.</p>
+
+												<pre>String texto = &quot;Java&quot;;
+char primerCaracter = texto.charAt(0);
+System.out.println(&quot;El primer car&aacute;cter es: &quot; + primerCaracter);  // Salida: J</pre>
+								            	<h3><a id="index_8"></a>Comparación de Cadenas</h3>
+																<p>Para comparar dos cadenas, Java proporciona el método <code>equals()</code>, que devuelve <code>true</code> si las cadenas son exactamente iguales.</p>
+
+												<pre>String cadena1 = &quot;Hola&quot;;
+String cadena2 = &quot;hola&quot;;
+boolean sonIguales = cadena1.equals(cadena2);
+System.out.println(&quot;Las cadenas son iguales: &quot; + sonIguales);  // Salida: false</pre>
+												<p>En este ejemplo, <code>equals()</code> devuelve <code>false</code> porque Java diferencia entre mayúsculas y minúsculas. Para una comparación que ignore mayúsculas y minúsculas, se puede usar <code>equalsIgnoreCase()</code>.</p>
+
+								            	<h3><a id="index_9"></a>Subcadenas</h3>
+																<p>El método <code>substring()</code> se utiliza para extraer una parte de una cadena. Puede recibir uno o dos parámetros: el índice de inicio y opcionalmente el índice de fin.</p>
+
+												<pre>String texto = &quot;Aprendiendo Java&quot;;
+String subcadena = texto.substring(0, 10);
+System.out.println(&quot;Subcadena: &quot; + subcadena);  // Salida: Aprendiend</pre>
+												<p>En este ejemplo, <code>substring(0, 10)</code> extrae los primeros 10 caracteres de la cadena original.</p>
+
+								            	<h2><a id="index_10"></a>Manipulación Avanzada de Cadenas</h2>
+												            	<h3><a id="index_11"></a>Reemplazo de Caracteres o Subcadenas</h3>
+																<p>El método <code>replace()</code> permite reemplazar todas las ocurrencias de un carácter o una subcadena en una cadena con otro carácter o subcadena.</p>
+
+												<pre>String texto = &quot;La programaci&oacute;n en Java es divertida&quot;;
+String nuevoTexto = texto.replace(&quot;divertida&quot;, &quot;poderosa&quot;);
+System.out.println(nuevoTexto);  // Salida: La programaci&oacute;n en Java es poderosa</pre>
+								            	<h3><a id="index_12"></a>Conversión a Mayúsculas y Minúsculas</h3>
+																<p>Java proporciona los métodos <code>toUpperCase()</code> y <code>toLowerCase()</code> para convertir una cadena a mayúsculas o minúsculas, respectivamente.</p>
+
+												<pre>String texto = &quot;Java&quot;;
+String mayusculas = texto.toUpperCase();
+String minusculas = texto.toLowerCase();
+System.out.println(&quot;May&uacute;sculas: &quot; + mayusculas);  // Salida: JAVA
+System.out.println(&quot;Min&uacute;sculas: &quot; + minusculas);  // Salida: java</pre>
+								            	<h3><a id="index_13"></a>División de Cadenas</h3>
+																<p>El método <code>split()</code> divide una cadena en partes según un delimitador especificado y devuelve un array con las subcadenas resultantes.</p>
+
+												<pre>String texto = &quot;Java,Python,C++,JavaScript&quot;;
+String[] lenguajes = texto.split(&quot;,&quot;);
+for (String lenguaje : lenguajes) {
+    System.out.println(lenguaje);
+}
+// Salida:
+// Java
+// Python
+// C++
+// JavaScript</pre>
+												<p>En este ejemplo, <code>split(&quot;,&quot;)</code> divide la cadena en cuatro subcadenas utilizando la coma como delimitador.</p>
+
+								            	<h2><a id="index_14"></a>Inmutabilidad de las Cadenas</h2>
+												            	<h3><a id="index_15"></a>¿Qué significa que las cadenas sean inmutables?</h3>
+																<p>En Java, las cadenas son inmutables, lo que significa que una vez creada una cadena, no se puede modificar su contenido. Cualquier operación que parezca modificar una cadena en realidad crea una nueva cadena con el resultado de la operación.</p>
+
+												<pre>String original = &quot;Hola&quot;;
+String modificada = original.concat(&quot;, mundo!&quot;);
+System.out.println(&quot;Original: &quot; + original);       // Salida: Hola
+System.out.println(&quot;Modificada: &quot; + modificada);   // Salida: Hola, mundo!</pre>
+												<p>En este ejemplo, la cadena <code>original</code> no cambia después de la concatenación. En su lugar, se crea una nueva cadena <code>modificada</code>.</p>
+
+												<p>El manejo de cadenas de texto es una habilidad crucial en la programación en Java. Con el conocimiento de los métodos de la clase <code>String</code>, puedes realizar una amplia gama de operaciones de manipulación de texto. En el siguiente tema, exploraremos el manejo de excepciones, una característica esencial para crear programas robustos y confiables.</p>
+<p><strong>Recursos adicionales:</strong></p>
+<ul>
+<li><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html">Documentación oficial de Java sobre la clase <code>String</code></a></li>
+</ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

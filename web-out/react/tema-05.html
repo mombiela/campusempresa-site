@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado y Ciclo de Vida</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/react\tema-05.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/react\tema-05.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="react\tema-05.stxt" target="react\tema-05" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="tema-04" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="tema-06" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+										            	<h2><a id="index_0"></a>Introducción</h2>
+																<p>En React, el <strong>estado</strong> es una estructura que almacena datos que pueden cambiar con el tiempo y afectan la forma en que se renderiza un componente. A diferencia de las props, que son inmutables y se pasan desde componentes padres, el estado es gestionado internamente por el propio componente.</p>
+<p>El <strong>ciclo de vida</strong> de un componente describe las diferentes fases por las que pasa un componente desde su creación hasta su destrucción. Comprender el ciclo de vida es fundamental para gestionar correctamente recursos, realizar actualizaciones y optimizar el rendimiento de las aplicaciones React.</p>
+
+								            	<h3><a id="index_1"></a>Concepto de Estado en React</h3>
+																<p>El estado permite que los componentes React respondan a interacciones del usuario, cambios en los datos o cualquier otra actualización que requiera una re-renderización del componente.</p>
+<p><strong>Características del Estado:</strong></p>
+<ul>
+<li><strong>Mutable:</strong> A diferencia de las props, el estado puede cambiar.</li>
+<li><strong>Asincrónico:</strong> Las actualizaciones del estado pueden ser asincrónicas.</li>
+<li><strong>Local:</strong> El estado es local al componente donde se define, aunque puede ser compartido mediante técnicas como el levantamiento del estado o el uso de Context API.</li>
+</ul>
+
+								            	<h3><a id="index_2"></a>Manejo del Estado en Componentes de Clase</h3>
+																<p>En los componentes de clase, el estado se maneja a través de <code>this.state</code> y se actualiza utilizando <code>this.setState()</code>.</p>
+<p><strong>Definiendo el Estado Inicial:</strong></p>
+
+												<pre>// Definiendo el estado inicial en un componente de clase
+class Contador extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            cuenta: 0
+        };
+    }
+    
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;p&gt;Cuenta: {this.state.cuenta}&lt;/p&gt;
+            &lt;/div&gt;
+        );
+    }
+}</pre>
+												<p><strong>Actualizando el Estado:</strong></p>
+
+												<pre>// Actualizando el estado con setState
+class Contador extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            cuenta: 0
+        };
+        this.incrementar = this.incrementar.bind(this);
+    }
+    
+    incrementar() {
+        this.setState((estadoAnterior) =&gt; ({
+            cuenta: estadoAnterior.cuenta + 1
+        }));
+    }
+    
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;p&gt;Cuenta: {this.state.cuenta}&lt;/p&gt;
+                &lt;button onClick={this.incrementar}&gt;Incrementar&lt;/button&gt;
+            &lt;/div&gt;
+        );
+    }
+}</pre>
+								            	<h3><a id="index_3"></a>Hooks: useState en Componentes Funcionales</h3>
+																<p>Con la introducción de los <strong>hooks</strong> en React, es posible manejar el estado en componentes funcionales utilizando el hook <code>useState</code>.</p>
+<p><strong>Uso Básico de useState:</strong></p>
+
+												<pre>// Usando useState en un componente funcional
+import React, { useState } from 'react';
+
+function Contador() {
+    const [cuenta, setCuenta] = useState(0);
+    
+    const incrementar = () =&gt; {
+        setCuenta(cuenta + 1);
+    };
+    
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Cuenta: {cuenta}&lt;/p&gt;
+            &lt;button onClick={incrementar}&gt;Incrementar&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}</pre>
+												<p><strong>Actualizaciones Basadas en el Estado Anterior:</strong></p>
+
+												<pre>// Actualizando el estado basado en el valor anterior
+function Contador() {
+    const [cuenta, setCuenta] = useState(0);
+    
+    const incrementar = () =&gt; {
+        setCuenta((prevCuenta) =&gt; prevCuenta + 1);
+    };
+    
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Cuenta: {cuenta}&lt;/p&gt;
+            &lt;button onClick={incrementar}&gt;Incrementar&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}</pre>
+								            	<h3><a id="index_4"></a>Ciclo de Vida de los Componentes de Clase</h3>
+																<p>Los componentes de clase tienen métodos que se ejecutan en diferentes fases de su ciclo de vida. Algunos de los métodos más importantes son:</p>
+<p><strong>Montaje:</strong></p>
+<ul>
+<li><code>constructor()</code>: Inicializa el estado y enlaza métodos.</li>
+<li><code>componentDidMount()</code>: Se llama después de que el componente se ha montado en el DOM. Ideal para realizar solicitudes de datos o configurar suscripciones.</li>
+</ul>
+<p><strong>Actualización:</strong></p>
+<ul>
+<li><code>shouldComponentUpdate(nextProps, nextState)</code>: Determina si el componente debe re-renderizarse.</li>
+<li><code>componentDidUpdate(prevProps, prevState)</code>: Se llama después de que el componente ha sido actualizado. Útil para realizar operaciones basadas en cambios previos.</li>
+</ul>
+<p><strong>Desmontaje:</strong></p>
+<ul>
+<li><code>componentWillUnmount()</code>: Se llama antes de que el componente sea destruido. Ideal para limpiar recursos como suscripciones o temporizadores.</li>
+</ul>
+<p><strong>Ejemplo de Uso de Métodos del Ciclo de Vida:</strong></p>
+
+												<pre>class Temporizador extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { segundos: 0 };
+    }
+    
+    componentDidMount() {
+        this.interval = setInterval(() =&gt; {
+            this.setState((estado) =&gt; ({ segundos: estado.segundos + 1 }));
+        }, 1000);
+    }
+    
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+    
+    render() {
+        return &lt;p&gt;Segundos: {this.state.segundos}&lt;/p&gt;;
+    }
+}</pre>
+								            	<h3><a id="index_5"></a>Hooks: useEffect en Componentes Funcionales</h3>
+																<p>El hook <code>useEffect</code> permite manejar efectos secundarios en componentes funcionales, reemplazando la funcionalidad de los métodos del ciclo de vida en componentes de clase.</p>
+<p><strong>Uso Básico de useEffect:</strong></p>
+
+												<pre>// Usando useEffect para montar un temporizador
+import React, { useState, useEffect } from 'react';
+
+function Temporizador() {
+    const [segundos, setSegundos] = useState(0);
+    
+    useEffect(() =&gt; {
+        const interval = setInterval(() =&gt; {
+            setSegundos((prevSegundos) =&gt; prevSegundos + 1);
+        }, 1000);
+        
+        // Limpieza del efecto
+        return () =&gt; clearInterval(interval);
+    }, []); // El arreglo vac&iacute;o indica que el efecto se ejecuta una vez al montar
+    
+    return &lt;p&gt;Segundos: {segundos}&lt;/p&gt;;
+}</pre>
+												<p><strong>useEffect con Dependencias:</strong></p>
+
+												<pre>// useEffect que se ejecuta cuando una dependencia cambia
+function Contador({ inicial }) {
+    const [cuenta, setCuenta] = useState(inicial);
+    
+    useEffect(() =&gt; {
+        document.title = `Cuenta: ${cuenta}`;
+    }, [cuenta]); // Se ejecuta cada vez que 'cuenta' cambia
+    
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Cuenta: {cuenta}&lt;/p&gt;
+            &lt;button onClick={() =&gt; setCuenta(cuenta + 1)}&gt;Incrementar&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}</pre>
+								            	<h3><a id="index_6"></a>Ejemplos Prácticos</h3>
+																<p><strong>Ejemplo 1: Fetch de Datos al Montar el Componente</strong></p>
+
+												<pre>// Componente que obtiene datos al montar
+import React, { useState, useEffect } from 'react';
+
+function Usuarios() {
+    const [usuarios, setUsuarios] = useState([]);
+    
+    useEffect(() =&gt; {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response =&gt; response.json())
+            .then(data =&gt; setUsuarios(data));
+    }, []);
+    
+    return (
+        &lt;ul&gt;
+            {usuarios.map(usuario =&gt; (
+                &lt;li key={usuario.id}&gt;{usuario.name}&lt;/li&gt;
+            ))}
+        &lt;/ul&gt;
+    );
+}</pre>
+												<p><strong>Ejemplo 2: Limpieza de Recursos</strong></p>
+
+												<pre>// Componente que configura y limpia un evento
+import React, { useEffect } from 'react';
+
+function EventoVentana() {
+    useEffect(() =&gt; {
+        const manejarResize = () =&gt; {
+            console.log('Ventana redimensionada');
+        };
+        
+        window.addEventListener('resize', manejarResize);
+        
+        return () =&gt; {
+            window.removeEventListener('resize', manejarResize);
+        };
+    }, []);
+    
+    return &lt;p&gt;Redimensiona la ventana y revisa la consola.&lt;/p&gt;;
+}</pre>
+								            	<h3><a id="index_7"></a>Conclusión</h3>
+																<p>En este tema, hemos explorado cómo manejar el estado en React, tanto en componentes de clase como en componentes funcionales utilizando hooks. También hemos visto cómo gestionar el ciclo de vida de los componentes para realizar operaciones en momentos específicos de su existencia. Dominar el manejo del estado y el ciclo de vida es esencial para construir aplicaciones React eficientes, interactivas y bien estructuradas. En los próximos temas, profundizaremos en el manejo de eventos y otras funcionalidades avanzadas de React.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

@@ -2,6 +2,8 @@ package org.swb.utils;
 
 import org.apache.commons.lang.StringEscapeUtils;
 
+import info.semantictext.LineSplitter;
+
 public class Utils
 {
 	public String escapeHtml(String text)
@@ -12,5 +14,10 @@ public class Utils
     public int parseInt(String text)
     {
         return Integer.parseInt(text);
+    }    
+    public LineSplitter split(String text)
+    {
+        return LineSplitter.split(text);
     }
+   
 }

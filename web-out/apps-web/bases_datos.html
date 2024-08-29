@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicación de BBDD</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/apps-web\bases_datos.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  			<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/apps-web\bases_datos.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="apps-web\bases_datos.stxt" target="apps-web\bases_datos" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="00-table-content" title="El Libro">El Libro</a></li>
+			<li><a href="02-tutorial" title="Tutorial">Tutorial</a></li>
+			<li><a href="08-stxt-vs" title="STxT vs">STxT vs</a></li>
+			<li><a href="global-campus" title="Global Campus">Global Campus</a></li>
+			<li><a href="stxt" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				
+			
+			
+									<p>Las Bases de Datos (BBDD) son sistemas que permiten almacenar, organizar y gestionar grandes cantidades de información de manera estructurada. Son esenciales en el desarrollo de aplicaciones web y de software, ya que facilitan el acceso, manipulación y almacenamiento eficiente de datos.</p>
+
+								            	<h2><a id="index_0"></a>Tipos de Bases de Datos</h2>
+																<p>Las bases de datos pueden clasificarse en diferentes tipos según su estructura y forma de gestionar los datos:</p>
+<ul>
+<li>Bases de Datos Relacionales: Organizan los datos en tablas que están relacionadas entre sí. Utilizan el Lenguaje de Consulta Estructurado (SQL) para la gestión de los datos. Ejemplos: MySQL, PostgreSQL, Oracle Database.</li>
+<li>Bases de Datos NoSQL: Diseñadas para manejar grandes volúmenes de datos no estructurados o semi-estructurados. Se dividen en varios subtipos:</li>
+</ul>
+<h1>Documentales: Almacenan datos en documentos similares a JSON. Ejemplo: MongoDB.</h1>
+<h1>Clave-Valor: Almacenan datos como pares clave-valor. Ejemplo: Redis.</h1>
+<h1>Columnar: Optimizadas para consultas a gran escala sobre grandes cantidades de datos. Ejemplo: Apache Cassandra.</h1>
+<h1>Grafos: Almacenan datos en nodos y relaciones, ideales para datos interconectados. Ejemplo: Neo4j.</h1>
+
+								            	<h2><a id="index_1"></a>Bases de Datos Relacionales (SQL)</h2>
+																<p>Las bases de datos relacionales son las más comunes y se basan en el modelo de tablas. Los componentes clave incluyen:</p>
+<ul>
+<li>Tablas: Conjuntos de datos organizados en filas y columnas.</li>
+<li>Filas (Registros): Cada fila representa una entrada única de datos.</li>
+<li>Columnas: Cada columna representa un atributo de los datos.</li>
+<li>Llaves Primarias: Identificadores únicos para cada fila en una tabla.</li>
+<li>Llaves Foráneas: Campos que vinculan una tabla con otra para establecer relaciones.</li>
+</ul>
+<p>Ejemplo de una tabla simple en SQL:</p>
+
+												<pre>CREATE TABLE Usuarios (
+ID INT PRIMARY KEY,
+Nombre VARCHAR(100),
+Correo VARCHAR(100)
+);</pre>
+												<p>Ejemplo de consulta SQL:</p>
+
+												<pre>SELECT * FROM Usuarios WHERE Nombre = 'Juan';</pre>
+												
+								            	<h2><a id="index_2"></a>Bases de Datos NoSQL</h2>
+																<p>Las bases de datos NoSQL ofrecen flexibilidad y escalabilidad para manejar datos no estructurados o semi-estructurados. A continuación, se presentan algunos ejemplos de subtipos:</p>
+<ul>
+<li>Documentales (MongoDB): Almacenan datos en documentos BSON (similar a JSON).</li>
+</ul>
+<p>Ejemplo de documento en MongoDB:</p>
+
+												<pre>{
+&quot;_id&quot;: ObjectId(&quot;507f1f77bcf86cd799439011&quot;),
+&quot;nombre&quot;: &quot;Juan&quot;,
+&quot;correo&quot;: &quot;juan@example.com&quot;
+}</pre>
+												<p>Consulta en MongoDB:</p>
+
+												<pre>db.usuarios.find({ nombre: &quot;Juan&quot; });</pre>
+												<ul>
+<li>Clave-Valor (Redis): Almacenan datos como pares clave-valor.</li>
+</ul>
+<p>Ejemplo de comandos en Redis:</p>
+
+												<pre>SET nombre &quot;Juan&quot;
+GET nombre</pre>
+												<ul>
+<li>Columnar (Apache Cassandra): Optimizadas para consultas a gran escala sobre grandes cantidades de datos.</li>
+</ul>
+<p>Ejemplo de esquema en Cassandra:</p>
+
+												<pre>CREATE TABLE Usuarios (
+ID UUID PRIMARY KEY,
+Nombre TEXT,
+Correo TEXT
+);</pre>
+												<ul>
+<li>Grafos (Neo4j): Almacenan datos en nodos y relaciones.</li>
+</ul>
+<p>Ejemplo de creación de nodos y relaciones en Neo4j:</p>
+
+												<pre>CREATE (juan
+{nombre: &quot;Juan&quot;, correo: &quot;juan@example.com&quot;})
+CREATE (maria
+{nombre: &quot;Maria&quot;, correo: &quot;maria@example.com&quot;})
+CREATE (juan)-[
+]-&gt;(maria)</pre>
+												
+								            	<h2><a id="index_3"></a>Lenguaje de Consulta</h2>
+																<p>Para interactuar con bases de datos, se utilizan lenguajes de consulta específicos. El más común para bases de datos relacionales es SQL. Las bases de datos NoSQL, por otro lado, utilizan diversos lenguajes y APIs para gestionar los datos.</p>
+<p>Ejemplo de consultas SQL comunes:</p>
+<h1>Seleccionar datos: <code>SELECT * FROM Usuarios</code></h1>
+<h1>Insertar datos: <code>INSERT INTO Usuarios (Nombre, Correo) VALUES ('Juan', 'juan@example.com')</code></h1>
+<h1>Actualizar datos: <code>UPDATE Usuarios SET Correo = 'nuevo_correo@example.com' WHERE Nombre = 'Juan'</code></h1>
+<h1>Eliminar datos: <code>DELETE FROM Usuarios WHERE Nombre = 'Juan'</code></h1>
+
+								            	<h2><a id="index_4"></a>Normalización</h2>
+																<p>La normalización es el proceso de estructurar una base de datos para reducir la redundancia y mejorar la integridad de los datos. Consiste en dividir una base de datos en tablas más pequeñas y vincularlas mediante llaves foráneas.</p>
+
+								            	<h2><a id="index_5"></a>Conclusión</h2>
+																<p>Las bases de datos son una parte fundamental del desarrollo de aplicaciones, permitiendo almacenar y gestionar grandes volúmenes de datos de manera eficiente. Tanto las bases de datos relacionales como las NoSQL tienen sus propias ventajas y son adecuadas para diferentes tipos de aplicaciones. Con una comprensión sólida de los conceptos y tecnologías de bases de datos, los desarrolladores pueden elegir y utilizar las herramientas más adecuadas para sus necesidades específicas.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>
