@@ -13,12 +13,7 @@
     </header>
 
     <div class="top-bar">
-    	<ul>
-			<li><a href="about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>
-			<li><a href="donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a></li>
-			<li><a href="contribute.html" title="${lang.get("menu.contrib")}">${lang.get("menu.contrib")}</a></li>
-			<li><a href="licence.html" title="${lang.get("menu.licence")}">${lang.get("menu.licence")}</a></li>
-    	</ul>
+    	#parse("/menu.vm")
     </div>
 	
     <div id="main_content" class="clearfix">
