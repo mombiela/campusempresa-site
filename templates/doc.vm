@@ -37,8 +37,8 @@
 			<div class="col-4">
 				<div class="card">
 				<a href="${elem.getChild("url").getText()}">
-					  <div class="card-body" style="background-color:#eee">
-					    <h3 class="card-title" >${elem.getChild("title").getText()}</h3>
+					  <div class="card-body title">
+					    <h3 class="card-title">${elem.getChild("title").getText()}</h3>
 					  </div>
 					  <div class="card-body">
 					  	${wiki.render(${elem.getChild("content").getText()})}
