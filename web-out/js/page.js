@@ -21,5 +21,5 @@ function accept()
 function checkCookies()
 {
 	var x = Cookies.get('cookies_informed');
-	if (x == "OK") remove("cookies_adv");
+	if (x == "OK" && false) remove("cookies_adv");
 }
