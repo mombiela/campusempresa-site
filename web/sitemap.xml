@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://www.semantictext.info/es/about.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/apps-web\api_rest.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/apps-web\backend_vision_general.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/apps-web\bases_datos.html</loc><priority>0.5</priority></url>
@@ -45,6 +46,8 @@
 <url><loc>https://www.semantictext.info/es/cobol\subprogramas.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/cobol\tablas.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/cobol\tipos_datos.html</loc><priority>0.5</priority></url>
+<url><loc>https://www.semantictext.info/es/contribute.html</loc><priority>0.5</priority></url>
+<url><loc>https://www.semantictext.info/es/cookies.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/css\alineacion_flexbox.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/css\aplicacion_css.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/css\areas_grid.html</loc><priority>0.5</priority></url>
@@ -81,6 +84,7 @@
 <url><loc>https://www.semantictext.info/es/css\selectores_tipos.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/css\sintaxis_css.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/css\texto_fuente.html</loc><priority>0.5</priority></url>
+<url><loc>https://www.semantictext.info/es/donate.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/html\index.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/html\tema-01.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/html\tema-02.html</loc><priority>0.5</priority></url>
@@ -135,6 +139,7 @@
 <url><loc>https://www.semantictext.info/es/javascript\17-ajax-fetch-api.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/javascript\18-modulos-javascript.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/javascript\index.html</loc><priority>0.5</priority></url>
+<url><loc>https://www.semantictext.info/es/licence.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/python\base_nomenclatura.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/python\base_palabras_reservadas.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/python\base_sintaxis.html</loc><priority>0.5</priority></url>
@@ -189,6 +194,7 @@
 <url><loc>https://www.semantictext.info/es/react\tema-21.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/react\tema-22.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/es/react\tema-23.html</loc><priority>0.5</priority></url>
+<url><loc>https://www.semantictext.info/ca/about.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/apps-web\api_rest.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/apps-web\backend_vision_general.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/apps-web\bases_datos.html</loc><priority>0.5</priority></url>
@@ -234,6 +240,8 @@
 <url><loc>https://www.semantictext.info/ca/cobol\subprogramas.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/cobol\tablas.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/cobol\tipos_datos.html</loc><priority>0.5</priority></url>
+<url><loc>https://www.semantictext.info/ca/contribute.html</loc><priority>0.5</priority></url>
+<url><loc>https://www.semantictext.info/ca/cookies.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/css\alineacion_flexbox.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/css\aplicacion_css.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/css\areas_grid.html</loc><priority>0.5</priority></url>
@@ -270,6 +278,7 @@
 <url><loc>https://www.semantictext.info/ca/css\selectores_tipos.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/css\sintaxis_css.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/css\texto_fuente.html</loc><priority>0.5</priority></url>
+<url><loc>https://www.semantictext.info/ca/donate.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/html\index.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/html\tema-01.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/html\tema-02.html</loc><priority>0.5</priority></url>
@@ -324,6 +333,7 @@
 <url><loc>https://www.semantictext.info/ca/javascript\17-ajax-fetch-api.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/javascript\18-modulos-javascript.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/javascript\index.html</loc><priority>0.5</priority></url>
+<url><loc>https://www.semantictext.info/ca/licence.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/python\base_nomenclatura.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/python\base_palabras_reservadas.html</loc><priority>0.5</priority></url>
 <url><loc>https://www.semantictext.info/ca/python\base_sintaxis.html</loc><priority>0.5</priority></url>

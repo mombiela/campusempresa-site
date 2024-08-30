@@ -1,10 +1,10 @@
 <div class="container-xxl">
 	<div class="row">
 		<div class="col">
-			<a href="about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a>
-			<a href="donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a>
-			<a href="contribute.html" title="${lang.get("menu.contrib")}">${lang.get("menu.contrib")}</a>
-			<a href="licence.html" title="${lang.get("menu.licence")}">${lang.get("menu.licence")}</a>
+			<a href="/${lang.get("lang")}/about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a>
+			<a href="/${lang.get("lang")}/donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a>
+			<a href="/${lang.get("lang")}/contribute.html" title="${lang.get("menu.contrib")}">${lang.get("menu.contrib")}</a>
+			<a href="/${lang.get("lang")}/licence.html" title="${lang.get("menu.licence")}">${lang.get("menu.licence")}</a>
 		</div>
 	</div>
 </div>
