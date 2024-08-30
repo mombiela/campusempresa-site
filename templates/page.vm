@@ -8,22 +8,24 @@
 <body>
 	<div id="header" class="container-xxl">
 		<div class="row">
-			<div class="col-12 p-0">
+			<div class="col-8 p-0">
 				<h1 class="m-0 p-0">
-					<a href="/index.html"><img src="/img/logo-web-transparent.png"></a>
+					<a href="/index.html"><img src="/img/logo_header.png"></a>
 				</h3>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-8 p-0 m-0">
-				<h2>${lang.get("title")}</h2>
-			</div>
-			<div class="col-4 text-end p-0 m-0">
-				#parse("menu_idioma.vm")
+			<div class="col-4 p-0 text-end">
+				<h2><cite>${lang.get("title")}</cite></h2><br>
 			</div>
 		</div>
 	</div>
 
+	<div class="container-xxl" style="margin-top: -1em;">
+		<div class="row">
+			<div class="col-12 p-0 m-0 text-end">
+				#parse("menu_idioma.vm")
+			</div>
+		</div>
+	</div>
     <div class="top-bar container-fluid">
     	#parse("/menu_top.vm")
     </div>
