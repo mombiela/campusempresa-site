@@ -56,6 +56,50 @@
     	<div class="row">
     		<div class="col col-8">
     			
+
+
+			<p>COBOL ofrece una variedad de tipos de datos que permiten a los programadores manejar diferentes tipos de información de manera eficiente. Los tipos de datos en COBOL se definen utilizando la cláusula <code>PIC</code> (Picture), que especifica el formato y la longitud de los datos. A continuación se describen los tipos de datos más comunes:</p>
+<ul>
+<li>
+<p><strong>Alfanuméricos (X)</strong>: Representan datos de texto. Cada carácter se define con una <code>X</code>. Por ejemplo, <code>PIC X(10)</code> define una cadena de texto de 10 caracteres.</p>
+</li>
+<li>
+<p><strong>Numéricos (9)</strong>: Representan datos numéricos. Cada dígito se define con un <code>9</code>. Por ejemplo, <code>PIC 9(5)</code> define un número entero de hasta 5 dígitos.</p>
+</li>
+<li>
+<p><strong>Numéricos con punto decimal implícito (V)</strong>: Permiten la representación de números con decimales. El carácter <code>V</code> indica la posición del punto decimal. Por ejemplo, <code>PIC 9(3)V99</code> define un número con 3 dígitos enteros y 2 decimales.</p>
+</li>
+<li>
+<p><strong>Sinalizados (S)</strong>: Indican que un número puede ser positivo o negativo. El carácter <code>S</code> se usa para definir números sinalizados. Por ejemplo, <code>PIC S9(4)</code> define un número entero de hasta 4 dígitos con signo.</p>
+</li>
+<li>
+<p><strong>Comp-3 (Packed Decimal)</strong>: Representa datos numéricos en formato decimal empaquetado, lo que ahorra espacio. Se utiliza la cláusula <code>COMP-3</code>. Por ejemplo, <code>PIC 9(6) COMP-3</code> define un número empaquetado de hasta 6 dígitos.</p>
+</li>
+<li>
+<p><strong>Comp (Binary)</strong>: Representa datos numéricos en formato binario, lo que permite cálculos más rápidos. Se utiliza la cláusula <code>COMP</code>. Por ejemplo, <code>PIC 9(4) COMP</code> define un número binario de hasta 4 dígitos.</p>
+</li>
+</ul>
+<p>Ejemplos de definiciones de tipos de datos en COBOL:</p>
+
+				<pre>01 EmployeeName PIC X(30).
+01 EmployeeID PIC 9(5).
+01 EmployeeSalary PIC 9(7)V99.
+01 EmployeeAge PIC S9(3).
+01 PackedNumber PIC 9(6) COMP-3.
+01 BinaryNumber PIC 9(4) COMP.</pre>
+				<p>En este ejemplo, se definen varios tipos de datos:</p>
+<ul>
+<li><code>EmployeeName</code>: Una cadena de texto de 30 caracteres.</li>
+<li><code>EmployeeID</code>: Un número entero de 5 dígitos.</li>
+<li><code>EmployeeSalary</code>: Un número con 7 dígitos enteros y 2 decimales.</li>
+<li><code>EmployeeAge</code>: Un número entero de 3 dígitos con signo.</li>
+<li><code>PackedNumber</code>: Un número empaquetado de 6 dígitos.</li>
+<li><code>BinaryNumber</code>: Un número binario de 4 dígitos.</li>
+</ul>
+<p>Estos tipos de datos permiten a los programas COBOL manejar una amplia gama de información de manera efectiva y eficiente.</p>
+
+	
+<!--
 <div class="row">
 	<div class="col-4" style="margin-bottom: 1rem;">
 		<div class="card">
@@ -118,50 +162,8 @@
 			</div>
 	</div>
 </div>
-
-
-
-			<p>COBOL ofrece una variedad de tipos de datos que permiten a los programadores manejar diferentes tipos de información de manera eficiente. Los tipos de datos en COBOL se definen utilizando la cláusula <code>PIC</code> (Picture), que especifica el formato y la longitud de los datos. A continuación se describen los tipos de datos más comunes:</p>
-<ul>
-<li>
-<p><strong>Alfanuméricos (X)</strong>: Representan datos de texto. Cada carácter se define con una <code>X</code>. Por ejemplo, <code>PIC X(10)</code> define una cadena de texto de 10 caracteres.</p>
-</li>
-<li>
-<p><strong>Numéricos (9)</strong>: Representan datos numéricos. Cada dígito se define con un <code>9</code>. Por ejemplo, <code>PIC 9(5)</code> define un número entero de hasta 5 dígitos.</p>
-</li>
-<li>
-<p><strong>Numéricos con punto decimal implícito (V)</strong>: Permiten la representación de números con decimales. El carácter <code>V</code> indica la posición del punto decimal. Por ejemplo, <code>PIC 9(3)V99</code> define un número con 3 dígitos enteros y 2 decimales.</p>
-</li>
-<li>
-<p><strong>Sinalizados (S)</strong>: Indican que un número puede ser positivo o negativo. El carácter <code>S</code> se usa para definir números sinalizados. Por ejemplo, <code>PIC S9(4)</code> define un número entero de hasta 4 dígitos con signo.</p>
-</li>
-<li>
-<p><strong>Comp-3 (Packed Decimal)</strong>: Representa datos numéricos en formato decimal empaquetado, lo que ahorra espacio. Se utiliza la cláusula <code>COMP-3</code>. Por ejemplo, <code>PIC 9(6) COMP-3</code> define un número empaquetado de hasta 6 dígitos.</p>
-</li>
-<li>
-<p><strong>Comp (Binary)</strong>: Representa datos numéricos en formato binario, lo que permite cálculos más rápidos. Se utiliza la cláusula <code>COMP</code>. Por ejemplo, <code>PIC 9(4) COMP</code> define un número binario de hasta 4 dígitos.</p>
-</li>
-</ul>
-<p>Ejemplos de definiciones de tipos de datos en COBOL:</p>
-
-				<pre>01 EmployeeName PIC X(30).
-01 EmployeeID PIC 9(5).
-01 EmployeeSalary PIC 9(7)V99.
-01 EmployeeAge PIC S9(3).
-01 PackedNumber PIC 9(6) COMP-3.
-01 BinaryNumber PIC 9(4) COMP.</pre>
-				<p>En este ejemplo, se definen varios tipos de datos:</p>
-<ul>
-<li><code>EmployeeName</code>: Una cadena de texto de 30 caracteres.</li>
-<li><code>EmployeeID</code>: Un número entero de 5 dígitos.</li>
-<li><code>EmployeeSalary</code>: Un número con 7 dígitos enteros y 2 decimales.</li>
-<li><code>EmployeeAge</code>: Un número entero de 3 dígitos con signo.</li>
-<li><code>PackedNumber</code>: Un número empaquetado de 6 dígitos.</li>
-<li><code>BinaryNumber</code>: Un número binario de 4 dígitos.</li>
-</ul>
-<p>Estos tipos de datos permiten a los programas COBOL manejar una amplia gama de información de manera efectiva y eficiente.</p>
-
-	    		</div>
+-->
+    		</div>
     		<div class="col col-4">
     			<h2>Patrocinadores</h2>
 <p>¿Quieres ser nuestro patrocinador? De momento no tenemos patrocinadores oficiales, pero estamos abiertos a propuestas.</p>

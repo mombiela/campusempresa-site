@@ -56,6 +56,59 @@
     	<div class="row">
     		<div class="col col-8">
     			
+
+
+	    	<h2><a id="index_0"></a>Python como un Lenguaje Indentado</h2>
+						<p>Python utiliza la indentación para definir la estructura del código. A diferencia de otros lenguajes que utilizan llaves <code>{}</code> para delimitar bloques de código, Python utiliza la indentación (espacios o tabuladores) para agrupar sentencias. La correcta indentación es crucial porque determina el alcance y la estructura del código. Por ejemplo:</p>
+
+				<pre>if True:
+    print(&quot;Este es un bloque de c&oacute;digo correctamente indentado&quot;)</pre>
+		    	<h2><a id="index_1"></a>Declaración de Variables</h2>
+						<p>En Python, no es necesario declarar explícitamente el tipo de una variable antes de usarla. Simplemente se asigna un valor a una variable, y Python determinará automáticamente su tipo. Aquí hay algunos ejemplos:</p>
+
+				<pre>x = 10        # Entero
+y = 3.14      # Flotante
+mensaje = &quot;Hola, mundo&quot;  # Cadena de texto</pre>
+		    	<h2><a id="index_2"></a>Comentarios</h2>
+						<p>Los comentarios en Python se utilizan para documentar el código y hacerlo más legible. Comienzan con el símbolo # y se extienden hasta el final de la línea. Los comentarios no afectan la ejecución del programa. Aquí tienes algunos ejemplos de comentarios:</p>
+
+				<pre>***# Esto es un comentario de una sola l&iacute;nea***
+
+***&quot;&quot;&quot;***
+***Este es un comentario de varias l&iacute;neas.***
+***Puedes escribir m&uacute;ltiples l&iacute;neas de comentarios***
+***entre tres comillas simples o dobles.***
+***&quot;&quot;&quot;***
+
+***# Asignar un valor a la variable x***
+x = 10</pre>
+		    	<h2><a id="index_3"></a>Ejemplo de Código Completo</h2>
+						<p>A continuación, se muestra un ejemplo de un programa simple en Python que calcula el área de un círculo. Este ejemplo utiliza comentarios para explicar cada paso del proceso:</p>
+
+				<pre># Programa para calcular el &aacute;rea de un c&iacute;rculo
+
+# Definici&oacute;n de constantes
+PI = 3.14159
+
+# Solicitar al usuario el radio del c&iacute;rculo
+radio = float(input(&quot;Introduce el radio del c&iacute;rculo: &quot;))
+
+# Calcular el &aacute;rea del c&iacute;rculo
+area = PI * radio ** 2
+
+# Mostrar el resultado
+print(&quot;El &aacute;rea del c&iacute;rculo es:&quot;, area)</pre>
+				<p>En este ejemplo:</p>
+<ul>
+<li>Se define una constante <code>PI</code> para el valor de pi.</li>
+<li>Se solicita al usuario que introduzca el radio del círculo.</li>
+<li>Se calcula el área del círculo utilizando la fórmula <code>area = PI * radio ** 2</code>.</li>
+<li>Se muestra el resultado al usuario.</li>
+</ul>
+<p>Los comentarios explican qué hace cada parte del código, lo que ayuda a que el código sea más comprensible. Además, la correcta identación y la claridad en la declaración de variables hacen que el código sea fácil de leer y mantener.</p>
+
+	
+<!--
 <div class="row">
 	<div class="col-4" style="margin-bottom: 1rem;">
 		<div class="card">
@@ -118,59 +171,8 @@
 			</div>
 	</div>
 </div>
-
-
-
-	    	<h2><a id="index_0"></a>Python como un Lenguaje Indentado</h2>
-						<p>Python utiliza la indentación para definir la estructura del código. A diferencia de otros lenguajes que utilizan llaves <code>{}</code> para delimitar bloques de código, Python utiliza la indentación (espacios o tabuladores) para agrupar sentencias. La correcta indentación es crucial porque determina el alcance y la estructura del código. Por ejemplo:</p>
-
-				<pre>if True:
-    print(&quot;Este es un bloque de c&oacute;digo correctamente indentado&quot;)</pre>
-		    	<h2><a id="index_1"></a>Declaración de Variables</h2>
-						<p>En Python, no es necesario declarar explícitamente el tipo de una variable antes de usarla. Simplemente se asigna un valor a una variable, y Python determinará automáticamente su tipo. Aquí hay algunos ejemplos:</p>
-
-				<pre>x = 10        # Entero
-y = 3.14      # Flotante
-mensaje = &quot;Hola, mundo&quot;  # Cadena de texto</pre>
-		    	<h2><a id="index_2"></a>Comentarios</h2>
-						<p>Los comentarios en Python se utilizan para documentar el código y hacerlo más legible. Comienzan con el símbolo # y se extienden hasta el final de la línea. Los comentarios no afectan la ejecución del programa. Aquí tienes algunos ejemplos de comentarios:</p>
-
-				<pre>***# Esto es un comentario de una sola l&iacute;nea***
-
-***&quot;&quot;&quot;***
-***Este es un comentario de varias l&iacute;neas.***
-***Puedes escribir m&uacute;ltiples l&iacute;neas de comentarios***
-***entre tres comillas simples o dobles.***
-***&quot;&quot;&quot;***
-
-***# Asignar un valor a la variable x***
-x = 10</pre>
-		    	<h2><a id="index_3"></a>Ejemplo de Código Completo</h2>
-						<p>A continuación, se muestra un ejemplo de un programa simple en Python que calcula el área de un círculo. Este ejemplo utiliza comentarios para explicar cada paso del proceso:</p>
-
-				<pre># Programa para calcular el &aacute;rea de un c&iacute;rculo
-
-# Definici&oacute;n de constantes
-PI = 3.14159
-
-# Solicitar al usuario el radio del c&iacute;rculo
-radio = float(input(&quot;Introduce el radio del c&iacute;rculo: &quot;))
-
-# Calcular el &aacute;rea del c&iacute;rculo
-area = PI * radio ** 2
-
-# Mostrar el resultado
-print(&quot;El &aacute;rea del c&iacute;rculo es:&quot;, area)</pre>
-				<p>En este ejemplo:</p>
-<ul>
-<li>Se define una constante <code>PI</code> para el valor de pi.</li>
-<li>Se solicita al usuario que introduzca el radio del círculo.</li>
-<li>Se calcula el área del círculo utilizando la fórmula <code>area = PI * radio ** 2</code>.</li>
-<li>Se muestra el resultado al usuario.</li>
-</ul>
-<p>Los comentarios explican qué hace cada parte del código, lo que ayuda a que el código sea más comprensible. Además, la correcta identación y la claridad en la declaración de variables hacen que el código sea fácil de leer y mantener.</p>
-
-	    		</div>
+-->
+    		</div>
     		<div class="col col-4">
     			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>

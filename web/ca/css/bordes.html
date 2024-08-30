@@ -56,6 +56,66 @@
     	<div class="row">
     		<div class="col col-8">
     			
+
+
+			<ul>
+<li>
+<p><strong>Propiedades de bordes</strong></p>
+</li>
+<li>
+<p><code>border</code>: Define el borde completo en una sola declaración. Ejemplo: <code>border: 1px solid black;</code></p>
+</li>
+<li>
+<p><code>border-width</code>: Especifica el grosor del borde. Ejemplo: <code>border-width: 2px;</code></p>
+</li>
+<li>
+<p><code>border-style</code>: Define el estilo del borde. Valores comunes: <code>solid</code>, <code>dotted</code>, <code>dashed</code>, <code>double</code>. Ejemplo: <code>border-style: solid;</code></p>
+</li>
+<li>
+<p><code>border-color</code>: Establece el color del borde. Ejemplo: <code>border-color: red;</code></p>
+</li>
+<li>
+<p><code>border-radius</code>: Redondea las esquinas del borde. Ejemplo: <code>border-radius: 10px;</code></p>
+</li>
+<li>
+<p><code>border-top</code>, <code>border-right</code>, <code>border-bottom</code>, <code>border-left</code>: Permiten definir bordes individuales para cada lado. Ejemplo: <code>border-top: 2px dashed blue;</code></p>
+</li>
+<li>
+<p><strong>Propiedades de contornos</strong></p>
+</li>
+<li>
+<p><code>outline</code>: Define el contorno completo en una sola declaración. Ejemplo: <code>outline: 1px solid red;</code></p>
+</li>
+<li>
+<p><code>outline-width</code>: Especifica el grosor del contorno. Ejemplo: <code>outline-width: 3px;</code></p>
+</li>
+<li>
+<p><code>outline-style</code>: Define el estilo del contorno. Valores comunes: <code>solid</code>, <code>dotted</code>, <code>dashed</code>, <code>double</code>. Ejemplo: <code>outline-style: dashed;</code></p>
+</li>
+<li>
+<p><code>outline-color</code>: Establece el color del contorno. Ejemplo: <code>outline-color: green;</code></p>
+</li>
+<li>
+<p><code>outline-offset</code>: Define el espacio entre el contorno y el borde del elemento. Ejemplo: <code>outline-offset: 5px;</code></p>
+</li>
+</ul>
+
+		    	<h2><a id="index_0"></a>Ejemplo de uso de propiedades de bordes y contornos</h2>
+						
+				<pre>div {
+border: 2px solid blue;
+border-radius: 15px;
+outline: 3px dotted red;
+outline-offset: 10px;
+}</pre>
+				<p>Este ejemplo define un div con un borde azul sólido de 2px, esquinas redondeadas de 15px, un contorno rojo punteado de 3px y un espacio de 10px entre el borde y el contorno.</p>
+<ul>
+<li>[[https://developer.mozilla.org/es/docs/Web/CSS/border|Documentación sobre la propiedad border en CSS]]</li>
+<li>[[https://developer.mozilla.org/es/docs/Web/CSS/outline|Documentación sobre la propiedad outline en CSS]]</li>
+</ul>
+
+	
+<!--
 <div class="row">
 	<div class="col-4" style="margin-bottom: 1rem;">
 		<div class="card">
@@ -118,66 +178,8 @@
 			</div>
 	</div>
 </div>
-
-
-
-			<ul>
-<li>
-<p><strong>Propiedades de bordes</strong></p>
-</li>
-<li>
-<p><code>border</code>: Define el borde completo en una sola declaración. Ejemplo: <code>border: 1px solid black;</code></p>
-</li>
-<li>
-<p><code>border-width</code>: Especifica el grosor del borde. Ejemplo: <code>border-width: 2px;</code></p>
-</li>
-<li>
-<p><code>border-style</code>: Define el estilo del borde. Valores comunes: <code>solid</code>, <code>dotted</code>, <code>dashed</code>, <code>double</code>. Ejemplo: <code>border-style: solid;</code></p>
-</li>
-<li>
-<p><code>border-color</code>: Establece el color del borde. Ejemplo: <code>border-color: red;</code></p>
-</li>
-<li>
-<p><code>border-radius</code>: Redondea las esquinas del borde. Ejemplo: <code>border-radius: 10px;</code></p>
-</li>
-<li>
-<p><code>border-top</code>, <code>border-right</code>, <code>border-bottom</code>, <code>border-left</code>: Permiten definir bordes individuales para cada lado. Ejemplo: <code>border-top: 2px dashed blue;</code></p>
-</li>
-<li>
-<p><strong>Propiedades de contornos</strong></p>
-</li>
-<li>
-<p><code>outline</code>: Define el contorno completo en una sola declaración. Ejemplo: <code>outline: 1px solid red;</code></p>
-</li>
-<li>
-<p><code>outline-width</code>: Especifica el grosor del contorno. Ejemplo: <code>outline-width: 3px;</code></p>
-</li>
-<li>
-<p><code>outline-style</code>: Define el estilo del contorno. Valores comunes: <code>solid</code>, <code>dotted</code>, <code>dashed</code>, <code>double</code>. Ejemplo: <code>outline-style: dashed;</code></p>
-</li>
-<li>
-<p><code>outline-color</code>: Establece el color del contorno. Ejemplo: <code>outline-color: green;</code></p>
-</li>
-<li>
-<p><code>outline-offset</code>: Define el espacio entre el contorno y el borde del elemento. Ejemplo: <code>outline-offset: 5px;</code></p>
-</li>
-</ul>
-
-		    	<h2><a id="index_0"></a>Ejemplo de uso de propiedades de bordes y contornos</h2>
-						
-				<pre>div {
-border: 2px solid blue;
-border-radius: 15px;
-outline: 3px dotted red;
-outline-offset: 10px;
-}</pre>
-				<p>Este ejemplo define un div con un borde azul sólido de 2px, esquinas redondeadas de 15px, un contorno rojo punteado de 3px y un espacio de 10px entre el borde y el contorno.</p>
-<ul>
-<li>[[https://developer.mozilla.org/es/docs/Web/CSS/border|Documentación sobre la propiedad border en CSS]]</li>
-<li>[[https://developer.mozilla.org/es/docs/Web/CSS/outline|Documentación sobre la propiedad outline en CSS]]</li>
-</ul>
-
-	    		</div>
+-->
+    		</div>
     		<div class="col col-4">
     			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>

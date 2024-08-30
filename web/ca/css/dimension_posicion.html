@@ -56,6 +56,68 @@
     	<div class="row">
     		<div class="col col-8">
     			
+
+
+			<ul>
+<li>
+<p><strong>Propiedades de dimensión</strong></p>
+</li>
+<li>
+<p><code>width</code>: Define el ancho de un elemento. Ejemplo: <code>width: 100px;</code></p>
+</li>
+<li>
+<p><code>height</code>: Define la altura de un elemento. Ejemplo: <code>height: 200px;</code></p>
+</li>
+<li>
+<p><code>max-width</code>: Establece el ancho máximo de un elemento. Ejemplo: <code>max-width: 300px;</code></p>
+</li>
+<li>
+<p><code>max-height</code>: Establece la altura máxima de un elemento. Ejemplo: <code>max-height: 400px;</code></p>
+</li>
+<li>
+<p><code>min-width</code>: Establece el ancho mínimo de un elemento. Ejemplo: <code>min-width: 150px;</code></p>
+</li>
+<li>
+<p><code>min-height</code>: Establece la altura mínima de un elemento. Ejemplo: <code>min-height: 250px;</code></p>
+</li>
+<li>
+<p><strong>Propiedades de posición</strong></p>
+</li>
+<li>
+<p><code>position</code>: Define el método de posicionamiento de un elemento. Valores comunes: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>. Ejemplo: <code>position: absolute;</code></p>
+</li>
+<li>
+<p><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>: Establecen la posición de un elemento posicionado. Ejemplo: <code>top: 50px;</code></p>
+</li>
+<li>
+<p><code>z-index</code>: Controla el orden de apilamiento de elementos posicionados. Ejemplo: <code>z-index: 10;</code></p>
+</li>
+<li>
+<p><code>overflow</code>: Controla lo que sucede si el contenido desborda el área de un elemento. Valores comunes: <code>visible</code>, <code>hidden</code>, <code>scroll</code>, <code>auto</code>. Ejemplo: <code>overflow: hidden;</code></p>
+</li>
+</ul>
+
+		    	<h2><a id="index_0"></a>Ejemplo de uso de propiedades de dimensión y posición</h2>
+						
+				<pre>div {
+width: 200px;
+height: 150px;
+max-width: 250px;
+min-height: 100px;
+position: relative;
+top: 20px;
+left: 10px;
+z-index: 5;
+overflow: auto;
+}</pre>
+				<p>Este ejemplo define un div con un ancho de 200px, altura de 150px, ancho máximo de 250px, altura mínima de 100px, posición relativa con 20px desde la parte superior y 10px desde la izquierda, un <code>z-index</code> de 5 y un desbordamiento automático.</p>
+<ul>
+<li>[[https://developer.mozilla.org/es/docs/Web/CSS/width|Documentación sobre la propiedad width en CSS]]</li>
+<li>[[https://developer.mozilla.org/es/docs/Web/CSS/position|Documentación sobre la propiedad position en CSS]]</li>
+</ul>
+
+	
+<!--
 <div class="row">
 	<div class="col-4" style="margin-bottom: 1rem;">
 		<div class="card">
@@ -118,68 +180,8 @@
 			</div>
 	</div>
 </div>
-
-
-
-			<ul>
-<li>
-<p><strong>Propiedades de dimensión</strong></p>
-</li>
-<li>
-<p><code>width</code>: Define el ancho de un elemento. Ejemplo: <code>width: 100px;</code></p>
-</li>
-<li>
-<p><code>height</code>: Define la altura de un elemento. Ejemplo: <code>height: 200px;</code></p>
-</li>
-<li>
-<p><code>max-width</code>: Establece el ancho máximo de un elemento. Ejemplo: <code>max-width: 300px;</code></p>
-</li>
-<li>
-<p><code>max-height</code>: Establece la altura máxima de un elemento. Ejemplo: <code>max-height: 400px;</code></p>
-</li>
-<li>
-<p><code>min-width</code>: Establece el ancho mínimo de un elemento. Ejemplo: <code>min-width: 150px;</code></p>
-</li>
-<li>
-<p><code>min-height</code>: Establece la altura mínima de un elemento. Ejemplo: <code>min-height: 250px;</code></p>
-</li>
-<li>
-<p><strong>Propiedades de posición</strong></p>
-</li>
-<li>
-<p><code>position</code>: Define el método de posicionamiento de un elemento. Valores comunes: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>. Ejemplo: <code>position: absolute;</code></p>
-</li>
-<li>
-<p><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>: Establecen la posición de un elemento posicionado. Ejemplo: <code>top: 50px;</code></p>
-</li>
-<li>
-<p><code>z-index</code>: Controla el orden de apilamiento de elementos posicionados. Ejemplo: <code>z-index: 10;</code></p>
-</li>
-<li>
-<p><code>overflow</code>: Controla lo que sucede si el contenido desborda el área de un elemento. Valores comunes: <code>visible</code>, <code>hidden</code>, <code>scroll</code>, <code>auto</code>. Ejemplo: <code>overflow: hidden;</code></p>
-</li>
-</ul>
-
-		    	<h2><a id="index_0"></a>Ejemplo de uso de propiedades de dimensión y posición</h2>
-						
-				<pre>div {
-width: 200px;
-height: 150px;
-max-width: 250px;
-min-height: 100px;
-position: relative;
-top: 20px;
-left: 10px;
-z-index: 5;
-overflow: auto;
-}</pre>
-				<p>Este ejemplo define un div con un ancho de 200px, altura de 150px, ancho máximo de 250px, altura mínima de 100px, posición relativa con 20px desde la parte superior y 10px desde la izquierda, un <code>z-index</code> de 5 y un desbordamiento automático.</p>
-<ul>
-<li>[[https://developer.mozilla.org/es/docs/Web/CSS/width|Documentación sobre la propiedad width en CSS]]</li>
-<li>[[https://developer.mozilla.org/es/docs/Web/CSS/position|Documentación sobre la propiedad position en CSS]]</li>
-</ul>
-
-	    		</div>
+-->
+    		</div>
     		<div class="col col-4">
     			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>

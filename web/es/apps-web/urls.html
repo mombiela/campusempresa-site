@@ -56,6 +56,62 @@
     	<div class="row">
     		<div class="col col-8">
     			
+
+
+			<p>Una URL (Uniform Resource Locator) es la dirección que se utiliza para acceder a recursos en la web. Las URLs son fundamentales para la navegación y la localización de recursos en Internet. Veamos su estructura y cómo se utilizan.</p>
+
+		    	<h2><a id="index_0"></a>Componentes de una URL</h2>
+						<p>Las URLs están compuestas por varias partes, cada una de las cuales tiene un propósito específico. Aquí se muestra la estructura general de una URL:</p>
+
+				<pre>protocolo://usuario:contrase&ntilde;a@host:puerto/ruta?consulta#fragmento</pre>
+				<p>Veamos cada componente en detalle:</p>
+<ul>
+<li>
+<p><strong>Protocolo</strong>: Especifica el método de acceso al recurso. Los protocolos más comunes son HTTP y HTTPS. Por ejemplo, <code>http</code> y <code>https</code>.</p>
+</li>
+<li>
+<p><strong>Usuario:Contraseña</strong> (opcional): Proporciona credenciales de autenticación para acceder a ciertos recursos. Esta parte se utiliza raramente en la práctica debido a problemas de seguridad. Ejemplo: <code>usuario:contraseña</code>.</p>
+</li>
+<li>
+<p><strong>Host</strong>: Indica el servidor en el que se encuentra el recurso. Puede ser una dirección IP (ej. <code>192.168.1.1</code>) o un nombre de dominio (ej. <code>www.ejemplo.com</code>).</p>
+</li>
+<li>
+<p><strong>Puerto</strong> (opcional): Especifica el puerto del servidor al que se accede. Si no se especifica, se usan los puertos predeterminados (80 para HTTP y 443 para HTTPS). Ejemplo: <code>:8080</code>.</p>
+</li>
+<li>
+<p><strong>Ruta</strong>: Define la ubicación específica del recurso en el servidor. Se presenta como una ruta de archivo. Ejemplo: <code>/directorio/recurso.html</code>.</p>
+</li>
+<li>
+<p><strong>Consulta</strong> (opcional): Contiene parámetros adicionales enviados al servidor. Se inicia con un signo de interrogación (<code>?</code>) y los parámetros están separados por el símbolo de ampersand (<code>&amp;</code>). Ejemplo: <code>?id=123&amp;nombre=juan</code>.</p>
+</li>
+<li>
+<p><strong>Fragmento</strong> (opcional): Es una referencia interna dentro del recurso. Se inicia con una almohadilla (``````#). Ejemplo: <code>#seccion2</code>.</p>
+</li>
+</ul>
+
+		    	<h2><a id="index_1"></a>Ejemplo de una URL completa</h2>
+						<p>A continuación se presenta un ejemplo de una URL completa con todos sus componentes:</p>
+
+				<pre>https://usuario:contrase&ntilde;a@www.ejemplo.com:8080/directorio/recurso.html?id=123&amp;nombre=juan#seccion2</pre>
+				
+		    	<h2><a id="index_2"></a>Uso de URLs</h2>
+						<h1><strong>Navegación</strong>: Las URLs permiten a los usuarios navegar a diferentes páginas y recursos en la web. Al introducir una URL en la barra de direcciones del navegador, este realiza una solicitud al servidor correspondiente y muestra el recurso solicitado.</h1>
+<h1><strong>Enlaces</strong>: Las URLs se utilizan para crear enlaces (hipervínculos) en las páginas web. Estos enlaces permiten a los usuarios hacer clic y ser dirigidos a diferentes recursos o páginas.</h1>
+
+				<pre>&lt;a href=&quot;https://www.ejemplo.com&quot;&gt;Visitar Ejemplo&lt;/a&gt;</pre>
+				<h1><strong>Formularios</strong>: En los formularios web, las URLs se utilizan para enviar datos al servidor. Los datos del formulario se agregan a la URL como parte de la consulta cuando se utiliza el método <code>GET</code>.</h1>
+
+				<pre>&lt;form action=&quot;https://www.ejemplo.com/buscar&quot; method=&quot;get&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;query&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Buscar&quot;&gt;
+
+&lt;/form&gt;</pre>
+				
+		    	<h2><a id="index_3"></a>Conclusión</h2>
+						<p>Las URLs son esenciales para la estructura y funcionamiento de la web. Comprender sus componentes y cómo se utilizan permite una mejor navegación, desarrollo y manipulación de recursos en Internet. Para más detalles sobre la especificación de URLs, puedes consultar la RFC 3986 [[https://tools.ietf.org/html/rfc3986|RFC 3986 - Uniform Resource Identifier (URI): Generic Syntax]].</p>
+
+	
+<!--
 <div class="row">
 	<div class="col-4" style="margin-bottom: 1rem;">
 		<div class="card">
@@ -118,62 +174,8 @@
 			</div>
 	</div>
 </div>
-
-
-
-			<p>Una URL (Uniform Resource Locator) es la dirección que se utiliza para acceder a recursos en la web. Las URLs son fundamentales para la navegación y la localización de recursos en Internet. Veamos su estructura y cómo se utilizan.</p>
-
-		    	<h2><a id="index_0"></a>Componentes de una URL</h2>
-						<p>Las URLs están compuestas por varias partes, cada una de las cuales tiene un propósito específico. Aquí se muestra la estructura general de una URL:</p>
-
-				<pre>protocolo://usuario:contrase&ntilde;a@host:puerto/ruta?consulta#fragmento</pre>
-				<p>Veamos cada componente en detalle:</p>
-<ul>
-<li>
-<p><strong>Protocolo</strong>: Especifica el método de acceso al recurso. Los protocolos más comunes son HTTP y HTTPS. Por ejemplo, <code>http</code> y <code>https</code>.</p>
-</li>
-<li>
-<p><strong>Usuario:Contraseña</strong> (opcional): Proporciona credenciales de autenticación para acceder a ciertos recursos. Esta parte se utiliza raramente en la práctica debido a problemas de seguridad. Ejemplo: <code>usuario:contraseña</code>.</p>
-</li>
-<li>
-<p><strong>Host</strong>: Indica el servidor en el que se encuentra el recurso. Puede ser una dirección IP (ej. <code>192.168.1.1</code>) o un nombre de dominio (ej. <code>www.ejemplo.com</code>).</p>
-</li>
-<li>
-<p><strong>Puerto</strong> (opcional): Especifica el puerto del servidor al que se accede. Si no se especifica, se usan los puertos predeterminados (80 para HTTP y 443 para HTTPS). Ejemplo: <code>:8080</code>.</p>
-</li>
-<li>
-<p><strong>Ruta</strong>: Define la ubicación específica del recurso en el servidor. Se presenta como una ruta de archivo. Ejemplo: <code>/directorio/recurso.html</code>.</p>
-</li>
-<li>
-<p><strong>Consulta</strong> (opcional): Contiene parámetros adicionales enviados al servidor. Se inicia con un signo de interrogación (<code>?</code>) y los parámetros están separados por el símbolo de ampersand (<code>&amp;</code>). Ejemplo: <code>?id=123&amp;nombre=juan</code>.</p>
-</li>
-<li>
-<p><strong>Fragmento</strong> (opcional): Es una referencia interna dentro del recurso. Se inicia con una almohadilla (``````#). Ejemplo: <code>#seccion2</code>.</p>
-</li>
-</ul>
-
-		    	<h2><a id="index_1"></a>Ejemplo de una URL completa</h2>
-						<p>A continuación se presenta un ejemplo de una URL completa con todos sus componentes:</p>
-
-				<pre>https://usuario:contrase&ntilde;a@www.ejemplo.com:8080/directorio/recurso.html?id=123&amp;nombre=juan#seccion2</pre>
-				
-		    	<h2><a id="index_2"></a>Uso de URLs</h2>
-						<h1><strong>Navegación</strong>: Las URLs permiten a los usuarios navegar a diferentes páginas y recursos en la web. Al introducir una URL en la barra de direcciones del navegador, este realiza una solicitud al servidor correspondiente y muestra el recurso solicitado.</h1>
-<h1><strong>Enlaces</strong>: Las URLs se utilizan para crear enlaces (hipervínculos) en las páginas web. Estos enlaces permiten a los usuarios hacer clic y ser dirigidos a diferentes recursos o páginas.</h1>
-
-				<pre>&lt;a href=&quot;https://www.ejemplo.com&quot;&gt;Visitar Ejemplo&lt;/a&gt;</pre>
-				<h1><strong>Formularios</strong>: En los formularios web, las URLs se utilizan para enviar datos al servidor. Los datos del formulario se agregan a la URL como parte de la consulta cuando se utiliza el método <code>GET</code>.</h1>
-
-				<pre>&lt;form action=&quot;https://www.ejemplo.com/buscar&quot; method=&quot;get&quot;&gt;
-&lt;input type=&quot;text&quot; name=&quot;query&quot;&gt;
-&lt;input type=&quot;submit&quot; value=&quot;Buscar&quot;&gt;
-
-&lt;/form&gt;</pre>
-				
-		    	<h2><a id="index_3"></a>Conclusión</h2>
-						<p>Las URLs son esenciales para la estructura y funcionamiento de la web. Comprender sus componentes y cómo se utilizan permite una mejor navegación, desarrollo y manipulación de recursos en Internet. Para más detalles sobre la especificación de URLs, puedes consultar la RFC 3986 [[https://tools.ietf.org/html/rfc3986|RFC 3986 - Uniform Resource Identifier (URI): Generic Syntax]].</p>
-
-	    		</div>
+-->
+    		</div>
     		<div class="col col-4">
     			<h2>Patrocinadores</h2>
 <p>¿Quieres ser nuestro patrocinador? De momento no tenemos patrocinadores oficiales, pero estamos abiertos a propuestas.</p>

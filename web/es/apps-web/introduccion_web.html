@@ -56,6 +56,54 @@
     	<div class="row">
     		<div class="col col-8">
     			
+
+
+			<p>La web, también conocida como la World Wide Web (WWW), es un sistema de información distribuido que permite el acceso a recursos y servicios a través de Internet. Para entender cómo funciona la web, es importante conocer los componentes básicos y cómo interactúan entre sí.</p>
+
+		    	<h2><a id="index_0"></a>Componentes de la web</h2>
+						<ul>
+<li><strong>Cliente</strong>: Es el dispositivo que solicita información a la web, generalmente un navegador web como Chrome, Firefox o Safari.</li>
+<li><strong>Servidor</strong>: Es el dispositivo que almacena y envía información a los clientes cuando se le solicita.</li>
+<li><strong>URL</strong>: Una URL (Uniform Resource Locator) es la dirección que especifica la ubicación de un recurso en la web.</li>
+<li><strong>Protocolo HTTP/HTTPS</strong>: HTTP (HyperText Transfer Protocol) y HTTPS (HTTP Secure) son los protocolos utilizados para la transmisión de datos en la web.</li>
+</ul>
+
+		    	<h2><a id="index_1"></a>Proceso básico de funcionamiento de la web</h2>
+						<h1>El usuario ingresa una <code>URL</code> en el navegador.</h1>
+<h1>El navegador envía una <code>petición HTTP</code> al servidor correspondiente a la URL.</h1>
+<h1>El servidor procesa la petición y responde con el recurso solicitado (como una página HTML, un archivo de imagen, etc.).</h1>
+<h1>El navegador recibe el recurso y lo muestra al usuario.</h1>
+
+		    	<h2><a id="index_2"></a>Ejemplo de una petición HTTP</h2>
+						<p>Cuando se ingresa una URL en el navegador, como [[http://example.com]], el navegador realiza una <code>petición HTTP</code> al servidor. A continuación se muestra un ejemplo de una petición HTTP y una respuesta del servidor:</p>
+
+				<pre>GET /index.html HTTP/1.1
+Host: example.com
+User-Agent: Mozilla/5.0
+Accept: text/html</pre>
+				<p>La respuesta del servidor podría ser:</p>
+
+				<pre>HTTP/1.1 200 OK
+Content-Type: text/html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Ejemplo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;&iexcl;Hola, mundo!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+				
+		    	<h2><a id="index_3"></a>Seguridad en la web</h2>
+						<p>La seguridad en la web es crucial para proteger la información y la privacidad de los usuarios. HTTPS (HTTP Secure) es una versión segura de HTTP que utiliza SSL/TLS para cifrar la comunicación entre el cliente y el servidor.</p>
+
+		    	<h2><a id="index_4"></a>Resumen</h2>
+						<p>La web funciona mediante la interacción entre clientes y servidores, utilizando URLs para localizar recursos y el protocolo HTTP/HTTPS para la transmisión de datos. El cliente realiza peticiones y el servidor responde con los recursos solicitados, permitiendo la visualización de contenido en el navegador del usuario.</p>
+
+	
+<!--
 <div class="row">
 	<div class="col-4" style="margin-bottom: 1rem;">
 		<div class="card">
@@ -118,54 +166,8 @@
 			</div>
 	</div>
 </div>
-
-
-
-			<p>La web, también conocida como la World Wide Web (WWW), es un sistema de información distribuido que permite el acceso a recursos y servicios a través de Internet. Para entender cómo funciona la web, es importante conocer los componentes básicos y cómo interactúan entre sí.</p>
-
-		    	<h2><a id="index_0"></a>Componentes de la web</h2>
-						<ul>
-<li><strong>Cliente</strong>: Es el dispositivo que solicita información a la web, generalmente un navegador web como Chrome, Firefox o Safari.</li>
-<li><strong>Servidor</strong>: Es el dispositivo que almacena y envía información a los clientes cuando se le solicita.</li>
-<li><strong>URL</strong>: Una URL (Uniform Resource Locator) es la dirección que especifica la ubicación de un recurso en la web.</li>
-<li><strong>Protocolo HTTP/HTTPS</strong>: HTTP (HyperText Transfer Protocol) y HTTPS (HTTP Secure) son los protocolos utilizados para la transmisión de datos en la web.</li>
-</ul>
-
-		    	<h2><a id="index_1"></a>Proceso básico de funcionamiento de la web</h2>
-						<h1>El usuario ingresa una <code>URL</code> en el navegador.</h1>
-<h1>El navegador envía una <code>petición HTTP</code> al servidor correspondiente a la URL.</h1>
-<h1>El servidor procesa la petición y responde con el recurso solicitado (como una página HTML, un archivo de imagen, etc.).</h1>
-<h1>El navegador recibe el recurso y lo muestra al usuario.</h1>
-
-		    	<h2><a id="index_2"></a>Ejemplo de una petición HTTP</h2>
-						<p>Cuando se ingresa una URL en el navegador, como [[http://example.com]], el navegador realiza una <code>petición HTTP</code> al servidor. A continuación se muestra un ejemplo de una petición HTTP y una respuesta del servidor:</p>
-
-				<pre>GET /index.html HTTP/1.1
-Host: example.com
-User-Agent: Mozilla/5.0
-Accept: text/html</pre>
-				<p>La respuesta del servidor podría ser:</p>
-
-				<pre>HTTP/1.1 200 OK
-Content-Type: text/html
-
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Ejemplo&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;&iexcl;Hola, mundo!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
-				
-		    	<h2><a id="index_3"></a>Seguridad en la web</h2>
-						<p>La seguridad en la web es crucial para proteger la información y la privacidad de los usuarios. HTTPS (HTTP Secure) es una versión segura de HTTP que utiliza SSL/TLS para cifrar la comunicación entre el cliente y el servidor.</p>
-
-		    	<h2><a id="index_4"></a>Resumen</h2>
-						<p>La web funciona mediante la interacción entre clientes y servidores, utilizando URLs para localizar recursos y el protocolo HTTP/HTTPS para la transmisión de datos. El cliente realiza peticiones y el servidor responde con los recursos solicitados, permitiendo la visualización de contenido en el navegador del usuario.</p>
-
-	    		</div>
+-->
+    		</div>
     		<div class="col col-4">
     			<h2>Patrocinadores</h2>
 <p>¿Quieres ser nuestro patrocinador? De momento no tenemos patrocinadores oficiales, pero estamos abiertos a propuestas.</p>

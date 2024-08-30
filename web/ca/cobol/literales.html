@@ -56,6 +56,69 @@
     	<div class="row">
     		<div class="col col-8">
     			
+
+
+			<p>En COBOL, los literales son valores constantes que se utilizan directamente en el código. Estos valores pueden ser numéricos, alfanuméricos, o figurativos. A continuación, se describen los diferentes tipos de literales y su uso en COBOL.</p>
+
+		    	<h2><a id="index_0"></a>Literales Numéricos</h2>
+						<p>Los literales numéricos representan valores numéricos constantes. Pueden incluir dígitos, un signo opcional (+ o -), y un punto decimal opcional. Ejemplos:</p>
+
+				<pre>MOVE 100 TO WS-Variable.
+ADD 25.75 TO WS-Amount.
+SUBTRACT -50 FROM WS-Balance.</pre>
+				<p>En estos ejemplos:</p>
+<ul>
+<li>El literal numérico <code>100</code> se mueve a <code>WS-Variable</code>.</li>
+<li>El literal numérico <code>25.75</code> se suma a <code>WS-Amount</code>.</li>
+<li>El literal numérico <code>-50</code> se resta de <code>WS-Balance</code>.</li>
+</ul>
+
+		    	<h2><a id="index_1"></a>Literales Alfanuméricos</h2>
+						<p>Los literales alfanuméricos son secuencias de caracteres encerradas entre comillas simples o dobles. Se utilizan para representar texto. Ejemplos:</p>
+
+				<pre>MOVE 'Hello, World!' TO WS-Greeting.
+MOVE &quot;John Doe&quot; TO WS-Name.
+DISPLAY 'Processing Complete'.</pre>
+				<p>En estos ejemplos:</p>
+<ul>
+<li>El literal alfanumérico <code>'Hello, World!'</code> se mueve a <code>WS-Greeting</code>.</li>
+<li>El literal alfanumérico <code>'John Doe'</code> se mueve a <code>WS-Name</code>.</li>
+<li>El literal alfanumérico <code>'Processing Complete'</code> se muestra en la pantalla.</li>
+</ul>
+
+		    	<h2><a id="index_2"></a>Literales Figurativos</h2>
+						<p>Los literales figurativos son palabras reservadas que representan valores comunes. Los más utilizados son <code>SPACE</code> (o <code>SPACES</code>), <code>ZERO</code> (o <code>ZEROS</code> o <code>ZEROES</code>), y <code>HIGH-VALUE</code> (o <code>HIGH-VALUES</code>). Ejemplos:</p>
+
+				<pre>MOVE SPACE TO WS-TextField.
+MOVE ZEROS TO WS-Count.
+MOVE HIGH-VALUE TO WS-Flag.</pre>
+				<p>En estos ejemplos:</p>
+<ul>
+<li>El literal figurativo <code>SPACE</code> se mueve a <code>WS-TextField</code>, llenándolo con espacios en blanco.</li>
+<li>El literal figurativo <code>ZEROS</code> se mueve a <code>WS-Count</code>, estableciéndolo en cero.</li>
+<li>El literal figurativo <code>HIGH-VALUE</code> se mueve a <code>WS-Flag</code>, asignándole el valor más alto posible para el tipo de dato.</li>
+</ul>
+
+		    	<h2><a id="index_3"></a>Uso en Sentencias</h2>
+						<p>Los literales se utilizan frecuentemente en diversas sentencias COBOL. Aquí hay ejemplos adicionales de su uso:</p>
+
+				<pre>IF WS-Total &gt; 1000 THEN
+DISPLAY 'Total exceeds threshold'.
+END-IF.
+
+COMPUTE WS-Discount = WS-Price * 0.1.
+
+MOVE 'EOF' TO WS-Status.</pre>
+				<p>En estos ejemplos:</p>
+<ul>
+<li>El literal numérico <code>1000</code> se utiliza en una condición <code>IF</code>.</li>
+<li>El literal numérico <code>0.1</code> se utiliza en una operación <code>COMPUTE</code>.</li>
+<li>El literal alfanumérico <code>'EOF'</code> se utiliza en una sentencia <code>MOVE</code>.</li>
+</ul>
+<p>Los literales en COBOL permiten que el código sea más claro y comprensible, ya que representan valores constantes directamente en el programa. Su uso adecuado es esencial para escribir programas COBOL efectivos y mantenibles.</p>
+
+	
+<!--
 <div class="row">
 	<div class="col-4" style="margin-bottom: 1rem;">
 		<div class="card">
@@ -118,69 +181,8 @@
 			</div>
 	</div>
 </div>
-
-
-
-			<p>En COBOL, los literales son valores constantes que se utilizan directamente en el código. Estos valores pueden ser numéricos, alfanuméricos, o figurativos. A continuación, se describen los diferentes tipos de literales y su uso en COBOL.</p>
-
-		    	<h2><a id="index_0"></a>Literales Numéricos</h2>
-						<p>Los literales numéricos representan valores numéricos constantes. Pueden incluir dígitos, un signo opcional (+ o -), y un punto decimal opcional. Ejemplos:</p>
-
-				<pre>MOVE 100 TO WS-Variable.
-ADD 25.75 TO WS-Amount.
-SUBTRACT -50 FROM WS-Balance.</pre>
-				<p>En estos ejemplos:</p>
-<ul>
-<li>El literal numérico <code>100</code> se mueve a <code>WS-Variable</code>.</li>
-<li>El literal numérico <code>25.75</code> se suma a <code>WS-Amount</code>.</li>
-<li>El literal numérico <code>-50</code> se resta de <code>WS-Balance</code>.</li>
-</ul>
-
-		    	<h2><a id="index_1"></a>Literales Alfanuméricos</h2>
-						<p>Los literales alfanuméricos son secuencias de caracteres encerradas entre comillas simples o dobles. Se utilizan para representar texto. Ejemplos:</p>
-
-				<pre>MOVE 'Hello, World!' TO WS-Greeting.
-MOVE &quot;John Doe&quot; TO WS-Name.
-DISPLAY 'Processing Complete'.</pre>
-				<p>En estos ejemplos:</p>
-<ul>
-<li>El literal alfanumérico <code>'Hello, World!'</code> se mueve a <code>WS-Greeting</code>.</li>
-<li>El literal alfanumérico <code>'John Doe'</code> se mueve a <code>WS-Name</code>.</li>
-<li>El literal alfanumérico <code>'Processing Complete'</code> se muestra en la pantalla.</li>
-</ul>
-
-		    	<h2><a id="index_2"></a>Literales Figurativos</h2>
-						<p>Los literales figurativos son palabras reservadas que representan valores comunes. Los más utilizados son <code>SPACE</code> (o <code>SPACES</code>), <code>ZERO</code> (o <code>ZEROS</code> o <code>ZEROES</code>), y <code>HIGH-VALUE</code> (o <code>HIGH-VALUES</code>). Ejemplos:</p>
-
-				<pre>MOVE SPACE TO WS-TextField.
-MOVE ZEROS TO WS-Count.
-MOVE HIGH-VALUE TO WS-Flag.</pre>
-				<p>En estos ejemplos:</p>
-<ul>
-<li>El literal figurativo <code>SPACE</code> se mueve a <code>WS-TextField</code>, llenándolo con espacios en blanco.</li>
-<li>El literal figurativo <code>ZEROS</code> se mueve a <code>WS-Count</code>, estableciéndolo en cero.</li>
-<li>El literal figurativo <code>HIGH-VALUE</code> se mueve a <code>WS-Flag</code>, asignándole el valor más alto posible para el tipo de dato.</li>
-</ul>
-
-		    	<h2><a id="index_3"></a>Uso en Sentencias</h2>
-						<p>Los literales se utilizan frecuentemente en diversas sentencias COBOL. Aquí hay ejemplos adicionales de su uso:</p>
-
-				<pre>IF WS-Total &gt; 1000 THEN
-DISPLAY 'Total exceeds threshold'.
-END-IF.
-
-COMPUTE WS-Discount = WS-Price * 0.1.
-
-MOVE 'EOF' TO WS-Status.</pre>
-				<p>En estos ejemplos:</p>
-<ul>
-<li>El literal numérico <code>1000</code> se utiliza en una condición <code>IF</code>.</li>
-<li>El literal numérico <code>0.1</code> se utiliza en una operación <code>COMPUTE</code>.</li>
-<li>El literal alfanumérico <code>'EOF'</code> se utiliza en una sentencia <code>MOVE</code>.</li>
-</ul>
-<p>Los literales en COBOL permiten que el código sea más claro y comprensible, ya que representan valores constantes directamente en el programa. Su uso adecuado es esencial para escribir programas COBOL efectivos y mantenibles.</p>
-
-	    		</div>
+-->
+    		</div>
     		<div class="col col-4">
     			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>

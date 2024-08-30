@@ -66,6 +66,64 @@
 					</div>
 	</div>
 
+
+
+		    	<h2><a id="index_0"></a>Estructura fundamental de un documento HTML</h2>
+				    	<h3><a id="index_1"></a>La declaración `DOCTYPE`</h3>
+						<p>El primer elemento de cualquier documento HTML debe ser la declaración <code>DOCTYPE</code>. Este elemento no es una etiqueta HTML, sino una instrucción al navegador para que interprete el documento de acuerdo con una versión específica de HTML.</p>
+<p>En HTML5, la declaración <code>DOCTYPE</code> es simple y se escribe de la siguiente manera:</p>
+
+				<pre>&lt;!DOCTYPE html&gt;</pre>
+		    	<h3><a id="index_2"></a>La etiqueta `<html>`</h3>
+						<p>La etiqueta <code>&lt;html&gt;</code> es la raíz de un documento HTML. Todos los demás elementos HTML se encuentran dentro de esta etiqueta. Define el comienzo y el final del documento HTML y establece el contexto para todas las etiquetas que contiene.</p>
+
+				<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;!-- Todo el contenido HTML va aqu&iacute; --&gt;
+&lt;/html&gt;</pre>
+		    	<h3><a id="index_3"></a>La etiqueta `<head>`</h3>
+						<p>La etiqueta <code>&lt;head&gt;</code> contiene metadatos sobre el documento, como el título de la página, enlaces a hojas de estilo CSS, y scripts de JavaScript. Aunque el contenido dentro de <code>&lt;head&gt;</code> no se muestra directamente en la página web, es crucial para el correcto funcionamiento y estilo del sitio.</p>
+<p><strong>Elementos comunes dentro de <code>&lt;head&gt;</code></strong>:</p>
+<ul>
+<li><code>&lt;title&gt;</code>: Define el título de la página que se muestra en la pestaña del navegador.</li>
+<li><code>&lt;meta&gt;</code>: Proporciona metadatos como la codificación de caracteres.</li>
+<li><code>&lt;link&gt;</code>: Conecta el documento HTML con archivos externos como hojas de estilo CSS.</li>
+<li><code>&lt;script&gt;</code>: Incluye o enlaza scripts de JavaScript.</li>
+</ul>
+
+				<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Mi p&aacute;gina web&lt;/title&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+    &lt;/head&gt;
+&lt;/html&gt;</pre>
+		    	<h3><a id="index_4"></a>La etiqueta `<body>`</h3>
+						<p>La etiqueta <code>&lt;body&gt;</code> contiene todo el contenido que se mostrará en la página web. Esto incluye texto, imágenes, enlaces, y cualquier otro elemento que los usuarios verán o interactuarán directamente. Es la parte visible del documento HTML cuando se carga en un navegador.</p>
+
+				<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Mi primera p&aacute;gina web&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Bienvenidos a mi sitio web&lt;/h1&gt;
+        &lt;p&gt;Este es el contenido principal de mi p&aacute;gina.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+		    	<h2><a id="index_5"></a>Resumen de la estructura HTML</h2>
+						<p>La estructura básica de un documento HTML se puede resumir en los siguientes elementos clave:</p>
+<ol>
+<li><code>&lt;!DOCTYPE html&gt;</code>: Instrucción para el navegador sobre la versión de HTML.</li>
+<li><code>&lt;html&gt;</code>: Raíz del documento.</li>
+<li><code>&lt;head&gt;</code>: Contiene metadatos y enlaces a recursos externos.</li>
+<li><code>&lt;body&gt;</code>: Contiene todo el contenido visible de la página.</li>
+</ol>
+<p>Esta estructura asegura que los documentos HTML sean bien formados y compatibles con los navegadores web, facilitando la creación de páginas web accesibles y bien estructuradas.</p>
+
+	
+<!--
 <div class="row">
 	<div class="col-4" style="margin-bottom: 1rem;">
 		<div class="card">
@@ -128,64 +186,8 @@
 			</div>
 	</div>
 </div>
-
-
-
-		    	<h2><a id="index_0"></a>Estructura fundamental de un documento HTML</h2>
-				    	<h3><a id="index_1"></a>La declaración `DOCTYPE`</h3>
-						<p>El primer elemento de cualquier documento HTML debe ser la declaración <code>DOCTYPE</code>. Este elemento no es una etiqueta HTML, sino una instrucción al navegador para que interprete el documento de acuerdo con una versión específica de HTML.</p>
-<p>En HTML5, la declaración <code>DOCTYPE</code> es simple y se escribe de la siguiente manera:</p>
-
-				<pre>&lt;!DOCTYPE html&gt;</pre>
-		    	<h3><a id="index_2"></a>La etiqueta `<html>`</h3>
-						<p>La etiqueta <code>&lt;html&gt;</code> es la raíz de un documento HTML. Todos los demás elementos HTML se encuentran dentro de esta etiqueta. Define el comienzo y el final del documento HTML y establece el contexto para todas las etiquetas que contiene.</p>
-
-				<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;!-- Todo el contenido HTML va aqu&iacute; --&gt;
-&lt;/html&gt;</pre>
-		    	<h3><a id="index_3"></a>La etiqueta `<head>`</h3>
-						<p>La etiqueta <code>&lt;head&gt;</code> contiene metadatos sobre el documento, como el título de la página, enlaces a hojas de estilo CSS, y scripts de JavaScript. Aunque el contenido dentro de <code>&lt;head&gt;</code> no se muestra directamente en la página web, es crucial para el correcto funcionamiento y estilo del sitio.</p>
-<p><strong>Elementos comunes dentro de <code>&lt;head&gt;</code></strong>:</p>
-<ul>
-<li><code>&lt;title&gt;</code>: Define el título de la página que se muestra en la pestaña del navegador.</li>
-<li><code>&lt;meta&gt;</code>: Proporciona metadatos como la codificación de caracteres.</li>
-<li><code>&lt;link&gt;</code>: Conecta el documento HTML con archivos externos como hojas de estilo CSS.</li>
-<li><code>&lt;script&gt;</code>: Incluye o enlaza scripts de JavaScript.</li>
-</ul>
-
-				<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Mi p&aacute;gina web&lt;/title&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
-    &lt;/head&gt;
-&lt;/html&gt;</pre>
-		    	<h3><a id="index_4"></a>La etiqueta `<body>`</h3>
-						<p>La etiqueta <code>&lt;body&gt;</code> contiene todo el contenido que se mostrará en la página web. Esto incluye texto, imágenes, enlaces, y cualquier otro elemento que los usuarios verán o interactuarán directamente. Es la parte visible del documento HTML cuando se carga en un navegador.</p>
-
-				<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Mi primera p&aacute;gina web&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Bienvenidos a mi sitio web&lt;/h1&gt;
-        &lt;p&gt;Este es el contenido principal de mi p&aacute;gina.&lt;/p&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</pre>
-		    	<h2><a id="index_5"></a>Resumen de la estructura HTML</h2>
-						<p>La estructura básica de un documento HTML se puede resumir en los siguientes elementos clave:</p>
-<ol>
-<li><code>&lt;!DOCTYPE html&gt;</code>: Instrucción para el navegador sobre la versión de HTML.</li>
-<li><code>&lt;html&gt;</code>: Raíz del documento.</li>
-<li><code>&lt;head&gt;</code>: Contiene metadatos y enlaces a recursos externos.</li>
-<li><code>&lt;body&gt;</code>: Contiene todo el contenido visible de la página.</li>
-</ol>
-<p>Esta estructura asegura que los documentos HTML sean bien formados y compatibles con los navegadores web, facilitando la creación de páginas web accesibles y bien estructuradas.</p>
-
-	    		</div>
+-->
+    		</div>
     		<div class="col col-4">
     			<h2>Patrocinadores</h2>
 <p>¿Quieres ser nuestro patrocinador? De momento no tenemos patrocinadores oficiales, pero estamos abiertos a propuestas.</p>

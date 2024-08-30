@@ -66,6 +66,53 @@
 					</div>
 	</div>
 
+
+
+		    	<h2><a id="index_0"></a>Creación de enlaces en HTML</h2>
+				    	<h3><a id="index_1"></a>La etiqueta `<a>`</h3>
+						<p>La etiqueta <code>&lt;a&gt;</code> es utilizada para crear enlaces en HTML. Estos enlaces permiten a los usuarios navegar entre páginas web, descargar archivos, o realizar otras acciones al hacer clic en el texto o elemento enlazado. El atributo más importante de <code>&lt;a&gt;</code> es <code>href</code>, que especifica la URL o el destino del enlace.</p>
+
+				<pre>&lt;a href=&quot;https://example.com&quot;&gt;Visita nuestro sitio web&lt;/a&gt;</pre>
+		    	<h3><a id="index_2"></a>Enlaces internos y anclajes</h3>
+						<p>Además de enlazar a otras páginas, puedes crear enlaces que dirijan al usuario a diferentes partes dentro de la misma página utilizando anclajes. Para ello, se utilizan los atributos <code>id</code> en el destino y <code>href</code> con el valor del <code>id</code> precedido por un <code>#</code>.</p>
+
+				<pre>&lt;!-- Enlace interno --&gt;
+&lt;a href=&quot;#seccion1&quot;&gt;Ir a la Secci&oacute;n 1&lt;/a&gt;
+
+&lt;!-- Destino del enlace --&gt;
+&lt;h2 id=&quot;seccion1&quot;&gt;Secci&oacute;n 1&lt;/h2&gt;
+&lt;p&gt;Este es el contenido de la Secci&oacute;n 1.&lt;/p&gt;</pre>
+		    	<h3><a id="index_3"></a>Enlaces externos</h3>
+						<p>Los enlaces que apuntan a otras páginas web fuera del sitio actual se consideran enlaces externos. Es importante tener en cuenta la seguridad y usabilidad al crear estos enlaces. El atributo <code>target=&quot;_blank&quot;</code> puede utilizarse para abrir el enlace en una nueva pestaña o ventana del navegador.</p>
+
+				<pre>&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot;&gt;Visita Example.com en una nueva pesta&ntilde;a&lt;/a&gt;</pre>
+		    	<h3><a id="index_4"></a>Enlaces de descarga</h3>
+						<p>HTML permite que un enlace apunte a un archivo que se descargará al hacer clic en él, en lugar de abrirlo en el navegador. Esto se logra utilizando el atributo <code>download</code> en la etiqueta <code>&lt;a&gt;</code>.</p>
+
+				<pre>&lt;a href=&quot;archivo.pdf&quot; download&gt;Descargar archivo PDF&lt;/a&gt;</pre>
+		    	<h3><a id="index_5"></a>Navegación con listas</h3>
+						<p>Es común ver que los menús de navegación se crean utilizando listas no ordenadas (<code>&lt;ul&gt;</code>) con elementos de lista (<code>&lt;li&gt;</code>) que contienen enlaces (<code>&lt;a&gt;</code>). Esto es una práctica estándar en el desarrollo web, ya que facilita la organización y el estilo de los menús de navegación.</p>
+
+				<pre>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+		    	<h2><a id="index_6"></a>Buenas prácticas al usar enlaces</h2>
+						<p>Al trabajar con enlaces en HTML, es importante seguir ciertas buenas prácticas para asegurar la accesibilidad y la experiencia de usuario:</p>
+<ol>
+<li><strong>Texto descriptivo</strong>: El texto del enlace debe ser claro y descriptivo para que los usuarios y los motores de búsqueda comprendan a dónde llevará el enlace.</li>
+<li><strong>Evitar &quot;haz clic aquí&quot;</strong>: En lugar de usar &quot;haz clic aquí&quot;, describe el destino o la acción que se realizará.</li>
+<li><strong>Enlaces accesibles</strong>: Asegúrate de que los enlaces sean accesibles a través del teclado y que los lectores de pantalla puedan interpretarlos correctamente.</li>
+<li><strong>Verificación de enlaces</strong>: Revisa regularmente que los enlaces funcionen y que no conduzcan a páginas inexistentes o rotas.</li>
+</ol>
+
+				<pre>&lt;!-- Ejemplo de un buen enlace --&gt;
+&lt;a href=&quot;https://www.w3.org/WAI/&quot;&gt;Gu&iacute;a de accesibilidad web de la W3C&lt;/a&gt;</pre>
+	
+<!--
 <div class="row">
 	<div class="col-4" style="margin-bottom: 1rem;">
 		<div class="card">
@@ -128,53 +175,8 @@
 			</div>
 	</div>
 </div>
-
-
-
-		    	<h2><a id="index_0"></a>Creación de enlaces en HTML</h2>
-				    	<h3><a id="index_1"></a>La etiqueta `<a>`</h3>
-						<p>La etiqueta <code>&lt;a&gt;</code> es utilizada para crear enlaces en HTML. Estos enlaces permiten a los usuarios navegar entre páginas web, descargar archivos, o realizar otras acciones al hacer clic en el texto o elemento enlazado. El atributo más importante de <code>&lt;a&gt;</code> es <code>href</code>, que especifica la URL o el destino del enlace.</p>
-
-				<pre>&lt;a href=&quot;https://example.com&quot;&gt;Visita nuestro sitio web&lt;/a&gt;</pre>
-		    	<h3><a id="index_2"></a>Enlaces internos y anclajes</h3>
-						<p>Además de enlazar a otras páginas, puedes crear enlaces que dirijan al usuario a diferentes partes dentro de la misma página utilizando anclajes. Para ello, se utilizan los atributos <code>id</code> en el destino y <code>href</code> con el valor del <code>id</code> precedido por un <code>#</code>.</p>
-
-				<pre>&lt;!-- Enlace interno --&gt;
-&lt;a href=&quot;#seccion1&quot;&gt;Ir a la Secci&oacute;n 1&lt;/a&gt;
-
-&lt;!-- Destino del enlace --&gt;
-&lt;h2 id=&quot;seccion1&quot;&gt;Secci&oacute;n 1&lt;/h2&gt;
-&lt;p&gt;Este es el contenido de la Secci&oacute;n 1.&lt;/p&gt;</pre>
-		    	<h3><a id="index_3"></a>Enlaces externos</h3>
-						<p>Los enlaces que apuntan a otras páginas web fuera del sitio actual se consideran enlaces externos. Es importante tener en cuenta la seguridad y usabilidad al crear estos enlaces. El atributo <code>target=&quot;_blank&quot;</code> puede utilizarse para abrir el enlace en una nueva pestaña o ventana del navegador.</p>
-
-				<pre>&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot;&gt;Visita Example.com en una nueva pesta&ntilde;a&lt;/a&gt;</pre>
-		    	<h3><a id="index_4"></a>Enlaces de descarga</h3>
-						<p>HTML permite que un enlace apunte a un archivo que se descargará al hacer clic en él, en lugar de abrirlo en el navegador. Esto se logra utilizando el atributo <code>download</code> en la etiqueta <code>&lt;a&gt;</code>.</p>
-
-				<pre>&lt;a href=&quot;archivo.pdf&quot; download&gt;Descargar archivo PDF&lt;/a&gt;</pre>
-		    	<h3><a id="index_5"></a>Navegación con listas</h3>
-						<p>Es común ver que los menús de navegación se crean utilizando listas no ordenadas (<code>&lt;ul&gt;</code>) con elementos de lista (<code>&lt;li&gt;</code>) que contienen enlaces (<code>&lt;a&gt;</code>). Esto es una práctica estándar en el desarrollo web, ya que facilita la organización y el estilo de los menús de navegación.</p>
-
-				<pre>&lt;nav&gt;
-    &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Inicio&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contacto&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;</pre>
-		    	<h2><a id="index_6"></a>Buenas prácticas al usar enlaces</h2>
-						<p>Al trabajar con enlaces en HTML, es importante seguir ciertas buenas prácticas para asegurar la accesibilidad y la experiencia de usuario:</p>
-<ol>
-<li><strong>Texto descriptivo</strong>: El texto del enlace debe ser claro y descriptivo para que los usuarios y los motores de búsqueda comprendan a dónde llevará el enlace.</li>
-<li><strong>Evitar &quot;haz clic aquí&quot;</strong>: En lugar de usar &quot;haz clic aquí&quot;, describe el destino o la acción que se realizará.</li>
-<li><strong>Enlaces accesibles</strong>: Asegúrate de que los enlaces sean accesibles a través del teclado y que los lectores de pantalla puedan interpretarlos correctamente.</li>
-<li><strong>Verificación de enlaces</strong>: Revisa regularmente que los enlaces funcionen y que no conduzcan a páginas inexistentes o rotas.</li>
-</ol>
-
-				<pre>&lt;!-- Ejemplo de un buen enlace --&gt;
-&lt;a href=&quot;https://www.w3.org/WAI/&quot;&gt;Gu&iacute;a de accesibilidad web de la W3C&lt;/a&gt;</pre>
-	    		</div>
+-->
+    		</div>
     		<div class="col col-4">
     			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>
