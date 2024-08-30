@@ -21,7 +21,7 @@ public class VelocityUtils
         
         // Creamos properties
         Properties props = new Properties();
-        props.setProperty("input.encoding", "Cp1252");
+        props.setProperty("input.encoding", "UTF-8");
         props.setProperty("output.encoding", "UTF-8");
         props.setProperty("runtime.log.logsystem.class", "org.swb.velocity.VelocityLogChute");
         props.setProperty("resource.loader", "file");
