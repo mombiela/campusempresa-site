@@ -15,10 +15,10 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-8">
+			<div class="col-8 p-0 m-0">
 				<h2>${lang.get("title")}</h2>
 			</div>
-			<div class="col-4 text-end">
+			<div class="col-4 text-end p-0 m-0">
 				#parse("menu_idioma.vm")
 			</div>
 		</div>
