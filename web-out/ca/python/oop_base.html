@@ -16,11 +16,13 @@
 
 <body>
 	<div id="main_header2" class="container-xxl">
+		<!--
 		<div class="row">
 			<div class="col-12 p-0">
 				<h1 class="m-0 p-0" id="main_title"><a href="/index.html"><img src="/img/logo-web-transparent.png"></h3>
 			</div>
 		</div>
+		-->
 		<div class="row">
 			<div class="col-12 p-0">
 				<h2 id="main_subtitle">Aprenent juns, unint la societat d'avui i demà</h2>
@@ -34,16 +36,23 @@
 		</div>
 	</div>
 
-    <div class="top-bar">
-    	<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
-<a href="donate.html" title="Donaciones">Donaciones</a>
-<a href="contribute.html" title="Contribuir">Contribuir</a>
-<a href="licence.html" title="Licencia">Licencia</a>
+    <div class="top-bar container-fluid">
+    	<div class="container-xxl">
+	<div class="row">
+		<div class="col">
+			<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
+			<a href="donate.html" title="Donaciones">Donaciones</a>
+			<a href="contribute.html" title="Contribuir">Contribuir</a>
+			<a href="licence.html" title="Licencia">Licencia</a>
+		</div>
+	</div>
+</div>
     </div>
 	
-    <div id="main_content" class="clearfix">
-    	<article>
-			
+    <div id="main_content" class="container-xxl">
+    	<div class="row">
+    		<div class="col col-8">
+    			
 
 
 			<p>Las clases son un concepto fundamental en la programación orientada a objetos (OOP) y permiten agrupar datos y funciones en una única entidad llamada &quot;objeto&quot;.</p>
@@ -115,9 +124,9 @@ empleado1.mostrar_salario()  # Output: Carlos gana 50000 d&oacute;lares al a&nti
 <li><strong>Herencia</strong>: Permite crear una nueva clase basada en una clase existente.</li>
 </ul>
 
-		  	</article>
-		<aside id="advertisement">
-	  		<h2>Patrocinadors</h2>
+	    		</div>
+    		<div class="col col-4">
+    			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>
 <p>Vols ser un d'ells? Contacta amb nosaltres:</p>
 <p><a href="mailto:admin@campusempresa.com">admin@campusempresa.com</a></p>
@@ -135,7 +144,8 @@ empleado1.mostrar_salario()  # Output: Carlos gana 50000 d&oacute;lares al a&nti
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-	  	</aside>
+    		</div>
+    	</div>
 	</div>
 	
 	<footer><p>&copy; 2024 - Tots els drets reservats.</p></footer>

@@ -16,11 +16,13 @@
 
 <body>
 	<div id="main_header2" class="container-xxl">
+		<!--
 		<div class="row">
 			<div class="col-12 p-0">
 				<h1 class="m-0 p-0" id="main_title"><a href="/index.html"><img src="/img/logo-web-transparent.png"></h3>
 			</div>
 		</div>
+		-->
 		<div class="row">
 			<div class="col-12 p-0">
 				<h2 id="main_subtitle">Aprenent juns, unint la societat d'avui i demà</h2>
@@ -34,16 +36,23 @@
 		</div>
 	</div>
 
-    <div class="top-bar">
-    	<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
-<a href="donate.html" title="Donaciones">Donaciones</a>
-<a href="contribute.html" title="Contribuir">Contribuir</a>
-<a href="licence.html" title="Licencia">Licencia</a>
+    <div class="top-bar container-fluid">
+    	<div class="container-xxl">
+	<div class="row">
+		<div class="col">
+			<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
+			<a href="donate.html" title="Donaciones">Donaciones</a>
+			<a href="contribute.html" title="Contribuir">Contribuir</a>
+			<a href="licence.html" title="Licencia">Licencia</a>
+		</div>
+	</div>
+</div>
     </div>
 	
-    <div id="main_content" class="clearfix">
-    	<article>
-			
+    <div id="main_content" class="container-xxl">
+    	<div class="row">
+    		<div class="col col-8">
+    			
 
 
 			<p>La División de Datos en un programa COBOL es fundamental, ya que declara todas las variables y estructuras de datos que el programa utilizará. Esta división permite organizar y definir de manera detallada cómo se almacenan y manejan los datos en el programa. Se divide en tres secciones principales:</p>
@@ -79,9 +88,9 @@ LINKAGE SECTION.
 				<p>En este ejemplo, la sección FILE define un archivo llamado <code>EmployeeFile</code> con una estructura de registro que incluye el ID del empleado, el nombre y el salario. La sección WORKING-STORAGE declara variables temporales para contar empleados y sumar los salarios totales. La sección LINKAGE define parámetros que se pasan a este programa desde otros programas.</p>
 <p>La División de Datos es crucial para establecer cómo se manejan los datos dentro del programa COBOL, asegurando que todos los elementos de datos estén claramente definidos y organizados. Esta estructura facilita el manejo de datos complejos y asegura que el programa pueda acceder y manipular la información de manera eficiente.</p>
 
-		  	</article>
-		<aside id="advertisement">
-	  		<h2>Patrocinadors</h2>
+	    		</div>
+    		<div class="col col-4">
+    			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>
 <p>Vols ser un d'ells? Contacta amb nosaltres:</p>
 <p><a href="mailto:admin@campusempresa.com">admin@campusempresa.com</a></p>
@@ -99,7 +108,8 @@ LINKAGE SECTION.
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-	  	</aside>
+    		</div>
+    	</div>
 	</div>
 	
 	<footer><p>&copy; 2024 - Tots els drets reservats.</p></footer>

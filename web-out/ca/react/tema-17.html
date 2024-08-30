@@ -16,11 +16,13 @@
 
 <body>
 	<div id="main_header2" class="container-xxl">
+		<!--
 		<div class="row">
 			<div class="col-12 p-0">
 				<h1 class="m-0 p-0" id="main_title"><a href="/index.html"><img src="/img/logo-web-transparent.png"></h3>
 			</div>
 		</div>
+		-->
 		<div class="row">
 			<div class="col-12 p-0">
 				<h2 id="main_subtitle">Aprenent juns, unint la societat d'avui i demà</h2>
@@ -34,20 +36,32 @@
 		</div>
 	</div>
 
-    <div class="top-bar">
-    	<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
-<a href="donate.html" title="Donaciones">Donaciones</a>
-<a href="contribute.html" title="Contribuir">Contribuir</a>
-<a href="licence.html" title="Licencia">Licencia</a>
+    <div class="top-bar container-fluid">
+    	<div class="container-xxl">
+	<div class="row">
+		<div class="col">
+			<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
+			<a href="donate.html" title="Donaciones">Donaciones</a>
+			<a href="contribute.html" title="Contribuir">Contribuir</a>
+			<a href="licence.html" title="Licencia">Licencia</a>
+		</div>
+	</div>
+</div>
     </div>
 	
-    <div id="main_content" class="clearfix">
-    	<article>
-				<div class="column row book_nav clearfix">
+    <div id="main_content" class="container-xxl">
+    	<div class="row">
+    		<div class="col col-8">
+    				<div class="book_nav row">
 		
-		           	<a style="float:left;"	href="tema-16" title="Anterior">&#x25C4; Anterior</a>
+		<div class="col-6">
+				           	<a style="float:left;"	href="tema-16" title="Anterior">&#x25C4; Anterior</a>
+					</div>
+		
+		<div class="col-6">
 				           	<a style="float:right;" href="tema-18" title="Següent">Següent &#x25BA;</a>
-			</div>
+					</div>
+	</div>
 
 
 
@@ -173,9 +187,9 @@ function ListaProductos() {
 				    	<h3><a id="index_13"></a>Resumen sobre Parámetros en la URL</h3>
 						<p>El uso de parámetros en la URL es una funcionalidad poderosa en React Router que permite crear rutas dinámicas y flexibles. Con <code>useParams</code> y la capacidad de manejar múltiples y opcionales parámetros, puedes construir aplicaciones React que respondan de manera eficiente a las necesidades de navegación de tus usuarios. En los próximos temas, exploraremos cómo proteger rutas y manejar la autenticación en aplicaciones React con React Router.</p>
 
-		  	</article>
-		<aside id="advertisement">
-	  		<h2>Patrocinadors</h2>
+	    		</div>
+    		<div class="col col-4">
+    			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>
 <p>Vols ser un d'ells? Contacta amb nosaltres:</p>
 <p><a href="mailto:admin@campusempresa.com">admin@campusempresa.com</a></p>
@@ -193,7 +207,8 @@ function ListaProductos() {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-	  	</aside>
+    		</div>
+    	</div>
 	</div>
 	
 	<footer><p>&copy; 2024 - Tots els drets reservats.</p></footer>

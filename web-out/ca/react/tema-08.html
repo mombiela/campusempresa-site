@@ -16,11 +16,13 @@
 
 <body>
 	<div id="main_header2" class="container-xxl">
+		<!--
 		<div class="row">
 			<div class="col-12 p-0">
 				<h1 class="m-0 p-0" id="main_title"><a href="/index.html"><img src="/img/logo-web-transparent.png"></h3>
 			</div>
 		</div>
+		-->
 		<div class="row">
 			<div class="col-12 p-0">
 				<h2 id="main_subtitle">Aprenent juns, unint la societat d'avui i demà</h2>
@@ -34,20 +36,32 @@
 		</div>
 	</div>
 
-    <div class="top-bar">
-    	<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
-<a href="donate.html" title="Donaciones">Donaciones</a>
-<a href="contribute.html" title="Contribuir">Contribuir</a>
-<a href="licence.html" title="Licencia">Licencia</a>
+    <div class="top-bar container-fluid">
+    	<div class="container-xxl">
+	<div class="row">
+		<div class="col">
+			<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
+			<a href="donate.html" title="Donaciones">Donaciones</a>
+			<a href="contribute.html" title="Contribuir">Contribuir</a>
+			<a href="licence.html" title="Licencia">Licencia</a>
+		</div>
+	</div>
+</div>
     </div>
 	
-    <div id="main_content" class="clearfix">
-    	<article>
-				<div class="column row book_nav clearfix">
+    <div id="main_content" class="container-xxl">
+    	<div class="row">
+    		<div class="col col-8">
+    				<div class="book_nav row">
 		
-		           	<a style="float:left;"	href="tema-07" title="Anterior">&#x25C4; Anterior</a>
+		<div class="col-6">
+				           	<a style="float:left;"	href="tema-07" title="Anterior">&#x25C4; Anterior</a>
+					</div>
+		
+		<div class="col-6">
 				           	<a style="float:right;" href="tema-09" title="Següent">Següent &#x25BA;</a>
-			</div>
+					</div>
+	</div>
 
 
 
@@ -191,9 +205,9 @@ function FormularioValidacion() {
 				    	<h3><a id="index_11"></a>Resumen sobre Formularios en React</h3>
 						<p>Los formularios en React pueden ser gestionados de manera eficiente utilizando componentes controlados y no controlados. Es importante entender cuándo utilizar cada enfoque y cómo manejar la validación de datos. Dominar estos conceptos te permitirá crear formularios robustos y dinámicos que mejoren la interacción del usuario con tu aplicación. En los próximos temas, exploraremos la diferencia entre componentes controlados y no controlados en mayor profundidad.</p>
 
-		  	</article>
-		<aside id="advertisement">
-	  		<h2>Patrocinadors</h2>
+	    		</div>
+    		<div class="col col-4">
+    			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>
 <p>Vols ser un d'ells? Contacta amb nosaltres:</p>
 <p><a href="mailto:admin@campusempresa.com">admin@campusempresa.com</a></p>
@@ -211,7 +225,8 @@ function FormularioValidacion() {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-	  	</aside>
+    		</div>
+    	</div>
 	</div>
 	
 	<footer><p>&copy; 2024 - Tots els drets reservats.</p></footer>

@@ -16,11 +16,13 @@
 
 <body>
 	<div id="main_header2" class="container-xxl">
+		<!--
 		<div class="row">
 			<div class="col-12 p-0">
 				<h1 class="m-0 p-0" id="main_title"><a href="/index.html"><img src="/img/logo-web-transparent.png"></h3>
 			</div>
 		</div>
+		-->
 		<div class="row">
 			<div class="col-12 p-0">
 				<h2 id="main_subtitle">Aprenent juns, unint la societat d'avui i demà</h2>
@@ -34,20 +36,32 @@
 		</div>
 	</div>
 
-    <div class="top-bar">
-    	<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
-<a href="donate.html" title="Donaciones">Donaciones</a>
-<a href="contribute.html" title="Contribuir">Contribuir</a>
-<a href="licence.html" title="Licencia">Licencia</a>
+    <div class="top-bar container-fluid">
+    	<div class="container-xxl">
+	<div class="row">
+		<div class="col">
+			<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
+			<a href="donate.html" title="Donaciones">Donaciones</a>
+			<a href="contribute.html" title="Contribuir">Contribuir</a>
+			<a href="licence.html" title="Licencia">Licencia</a>
+		</div>
+	</div>
+</div>
     </div>
 	
-    <div id="main_content" class="clearfix">
-    	<article>
-				<div class="column row book_nav clearfix">
+    <div id="main_content" class="container-xxl">
+    	<div class="row">
+    		<div class="col col-8">
+    				<div class="book_nav row">
 		
-		           	<a style="float:left;"	href="tema-09" title="Anterior">&#x25C4; Anterior</a>
+		<div class="col-6">
+				           	<a style="float:left;"	href="tema-09" title="Anterior">&#x25C4; Anterior</a>
+					</div>
+		
+		<div class="col-6">
 				           	<a style="float:right;" href="tema-11" title="Següent">Següent &#x25BA;</a>
-			</div>
+					</div>
+	</div>
 
 
 
@@ -174,9 +188,9 @@ function MiComponente() {
 				    	<h3><a id="index_12"></a>Resumen sobre Refs y el DOM en React</h3>
 						<p>Las refs en React proporcionan una herramienta poderosa para manejar interacciones directas con el DOM y componentes React, aunque deben usarse con cuidado para evitar comprometer la integridad del flujo de datos de React. Entender cuándo y cómo utilizar refs correctamente te permitirá resolver ciertos problemas de manera efectiva sin comprometer el diseño declarativo que hace a React tan poderoso. En los próximos temas, exploraremos más sobre la administración del estado y el uso de Context API en React.</p>
 
-		  	</article>
-		<aside id="advertisement">
-	  		<h2>Patrocinadors</h2>
+	    		</div>
+    		<div class="col col-4">
+    			<h2>Patrocinadors</h2>
 <p>Vols ser el nostre patrocinador? De moment no tenim patrocinadors oficials, però estem oberts a propostes.</p>
 <p>Vols ser un d'ells? Contacta amb nosaltres:</p>
 <p><a href="mailto:admin@campusempresa.com">admin@campusempresa.com</a></p>
@@ -194,7 +208,8 @@ function MiComponente() {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-	  	</aside>
+    		</div>
+    	</div>
 	</div>
 	
 	<footer><p>&copy; 2024 - Tots els drets reservats.</p></footer>

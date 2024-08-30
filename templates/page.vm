@@ -7,11 +7,13 @@
 
 <body>
 	<div id="main_header2" class="container-xxl">
+		<!--
 		<div class="row">
 			<div class="col-12 p-0">
 				<h1 class="m-0 p-0" id="main_title"><a href="/index.html"><img src="/img/logo-web-transparent.png"></h3>
 			</div>
 		</div>
+		-->
 		<div class="row">
 			<div class="col-12 p-0">
 				<h2 id="main_subtitle">${lang.get("title")}</h2>
@@ -24,17 +26,19 @@
 		</div>
 	</div>
 
-    <div class="top-bar">
+    <div class="top-bar container-fluid">
     	#parse("/menu_top.vm")
     </div>
 	
-    <div id="main_content" class="clearfix">
-    	<article>
-			#parse("/doc.vm")	
-	  	</article>
-		<aside id="advertisement">
-	  		#parse("/ads.vm")
-	  	</aside>
+    <div id="main_content" class="container-xxl">
+    	<div class="row">
+    		<div class="col col-8">
+    			#parse("/doc.vm")
+    		</div>
+    		<div class="col col-4">
+    			#parse("/ads.vm")
+    		</div>
+    	</div>
 	</div>
 	
 	<footer>${lang.get("foot.1")}</footer>

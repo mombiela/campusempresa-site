@@ -16,11 +16,13 @@
 
 <body>
 	<div id="main_header2" class="container-xxl">
+		<!--
 		<div class="row">
 			<div class="col-12 p-0">
 				<h1 class="m-0 p-0" id="main_title"><a href="/index.html"><img src="/img/logo-web-transparent.png"></h3>
 			</div>
 		</div>
+		-->
 		<div class="row">
 			<div class="col-12 p-0">
 				<h2 id="main_subtitle">Aprendiendo juntos, uniendo la sociedad de hoy y mañana</h2>
@@ -34,20 +36,32 @@
 		</div>
 	</div>
 
-    <div class="top-bar">
-    	<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
-<a href="donate.html" title="Donaciones">Donaciones</a>
-<a href="contribute.html" title="Contribuir">Contribuir</a>
-<a href="licence.html" title="Licencia">Licencia</a>
+    <div class="top-bar container-fluid">
+    	<div class="container-xxl">
+	<div class="row">
+		<div class="col">
+			<a href="about.html" title="Sobre nosotros">Sobre nosotros</a>
+			<a href="donate.html" title="Donaciones">Donaciones</a>
+			<a href="contribute.html" title="Contribuir">Contribuir</a>
+			<a href="licence.html" title="Licencia">Licencia</a>
+		</div>
+	</div>
+</div>
     </div>
 	
-    <div id="main_content" class="clearfix">
-    	<article>
-				<div class="column row book_nav clearfix">
+    <div id="main_content" class="container-xxl">
+    	<div class="row">
+    		<div class="col col-8">
+    				<div class="book_nav row">
 		
-		           	<a style="float:left;"	href="tema-15" title="Anterior">&#x25C4; Anterior</a>
+		<div class="col-6">
+				           	<a style="float:left;"	href="tema-15" title="Anterior">&#x25C4; Anterior</a>
+					</div>
+		
+		<div class="col-6">
 				           	<a style="float:right;" href="tema-17" title="Siguiente">Siguiente &#x25BA;</a>
-			</div>
+					</div>
+	</div>
 
 
 
@@ -197,9 +211,9 @@ function App() {
 				    	<h3><a id="index_13"></a>Resumen sobre Navegación en React</h3>
 						<p>La navegación entre componentes es fundamental para crear aplicaciones React dinámicas y usables. Con herramientas como <code>Link</code>, <code>useNavigate</code>, y las rutas anidadas, React Router ofrece una solución completa para manejar la navegación de manera eficiente. Entender cómo implementar y gestionar la navegación te permitirá desarrollar aplicaciones más intuitivas y fáciles de usar. En los próximos temas, exploraremos aspectos más avanzados de React Router, como la protección de rutas y la implementación de la navegación basada en roles.</p>
 
-		  	</article>
-		<aside id="advertisement">
-	  		<h2>Patrocinadores</h2>
+	    		</div>
+    		<div class="col col-4">
+    			<h2>Patrocinadores</h2>
 <p>¿Quieres ser nuestro patrocinador? De momento no tenemos patrocinadores oficiales, pero estamos abiertos a propuestas.</p>
 <p>¿Quieres ser uno de ellos? Contacta con nosotros:</p>
 <p><a href="mailto:admin@campusempresa.com">admin@campusempresa.com</a></p>
@@ -217,7 +231,8 @@ function App() {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-	  	</aside>
+    		</div>
+    	</div>
 	</div>
 	
 	<footer><p>&copy; 2024 - Todos los derechos reservados.</p></footer>
