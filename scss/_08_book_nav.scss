@@ -1,14 +1,10 @@
-/* ******** */
-/* book_nav */
-/* ******** */
-
-div.book_nav {
+.book_nav {
 	margin-top: 0;
 	margin-bottom: 1em;	
 }
 
-div.book_nav a {
-	color: #dd7737;
+.book_nav a {
+	color: $color1;
 	text-decoration: none;
 }
 
