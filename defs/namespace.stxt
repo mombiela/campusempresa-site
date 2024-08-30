@@ -21,6 +21,11 @@ Namespace: campusempresa.org/namespace.stxt
 		Code: (*) TEXT
 		Plantuml: (*) TEXT
 		Html: (*) TEXT
+		Grid: (*)
+			Card: (+)
+				Title: (1)
+				url: (1)
+				Content: (1)
 
 	Default:
 		Title: (1)

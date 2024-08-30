@@ -31,6 +31,23 @@
 		<div class="row">
     		<div class="alert">${wiki.render($node.text)}</div>
     	</div>
+	#elseif(${node.name} == "grid")
+		<div class="row mb-3">
+		#foreach($elem in $node.getChilds())
+			<div class="col-4">
+				<div class="card">
+				<a href="${elem.getChild("url").getText()}">
+					  <div class="card-body" style="background-color:#eee">
+					    <h3 class="card-title" >${elem.getChild("title").getText()}</h3>
+					  </div>
+					  <div class="card-body">
+					  	${wiki.render(${elem.getChild("content").getText()})}
+					  </div>
+				 </a>
+				</div>
+			</div>
+		#end
+		</div>
 	#end
 #end
 
@@ -83,18 +100,6 @@
 		    <a href="#" class="card-link">Another link</a>
 		  </div>
 		</div>
-	</div>
-	<div class="col-4">
-			<div class="card">
-			<a href="react/">
-				  <div class="card-body" style="background-color:#eee">
-				    <h3 class="card-title" >Frameworks y tecnologías</h3>
-				  </div>
-				  <div class="card-body">
-				  	<p>Te enseñamos las tecnologías más actuales en Frameworks</p>
-				  </div>
-			 </a>
-			</div>
 	</div>
 </div>
 -->
