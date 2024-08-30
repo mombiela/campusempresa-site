@@ -41,7 +41,13 @@
     	</div>
 	</div>
 	
-	<footer>${lang.get("foot.1")}</footer>
+    <div class="container-xxl mt-3">
+		<div class="row">
+			<div class="col">
+				<footer>${lang.get("foot.1")}</footer>
+			</div>
+		</div>
+	</div>	
 	
 	<div id="cookies_adv">
 		${lang.get("cookies_1")}
