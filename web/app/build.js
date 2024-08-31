@@ -74,5 +74,8 @@ export async function buildContent(content, stxtUrl)
 	// Cookies
     checkCookies();
     $("#btn_accept_cookies").click(accept);
+    
+    // Lang
+    $("#lnk_lang_es,#lnk_lang_ca").click(setLang);
 }
 

@@ -1,15 +1,14 @@
-function setLang(dest_lang)
+function setLang(ev)
 {
-	var pathact = window.location.pathname.substring(4);
-	var newlocation = "/" + dest_lang + "/" + pathact;
-	Cookies.set('lang', dest_lang, {expires: 365});
-	window.location.href = newlocation;
+	let elem = $(ev.target);
+	localStorage.setItem("lang", elem.data("lang"));
+	window.location.reload();
 }
 
 function getLang()
 {
 	let lang = localStorage.getItem("lang");
-	if (!lang)
+	if (!lang || (lang != "es" && lang != "ca"))
 	{
 		lang = "es"; // TODO Hacer por dominio
 		localStorage.setItem("lang", lang);
