@@ -6,6 +6,17 @@ function setLang(dest_lang)
 	window.location.href = newlocation;
 }
 
+function getLang()
+{
+	let lang = localStorage.getItem("lang");
+	if (!lang)
+	{
+		lang = "es"; // TODO Hacer por dominio
+		localStorage.setItem("lang", lang);
+	}
+	return lang;
+}
+
 function remove(id)
 {
 	var elem = document.getElementById(id);

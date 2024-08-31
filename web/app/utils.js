@@ -8,21 +8,10 @@ export function esDominioValido(dominio)
     return regexDominio.test(dominio);
 }
 
-export async function getUrlContentCors(url) {
-    const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
-
-    const response = await fetch(proxyUrl);
-
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const text = await response.text();
-    return text;
-}
-
 export function getUrlFromHash(hashIni)
 {
+	let lang = getLang();
+	
 	// Validamos que empieze por "#"
 	let hash = hashIni;
 	if (!hash.startsWith("#")) throw new Error("Page not valid");
@@ -52,7 +41,7 @@ export function getUrlFromHash(hashIni)
 	}
 	else if (esNombrePaginaValido(stxtUrl))
 	{
-		stxtUrl = obtenerBaseURL() + "/" + stxtUrl;	
+		stxtUrl = obtenerBaseURL() + "/" + lang + "/" + stxtUrl;	
 	}
 	else
 	{
