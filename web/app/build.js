@@ -76,6 +76,17 @@ export async function buildContent(content, stxtUrl)
     $("#btn_accept_cookies").click(accept);
     
     // Lang
+    let lang = getLang();
     $("#lnk_lang_es,#lnk_lang_ca").click(setLang);
+	if (lang == "es")
+	{
+		$("#lit_lang_ca").hide();
+		$("#lnk_lang_es").hide();
+	}
+	else // ca
+	{
+		$("#lit_lang_es").hide();
+		$("#lnk_lang_ca").hide();
+	}
 }
 

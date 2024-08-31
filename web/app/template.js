@@ -18,9 +18,9 @@ export const mainConent = `
 	<div class="container-xxl" style="margin-top: -1em;">
 		<div class="row">
 			<div class="col-12 p-0 m-0 text-end">
-				<a href="#" id="lnk_lang_es" data-lang="es">Castellano</a>
+				<a href="#" id="lnk_lang_es" data-lang="es">Castellano</a><b id="lit_lang_es">Castellano</b>
 				|
-				<a href="#" id="lnk_lang_ca" data-lang="ca">Català</a>
+				<a href="#" id="lnk_lang_ca" data-lang="ca">Català</a><b id="lit_lang_ca">Catala</b>
 			</div>
 		</div>
 	</div>
