@@ -54,7 +54,7 @@ export const mainConent = `
 	
 	<div id="cookies_adv">
 		Fem servir galetes per millorar la teva experiència d'ús i oferir continguts adaptats als teus interessos
-        <a href="javascript:accept();" class="button">Entès!</a>
+        <a href="#" id="btn_accept_cookies" class="button">Entès!</a>
         <a href="cookies.html">Més informació</a>
     </div>	
 `;

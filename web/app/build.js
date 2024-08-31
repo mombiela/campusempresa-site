@@ -73,5 +73,6 @@ export async function buildContent(content, stxtUrl)
 	
 	// Cookies
     checkCookies();
+    $("#btn_accept_cookies").click(accept);
 }
 
