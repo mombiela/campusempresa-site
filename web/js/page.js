@@ -23,3 +23,4 @@ function checkCookies()
 	var x = Cookies.get('cookies_informed');
 	if (x == "OK") remove("cookies_adv");
 }
+

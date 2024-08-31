@@ -70,5 +70,8 @@ export async function buildContent(content, stxtUrl)
 
 	// Mathjax
 	window["mathReload"]();
+	
+	// Cookies
+    checkCookies();
 }
 
