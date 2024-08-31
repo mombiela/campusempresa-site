@@ -8,7 +8,16 @@ export async function getDefaultValues(hash, parser, mainNode)
 	let result = {};
 	try
 	{
-		const defaultNode = await getDefaultNode(hash, parser);
+		let defaultNode = null;
+		try
+		{
+			defaultNode = await getDefaultNode(hash, parser);
+		}
+		catch (error)
+		{
+			console.log(error);			
+		}
+		
 		const customDefault = mainNode.getChild("default");
 		
 		// -----------------------
@@ -61,6 +70,7 @@ export async function getDefaultValues(hash, parser, mainNode)
 	{
 		console.log(e);
 	}
+	
 	return result;
 }
 
