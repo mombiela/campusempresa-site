@@ -1,3 +1,7 @@
+import {getLiterals} from './literals.js';
+
+let literals = getLiterals(getLang());
+
 export const mainConent = `
 	<div id="header" class="container-xxl">
 		<div class="row">
@@ -24,7 +28,7 @@ export const mainConent = `
 		<div class="container-xxl">
 			<div class="row">
 				<div class="col">
-					<a href="#about">Sobre nosaltres</a>
+					<a href="#about">${literals.about}</a>
 					<a href="#donate">Donacions</a>
 					<a href="#contribute">Contribuir</a>
 					<a href="#licence">Licencia</a>
