@@ -1,0 +1,110 @@
+Document (campusempresa.org/namespace.stxt): Tema 16: Buenas prácticas y optimización en HTML
+	Navigation:
+		Previous: Anterior (tema-15)
+		Next: Siguiente (tema-17)
+	Header: Introducción a las buenas prácticas en HTML
+	Subheader: Mantén el código limpio y semántico
+
+	Content:
+		Escribir código HTML limpio y semántico es una de las mejores prácticas más importantes en el desarrollo web. Un código bien estructurado es más fácil de mantener, comprender y depurar. Además, ayuda a que los motores de búsqueda y las tecnologías de asistencia interpreten correctamente el contenido de la página.
+
+		**Consejos para un código HTML limpio**:
+		1. **Utiliza etiquetas semánticas**: Usa etiquetas como `<header>`, `<section>`, `<article>`, y `<footer>` para estructurar el contenido de manera lógica.
+		2. **Evita el uso excesivo de `div` y `span`**: Estas etiquetas deben usarse solo cuando no haya etiquetas más semánticas disponibles.
+		3. **Indentación adecuada**: Asegúrate de que tu código esté correctamente indentado para mejorar la legibilidad.
+
+	Code:
+		<!-- Ejemplo de HTML semántico -->
+		<article>
+			<header>
+				<h1>Título del artículo</h1>
+				<p>Publicado el 27 de agosto de 2024</p>
+			</header>
+			<section>
+				<p>Este es el contenido principal del artículo.</p>
+			</section>
+			<footer>
+				<p>Autor: Juan Pérez</p>
+			</footer>
+		</article>
+
+	Subheader: Optimización del rendimiento
+
+	Content:
+		La optimización del rendimiento es crucial para mejorar la velocidad de carga de las páginas y proporcionar una mejor experiencia de usuario. Un sitio web rápido y eficiente también tiene un mejor posicionamiento en los motores de búsqueda.
+
+		**Consejos para optimizar el rendimiento**:
+		1. **Minimiza los archivos**: Reduce el tamaño de los archivos HTML, CSS y JavaScript minificándolos.
+		2. **Usa imágenes optimizadas**: Comprime las imágenes sin perder calidad significativa y utiliza formatos de imagen modernos como WebP.
+		3. **Carga diferida (lazy loading)**: Implementa la carga diferida para imágenes y videos que no se necesitan inmediatamente.
+		4. **Reduce las solicitudes HTTP**: Combina archivos CSS y JavaScript cuando sea posible y utiliza sprites para las imágenes pequeñas.
+
+	Code:
+		<!-- Ejemplo de carga diferida de imágenes -->
+		<img src="imagen-placeholder.jpg" data-src="imagen-real.jpg" alt="Descripción de la imagen" loading="lazy">
+
+	Subheader: Mejora la accesibilidad y SEO
+
+	Content:
+		La accesibilidad y la optimización para motores de búsqueda (SEO) están estrechamente relacionadas, ya que ambos dependen de la correcta estructuración del contenido y del uso adecuado de etiquetas. Al seguir buenas prácticas de accesibilidad, también mejoras el SEO de tu sitio.
+
+		**Consejos para mejorar la accesibilidad y SEO**:
+		1. **Usa títulos jerárquicos (`<h1>` a `<h6>`)**: Estructura el contenido con títulos apropiados, lo que facilita la navegación para los usuarios y los motores de búsqueda.
+		2. **Incluye texto alternativo para las imágenes (`alt`)**: Mejora la accesibilidad y permite a los motores de búsqueda indexar mejor las imágenes.
+		3. **Proporciona descripciones significativas en los enlaces**: Evita usar "haz clic aquí" como texto de enlace y usa descripciones claras del destino del enlace.
+
+	Code:
+		<!-- Ejemplo de buena práctica de SEO y accesibilidad -->
+		<h1>Guía de optimización web</h1>
+		<p>Aprende a optimizar tu sitio web para mejorar el rendimiento y la accesibilidad.</p>
+		<a href="guia-seo.html">Lee nuestra guía completa de SEO</a>
+
+	Subheader: Evita los elementos obsoletos y malas prácticas
+
+	Content:
+		HTML ha evolucionado significativamente y algunas etiquetas y atributos han quedado obsoletos. Usar elementos obsoletos puede afectar negativamente la accesibilidad, el rendimiento y la compatibilidad futura del sitio.
+
+		**Elementos y prácticas a evitar**:
+		1. **Evita las tablas para el diseño**: Las tablas deben utilizarse solo para organizar datos tabulares, no para estructurar el diseño de la página.
+		2. **No uses etiquetas y atributos obsoletos**: Evita etiquetas como `<font>`, `<center>`, y atributos como `bgcolor` en favor de CSS.
+		3. **No sobrecargues tu HTML con JavaScript**: Mantén el código JavaScript separado en archivos externos y evita el uso excesivo de scripts en línea.
+
+	Code:
+		<!-- Ejemplo de malas prácticas a evitar -->
+		<!-- Mal uso de tablas para diseño -->
+		<table>
+			<tr>
+				<td>Contenido 1</td>
+				<td>Contenido 2</td>
+			</tr>
+		</table>
+
+		<!-- Uso obsoleto de la etiqueta <font> -->
+		<font color="red">Este es un texto en rojo</font>
+
+	Subheader: Uso correcto de formularios
+
+	Content:
+		Los formularios son una parte integral de muchas páginas web y deben seguir ciertas buenas prácticas para ser efectivos, accesibles y seguros.
+
+		**Consejos para formularios**:
+		1. **Usa etiquetas `<label>` correctamente**: Asegúrate de que todos los campos del formulario estén asociados con una etiqueta.
+		2. **Valida el formulario tanto en el cliente como en el servidor**: La validación del lado del cliente mejora la experiencia del usuario, mientras que la validación del lado del servidor asegura la seguridad.
+		3. **Simplifica la experiencia del usuario**: Utiliza atributos como `placeholder`, `required`, y `autofocus` para guiar al usuario en la interacción con el formulario.
+
+	Code:
+		<!-- Ejemplo de formulario con buenas prácticas -->
+		<form action="/submit-form" method="POST">
+			<label for="email">Correo electrónico:</label>
+			<input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+			<label for="mensaje">Mensaje:</label>
+			<textarea id="mensaje" name="mensaje" required></textarea>
+
+			<button type="submit">Enviar</button>
+		</form>
+
+	Header: Conclusión sobre buenas prácticas y optimización en HTML
+	
+	Content: 
+		Seguir buenas prácticas de HTML no solo mejora la legibilidad y mantenibilidad del código, sino que también optimiza el rendimiento, la accesibilidad y el SEO del sitio web. Asegurarse de que el código esté limpio, semántico y eficiente es clave para ofrecer una mejor experiencia de usuario y para asegurar que el sitio esté preparado para futuras actualizaciones y tecnologías.

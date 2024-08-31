@@ -1,0 +1,270 @@
+Document (campusempresa.org/namespace.stxt): Uso de SQL en programas COBOL
+	
+	Content: 
+	    El uso de SQL en programas COBOL permite integrar sentencias SQL directamente dentro del código COBOL, facilitando la interacción con bases de datos relacionales. Este enfoque, conocido como Embedded SQL (SQL embebido), es esencial para realizar operaciones como consultas, inserciones, actualizaciones y eliminaciones de datos en bases de datos. A continuación, se describen las técnicas y ejemplos para el uso de SQL en programas COBOL.
+	    
+	Header: Configuración inicial
+	
+	Content:
+	    
+	    Para utilizar SQL embebido en COBOL, es necesario incluir la estructura SQL Communication Area (SQLCA) que maneja el estado y los errores de SQL.
+	    
+	Subheader: Incluir SQLCA
+	
+	Content:
+	    
+	Code:
+	    EXEC SQL INCLUDE SQLCA END-EXEC.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  ```EXEC SQL INCLUDE SQLCA END-EXEC``` incluye la estructura SQLCA, que es utilizada para manejar errores y condiciones SQL.
+	    
+	Header: Conexión a la base de datos
+	
+	Content:
+	    
+	    Para conectarse a una base de datos, se utiliza la sentencia ```CONNECT```.
+	    
+	Subheader: Ejemplo de conexión a la base de datos
+	
+	Content:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 DB-CONNECTION-INFO.
+	    05 DB-USER PIC X(20) VALUE 'usuario'.
+	    05 DB-PASSWORD PIC X(20) VALUE 'contraseña'.
+	    05 DB-NAME PIC X(20) VALUE 'nombre_db'.
+	    
+	    PROCEDURE DIVISION.
+	    Conectar-Base-De-Datos.
+	    EXEC SQL
+	    CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD
+	    USING :DB-NAME
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error conectando a la base de datos: ' SQLCODE.
+	    END-IF.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  ```EXEC SQL CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD USING :DB-NAME END-EXEC``` establece la conexión a la base de datos utilizando las credenciales proporcionadas.
+	    *  ```SQLCODE``` se verifica para asegurar que la conexión fue exitosa.
+	    
+	Header: Consultas a la base de datos
+	
+	Content:
+	    
+	    Para realizar consultas en la base de datos, se utiliza la sentencia ```SELECT``` embebida.
+	    
+	Subheader: Ejemplo de consulta a la base de datos
+	
+	Content:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 CLIENTE-ID PIC 9(5).
+	    01 CLIENTE-NOMBRE PIC X(30).
+	    01 CLIENTE-DIRECCION PIC X(50).
+	    
+	    PROCEDURE DIVISION.
+	    Consultar-Base-De-Datos.
+	    EXEC SQL
+	    SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION
+	    INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION
+	    FROM CLIENTES
+	    WHERE CLIENTE_ID = 12345
+	    END-EXEC.
+	    
+	    IF SQLCODE = 0
+	    DISPLAY 'Cliente ID: ' CLIENTE-ID.
+	    DISPLAY 'Cliente Nombre: ' CLIENTE-NOMBRE.
+	    DISPLAY 'Cliente Dirección: ' CLIENTE-DIRECCION.
+	    ELSE
+	    DISPLAY 'Error en consulta: ' SQLCODE.
+	    END-IF.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  ```EXEC SQL SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION FROM CLIENTES WHERE CLIENTE_ID = 12345 END-EXEC``` ejecuta una consulta SQL que selecciona los datos del cliente con ```CLIENTE_ID``` igual a 12345.
+	    *  Los resultados se almacenan en las variables definidas en la sección ```WORKING-STORAGE```.
+	    
+	Header: Inserción de datos en la base de datos
+	
+	Content:
+	    
+	    Para insertar nuevos registros en la base de datos, se utiliza la sentencia ```INSERT```.
+	    
+	Subheader: Ejemplo de inserción de datos
+	
+	Content:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Insertar-En-Base-De-Datos.
+	    EXEC SQL
+	    INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION)
+	    VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION)
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error insertando datos: ' SQLCODE.
+	    ELSE
+	    DISPLAY 'Datos insertados correctamente'.
+	    END-IF.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  ```EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC``` inserta un nuevo registro en la tabla CLIENTES.
+	    *  ```SQLCODE``` se verifica para asegurar que la inserción fue exitosa.
+	    
+	Header: Actualización de datos en la base de datos
+	
+	Content:
+	    
+	    Para actualizar registros existentes, se utiliza la sentencia ```UPDATE```.
+	    
+	Subheader: Ejemplo de actualización de datos
+	
+	Content:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Actualizar-En-Base-De-Datos.
+	    EXEC SQL
+	    UPDATE CLIENTES
+	    SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION
+	    WHERE CLIENTE_ID = :CLIENTE-ID
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error actualizando datos: ' SQLCODE.
+	    ELSE
+	    DISPLAY 'Datos actualizados correctamente'.
+	    END-IF.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  ```EXEC SQL UPDATE CLIENTES SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC``` actualiza la dirección del cliente con el ID especificado.
+	    *  ```SQLCODE``` se verifica para asegurar que la actualización fue exitosa.
+	    
+	Header: Eliminación de datos en la base de datos
+	
+	Content:
+	    
+	    Para eliminar registros, se utiliza la sentencia ```DELETE```.
+	    
+	Subheader: Ejemplo de eliminación de datos
+	
+	Content:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Eliminar-En-Base-De-Datos.
+	    EXEC SQL
+	    DELETE FROM CLIENTES
+	    WHERE CLIENTE_ID = :CLIENTE-ID
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error eliminando datos: ' SQLCODE.
+	    ELSE
+	    DISPLAY 'Datos eliminados correctamente'.
+	    END-IF.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  ```EXEC SQL DELETE FROM CLIENTES WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC``` elimina el registro del cliente con el ID especificado.
+	    *  ```SQLCODE``` se verifica para asegurar que la eliminación fue exitosa.
+	    
+	Header: Manejo de errores y excepciones
+	
+	Content:
+	    
+	    El manejo de errores en operaciones con bases de datos se realiza mediante la verificación del ```SQLCODE``` y el uso de la estructura ```SQLCA```.
+	    
+	Subheader: Ejemplo de manejo de errores
+	
+	Content:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    EXEC SQL INCLUDE SQLCA END-EXEC.
+	    
+	    PROCEDURE DIVISION.
+	    Conectar-Base-De-Datos.
+	    EXEC SQL
+	    CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD
+	    USING :DB-NAME
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error conectando a la base de datos: ' SQLCODE.
+	    DISPLAY SQLERRMC.
+	    END-IF.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  ```SQLCODE``` y ```SQLERRMC``` se utilizan para verificar y mostrar mensajes de error en operaciones de base de datos.
+	    
+	Header: Desconexión de la base de datos
+	
+	Content:
+	    
+	    Para desconectar de la base de datos, se utiliza la sentencia ```DISCONNECT```.
+	    
+	Subheader: Ejemplo de desconexión de la base de datos
+	
+	Content:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Desconectar-Base-De-Datos.
+	    EXEC SQL
+	    DISCONNECT
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error desconectando de la base de datos: ' SQLCODE.
+	    ELSE
+	    DISPLAY 'Desconectado correctamente de la base de datos'.
+	    END-IF.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  ```EXEC SQL DISCONNECT END-EXEC``` desconecta la
+	    
+	    sesión de la base de datos.
+	    *  ```SQLCODE``` se verifica para asegurar que la desconexión fue exitosa.
+	    
+	Header: Conclusión
+	
+	Content:
+	    
+	    El uso de SQL en programas COBOL mediante Embedded SQL permite la integración eficiente con bases de datos relacionales. Comprender cómo realizar conexiones, consultas, inserciones, actualizaciones, eliminaciones y manejar errores es esencial para desarrollar aplicaciones COBOL robustas y eficientes que interactúen con bases de datos modernas.

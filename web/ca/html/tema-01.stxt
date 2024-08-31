@@ -1,0 +1,61 @@
+Document (campusempresa.org/namespace.stxt): Tema 1: ¿Qué es HTML?
+	Navigation:
+		Previous: Anterior (index)
+		Next: Siguiente (tema-02)
+	Header: Introducción a HTML
+	Subheader: Definición de HTML
+	
+	Content:
+		HTML, que significa _HyperText Markup Language_ (Lenguaje de Marcado de Hipertexto), es el estándar para crear páginas web. Es un lenguaje de marcado utilizado para estructurar el contenido de las páginas web, permitiendo a los navegadores mostrar texto, imágenes, enlaces, y otros elementos multimedia.
+
+		El HTML es la base de cualquier página web, y todo desarrollador web debe comprender cómo funciona para poder crear sitios web efectivos y accesibles.
+
+		**Características principales de HTML**:
+		* Es un lenguaje de marcado, no de programación.
+		* Utiliza etiquetas para definir la estructura y el contenido.
+		* Es el pilar fundamental de la web, junto con CSS y JavaScript.
+
+		Enlaces: [Más sobre HTML en Wikipedia](https://es.wikipedia.org/wiki/HTML)
+
+	Code:
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<title>Mi primera página web</title>
+			</head>
+			<body>
+				<h1>Hola Mundo!</h1>
+				<p>Este es mi primer documento HTML.</p>
+			</body>
+		</html>
+
+	Subheader: Historia breve de HTML
+	
+	Content:
+		El HTML fue desarrollado por Tim Berners-Lee en 1991 mientras trabajaba en CERN. Desde su creación, HTML ha pasado por varias versiones y ha evolucionado para incluir nuevas características y capacidades, convirtiéndose en un estándar global para la creación de contenido en la web.
+
+		**Versiones importantes de HTML**:
+		* HTML 1.0: La versión original.
+		* HTML 4.01: Estándar ampliamente adoptado.
+		* HTML5: La versión actual que incluye soporte para multimedia y otras tecnologías modernas.
+
+		Se puede formatear texto: **HTML5** es la versión más reciente y avanzada.
+
+	Code:
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<title>Historia de HTML</title>
+			</head>
+			<body>
+				<h1>HTML5: La evolución del lenguaje de la web</h1>
+				<p>Desde su creación en 1991, HTML ha evolucionado significativamente.</p>
+			</body>
+		</html>
+		
+	Header: La importancia de aprender HTML
+	
+	Content: 
+		Aprender HTML es esencial para cualquier persona interesada en el desarrollo web. Es el punto de partida para crear sitios web y aplicaciones web, y es un conocimiento fundamental que te permitirá avanzar en otros lenguajes y tecnologías como CSS, JavaScript, y frameworks modernos como React o Angular.
+		
+		HTML también es vital para comprender cómo estructurar la información en la web de manera accesible y eficiente, asegurando que todos los usuarios puedan interactuar con el contenido de manera efectiva.

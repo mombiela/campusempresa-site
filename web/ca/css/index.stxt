@@ -1,0 +1,91 @@
+Document (campusempresa.org/namespace.stxt): CSS
+	Header: Introducción a CSS
+	
+	Content:		
+	    * [Historia y evolución de CSS.](historia_css) 
+	    * [Definición y propósito de CSS.](que_es_css) 
+	    * [Estructura básica de una regla CSS.](sintaxis_css) 
+	    * [Formas de aplicar CSS a un documento HTML.](aplicacion_css) 
+	    * [Introducción a los selectores básicos en CSS.](selectores_basicos) 
+	
+	Header: Selectores CSS
+	
+	Content:		
+	    * [Tipos de selectores en CSS.](selectores_tipos) 
+	    * [Uso de selectores de clase.](selectores_clases) 
+	    * [Uso de selectores por ID.](selectores_id) 
+	    * [Selectores basados en atributos.](selectores_atributo) 
+	    * [Introducción a las pseudoclases.](selectores_pseudoclases) 
+	
+	Header: Propiedades Básicas de CSS
+	
+	Content:		
+	    * [Propiedades de color y fondo.](color_fondo) 
+	    * [Propiedades de texto y fuentes.](texto_fuente) 
+	    * [Propiedades de bordes y contornos.](bordes) 
+	    * [Propiedades de márgenes y relleno.](margenes_relleno) 
+	    * [Propiedades de dimensión y posición.](dimension_posicion) 
+	
+	Header: Modelo de Caja (Box Model)
+	
+	Content:		
+	    * [Concepto del modelo de caja.](que_es_boxmodel) 
+	    * [Componentes del modelo de caja.](componentes_boxmodel) 
+	    * [Manejo de bordes en el modelo de caja.](bordes_boxmodel) 
+	    * [Manejo de márgenes en el modelo de caja.](margenes_boxmodel) 
+	    * [Manejo del relleno en el modelo de caja.](relleno_boxmodel) 
+	
+	Header: Layout y Posicionamiento
+	
+	Content:		
+	    * [Posicionamiento estático.](posicionamiento_estatico) 
+	    * [Posicionamiento relativo.](posicionamiento_relativo) 
+	    * [Posicionamiento absoluto.](posicionamiento_absoluto) 
+	    * [Posicionamiento fijo.](posicionamiento_fijo) 
+	    * [Propiedades display y visibility.](display_visibility) 
+	
+	Header: Flexbox
+	
+	Content:		
+	    * [Introducción a Flexbox.](que_es_flexbox) 
+	    * [Propiedades del contenedor Flexbox.](contenedor_flexbox) 
+	    * [Propiedades de los ítems Flexbox.](items_flexbox) 
+	    * [Alineación y distribución en Flexbox.](alineacion_flexbox) 
+	    * [Ejemplos prácticos con Flexbox.](ejemplos_flexbox) 
+	
+	Header: CSS Grid
+	
+	Content:		
+	    * [Introducción a CSS Grid.](que_es_grid) 
+	    * [Propiedades del contenedor Grid.](contenedor_grid) 
+	    * [Propiedades de los ítems Grid.](items_grid) 
+	    * [Definición de áreas en CSS Grid.](areas_grid) 
+	    * [Ejemplos prácticos con CSS Grid.](ejemplos_grid) 
+	
+	Header: Transiciones y Animaciones
+	
+	Content:		
+	    * [Implementación de transiciones CSS.](transiciones_css) 
+	    * [Uso de keyframes para animaciones.](keyframes) 
+	    * [Creación de animaciones con CSS.](animaciones_css) 
+	    * [Uso de transformaciones en CSS.](transformaciones) 
+	    * [Ejemplos de transiciones y animaciones.](ejemplos_animaciones) 
+	
+	Header: Responsive Design
+	
+	Content:		
+	    * [Introducción al diseño responsive.](que_es_responsive) 
+	    * [Uso de media queries en CSS.](media_queries) 
+	    * [Uso de unidades relativas.](unidades_relativas) 
+	    * [Enfoque mobile-first en CSS.](mobile_first) 
+	    * [Ejemplos prácticos de diseño responsive.](ejemplos_responsive) 
+	
+	Header: Buenas Prácticas y Optimización
+	
+	Content:		
+	    * [Organización y estructura de CSS.](organizacion_css) 
+	    * [Uso de comentarios en CSS.](comentarios_css) 
+	    * [Optimización de rendimiento en CSS.](performance_css) 
+	    * [Herramientas y recursos útiles para CSS.](herramientas_css) 
+	    * [Mejores prácticas para accesibilidad en CSS.](accesibilidad_css) 
+		

@@ -1,0 +1,65 @@
+Document (campusempresa.org/namespace.stxt): Introducción a Java
+	Navigation:
+		Previous: Índice de contenidos (index)
+		Next: Configuración del Entorno de Desarrollo (02-configuracion-entorno)
+	
+	Header: ¿Qué es Java?
+	Subheader: Historia de Java
+	
+	Content:
+		Java es un lenguaje de programación y una plataforma informática lanzada por primera vez por Sun Microsystems en 1995. 
+		Es un lenguaje orientado a objetos que ha evolucionado a lo largo de los años, manteniendo su relevancia en la industria del software.
+		
+		**Principales hitos en la evolución de Java:**
+		
+		* Creación en 1991 por James Gosling.
+		* Lanzamiento de la primera versión pública en 1995.
+		* Adquisición de Sun Microsystems por Oracle en 2010.
+		* Evolución continua con versiones de largo plazo (LTS).
+		
+		**Enlaces relevantes:**
+		* [Historia oficial de Java](https://www.oracle.com/java/history.html)
+		
+	Subheader: Características Principales de Java
+	
+	Content:
+		Java es conocido por varias características clave que lo han convertido en uno de los lenguajes de programación más populares:
+		
+		* **Portabilidad**: Escriba una vez, ejecute en cualquier lugar.
+		* **Seguridad**: Seguridad incorporada con un entorno de ejecución controlado.
+		* **Orientado a objetos**: Facilita la creación de código modular y reutilizable.
+		* **Multihilo**: Permite la ejecución simultánea de múltiples procesos.
+		* **Robustez**: Manejo automático de memoria y manejo de excepciones.
+		
+		Java es ampliamente utilizado en el desarrollo de aplicaciones empresariales, móviles (especialmente en Android), aplicaciones web y sistemas embebidos.
+
+	Subheader: Ecosistema de Java
+	
+	Content:
+		El ecosistema de Java es vasto, incluyendo una variedad de herramientas, bibliotecas y entornos de ejecución (JVM):
+		
+		* **JDK (Java Development Kit)**: Incluye el compilador de Java, herramientas de desarrollo y la JVM.
+		* **JRE (Java Runtime Environment)**: Permite la ejecución de aplicaciones Java.
+		* **Frameworks y bibliotecas**: Spring, Hibernate, Apache Commons, entre otros.
+		* **IDEs (Entornos de Desarrollo Integrados)**: Eclipse, IntelliJ IDEA, NetBeans.
+		
+		Java también es la base de muchas tecnologías modernas y se utiliza en una amplia variedad de sectores, desde la banca hasta las telecomunicaciones.
+
+	Code:
+		public class HelloWorld {
+		    public static void main(String[] args) {
+		        System.out.println("¡Hola, mundo!");
+		    }
+		}
+		
+	Header: ¿Por qué aprender Java?
+	
+	Content: 
+		Aprender Java es una excelente inversión en tu carrera como programador. Java sigue siendo uno de los lenguajes más demandados por las empresas debido a su robustez, seguridad y amplia adopción en la industria.
+
+		* **Alta demanda laboral**: Las empresas buscan desarrolladores con experiencia en Java.
+		* **Versatilidad**: Java se utiliza en una gran variedad de aplicaciones, desde la web hasta móviles y sistemas empresariales.
+		* **Amplia comunidad**: La comunidad de Java es una de las más grandes, lo que significa abundancia de recursos, bibliotecas y soporte.
+		
+		**Enlaces útiles:**
+		* [Por qué Java es relevante](https://www.oracle.com/java/why-java.html)

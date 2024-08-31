@@ -1,0 +1,192 @@
+Document (campusempresa.org/namespace.stxt): Desarrollo del Proyecto
+	Navigation:
+		Previous: Anterior (tema-21)
+		Next: Siguiente (tema-23)
+		
+	Header: Introducción
+	Subheader: Importancia del Desarrollo Estructurado
+	Content:
+		El desarrollo del proyecto es la fase en la que las ideas y planes toman forma en código funcional. Esta etapa es crucial porque, aunque la planificación proporciona una hoja de ruta, el desarrollo es donde se materializan los componentes y funcionalidades de la aplicación. Un enfoque estructurado en esta fase asegura que el proyecto avance según lo planificado, cumpliendo con los objetivos de calidad, tiempo y costo.
+
+	Header: Implementación de Componentes
+	Subheader: Desarrollo de Componentes React
+	Content:
+		El desarrollo de componentes es el núcleo del trabajo en una aplicación React. Cada componente debe ser modular, reutilizable y seguir las mejores prácticas de desarrollo, como la separación de preocupaciones, la adherencia a los principios de diseño de componentes y la optimización del rendimiento.
+	Code:
+		// Ejemplo de un componente React bien estructurado
+		function TaskItem({ task, onToggle }) {
+			return (
+				<div className={`task-item ${task.completed ? 'completed' : ''}`}>
+					<input
+						type="checkbox"
+						checked={task.completed}
+						onChange={() => onToggle(task.id)}
+					/>
+					<span>{task.name}</span>
+				</div>
+			);
+		}
+
+	Content:
+		En este ejemplo, el componente `TaskItem` es simple y enfocado en una única responsabilidad: representar una tarea individual con una funcionalidad de alternancia. Mantener los componentes pequeños y enfocados facilita su mantenimiento y reutilización.
+
+	Subheader: Integración de Componentes y Estados
+	Content:
+		A medida que los componentes se desarrollan, es importante integrarlos correctamente con la gestión del estado de la aplicación. En React, esto se puede lograr usando el estado local, `useState`, y para estados más complejos, herramientas como Redux o Context API.
+	Code:
+		// Ejemplo de integración de estado con componentes
+		function TaskList({ tasks, onToggleTask }) {
+			return (
+				<div className="task-list">
+					{tasks.map((task) => (
+						<TaskItem key={task.id} task={task} onToggle={onToggleTask} />
+					))}
+				</div>
+			);
+		}
+
+		function App() {
+			const [tasks, setTasks] = useState([
+				{ id: 1, name: 'Tarea 1', completed: false },
+				{ id: 2, name: 'Tarea 2', completed: false },
+			]);
+
+			const toggleTask = (taskId) => {
+				setTasks((prevTasks) =>
+					prevTasks.map((task) =>
+						task.id === taskId ? { ...task, completed: !task.completed } : task
+					)
+				);
+			};
+
+			return <TaskList tasks={tasks} onToggleTask={toggleTask} />;
+		}
+
+	Content:
+		Este ejemplo muestra cómo los componentes `TaskList` y `TaskItem` se integran con la lógica de estado en el componente `App`. La gestión del estado se realiza de manera clara y predecible, lo que facilita el seguimiento de la lógica de la aplicación.
+
+	Header: Integración con APIs y Servicios
+	Subheader: Comunicación con APIs Externas
+	Content:
+		En muchas aplicaciones, es necesario interactuar con APIs externas para obtener y enviar datos. Durante el desarrollo, es crucial implementar estas integraciones de manera eficiente y segura, manejando correctamente las respuestas y los errores.
+	Code:
+		// Ejemplo de integración con una API usando useEffect
+		import { useEffect, useState } from 'react';
+		import axios from 'axios';
+
+		function App() {
+			const [tasks, setTasks] = useState([]);
+			const [loading, setLoading] = useState(true);
+
+			useEffect(() => {
+				axios.get('/api/tasks')
+					.then((response) => {
+						setTasks(response.data);
+						setLoading(false);
+					})
+					.catch((error) => {
+						console.error('Error fetching tasks:', error);
+						setLoading(false);
+					});
+			}, []);
+
+			if (loading) {
+				return <p>Cargando tareas...</p>;
+			}
+
+			return <TaskList tasks={tasks} />;
+		}
+
+	Content:
+		En este ejemplo, se utiliza `axios` para obtener datos de una API al montar el componente. El uso de `useEffect` asegura que la solicitud se realice en el momento adecuado y que el estado de carga se maneje correctamente.
+
+	Header: Pruebas y Verificación
+	Subheader: Implementación de Pruebas Unitarias
+	Content:
+		Las pruebas unitarias son fundamentales para asegurar que cada componente funcione como se espera de manera aislada. Herramientas como Jest y React Testing Library facilitan la escritura de pruebas claras y efectivas.
+	Code:
+		// Ejemplo de prueba unitaria con React Testing Library
+		import { render, screen, fireEvent } from '@testing-library/react';
+		import TaskItem from './TaskItem';
+
+		test('debe mostrar el nombre de la tarea y manejar el cambio de estado', () => {
+			const task = { id: 1, name: 'Tarea de prueba', completed: false };
+			const onToggle = jest.fn();
+
+			render(<TaskItem task={task} onToggle={onToggle} />);
+
+			expect(screen.getByText('Tarea de prueba')).toBeInTheDocument();
+
+			fireEvent.click(screen.getByRole('checkbox'));
+			expect(onToggle).toHaveBeenCalledWith(1);
+		});
+
+	Content:
+		Este ejemplo muestra una prueba unitaria para el componente `TaskItem`, verificando que el nombre de la tarea se muestre correctamente y que la función `onToggle` se llame con el argumento correcto cuando se interactúa con el checkbox.
+
+	Subheader: Pruebas de Integración y E2E
+	Content:
+		Las pruebas de integración y de extremo a extremo (E2E) son esenciales para verificar que diferentes partes de la aplicación funcionen bien juntas y que el flujo de usuario sea correcto. Herramientas como Cypress o Selenium son comunes para realizar estas pruebas.
+	Code:
+		// Ejemplo básico de prueba E2E con Cypress
+		describe('Flujo de gestión de tareas', () => {
+			it('debe permitir agregar, completar y eliminar tareas', () => {
+				cy.visit('/');
+
+				cy.get('input[name="new-task"]').type('Nueva tarea{enter}');
+				cy.contains('Nueva tarea').should('be.visible');
+
+				cy.get('input[type="checkbox"]').check();
+				cy.contains('Nueva tarea').should('have.class', 'completed');
+
+				cy.get('button.delete-task').click();
+				cy.contains('Nueva tarea').should('not.exist');
+			});
+		});
+
+	Content:
+		Este ejemplo de prueba E2E verifica que el flujo completo de agregar, completar y eliminar tareas funcione correctamente en la interfaz de usuario.
+
+	Header: Gestión de Versiones y Despliegue
+	Subheader: Uso de Control de Versiones
+	Content:
+		Durante el desarrollo, es esencial utilizar sistemas de control de versiones como Git para gestionar el código fuente, permitir la colaboración entre desarrolladores y mantener un historial de cambios.
+	Code:
+		// Ejemplo de flujo de trabajo con Git
+		/*
+		1. Crear una rama para una nueva funcionalidad:
+		   git checkout -b feature/nueva-funcionalidad
+
+		2. Realizar cambios y confirmarlos:
+		   git add .
+		   git commit -m "Añadir nueva funcionalidad"
+
+		3. Fusionar la rama con la rama principal:
+		   git checkout main
+		   git merge feature/nueva-funcionalidad
+		   git push origin main
+		*/
+
+	Content:
+		Este flujo de trabajo con Git asegura que los cambios se realicen de manera ordenada y que cada funcionalidad se desarrolle en una rama separada antes de integrarse en la rama principal.
+
+	Subheader: Preparación para el Despliegue
+	Content:
+		Antes de desplegar la aplicación, es importante realizar una revisión final, asegurarse de que todas las pruebas pasen y que la aplicación esté optimizada. El despliegue puede involucrar la configuración de un entorno de producción, la integración continua y el monitoreo post-despliegue.
+	Code:
+		// Ejemplo de script de despliegue con npm
+		/*
+		"scripts": {
+			"build": "react-scripts build",
+			"start": "react-scripts start",
+			"deploy": "npm run build && firebase deploy"
+		}
+		*/
+
+	Content:
+		En este ejemplo, el script de despliegue prepara la aplicación para producción y la despliega utilizando Firebase. Asegurar un proceso de despliegue eficiente es crucial para minimizar el tiempo de inactividad y garantizar una transición fluida a producción.
+
+	Header: Conclusión
+	Subheader: Resumen sobre el Desarrollo del Proyecto
+	Content:
+		El desarrollo del proyecto es donde las ideas y planes se convierten en una aplicación funcional. A través de un desarrollo estructurado, la integración eficiente de componentes y APIs, pruebas exhaustivas y una gestión de versiones adecuada, se puede asegurar que el proyecto no solo cumpla con los requisitos, sino que también sea escalable, mantenible y fácil de desplegar. En los próximos temas, exploraremos cómo manejar el seguimiento y la evaluación continua del proyecto para asegurar su éxito a largo plazo.

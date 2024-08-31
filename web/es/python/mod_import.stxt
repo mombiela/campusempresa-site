@@ -1,0 +1,202 @@
+Document (campusempresa.org/namespace.stxt): Importación de módulos
+	
+	Content: 
+	Header: Módulos y paquetes. Importación de módulos
+	
+	Content:
+	    
+	    Python tiene un sistema muy potente para organizar y reutilizar el código: los módulos y los paquetes. Estos permiten dividir el código en componentes más pequeños y manejables, facilitando la organización y el mantenimiento de proyectos grandes.
+	    
+	Header: Módulos
+	
+	Content:
+	    
+	    Un módulo en Python es simplemente un archivo con extensión ```.py``` que contiene definiciones y declaraciones de Python. Estos archivos pueden contener funciones, clases y variables, y pueden incluir código ejecutable.
+	    
+	    Ejemplo de un módulo simple (archivo llamado ```mimodulo.py```):
+	Code:
+	    # mimodulo.py
+	    def saludar():
+	    print("¡Hola, mundo!")
+	    
+	    pi = 3.14159
+	
+	
+	Content:
+	    
+	Header: Importación de Módulos
+	
+	Content:
+	    
+	    Para usar el código definido en un módulo, se debe importar dicho módulo en el script o en otro módulo. Esto se hace usando la palabra clave ```import```.
+	    
+	    Ejemplo de importación y uso de un módulo:
+	Code:
+	    import mimodulo
+	    
+	    mimodulo.saludar()
+	    print(mimodulo.pi)
+	
+	
+	Content:
+	    
+	    También se pueden importar partes específicas de un módulo usando ```from``` ... ```import```.
+	Code:
+	    from mimodulo import saludar, pi
+	    
+	    saludar()
+	    print(pi)
+	
+	
+	Content:
+	    
+	Header: Paquetes
+	
+	Content:
+	    
+	    Un paquete es una forma de estructurar la jerarquía de los módulos de Python usando directorios. Un paquete es un directorio que contiene un archivo especial llamado ```init.py```, el cual puede estar vacío o puede ejecutar algún código de inicialización para el paquete.
+	    
+	    Ejemplo de estructura de un paquete:
+	    ```startuml```
+	    package paquete {
+	    init.py
+	    modulo1.py
+	    modulo2.py
+	    }
+	    ```enduml```
+	    
+	    Para importar módulos desde un paquete, se puede usar la sintaxis de punto.
+	    
+	    Ejemplo:
+	Code:
+	    from paquete import modulo1, modulo2
+	    
+	    modulo1.funcion()
+	    modulo2.otrafuncion()
+	
+	
+	Content:
+	    
+	Header: Importación de Submódulos
+	
+	Content:
+	    
+	    También se pueden importar submódulos específicos de un paquete.
+	Code:
+	    from paquete.modulo1 import funcion
+	    
+	    funcion()
+	
+	
+	Content:
+	    
+	Header: Importación Renombrada
+	
+	Content:
+	    
+	    Para evitar conflictos de nombres o simplemente por conveniencia, se pueden renombrar módulos durante la importación usando ```as```.
+	Code:
+	    import mimodulo as mm
+	    
+	    mm.saludar()
+	    print(mm.pi)
+	
+	
+	Content:
+	    
+	Header: Importación de Todos los Nombres de un Módulo
+	
+	Content:
+	    
+	    Se pueden importar todos los nombres de un módulo usando el asterisco (``````). Esto no es recomendado porque puede llevar a un código menos claro.
+	Code:
+	    from mimodulo import
+	    
+	    saludar()
+	    print(pi)
+	
+	
+	Content:
+	    
+	Header: Funciones Importantes
+	
+	Content:
+	    
+	    *  ```dir()```: Devuelve una lista de nombres definidos en un módulo.
+	Code:
+	    import mimodulo
+	    print(dir(mimodulo))
+	
+	
+	Content:
+	    
+	    *  ```help()```: Muestra la documentación del módulo.
+	Code:
+	    import mimodulo
+	    help(mimodulo)
+	
+	
+	Content:
+	    
+	Header: Creación y Uso de Paquetes
+	
+	Content:
+	    
+	    Para crear un paquete, simplemente se crea un directorio con un archivo ```init.py``` dentro de él. Luego, se pueden añadir módulos adicionales a este directorio.
+	    
+	    Estructura de ejemplo:
+	    ```startuml```
+	    package mipaquete {
+	    init.py
+	    matematica.py
+	    saludos.py
+	    }
+	    ```enduml```
+	    
+	    Contenido de ```init.py```:
+	Code:
+	    # init.py
+	    from .matematica import suma
+	    from .saludos import saludar
+	
+	
+	Content:
+	    
+	    Ahora se puede importar y usar el paquete completo:
+	Code:
+	    import mipaquete
+	    
+	    mipaquete.saludar()
+	    print(mipaquete.suma(1, 2))
+	
+	
+	Content:
+	    
+	Header: Instalación de Paquetes Externos
+	
+	Content:
+	    
+	    Python tiene un sistema de gestión de paquetes llamado ```pip```, que permite instalar paquetes externos desde el Python Package Index (PyPI).
+	    
+	    Para instalar un paquete:
+	Code:
+	    pip install nombre_paquete
+	
+	
+	Content:
+	    
+	    Para usar un paquete instalado:
+	Code:
+	    import nombre_paquete
+	
+	
+	Content:
+	    
+	Header: Ventajas del Uso de Módulos y Paquetes
+	
+	Content:
+	    
+	    *  **Organización**: Permiten estructurar el código en componentes más pequeños y manejables.
+	    *  **Reutilización**: Facilitan la reutilización del código en diferentes proyectos.
+	    *  **Mantenimiento**: Hacen que el código sea más fácil de mantener y actualizar.
+	    *  **Colaboración**: Facilitan la colaboración entre varios desarrolladores.

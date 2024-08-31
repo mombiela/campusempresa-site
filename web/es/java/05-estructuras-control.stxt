@@ -1,0 +1,134 @@
+Document (campusempresa.org/namespace.stxt): Estructuras de Control de Flujo
+	Navigation:
+		Previous: Operadores y Expresiones (04-operadores-expresiones)
+		Next: Ciclos en Java: for, while, do-while (06-ciclos)
+	
+	Header: Introducción a las Estructuras de Control
+	Subheader: ¿Qué son las estructuras de control?
+	
+	Content:
+		Las estructuras de control de flujo permiten a los programadores dirigir el orden en el que se ejecutan las instrucciones en un programa. Estas estructuras son esenciales para tomar decisiones y repetir acciones, lo que hace que un programa sea dinámico y adaptable.
+		
+	Header: Estructuras de Decisión
+	Subheader: La sentencia `if`
+	
+	Content:
+		La sentencia `if` se utiliza para ejecutar un bloque de código solo si una condición es verdadera. Es la estructura de decisión más básica en Java.
+		
+	Code:
+		int numero = 10;
+		if (numero > 0) {
+		    System.out.println("El número es positivo");
+		}
+
+	Subheader: La sentencia `if-else`
+	
+	Content:
+		La sentencia `if-else` permite ejecutar un bloque de código cuando la condición es verdadera y otro bloque diferente cuando la condición es falsa.
+		
+	Code:
+		int numero = -5;
+		if (numero > 0) {
+		    System.out.println("El número es positivo");
+		} else {
+		    System.out.println("El número es negativo o cero");
+		}
+
+	Subheader: La sentencia `else if`
+	
+	Content:
+		La sentencia `else if` permite manejar múltiples condiciones. Se ejecuta el primer bloque cuyo `if` o `else if` sea verdadero.
+		
+	Code:
+		int numero = 0;
+		if (numero > 0) {
+		    System.out.println("El número es positivo");
+		} else if (numero < 0) {
+		    System.out.println("El número es negativo");
+		} else {
+		    System.out.println("El número es cero");
+		}
+
+	Header: La sentencia `switch`
+	Subheader: Uso del `switch`
+	
+	Content:
+		La sentencia `switch` se utiliza para seleccionar una de entre muchas opciones posibles basándose en el valor de una variable. Es útil cuando se tienen múltiples condiciones basadas en un mismo valor.
+		
+	Code:
+		int dia = 3;
+		switch (dia) {
+		    case 1:
+		        System.out.println("Lunes");
+		        break;
+		    case 2:
+		        System.out.println("Martes");
+		        break;
+		    case 3:
+		        System.out.println("Miércoles");
+		        break;
+		    case 4:
+		        System.out.println("Jueves");
+		        break;
+		    case 5:
+		        System.out.println("Viernes");
+		        break;
+		    case 6:
+		        System.out.println("Sábado");
+		        break;
+		    case 7:
+		        System.out.println("Domingo");
+		        break;
+		    default:
+		        System.out.println("Día no válido");
+		}
+
+	Subheader: Consideraciones al usar `switch`
+	
+	Content:
+		El `switch` es una alternativa a las múltiples sentencias `if-else if`. Es más legible cuando se manejan muchos valores para la misma variable. Sin embargo, es importante recordar:
+		
+		* Cada bloque `case` debe terminar con `break` para evitar la "caída" al siguiente caso.
+		* El bloque `default` es opcional, pero se recomienda para manejar valores imprevistos.
+
+	Header: Estructuras de Control Iterativas
+	Subheader: El bucle `for`
+	
+	Content:
+		El bucle `for` se utiliza para ejecutar un bloque de código un número determinado de veces. Es especialmente útil cuando se conoce de antemano cuántas veces se necesita repetir una acción.
+		
+	Code:
+		for (int i = 1; i <= 5; i++) {
+		    System.out.println("Iteración: " + i);
+		}
+
+	Subheader: El bucle `while`
+	
+	Content:
+		El bucle `while` se ejecuta mientras una condición sea verdadera. Es útil cuando no se conoce el número exacto de iteraciones, pero sí la condición de terminación.
+		
+	Code:
+		int i = 1;
+		while (i <= 5) {
+		    System.out.println("Iteración: " + i);
+		    i++;
+		}
+
+	Subheader: El bucle `do-while`
+	
+	Content:
+		El bucle `do-while` es similar al `while`, pero garantiza que el bloque de código se ejecutará al menos una vez, ya que la condición se evalúa después de la ejecución del bloque.
+		
+	Code:
+		int i = 1;
+		do {
+		    System.out.println("Iteración: " + i);
+		    i++;
+		} while (i <= 5);
+
+	Content:
+		Los bucles son una herramienta poderosa en la programación, permitiendo repetir acciones de manera controlada. En el siguiente tema, exploraremos los detalles de cada tipo de bucle y ejemplos prácticos de su uso.
+
+	Content:
+		**Recursos adicionales:**
+		* [Documentación oficial de Java sobre estructuras de control](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)

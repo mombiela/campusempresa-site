@@ -1,0 +1,154 @@
+Document (campusempresa.org/namespace.stxt): Interfaces y Clases Abstractas
+	Navigation:
+		Previous: Herencia y Polimorfismo (08-herencia-polimorfismo)
+		Next: Arrays y Colecciones en Java (10-arrays-colecciones)
+	
+	Header: Introducción a las Interfaces y Clases Abstractas
+	Subheader: ¿Qué son las interfaces y clases abstractas?
+	
+	Content:
+		En Java, las interfaces y las clases abstractas son herramientas poderosas para definir comportamientos que pueden ser compartidos o implementados por diferentes clases. Las interfaces establecen un contrato que las clases deben cumplir, mientras que las clases abstractas permiten compartir código común entre clases relacionadas, pero no pueden ser instanciadas por sí mismas.
+		
+	Header: Interfaces en Java
+	Subheader: Definición de una Interfaz
+	
+	Content:
+		Una interfaz en Java es un tipo de referencia que define un conjunto de métodos abstractos que deben ser implementados por cualquier clase que declare que implementa la interfaz. Las interfaces son completamente abstractas y no pueden contener implementación de métodos.
+		
+	Code:
+		public interface Volador {
+		    void volar();
+		}
+
+		public class Pajaro implements Volador {
+		    public void volar() {
+		        System.out.println("El pájaro vuela");
+		    }
+		}
+
+		public class Avion implements Volador {
+		    public void volar() {
+		        System.out.println("El avión vuela");
+		    }
+		}
+
+	Content:
+		En este ejemplo, la interfaz `Volador` define un método `volar`. Tanto `Pajaro` como `Avion` implementan la interfaz y proporcionan su propia versión del método `volar`.
+
+	Subheader: Implementación Múltiple
+	
+	Content:
+		Una de las características más importantes de las interfaces es que una clase puede implementar múltiples interfaces, lo que permite a las clases tener comportamientos diversos.
+		
+	Code:
+		public interface Volador {
+		    void volar();
+		}
+
+		public interface Nadador {
+		    void nadar();
+		}
+
+		public class Pato implements Volador, Nadador {
+		    public void volar() {
+		        System.out.println("El pato vuela");
+		    }
+
+		    public void nadar() {
+		        System.out.println("El pato nada");
+		    }
+		}
+
+	Content:
+		En este ejemplo, la clase `Pato` implementa tanto `Volador` como `Nadador`, lo que significa que debe definir los métodos `volar` y `nadar`.
+
+	Header: Clases Abstractas en Java
+	Subheader: Definición de una Clase Abstracta
+	
+	Content:
+		Una clase abstracta es una clase que no puede ser instanciada directamente y puede contener tanto métodos abstractos (sin implementación) como métodos concretos (con implementación). Las clases abstractas se utilizan cuando se desea proporcionar una funcionalidad común que debe ser compartida por todas las subclases, pero también se quiere que algunas partes del comportamiento sean definidas por las subclases.
+		
+	Code:
+		public abstract class Animal {
+		    String nombre;
+
+		    public Animal(String nombre) {
+		        this.nombre = nombre;
+		    }
+
+		    abstract void hacerSonido();
+
+		    void dormir() {
+		        System.out.println("El animal está durmiendo");
+		    }
+		}
+
+		public class Perro extends Animal {
+		    public Perro(String nombre) {
+		        super(nombre);
+		    }
+
+		    void hacerSonido() {
+		        System.out.println("El perro ladra");
+		    }
+		}
+
+	Content:
+		En este ejemplo, `Animal` es una clase abstracta que define un método abstracto `hacerSonido` y un método concreto `dormir`. La clase `Perro` extiende `Animal` y proporciona una implementación para el método `hacerSonido`.
+
+	Subheader: Diferencias entre Clases Abstractas e Interfaces
+	
+	Content:
+		Es importante entender cuándo usar clases abstractas y cuándo usar interfaces. Aquí hay algunas diferencias clave:
+		
+		* **Métodos con Implementación**: Las clases abstractas pueden tener métodos con implementación, mientras que las interfaces (antes de Java 8) solo pueden tener métodos abstractos.
+		* **Herencia Múltiple**: Una clase puede implementar múltiples interfaces, pero solo puede extender una clase abstracta.
+		* **Campos**: Las clases abstractas pueden tener campos, mientras que las interfaces no (aunque desde Java 8, las interfaces pueden tener variables estáticas y finales).
+
+	Header: Uso Combinado de Interfaces y Clases Abstractas
+	Subheader: Un Ejemplo Práctico
+	
+	Content:
+		En muchas situaciones, se puede usar una combinación de clases abstractas e interfaces para aprovechar lo mejor de ambos mundos.
+		
+	Code:
+		public interface Volador {
+		    void volar();
+		}
+
+		public abstract class Animal {
+		    String nombre;
+
+		    public Animal(String nombre) {
+		        this.nombre = nombre;
+		    }
+
+		    abstract void hacerSonido();
+
+		    void dormir() {
+		        System.out.println("El animal está durmiendo");
+		    }
+		}
+
+		public class Murcielago extends Animal implements Volador {
+		    public Murcielago(String nombre) {
+		        super(nombre);
+		    }
+
+		    void hacerSonido() {
+		        System.out.println("El murciélago hace un sonido agudo");
+		    }
+
+		    public void volar() {
+		        System.out.println("El murciélago vuela");
+		    }
+		}
+
+	Content:
+		En este ejemplo, `Murcielago` extiende la clase abstracta `Animal` y también implementa la interfaz `Volador`, combinando la funcionalidad de ambas.
+
+	Content:
+		Las interfaces y clases abstractas son fundamentales para crear arquitecturas de software flexibles y reutilizables. En el siguiente tema, exploraremos los arrays y colecciones en Java, que son esenciales para manejar conjuntos de datos.
+
+		**Recursos adicionales:**
+		* [Documentación oficial de Java sobre interfaces y clases abstractas](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)

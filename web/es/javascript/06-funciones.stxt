@@ -1,0 +1,142 @@
+Document (campusempresa.org/namespace.stxt): Funciones
+	Navigation:
+		Previous: Bucles y Iteraciones (05-bucles-iteraciones)
+		Next: Arreglos (Arrays) (07-arreglos-arrays)
+	Header: Funciones en JavaScript
+	Subheader: ¿Qué es una función?
+	
+	Content:
+		Una función es un bloque de código diseñado para realizar una tarea específica. 
+		Las funciones permiten reutilizar código y hacer que el programa sea más modular y fácil de mantener.
+
+		En JavaScript, las funciones pueden tomar argumentos y devolver un valor. 
+		Las funciones se pueden declarar y luego invocar o ejecutar en cualquier momento.
+
+	Code:
+		// Ejemplo básico de declaración de una función
+		function saludar() {
+			console.log("¡Hola, mundo!");
+		}
+
+		// Invocación de la función
+		saludar(); // Output: ¡Hola, mundo!
+
+	Subheader: Declaración de funciones
+	
+	Content:
+		Las funciones en JavaScript se pueden declarar de varias maneras, siendo las más comunes las funciones declaradas 
+		y las funciones expresadas.
+
+		**Función declarada**: Es la forma más común y se declara utilizando la palabra clave `function` seguida del nombre de la función.
+
+	Code:
+		// Declaración de una función
+		function sumar(a, b) {
+			return a + b;
+		}
+
+		// Uso de la función
+		let resultado = sumar(5, 3);
+		console.log("Resultado de la suma: " + resultado); // Output: Resultado de la suma: 8
+
+	Subheader: Funciones como expresiones
+	
+	Content:
+		Una función también se puede declarar como una expresión y se puede almacenar en una variable. 
+		Estas se conocen como **funciones anónimas** cuando no tienen nombre.
+
+	Code:
+		// Función como expresión
+		const multiplicar = function(a, b) {
+			return a * b;
+		};
+
+		// Uso de la función
+		let producto = multiplicar(4, 7);
+		console.log("Resultado de la multiplicación: " + producto); // Output: Resultado de la multiplicación: 28
+
+	Subheader: Funciones flecha (Arrow Functions)
+	
+	Content:
+		Las funciones flecha, introducidas en ES6, son una sintaxis más concisa para escribir funciones anónimas. 
+		El uso de funciones flecha también cambia la forma en que se comporta `this` dentro de la función.
+
+	Code:
+		// Función flecha
+		const dividir = (a, b) => {
+			return a / b;
+		};
+
+		// Uso de la función flecha
+		let cociente = dividir(10, 2);
+		console.log("Resultado de la división: " + cociente); // Output: Resultado de la división: 5
+
+	Subheader: Parámetros y argumentos
+	
+	Content:
+		Las funciones pueden recibir **parámetros** que son variables locales usadas dentro de la función. 
+		Al invocar la función, se pasan los **argumentos** que son los valores asignados a esos parámetros.
+
+	Code:
+		// Ejemplo de función con parámetros
+		function presentar(nombre, edad) {
+			console.log("Hola, mi nombre es " + nombre + " y tengo " + edad + " años.");
+		}
+
+		// Pasando argumentos a la función
+		presentar("Luis", 30); // Output: Hola, mi nombre es Luis y tengo 30 años.
+
+	Subheader: Valores de retorno
+	
+	Content:
+		Una función puede devolver un valor usando la palabra clave `return`. 
+		Cuando se ejecuta una declaración `return`, la función finaliza y devuelve el valor especificado.
+
+	Code:
+		// Ejemplo de función con valor de retorno
+		function cuadrado(num) {
+			return num * num;
+		}
+
+		// Almacenar el valor retornado en una variable
+		let resultadoCuadrado = cuadrado(4);
+		console.log("El cuadrado de 4 es: " + resultadoCuadrado); // Output: El cuadrado de 4 es: 16
+
+	Subheader: Funciones de orden superior
+	
+	Content:
+		Las funciones de orden superior son aquellas que pueden tomar otras funciones como argumentos o devolver una función como resultado.
+		Esto permite construir funciones más abstractas y flexibles.
+
+	Code:
+		// Ejemplo de función de orden superior
+		function aplicarOperacion(a, b, operacion) {
+			return operacion(a, b);
+		}
+
+		// Usando una función flecha como argumento
+		let suma = aplicarOperacion(5, 3, (x, y) => x + y);
+		console.log("Resultado de aplicar operación suma: " + suma); // Output: Resultado de aplicar operación suma: 8
+
+		let resta = aplicarOperacion(5, 3, (x, y) => x - y);
+		console.log("Resultado de aplicar operación resta: " + resta); // Output: Resultado de aplicar operación resta: 2
+
+	Header: Funciones Recursivas
+	
+	Content: 
+		Una función recursiva es aquella que se llama a sí misma, permitiendo que se repita su propio código. 
+		Las funciones recursivas deben tener una condición base para evitar bucles infinitos.
+
+	Code:
+		// Ejemplo de función recursiva
+		function factorial(n) {
+			if (n === 0) {
+				return 1;
+			} else {
+				return n + factorial(n - 1);
+			}
+		}
+
+		// Uso de la función recursiva
+		let resultadoFactorial = factorial(5);
+		console.log("El factorial de 5 es: " + resultadoFactorial); // Output: El factorial de 5 es: 15

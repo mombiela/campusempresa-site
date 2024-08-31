@@ -1,0 +1,52 @@
+Document (campusempresa.org/namespace.stxt): ¿Qué es React?
+	Navigation:
+		Previous: Anterior (index)
+		Next: Siguiente (tema-02)
+		
+	Header: Introducción
+	Content:
+		React es una biblioteca de JavaScript para construir interfaces de usuario. Fue desarrollada por Facebook y es ampliamente utilizada en el desarrollo de aplicaciones web modernas. 
+
+		React se centra en la creación de componentes reutilizables que pueden gestionar su propio estado. Esta característica permite construir aplicaciones dinámicas y eficientes, donde la actualización de la interfaz de usuario es rápida y fluida.
+		
+	Subheader: Historia de React
+	Content:
+		React fue introducido por primera vez por Facebook en 2013. La necesidad surgió de crear una experiencia de usuario más rápida y eficaz en aplicaciones grandes, como Facebook y Instagram. Desde entonces, ha crecido en popularidad y es mantenida tanto por Facebook como por una comunidad activa de desarrolladores de todo el mundo.
+
+		Una de las innovaciones clave que React trajo fue el Virtual DOM, que permite actualizaciones de la interfaz de usuario más rápidas al minimizar las manipulaciones del DOM real.
+		
+	Subheader: Características Clave de React
+	Content:
+		React ofrece varias características que lo hacen destacar entre otras bibliotecas y frameworks:
+		
+		* **Componentes:** React permite descomponer la interfaz de usuario en componentes reutilizables y autónomos.
+		* **JSX:** Una extensión de JavaScript que permite escribir código similar a HTML dentro de JavaScript, haciendo el código más legible y estructurado.
+		* **Virtual DOM:** React mantiene un DOM virtual en memoria, lo que permite actualizaciones más eficientes de la interfaz de usuario.
+		* **Unidirectional Data Flow:** El flujo de datos en React es unidireccional, lo que facilita la gestión del estado de la aplicación y la depuración.
+		
+	Subheader: Ventajas de Usar React
+	Content:
+		El uso de React en el desarrollo de aplicaciones web ofrece varias ventajas:
+		
+		* **Velocidad:** Gracias al Virtual DOM, las actualizaciones de la interfaz de usuario son rápidas, lo que mejora la experiencia del usuario.
+		* **Modularidad:** La creación de componentes modulares facilita la reutilización de código y el mantenimiento de la aplicación.
+		* **Comunidad y Ecosistema:** React tiene una comunidad grande y activa, lo que significa acceso a una vasta cantidad de recursos, bibliotecas y herramientas adicionales.
+		* **Aprendizaje Continuo:** React es constantemente mejorado por Facebook y la comunidad, lo que significa que siempre hay nuevas prácticas y herramientas por aprender.
+
+	Code:
+		// Ejemplo básico de un componente en React
+		import React from 'react';
+
+		function Welcome(props) {
+			return <h1>Hola, {props.name}</h1>;
+		}
+
+		// Renderizando el componente en la página
+		import ReactDOM from 'react-dom';
+		ReactDOM.render(<Welcome name="Mundo" />, document.getElementById('root'));
+		
+	Subheader: Conclusión
+	Content:
+		React es una herramienta poderosa para construir aplicaciones web modernas. Su enfoque en componentes reutilizables, junto con la eficiencia del Virtual DOM, lo convierte en una opción popular entre los desarrolladores.
+
+		En los próximos temas, exploraremos más a fondo cómo empezar a trabajar con React, desde la instalación hasta la creación de aplicaciones más complejas.

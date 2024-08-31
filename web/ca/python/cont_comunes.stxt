@@ -1,0 +1,194 @@
+Document (campusempresa.org/namespace.stxt): Operaciones comunes
+	
+	Content: 
+	Header: Tipos Contenedores en Python: Operaciones Comunes
+	
+	Content:
+	    
+	    En Python, los tipos contenedores son estructuras de datos que pueden almacenar otros objetos. Los contenedores más comunes son las listas, tuplas, conjuntos y diccionarios. Cada tipo de contenedor tiene sus propias características y usos, pero hay algunas operaciones comunes que se pueden realizar en todos ellos.
+	    
+	Header: Listas
+	
+	Content:
+	    
+	    Las listas son contenedores ordenados y mutables que pueden almacenar elementos de diferentes tipos.
+	    
+	    Ejemplo de una lista:
+	Code:
+	    mi_lista = [1, 2, 3, 4]
+	
+	
+	Content:
+	    
+	Header: Tuplas
+	
+	Content:
+	    
+	    Las tuplas son contenedores ordenados e inmutables. Una vez que se crean, sus elementos no pueden cambiar.
+	    
+	    Ejemplo de una tupla:
+	Code:
+	    mi_tupla = (1, 2, 3, 4)
+	
+	
+	Content:
+	    
+	Header: Conjuntos
+	
+	Content:
+	    
+	    Los conjuntos son contenedores desordenados de elementos únicos. No permiten duplicados.
+	    
+	    Ejemplo de un conjunto:
+	Code:
+	    mi_conjunto = {1, 2, 3, 4}
+	
+	
+	Content:
+	    
+	Header: Diccionarios
+	
+	Content:
+	    
+	    Los diccionarios son contenedores desordenados que almacenan pares clave-valor. Las claves deben ser únicas.
+	    
+	    Ejemplo de un diccionario:
+	Code:
+	    mi_diccionario = {"a": 1, "b": 2, "c": 3}
+	
+	
+	Content:
+	    
+	Header: Operaciones Comunes
+	
+	Content:
+	    
+	    *  **Acceso a Elementos**:
+	    *  Listas y Tuplas:
+	Code:
+	    elemento = mi_lista[1] # Accede al segundo elemento
+	    elemento = mi_tupla[1] # Accede al segundo elemento
+	
+	
+	Content:
+	    
+	    *  Diccionarios:
+	Code:
+	    valor = mi_diccionario["a"] # Accede al valor con clave "a"
+	
+	
+	Content:
+	    
+	    *  Conjuntos: No se puede acceder a elementos individuales por índice ya que no tienen orden.
+	    
+	    *  **Modificación de Elementos**:
+	    *  Listas:
+	Code:
+	    mi_lista[1] = 20 # Modifica el segundo elemento
+	
+	
+	Content:
+	    
+	    *  Diccionarios:
+	Code:
+	    mi_diccionario["a"] = 10 # Modifica el valor con clave "a"
+	
+	
+	Content:
+	    
+	    *  Tuplas y Conjuntos: No se pueden modificar directamente (las tuplas son inmutables y los conjuntos no tienen índices).
+	    
+	    *  **Añadir Elementos**:
+	    *  Listas:
+	Code:
+	    mi_lista.append(5) # Añade un elemento al final
+	
+	
+	Content:
+	    
+	    *  Conjuntos:
+	Code:
+	    mi_conjunto.add(5) # Añade un nuevo elemento
+	
+	
+	Content:
+	    
+	    *  Diccionarios:
+	Code:
+	    mi_diccionario["d"] = 4 # Añade un nuevo par clave-valor
+	
+	
+	Content:
+	    
+	    *  Tuplas: No se pueden modificar después de su creación.
+	    
+	    *  **Eliminar Elementos**:
+	    *  Listas:
+	Code:
+	    mi_lista.remove(2) # Elimina la primera ocurrencia del valor 2
+	
+	
+	Content:
+	    
+	    *  Conjuntos:
+	Code:
+	    mi_conjunto.remove(2) # Elimina el valor 2
+	
+	
+	Content:
+	    
+	    *  Diccionarios:
+	Code:
+	    del mi_diccionario["a"] # Elimina el par clave-valor con clave "a"
+	
+	
+	Content:
+	    
+	    *  Tuplas: No se pueden modificar después de su creación.
+	    
+	    *  **Iteración**:
+	    *  Listas y Tuplas:
+	Code:
+	    for elemento in mi_lista:
+	    print(elemento)
+	
+	
+	Content:
+	    
+	    *  Conjuntos:
+	Code:
+	    for elemento in mi_conjunto:
+	    print(elemento)
+	
+	
+	Content:
+	    
+	    *  Diccionarios:
+	Code:
+	    for clave, valor in mi_diccionario.items():
+	    print(clave, valor)
+	
+	
+	Content:
+	    
+	    *  **Comprensión de Listas, Conjuntos y Diccionarios**:
+	    *  Listas:
+	Code:
+	    cuadrados = [x**2 for x in mi_lista]
+	
+	
+	Content:
+	    
+	    *  Conjuntos:
+	Code:
+	    cuadrados = {x**2 for x in mi_conjunto}
+	
+	
+	Content:
+	    
+	    *  Diccionarios:
+	Code:
+	    cuadrados = {x: x**2 for x in mi_lista}
+	
+	
+	Content:

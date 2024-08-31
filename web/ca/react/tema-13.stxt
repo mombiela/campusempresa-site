@@ -1,0 +1,110 @@
+Document (campusempresa.org/namespace.stxt): Manejo de Efectos Secundarios con useEffect
+	Navigation:
+		Previous: Anterior (tema-12)
+		Next: Siguiente (tema-14)
+		
+	Header: Introducción
+	Subheader: ¿Qué es useEffect?
+	Content:
+		El hook `useEffect` en React permite ejecutar efectos secundarios en componentes funcionales. Un efecto secundario es cualquier operación que no se relaciona directamente con la salida de un componente, como la obtención de datos desde un servidor, suscripciones a eventos, o la manipulación manual del DOM. `useEffect` reemplaza a los métodos del ciclo de vida de los componentes de clase, como `componentDidMount`, `componentDidUpdate` y `componentWillUnmount`.
+
+	Header: Uso Básico de useEffect
+	Subheader: Sintaxis de useEffect
+	Content:
+		El hook `useEffect` acepta dos argumentos: una función de efecto y un array de dependencias opcional. La función de efecto contiene el código que se ejecutará como efecto secundario, y el array de dependencias le indica a React cuándo debe volver a ejecutar el efecto.
+	Code:
+		// Ejemplo básico de uso de useEffect
+		import React, { useState, useEffect } from 'react';
+
+		function Contador() {
+			const [contador, setContador] = useState(0);
+
+			useEffect(() => {
+				document.title = `Has hecho clic ${contador} veces`;
+			}, [contador]);
+
+			return (
+				<div>
+					<p>Has hecho clic {contador} veces</p>
+					<button onClick={() => setContador(contador + 1)}>
+						Haz clic aquí
+					</button>
+				</div>
+			);
+		}
+
+	Content:
+		En este ejemplo, el título del documento se actualiza cada vez que cambia el valor de `contador`. El efecto se vuelve a ejecutar solo cuando el valor de `contador` cambia, gracias al array de dependencias `[contador]`.
+
+	Header: Efectos sin Dependencias
+	Subheader: Ejecución del Efecto solo en Montaje
+	Content:
+		Cuando `useEffect` se usa sin un array de dependencias, el efecto se ejecuta cada vez que el componente se renderiza, lo que puede ser ineficiente. Para ejecutar el efecto solo una vez al montar el componente, se pasa un array de dependencias vacío `[]`.
+	Code:
+		// Ejemplo de useEffect ejecutado solo una vez en montaje
+		useEffect(() => {
+			console.log('El componente se ha montado');
+		}, []);
+
+	Content:
+		En este ejemplo, el mensaje "El componente se ha montado" se mostrará en la consola solo una vez cuando el componente se monte.
+
+	Header: Limpieza de Efectos
+	Subheader: Uso de la Función de Limpieza
+	Content:
+		Si el efecto necesita realizar una limpieza (como cancelar una suscripción o un temporizador), se devuelve una función de limpieza desde dentro del `useEffect`. Esta función se ejecuta antes de que el componente se desmonte o antes de ejecutar el efecto la próxima vez.
+	Code:
+		// Ejemplo de limpieza en useEffect
+		useEffect(() => {
+			const temporizador = setInterval(() => {
+				console.log('Intervalo ejecutado');
+			}, 1000);
+
+			// Función de limpieza
+			return () => {
+				clearInterval(temporizador);
+				console.log('Intervalo limpiado');
+			};
+		}, []);
+
+	Content:
+		En este ejemplo, el intervalo se establece cuando el componente se monta y se limpia cuando el componente se desmonta o el efecto se vuelve a ejecutar.
+
+	Header: Efectos Condicionales
+	Subheader: Controlando cuándo se Ejecuta el Efecto
+	Content:
+		El array de dependencias permite ejecutar efectos solo cuando ciertas variables cambian. Esto es útil para evitar ejecuciones innecesarias del efecto cuando no hay cambios relevantes.
+	Code:
+		// Ejemplo de efecto condicional
+		useEffect(() => {
+			console.log('El contador ha cambiado');
+		}, [contador]);
+
+	Content:
+		En este ejemplo, el efecto solo se ejecuta cuando el valor de `contador` cambia, optimizando la ejecución del código.
+
+	Header: Efectos con Dependencias Múltiples
+	Subheader: Gestión de Múltiples Dependencias
+	Content:
+		`useEffect` también puede manejar múltiples dependencias. Cuando cualquiera de las dependencias cambia, el efecto se ejecuta de nuevo.
+	Code:
+		// Ejemplo de efecto con múltiples dependencias
+		useEffect(() => {
+			console.log('El contador o el estado ha cambiado');
+		}, [contador, estado]);
+
+	Content:
+		Este ejemplo muestra cómo `useEffect` puede responder a cambios en más de una variable, ejecutando el efecto si alguna de las dependencias se actualiza.
+
+	Header: Buenas Prácticas con useEffect
+	Subheader: Evitar Dependencias Incorrectas
+	Content:
+		Es crucial incluir todas las dependencias necesarias en el array de dependencias de `useEffect`. De lo contrario, puedes introducir errores donde los efectos no se actualizan correctamente. Si el efecto depende de variables o funciones, asegúrate de incluirlas en el array de dependencias.
+	Subheader: Mantener los Efectos Simples
+	Content:
+		Mantén los efectos simples y enfocados en una tarea específica. Si un efecto se vuelve demasiado complejo, considera dividirlo en varios `useEffect` separados para mejorar la legibilidad y el mantenimiento del código.
+
+	Header: Conclusión
+	Subheader: Resumen sobre useEffect
+	Content:
+		El hook `useEffect` es una herramienta fundamental en React para manejar efectos secundarios en componentes funcionales. Permite realizar operaciones que van más allá del renderizado, como la interacción con APIs, la manipulación del DOM, y la gestión de suscripciones o temporizadores. Comprender cómo y cuándo usar `useEffect` es crucial para desarrollar aplicaciones React eficientes y fáciles de mantener. En los próximos temas, exploraremos más patrones avanzados y técnicas para la gestión del estado y los efectos en aplicaciones React.

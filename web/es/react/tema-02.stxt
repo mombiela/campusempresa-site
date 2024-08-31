@@ -1,0 +1,96 @@
+Document (campusempresa.org/namespace.stxt): Configuración del entorno de desarrollo
+	Navigation:
+		Previous: Anterior (tema-01)
+		Next: Siguiente (tema-03)
+		
+	Header: Introducción
+	Content:
+		Antes de comenzar a desarrollar con React, es fundamental configurar el entorno de desarrollo. En este tema, cubriremos los pasos necesarios para instalar Node.js, crear un nuevo proyecto React usando Create React App, y preparar tu editor de código para una mejor experiencia de desarrollo.
+
+	Subheader: Instalación de Node.js y npm
+	Content:
+		React requiere Node.js y npm (Node Package Manager) para funcionar. Node.js es un entorno de ejecución para JavaScript que permite ejecutar código JavaScript en el lado del servidor, mientras que npm es un administrador de paquetes que facilita la instalación de bibliotecas y herramientas necesarias para desarrollar con JavaScript.
+
+		**Pasos para instalar Node.js y npm:**
+		
+		1. Visita el [sitio oficial de Node.js](https://nodejs.org).
+		2. Descarga la versión LTS (Long Term Support), que es más estable para la mayoría de los proyectos.
+		3. Sigue las instrucciones del instalador para tu sistema operativo.
+		4. Una vez instalado, verifica la instalación abriendo una terminal y ejecutando:
+			```bash
+			node -v
+			npm -v
+			```
+		Estos comandos deberían mostrar la versión instalada de Node.js y npm.
+
+	Subheader: Crear un nuevo proyecto React con Create React App
+	Content:
+		**Create React App** es una herramienta oficial recomendada para crear aplicaciones React. Configura automáticamente un entorno de desarrollo con todas las dependencias necesarias.
+
+		**Pasos para crear un nuevo proyecto React:**
+		
+		1. Abre una terminal y navega a la carpeta donde quieras crear tu proyecto.
+		2. Ejecuta el siguiente comando para crear un nuevo proyecto:
+			```bash
+			npx create-react-app mi-primer-proyecto
+			```
+		3. Cambia al directorio del proyecto:
+			```bash
+			cd mi-primer-proyecto
+			```
+		4. Inicia el servidor de desarrollo para ver tu aplicación en acción:
+			```bash
+			npm start
+			```
+		Esto abrirá tu navegador en `http://localhost:3000` y verás la aplicación React inicial.
+
+	Subheader: Configuración del editor de código
+	Content:
+		El editor de código que elijas puede influir significativamente en tu flujo de trabajo. Visual Studio Code (VSCode) es uno de los editores más populares entre los desarrolladores de React.
+
+		**Recomendaciones para configurar VSCode:**
+		
+		1. **Extensiones esenciales:**
+			* **ESLint:** Ayuda a mantener el código limpio y consistente.
+			* **Prettier - Code formatter:** Formatea automáticamente el código para que siga las mismas reglas de estilo.
+			* **Reactjs code snippets:** Proporciona atajos para escribir código React más rápidamente.
+		
+		2. **Configuración del tema y la fuente:**
+			Personaliza tu editor con un tema que te sea cómodo y una fuente monoespaciada como Fira Code o JetBrains Mono.
+
+	Subheader: Configuración de Git (Opcional)
+	Content:
+		Es recomendable utilizar un sistema de control de versiones como Git para gestionar los cambios en tu código.
+
+		**Pasos básicos para configurar Git:**
+		
+		1. Instala Git desde el [sitio oficial](https://git-scm.com).
+		2. Configura tu nombre y correo electrónico:
+			```bash
+			git config --global user.name "Tu Nombre"
+			git config --global user.email "tuemail@example.com"
+			```
+		3. Inicializa un repositorio en tu proyecto:
+			```bash
+			git init
+			```
+		4. Realiza tu primer commit:
+			```bash
+			git add .
+			git commit -m "Inicialización del proyecto React"
+			```
+
+	Code:
+		// Ejemplo de un script de npm en package.json
+		{
+			"scripts": {
+				"start": "react-scripts start",
+				"build": "react-scripts build",
+				"test": "react-scripts test",
+				"eject": "react-scripts eject"
+			}
+		}
+
+	Subheader: Conclusión
+	Content:
+		Ahora que tienes tu entorno de desarrollo configurado, estás listo para empezar a desarrollar con React. En los próximos temas, exploraremos los fundamentos de React y cómo construir aplicaciones interactivas y dinámicas.

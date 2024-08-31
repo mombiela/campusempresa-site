@@ -1,0 +1,121 @@
+Document (campusempresa.org/namespace.stxt): Operadores y Expresiones
+	Navigation:
+		Previous: Variables y Tipos de Datos (02-variables-tipos-datos)
+		Next: Estructuras Condicionales (04-estructuras-condicionales)
+	Header: Operadores y Expresiones en JavaScript
+	Subheader: ¿Qué es una expresión?
+	
+	Content:
+		Una expresión en JavaScript es cualquier fragmento de código que produce un valor. 
+		Las expresiones pueden ser simples, como un valor literal, o complejas, combinando múltiples operadores y variables.
+
+		Por ejemplo, las siguientes son expresiones válidas:
+
+		* `42` (literal de número)
+		* `"Hola, mundo!"` (literal de cadena de texto)
+		* `5 + 3` (expresión aritmética)
+		* `x > 10` (expresión relacional)
+
+		Enlaces: [Documentación sobre expresiones en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_operators)
+
+	Code:
+		// Ejemplo de expresiones simples
+		let resultado = 5 + 3;
+		console.log(resultado); // Output: 8
+
+		// Expresión compleja
+		let esMayor = resultado > 7;
+		console.log(esMayor); // Output: true
+
+	Subheader: Operadores en JavaScript
+	
+	Content:
+		Los operadores son símbolos que indican al intérprete que realice una operación específica con uno o más operandos.
+		JavaScript soporta varios tipos de operadores, incluyendo:
+
+		* **Operadores Aritméticos**: Realizan operaciones matemáticas básicas.
+		* **Operadores de Asignación**: Asignan valores a variables.
+		* **Operadores de Comparación**: Comparan dos valores y devuelven un valor booleano.
+		* **Operadores Lógicos**: Realizan operaciones lógicas y devuelven un valor booleano.
+		* **Operadores de Incremento/Decremento**: Incrementan o decrementan el valor de una variable.
+		* **Operadores Ternarios**: Operadores condicionales que evalúan una expresión y devuelven un valor basado en la condición.
+
+	Code:
+		// Operadores aritméticos
+		let suma = 10 + 5;
+		let resta = 10 - 5;
+		let multiplicacion = 10 * 5;
+		let division = 10 / 5;
+
+		console.log(suma); // Output: 15
+		console.log(resta); // Output: 5
+		console.log(multiplicacion); // Output: 50
+		console.log(division); // Output: 2
+
+		// Operadores de asignación
+		let x = 10;
+		x += 5; // x = x + 5;
+		console.log(x); // Output: 15
+
+	Subheader: Operadores de Comparación
+	
+	Content:
+		Los operadores de comparación comparan dos valores y devuelven un valor booleano (`true` o `false`).
+		Algunos de los operadores de comparación más comunes son:
+
+		* **Igualdad (==)**: Compara dos valores para igualdad.
+		* **Igualdad estricta (===)**: Compara dos valores para igualdad, considerando también el tipo de datos.
+		* **Desigualdad (!=)**: Compara dos valores para desigualdad.
+		* **Desigualdad estricta (!==)**: Compara dos valores para desigualdad, considerando también el tipo de datos.
+		* **Mayor que (>)**, **Menor que (<)**: Compara si un valor es mayor o menor que otro.
+		* **Mayor o igual que (>=)**, **Menor o igual que (<=)**: Compara si un valor es mayor o igual o menor o igual que otro.
+
+	Code:
+		// Ejemplo de operadores de comparación
+		let a = 10;
+		let b = "10";
+
+		console.log(a == b); // Output: true (compara solo el valor)
+		console.log(a === b); // Output: false (compara el valor y el tipo)
+		console.log(a != b); // Output: false
+		console.log(a !== b); // Output: true
+
+	Subheader: Operadores Lógicos
+	
+	Content:
+		Los operadores lógicos permiten combinar múltiples expresiones y devuelven un valor booleano. Los principales son:
+
+		* **AND lógico (&&)**: Devuelve `true` si ambas expresiones son verdaderas.
+		* **OR lógico (||)**: Devuelve `true` si al menos una de las expresiones es verdadera.
+		* **NOT lógico (!)**: Invierte el valor de una expresión; devuelve `true` si la expresión es falsa y `false` si es verdadera.
+
+	Code:
+		// Ejemplo de operadores lógicos
+		let edad = 25;
+		let esAdulto = edad >= 18;
+		let tieneLicencia = true;
+
+		// Operador AND
+		let puedeConducir = esAdulto && tieneLicencia;
+		console.log(puedeConducir); // Output: true
+
+		// Operador OR
+		let esMenor = edad < 18 || edad === 25;
+		console.log(esMenor); // Output: true
+
+		// Operador NOT
+		let noTieneLicencia = !tieneLicencia;
+		console.log(noTieneLicencia); // Output: false
+
+	Header: Operador Ternario
+	
+	Content: 
+		El operador ternario es una forma compacta de escribir una declaración condicional `if-else`. 
+		Se representa con el signo `?` y `:` y tiene la siguiente sintaxis:
+
+		`condición ? valor_si_true : valor_si_false;`
+
+	Code:
+		// Ejemplo de operador ternario
+		let esMayorDeEdad = edad >= 18 ? "Sí, es mayor de edad" : "No, es menor de edad";
+		console.log(esMayorDeEdad); // Output: "Sí, es mayor de edad"

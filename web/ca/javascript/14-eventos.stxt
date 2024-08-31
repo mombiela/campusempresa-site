@@ -1,0 +1,137 @@
+Document (campusempresa.org/namespace.stxt): Eventos
+	Navigation:
+		Previous: Manipulación del DOM (13-manipulacion-dom)
+		Next: Introducción a jQuery (15-introduccion-jquery)
+	Header: Eventos en JavaScript
+	Subheader: ¿Qué es un evento?
+	
+	Content:
+		En JavaScript, un **evento** es cualquier interacción del usuario o acción del navegador que se puede detectar y manejar mediante código. 
+		Algunos ejemplos de eventos comunes son clics de botones, cambios en campos de texto, desplazamiento de la página, y carga de la página.
+		
+		Los eventos permiten crear aplicaciones interactivas y dinámicas al responder a las acciones del usuario en tiempo real.
+
+	Code:
+		// Ejemplo básico de un evento de clic
+		let boton = document.getElementById("miBoton");
+
+		boton.addEventListener("click", function() {
+			alert("¡Botón clickeado!");
+		});
+
+	Subheader: Manejo de eventos
+	
+	Content:
+		Para manejar eventos en JavaScript, se pueden usar los métodos `addEventListener` y `removeEventListener`. 
+		El método `addEventListener` permite registrar una función que se ejecutará cuando ocurra un evento específico.
+
+		* `addEventListener(tipoDeEvento, función)` - Asocia una función a un evento específico.
+		* `removeEventListener(tipoDeEvento, función)` - Elimina un manejador de eventos previamente registrado.
+
+	Code:
+		// Ejemplo de manejo de eventos
+		let inputTexto = document.getElementById("miInput");
+
+		// Añadir un evento de cambio
+		inputTexto.addEventListener("change", function() {
+			console.log("El valor ha cambiado a: " + inputTexto.value);
+		});
+
+		// Remover el evento
+		let manejarEvento = function() {
+			console.log("Evento removido");
+		};
+
+		inputTexto.addEventListener("input", manejarEvento);
+		inputTexto.removeEventListener("input", manejarEvento);
+
+	Subheader: Eventos de ratón
+	
+	Content:
+		Los eventos de ratón son aquellos que responden a las acciones del usuario con el ratón, como clics, doble clics, y movimientos.
+
+		* `click` - Se activa cuando el usuario hace clic en un elemento.
+		* `dblclick` - Se activa cuando el usuario hace doble clic en un elemento.
+		* `mouseover` - Se activa cuando el ratón se mueve sobre un elemento.
+		* `mouseout` - Se activa cuando el ratón sale de un elemento.
+		* `mousemove` - Se activa cuando el ratón se mueve dentro de un elemento.
+
+	Code:
+		// Ejemplo de eventos de ratón
+		let caja = document.getElementById("miCaja");
+
+		caja.addEventListener("mouseover", function() {
+			caja.style.backgroundColor = "lightblue";
+		});
+
+		caja.addEventListener("mouseout", function() {
+			caja.style.backgroundColor = "";
+		});
+
+		caja.addEventListener("click", function() {
+			alert("Caja clickeada");
+		});
+
+	Subheader: Eventos de teclado
+	
+	Content:
+		Los eventos de teclado responden a las interacciones del usuario con el teclado.
+
+		* `keydown` - Se activa cuando una tecla es presionada.
+		* `keyup` - Se activa cuando una tecla es liberada.
+		* `keypress` - Se activa cuando una tecla es presionada y liberada. Este evento está en desuso y `keydown` o `keyup` suelen ser preferidos.
+
+	Code:
+		// Ejemplo de eventos de teclado
+		document.addEventListener("keydown", function(event) {
+			console.log("Tecla presionada: " + event.key);
+		});
+
+		document.addEventListener("keyup", function(event) {
+			console.log("Tecla liberada: " + event.key);
+		});
+
+	Subheader: Eventos de formulario
+	
+	Content:
+		Los eventos de formulario están relacionados con la interacción del usuario con elementos de formulario, como campos de entrada, botones y selects.
+
+		* `submit` - Se activa cuando se envía un formulario.
+		* `focus` - Se activa cuando un elemento de formulario recibe el foco.
+		* `blur` - Se activa cuando un elemento de formulario pierde el foco.
+		* `change` - Se activa cuando el valor de un elemento de formulario cambia.
+
+	Code:
+		// Ejemplo de evento de envío de formulario
+		let formulario = document.getElementById("miFormulario");
+
+		formulario.addEventListener("submit", function(event) {
+			event.preventDefault(); // Evitar el envío del formulario
+			alert("Formulario enviado");
+		});
+
+	Subheader: Propagación de eventos
+	
+	Content:
+		La propagación de eventos es el proceso por el cual un evento se propaga a través del DOM. 
+		JavaScript permite controlar la propagación de eventos a través de la fase de burbujeo (bubble) y la fase de captura (capture).
+
+		* **Fase de burbujeo**: El evento comienza desde el elemento objetivo y se propaga hacia arriba en la jerarquía del DOM.
+		* **Fase de captura**: El evento se propaga desde el documento raíz hacia el elemento objetivo.
+
+		La propagación se puede controlar usando `event.stopPropagation()` para detenerla en cualquier punto.
+
+	Code:
+		// Ejemplo de propagación de eventos
+		let contenedor = document.getElementById("contenedor");
+
+		contenedor.addEventListener("click", function() {
+			alert("Contenedor clickeado");
+		});
+
+		let botonInterno = document.getElementById("botonInterno");
+
+		botonInterno.addEventListener("click", function(event) {
+			alert("Botón clickeado");
+			event.stopPropagation(); // Detener la propagación
+		});

@@ -1,0 +1,139 @@
+Document (campusempresa.org/namespace.stxt): Tema 9: Layouts y posicionamiento básico en CSS
+	Navigation:
+		Previous: Anterior (tema-08)
+		Next: Siguiente (tema-10)
+	Header: Introducción a los layouts en CSS
+	Subheader: ¿Qué es un layout?
+
+	Content:
+		En el diseño web, un "layout" se refiere a la disposición y organización de los elementos en una página. CSS proporciona varias herramientas y técnicas para crear layouts que son fundamentales para diseñar interfaces de usuario atractivas y funcionales.
+
+		Algunos de los métodos más utilizados para construir layouts en CSS incluyen:
+		1. **Display**: Controla cómo se muestran los elementos.
+		2. **Position**: Controla la posición de los elementos en la página.
+		3. **Flexbox**: Un sistema de diseño unidimensional para distribuir espacio entre elementos.
+		4. **Grid**: Un sistema de diseño bidimensional para organizar elementos en filas y columnas.
+
+	Code:
+		/* Ejemplo básico de layout */
+		.container {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.item {
+			flex: 1;
+			padding: 10px;
+			border: 1px solid #ccc;
+		}
+
+	Subheader: El modelo de caja en CSS
+
+	Content:
+		El modelo de caja es uno de los conceptos más fundamentales en CSS. Todos los elementos en CSS se representan como cajas rectangulares, y el modelo de caja define cómo se calculan el tamaño y el espaciado de esas cajas.
+
+		El modelo de caja incluye:
+		1. **Content**: El contenido real del elemento, como texto o imágenes.
+		2. **Padding**: El espacio entre el contenido y el borde del elemento.
+		3. **Border**: El borde alrededor del padding y el contenido.
+		4. **Margin**: El espacio exterior que separa el borde del elemento de otros elementos.
+
+	Code:
+		/* Ejemplo de modelo de caja */
+		.box {
+			width: 200px;
+			padding: 10px;
+			border: 5px solid #000;
+			margin: 20px;
+		}
+
+	Subheader: Posicionamiento en CSS
+
+	Content:
+		CSS ofrece varios métodos de posicionamiento que permiten controlar la ubicación de los elementos en la página:
+
+		1. **Static**: Es el valor predeterminado y posiciona los elementos de acuerdo al flujo normal del documento.
+		2. **Relative**: Permite mover un elemento en relación con su posición original.
+		3. **Absolute**: Posiciona un elemento en relación a su contenedor más cercano con posicionamiento relativo, absoluto o fijo.
+		4. **Fixed**: Posiciona un elemento en relación con la ventana del navegador, permaneciendo fijo al hacer scroll.
+		5. **Sticky**: Es una combinación de `relative` y `fixed`, donde el elemento se desplaza hasta que alcanza un umbral especificado y luego se fija en su lugar.
+
+	Code:
+		/* Ejemplo de posicionamiento */
+		.relative-box {
+			position: relative;
+			top: 20px;
+			left: 10px;
+		}
+
+		.absolute-box {
+			position: absolute;
+			top: 50px;
+			right: 20px;
+		}
+
+		.fixed-box {
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+		}
+
+	Subheader: Layouts con Flexbox
+
+	Content:
+		Flexbox es un modelo de layout unidimensional que facilita la alineación y distribución de espacio entre elementos en un contenedor. Los elementos flexibles pueden crecer o encogerse para llenar el espacio disponible, lo que hace que Flexbox sea ideal para crear layouts fluidos.
+
+		**Propiedades clave de Flexbox**:
+		1. **display: flex;**: Convierte un contenedor en un contenedor flex.
+		2. **flex-direction**: Define la dirección del eje principal (`row`, `column`, etc.).
+		3. **justify-content**: Alinea los elementos a lo largo del eje principal.
+		4. **align-items**: Alinea los elementos a lo largo del eje transversal.
+		5. **flex-grow, flex-shrink, flex-basis**: Controlan cómo los elementos flexibles crecen o se encogen.
+
+	Code:
+		/* Ejemplo de Flexbox */
+		.flex-container {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.flex-item {
+			flex-grow: 1;
+			margin: 10px;
+			padding: 20px;
+			background-color: lightcoral;
+		}
+
+	Subheader: Layouts con CSS Grid
+
+	Content:
+		CSS Grid es un sistema de diseño bidimensional que permite crear layouts complejos mediante la definición de filas y columnas. Es una herramienta poderosa para construir layouts de página completos y permite un control detallado sobre la disposición de los elementos.
+
+		**Propiedades clave de CSS Grid**:
+		1. **display: grid;**: Convierte un contenedor en un contenedor de grid.
+		2. **grid-template-columns, grid-template-rows**: Define la estructura del grid.
+		3. **grid-gap**: Controla el espaciado entre filas y columnas.
+		4. **grid-area**: Permite que un elemento ocupe múltiples filas o columnas.
+		5. **justify-items, align-items**: Alinean los elementos dentro de sus celdas.
+
+	Code:
+		/* Ejemplo de CSS Grid */
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 10px;
+		}
+
+		.grid-item {
+			background-color: lightblue;
+			padding: 20px;
+			text-align: center;
+		}
+
+	Header: Conclusión sobre layouts y posicionamiento en CSS
+	
+	Content: 
+		El diseño y el posicionamiento son aspectos cruciales del desarrollo web que determinan cómo los usuarios interactúan con una página. CSS ofrece una variedad de técnicas para crear layouts flexibles y posicionar elementos con precisión, desde el modelo de caja hasta herramientas más avanzadas como Flexbox y Grid.
+
+		Con una comprensión sólida de estos conceptos, puedes diseñar interfaces que sean tanto estéticamente agradables como funcionales, adaptándose a diferentes dispositivos y tamaños de pantalla.

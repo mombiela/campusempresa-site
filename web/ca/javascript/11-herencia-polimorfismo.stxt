@@ -1,0 +1,175 @@
+Document (campusempresa.org/namespace.stxt): Herencia y Polimorfismo
+	Navigation:
+		Previous: Clases y Prototipos (10-clases-prototipos)
+		Next: Encapsulamiento (12-encapsulamiento)
+	Header: Herencia y Polimorfismo en JavaScript
+	Subheader: Introducción a la Herencia
+	
+	Content:
+		La herencia es un concepto fundamental en la programación orientada a objetos, que permite crear nuevas clases a partir de clases existentes. 
+		En JavaScript, esto se logra utilizando clases y prototipos. La herencia permite que las nuevas clases hereden propiedades y métodos de las clases padres, 
+		lo que facilita la reutilización de código y la creación de jerarquías de clases.
+
+	Code:
+		// Ejemplo básico de herencia en JavaScript
+		class Animal {
+			constructor(nombre) {
+				this.nombre = nombre;
+			}
+
+			hacerSonido() {
+				console.log(`${this.nombre} hace un sonido.`);
+			}
+		}
+
+		class Perro extends Animal {
+			ladrar() {
+				console.log(`${this.nombre} dice guau.`);
+			}
+		}
+
+		let miPerro = new Perro("Rex");
+		miPerro.hacerSonido(); // Output: Rex hace un sonido.
+		miPerro.ladrar(); // Output: Rex dice guau.
+
+	Subheader: Clases base y clases derivadas
+	
+	Content:
+		Una **clase base** es la clase de la cual heredan otras clases. Las **clases derivadas** son aquellas que extienden la funcionalidad de la clase base, 
+		añadiendo nuevos métodos o sobreescribiendo los existentes.
+
+	Code:
+		// Ejemplo de clase base y clase derivada
+		class Vehiculo {
+			constructor(marca, modelo) {
+				this.marca = marca;
+				this.modelo = modelo;
+			}
+
+			arrancar() {
+				console.log(`El ${this.marca} ${this.modelo} está arrancando.`);
+			}
+		}
+
+		class Coche extends Vehiculo {
+			encenderRadio() {
+				console.log(`La radio del ${this.marca} ${this.modelo} está encendida.`);
+			}
+		}
+
+		let miCoche = new Coche("Toyota", "Corolla");
+		miCoche.arrancar(); // Output: El Toyota Corolla está arrancando.
+		miCoche.encenderRadio(); // Output: La radio del Toyota Corolla está encendida.
+
+	Subheader: Uso de la palabra clave `super`
+	
+	Content:
+		La palabra clave `super` se utiliza en las clases derivadas para llamar al constructor de la clase base. 
+		También se puede utilizar para acceder a métodos y propiedades de la clase base.
+
+	Code:
+		// Ejemplo de uso de super
+		class Persona {
+			constructor(nombre, edad) {
+				this.nombre = nombre;
+				this.edad = edad;
+			}
+
+			presentarse() {
+				console.log(`Hola, me llamo ${this.nombre} y tengo ${this.edad} años.`);
+			}
+		}
+
+		class Estudiante extends Persona {
+			constructor(nombre, edad, curso) {
+				super(nombre, edad);
+				this.curso = curso;
+			}
+
+			presentarse() {
+				super.presentarse();
+				console.log(`Estoy en el curso de ${this.curso}.`);
+			}
+		}
+
+		let estudiante = new Estudiante("Ana", 20, "Matemáticas");
+		estudiante.presentarse();
+		// Output:
+		// Hola, me llamo Ana y tengo 20 años.
+		// Estoy en el curso de Matemáticas.
+
+	Subheader: Polimorfismo
+	
+	Content:
+		El polimorfismo es la capacidad de un método para tomar diferentes formas. En JavaScript, esto se refiere a la capacidad de sobrescribir métodos en las clases derivadas, 
+		permitiendo que un mismo método actúe de manera diferente en diferentes contextos.
+
+	Code:
+		// Ejemplo de polimorfismo
+		class Empleado {
+			constructor(nombre, salario) {
+				this.nombre = nombre;
+				this.salario = salario;
+			}
+
+			mostrarInfo() {
+				console.log(`Empleado: ${this.nombre}, Salario: ${this.salario}`);
+			}
+		}
+
+		class Gerente extends Empleado {
+			constructor(nombre, salario, departamento) {
+				super(nombre, salario);
+				this.departamento = departamento;
+			}
+
+			mostrarInfo() {
+				console.log(`Gerente: ${this.nombre}, Salario: ${this.salario}, Departamento: ${this.departamento}`);
+			}
+		}
+
+		let empleado = new Empleado("Luis", 50000);
+		let gerente = new Gerente("Carla", 80000, "Ventas");
+
+		empleado.mostrarInfo(); // Output: Empleado: Luis, Salario: 50000
+		gerente.mostrarInfo(); // Output: Gerente: Carla, Salario: 80000, Departamento: Ventas
+
+	Subheader: Herencia y composición
+	
+	Content:
+		Además de la herencia, otro patrón común en la programación orientada a objetos es la **composición**. 
+		La composición implica construir objetos complejos a partir de otros objetos, lo que permite reutilizar código sin crear una jerarquía rígida.
+
+		La herencia se basa en un "es un" (is-a) relación, mientras que la composición se basa en un "tiene un" (has-a) relación.
+
+	Code:
+		// Ejemplo de composición
+		class Motor {
+			encender() {
+				console.log("El motor está encendido.");
+			}
+		}
+
+		class Ventanas {
+			abrir() {
+				console.log("Las ventanas están abiertas.");
+			}
+		}
+
+		class Coche {
+			constructor() {
+				this.motor = new Motor();
+				this.ventanas = new Ventanas();
+			}
+
+			arrancar() {
+				this.motor.encender();
+				this.ventanas.abrir();
+			}
+		}
+
+		let miCoche = new Coche();
+		miCoche.arrancar();
+		// Output:
+		// El motor está encendido.
+		// Las ventanas están abiertas.

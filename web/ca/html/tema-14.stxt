@@ -1,0 +1,119 @@
+Document (campusempresa.org/namespace.stxt): Tema 14: HTML5: Nuevas etiquetas y características
+	Navigation:
+		Previous: Anterior (tema-13)
+		Next: Siguiente (tema-15)
+	Header: Introducción a HTML5
+	Subheader: Evolución hacia HTML5
+
+	Content:
+		HTML5 es la última versión importante del lenguaje HTML y representa una evolución significativa respecto a sus predecesores. Introducido en 2014, HTML5 fue diseñado para abordar las limitaciones de las versiones anteriores y para soportar la creciente demanda de contenido multimedia y aplicaciones web interactivas.
+
+		**Principales objetivos de HTML5**:
+		1. Mejorar la interoperabilidad y reducir la dependencia de plugins externos como Flash.
+		2. Facilitar la creación de aplicaciones web ricas y complejas con nuevas APIs y características.
+		3. Establecer un estándar único y consistente para la web.
+
+	Code:
+		<!-- Ejemplo básico de documento HTML5 -->
+		<!DOCTYPE html>
+		<html lang="es">
+			<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Documento HTML5</title>
+			</head>
+			<body>
+				<h1>Bienvenidos a HTML5</h1>
+			</body>
+		</html>
+
+	Subheader: Nuevas etiquetas semánticas
+
+	Content:
+		Una de las mejoras más significativas en HTML5 es la introducción de nuevas etiquetas semánticas que permiten estructurar mejor el contenido de una página web. Estas etiquetas ofrecen una mejor legibilidad tanto para los desarrolladores como para los motores de búsqueda.
+
+		**Etiquetas semánticas clave**:
+		1. **`<header>`**: Representa la cabecera de un documento o sección.
+		2. **`<nav>`**: Define un conjunto de enlaces de navegación.
+		3. **`<section>`**: Representa una sección temática en un documento.
+		4. **`<article>`**: Define un contenido autónomo que podría ser distribuido de manera independiente.
+		5. **`<aside>`**: Contenido relacionado que se sitúa al margen del contenido principal.
+		6. **`<footer>`**: Representa el pie de página de un documento o sección.
+
+	Code:
+		<!-- Ejemplo de etiquetas semánticas en HTML5 -->
+		<body>
+			<header>
+				<h1>Mi sitio web</h1>
+			</header>
+			<nav>
+				<ul>
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#sobre">Sobre mí</a></li>
+					<li><a href="#contacto">Contacto</a></li>
+				</ul>
+			</nav>
+			<section id="inicio">
+				<article>
+					<h2>Título del artículo</h2>
+					<p>Este es un artículo en HTML5.</p>
+				</article>
+			</section>
+			<aside>
+				<p>Este es un contenido adicional.</p>
+			</aside>
+			<footer>
+				<p>&copy; 2024 Mi sitio web</p>
+			</footer>
+		</body>
+
+	Subheader: Manejo de multimedia en HTML5
+
+	Content:
+		HTML5 introdujo soporte nativo para contenido multimedia sin la necesidad de plugins externos. Las etiquetas `<audio>` y `<video>` permiten incluir archivos de audio y video directamente en las páginas web.
+
+		**Características clave**:
+		1. **`<audio>`**: Permite reproducir archivos de audio.
+		2. **`<video>`**: Permite reproducir archivos de video.
+		3. **Atributos como `controls`, `autoplay`, `loop`, y `muted`** para personalizar la reproducción.
+
+	Code:
+		<!-- Ejemplo de audio y video en HTML5 -->
+		<audio controls>
+			<source src="audio.mp3" type="audio/mpeg">
+			Tu navegador no soporta la reproducción de audio.
+		</audio>
+
+		<video controls width="320" height="240">
+			<source src="video.mp4" type="video/mp4">
+			Tu navegador no soporta la reproducción de video.
+		</video>
+
+	Subheader: Nuevas APIs de HTML5
+
+	Content:
+		HTML5 también introdujo una serie de APIs que permiten crear aplicaciones web más ricas e interactivas. Algunas de las APIs más importantes incluyen:
+
+		1. **API de Geolocalización**: Permite obtener la ubicación geográfica del usuario.
+		2. **API de Almacenamiento Web**: Proporciona almacenamiento local en el navegador con `localStorage` y `sessionStorage`.
+		3. **Canvas API**: Permite dibujar gráficos en 2D de manera dinámica.
+		4. **Drag and Drop API**: Permite implementar funcionalidades de arrastrar y soltar.
+		5. **Web Workers**: Permite ejecutar scripts en segundo plano sin bloquear la interfaz de usuario.
+
+	Code:
+		<!-- Ejemplo básico de Canvas en HTML5 -->
+		<canvas id="miCanvas" width="200" height="200" style="border:1px solid #000000;"></canvas>
+
+		<script>
+			let canvas = document.getElementById('miCanvas');
+			let context = canvas.getContext('2d');
+			context.fillStyle = "#FF0000";
+			context.fillRect(0, 0, 150, 75);
+		</script>
+
+	Header: Conclusión sobre HTML5
+	
+	Content: 
+		HTML5 ha revolucionado la forma en que se desarrollan las aplicaciones web al introducir nuevas etiquetas semánticas, capacidades multimedia nativas y una serie de APIs que expanden lo que es posible hacer en el navegador. Estas mejoras no solo hacen que las páginas web sean más ricas y dinámicas, sino que también facilitan la creación de contenido accesible y bien estructurado.
+
+		Adoptar HTML5 y sus características te permitirá construir sitios y aplicaciones web modernos que cumplen con los estándares más recientes de la industria.

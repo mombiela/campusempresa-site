@@ -1,0 +1,141 @@
+Document (campusempresa.org/namespace.stxt): Tema 13: Manipulación del DOM en JavaScript
+	Navigation:
+		Previous: Anterior (tema-12)
+		Next: Siguiente (tema-14)
+	Header: Introducción al DOM
+	Subheader: ¿Qué es el DOM?
+
+	Content:
+		El DOM (Document Object Model) es una interfaz de programación que representa la estructura de un documento HTML o XML como un árbol de nodos. Cada nodo en este árbol representa una parte del documento, como un elemento, atributo o texto. JavaScript puede interactuar con el DOM para modificar la estructura, estilo y contenido de una página web de manera dinámica.
+
+		El DOM es esencial para crear aplicaciones web interactivas, ya que permite a los desarrolladores acceder y manipular elementos de la página en tiempo real.
+
+	Code:
+		<!-- Ejemplo de estructura del DOM -->
+		<html>
+			<head>
+				<title>Mi página</title>
+			</head>
+			<body>
+				<h1>Encabezado</h1>
+				<p>Este es un párrafo de texto.</p>
+			</body>
+		</html>
+	Subheader: Selección de elementos del DOM
+	
+	Content:
+		Para manipular elementos en el DOM, primero necesitas seleccionarlos. JavaScript proporciona varios métodos para seleccionar elementos del DOM:
+	
+		1. **`getElementById`**: Selecciona un elemento por su atributo `id`.
+		2. **`getElementsByClassName`**: Selecciona todos los elementos con una clase específica.
+		3. **`getElementsByTagName`**: Selecciona todos los elementos de un tipo de etiqueta específico.
+		4. **`querySelector`**: Selecciona el primer elemento que coincide con un selector CSS.
+		5. **`querySelectorAll`**: Selecciona todos los elementos que coinciden con un selector CSS.
+	
+	Code:
+		<!-- Ejemplo de selección de elementos del DOM -->
+		<script>
+			let elementoPorId = document.getElementById("miElemento");
+			let elementosPorClase = document.getElementsByClassName("miClase");
+			let elementosPorEtiqueta = document.getElementsByTagName("p");
+			let primerElemento = document.querySelector(".miClase");
+			let todosLosElementos = document.querySelectorAll("p");
+	
+			console.log(elementoPorId);
+			console.log(elementosPorClase);
+			console.log(elementosPorEtiqueta);
+			console.log(primerElemento);
+			console.log(todosLosElementos);
+		</script>
+	
+	Subheader: Manipulación de contenido y estilo
+	
+	Content:
+		Una vez que has seleccionado un elemento, puedes manipular su contenido y estilo usando JavaScript. Puedes cambiar el texto, añadir o eliminar elementos, y modificar las propiedades CSS de un elemento.
+	
+		**Modificar contenido**:
+		- `innerHTML`: Permite cambiar el HTML interno de un elemento.
+		- `textContent`: Cambia solo el texto, sin afectar el HTML.
+	
+		**Modificar estilo**:
+		- `style.property`: Permite cambiar propiedades CSS directamente en un elemento.
+	
+	Code:
+		<!-- Ejemplo de manipulación de contenido y estilo -->
+		<script>
+			let miParrafo = document.getElementById("miParrafo");
+	
+			// Cambiar el contenido
+			miParrafo.innerHTML = "Nuevo contenido <strong>HTML</strong>";
+			miParrafo.textContent = "Nuevo contenido de texto";
+	
+			// Cambiar el estilo
+			miParrafo.style.color = "blue";
+			miParrafo.style.fontSize = "20px";
+		</script>
+
+	Subheader: Creación y eliminación de elementos
+	
+	Content:
+		JavaScript permite crear nuevos elementos en el DOM y agregarlos al documento, así como eliminar elementos existentes.
+	
+		**Crear un elemento**:
+		- `document.createElement`: Crea un nuevo elemento HTML.
+		- `appendChild`: Añade un elemento como hijo de otro elemento.
+	
+		**Eliminar un elemento**:
+		- `removeChild`: Elimina un elemento hijo de su elemento padre.
+	
+	Code:
+		<!-- Ejemplo de creación y eliminación de elementos -->
+		<script>
+			// Crear un nuevo elemento
+			let nuevoElemento = document.createElement("div");
+			nuevoElemento.textContent = "Soy un nuevo div";
+	
+			// Añadir el nuevo elemento al body
+			document.body.appendChild(nuevoElemento);
+	
+			// Eliminar un elemento existente
+			let elementoAEliminar = document.getElementById("elementoAEliminar");
+			elementoAEliminar.parentNode.removeChild(elementoAEliminar);
+		</script>
+	
+	Subheader: Manipulación de clases y atributos
+	
+	Content:
+		JavaScript también permite manipular las clases y atributos de los elementos en el DOM, lo que es útil para cambiar el estilo o el comportamiento de los elementos.
+	
+		**Manipulación de clases**:
+		- `classList.add`: Añade una clase a un elemento.
+		- `classList.remove`: Elimina una clase de un elemento.
+		- `classList.toggle`: Alterna la presencia de una clase en un elemento.
+	
+		**Manipulación de atributos**:
+		- `setAttribute`: Establece el valor de un atributo.
+		- `getAttribute`: Obtiene el valor de un atributo.
+		- `removeAttribute`: Elimina un atributo.
+	
+	Code:
+		<!-- Ejemplo de manipulación de clases y atributos -->
+		<script>
+			let miElemento = document.getElementById("miElemento");
+	
+			// Manipular clases
+			miElemento.classList.add("nueva-clase");
+			miElemento.classList.remove("clase-antigua");
+			miElemento.classList.toggle("clase-activa");
+	
+			// Manipular atributos
+			miElemento.setAttribute("data-valor", "123");
+			let valor = miElemento.getAttribute("data-valor");
+			miElemento.removeAttribute("data-valor");
+	
+			console.log(valor);
+		</script>
+	
+	Header: Conclusión sobre la manipulación del DOM en JavaScript
+	
+	Content: 
+		La manipulación del DOM es una de las habilidades más poderosas en JavaScript, permitiendo a los desarrolladores crear aplicaciones web dinámicas e interactivas. Al comprender cómo seleccionar y modificar elementos del DOM, puedes crear experiencias de usuario ricas y personalizadas, adaptando el contenido y el diseño en tiempo real en respuesta a las interacciones del usuario.
+			

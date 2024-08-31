@@ -1,0 +1,195 @@
+Document (campusempresa.org/namespace.stxt): Introducción a la Concurrencia en Java
+	Navigation:
+		Previous: Manejo de Excepciones (12-manejo-excepciones)
+		Next: Buenas Prácticas de Programación (14-buenas-practicas)
+	
+	Header: Introducción a la Concurrencia
+	Subheader: ¿Qué es la concurrencia en Java?
+	
+	Content:
+		La concurrencia en Java se refiere a la capacidad de ejecutar múltiples hilos de manera simultánea dentro de un programa. Esto es fundamental para aprovechar al máximo los procesadores modernos y para mejorar el rendimiento de las aplicaciones, especialmente aquellas que requieren realizar múltiples tareas al mismo tiempo, como manejar múltiples conexiones de red o procesar grandes volúmenes de datos en paralelo.
+
+	Header: Hilos en Java
+	Subheader: Creación de Hilos
+	Content:
+		En Java, un hilo (`Thread`) es una unidad de ejecución dentro de un programa. Puedes crear un hilo de dos maneras principales: extendiendo la clase `Thread` o implementando la interfaz `Runnable`.
+	
+	Code:
+		// Creación de un hilo extendiendo la clase Thread
+		public class MiHilo extends Thread {
+		    public void run() {
+		        System.out.println("El hilo está corriendo.");
+		    }
+
+		    public static void main(String[] args) {
+		        MiHilo hilo = new MiHilo();
+		        hilo.start();  // Inicia el hilo
+		    }
+		}
+
+	Content:
+		En este ejemplo, la clase `MiHilo` extiende `Thread` y sobreescribe el método `run()`. El hilo se inicia llamando al método `start()`, que a su vez llama a `run()`.
+
+	Subheader: Implementación de `Runnable`
+	
+	Content:
+		Otra forma de crear un hilo es implementando la interfaz `Runnable`, que permite separar la lógica de la ejecución del hilo de la clase principal.
+		
+	Code:
+		// Creación de un hilo implementando Runnable
+		public class MiRunnable implements Runnable {
+		    public void run() {
+		        System.out.println("El hilo Runnable está corriendo.");
+		    }
+
+		    public static void main(String[] args) {
+		        MiRunnable runnable = new MiRunnable();
+		        Thread hilo = new Thread(runnable);
+		        hilo.start();  // Inicia el hilo
+		    }
+		}
+
+	Content:
+		En este ejemplo, `MiRunnable` implementa `Runnable` y proporciona la implementación de `run()`. El hilo se inicia creando una instancia de `Thread` y pasando la instancia de `MiRunnable` como argumento.
+
+	Header: Sincronización de Hilos
+	Subheader: Problemas de concurrencia
+	
+	Content:
+		Cuando varios hilos acceden a un recurso compartido, como una variable o un objeto, pueden ocurrir problemas de concurrencia. Esto sucede cuando los hilos interfieren entre sí, lo que puede resultar en comportamientos impredecibles o datos corruptos.
+
+	Subheader: Uso de la palabra clave `synchronized`
+	
+	Content:
+		Java proporciona la palabra clave `synchronized` para evitar que múltiples hilos accedan simultáneamente a un recurso compartido. Esto asegura que solo un hilo pueda ejecutar un bloque de código sincronizado a la vez.
+		
+	Code:
+		// Ejemplo de sincronización de métodos
+		public class Contador {
+		    private int cuenta = 0;
+
+		    public synchronized void incrementar() {
+		        cuenta++;
+		    }
+
+		    public int getCuenta() {
+		        return cuenta;
+		    }
+
+		    public static void main(String[] args) {
+		        Contador contador = new Contador();
+
+		        // Creación de dos hilos que incrementan la cuenta
+		        Thread hilo1 = new Thread(() -> {
+		            for (int i = 0; i < 1000; i++) {
+		                contador.incrementar();
+		            }
+		        });
+
+		        Thread hilo2 = new Thread(() -> {
+		            for (int i = 0; i < 1000; i++) {
+		                contador.incrementar();
+		            }
+		        });
+
+		        hilo1.start();
+		        hilo2.start();
+
+		        try {
+		            hilo1.join();
+		            hilo2.join();
+		        } catch (InterruptedException e) {
+		            e.printStackTrace();
+		        }
+
+		        System.out.println("Cuenta final: " + contador.getCuenta());  // Debería ser 2000
+		    }
+		}
+
+	Content:
+		En este ejemplo, el método `incrementar()` está sincronizado, lo que evita que varios hilos modifiquen la variable `cuenta` al mismo tiempo. Sin la sincronización, el valor final de `cuenta` podría ser incorrecto debido a condiciones de carrera.
+
+	Header: Bloqueo de Hilos
+	Subheader: Deadlock (Bloqueo Mutuo)
+	
+	Content:
+		Un `deadlock` ocurre cuando dos o más hilos quedan bloqueados permanentemente esperando recursos que están siendo retenidos por los otros hilos. Esto suele ocurrir cuando los hilos intentan adquirir varios bloqueos en diferente orden.
+		
+	Code:
+		// Ejemplo simple de posible deadlock
+		public class DeadlockEjemplo {
+		    public static void main(String[] args) {
+		        final String recurso1 = "Recurso 1";
+		        final String recurso2 = "Recurso 2";
+
+		        // Hilo 1
+		        Thread hilo1 = new Thread(() -> {
+		            synchronized (recurso1) {
+		                System.out.println("Hilo 1: bloqueó " + recurso1);
+
+		                try { Thread.sleep(100); } catch (Exception e) {}
+
+		                synchronized (recurso2) {
+		                    System.out.println("Hilo 1: bloqueó " + recurso2);
+		                }
+		            }
+		        });
+
+		        // Hilo 2
+		        Thread hilo2 = new Thread(() -> {
+		            synchronized (recurso2) {
+		                System.out.println("Hilo 2: bloqueó " + recurso2);
+
+		                try { Thread.sleep(100); } catch (Exception e) {}
+
+		                synchronized (recurso1) {
+		                    System.out.println("Hilo 2: bloqueó " + recurso1);
+		                }
+		            }
+		        });
+
+		        hilo1.start();
+		        hilo2.start();
+		    }
+		}
+
+	Content:
+		En este ejemplo, `hilo1` bloquea `recurso1` y espera para bloquear `recurso2`, mientras que `hilo2` bloquea `recurso2` y espera para bloquear `recurso1`. Esto causa un deadlock, ya que ambos hilos esperan indefinidamente.
+
+	Header: Uso de Ejecutores (`Executors`)
+	Subheader: Introducción a los `Executors`
+	
+	Content:
+		El framework `Executor` en Java proporciona una forma más avanzada de gestionar hilos. En lugar de crear y gestionar manualmente los hilos, `Executor` maneja un grupo de hilos y se encarga de la asignación de tareas a esos hilos.
+		
+	Code:
+		import java.util.concurrent.ExecutorService;
+		import java.util.concurrent.Executors;
+
+		public class EjemploExecutor {
+		    public static void main(String[] args) {
+		        ExecutorService executor = Executors.newFixedThreadPool(3);
+
+		        for (int i = 0; i < 5; i++) {
+		            Runnable tarea = new Tarea();
+		            executor.execute(tarea);
+		        }
+
+		        executor.shutdown();
+		    }
+		}
+
+		class Tarea implements Runnable {
+		    public void run() {
+		        System.out.println("Ejecutando tarea en el hilo: " + Thread.currentThread().getName());
+		    }
+		}
+
+	Content:
+		En este ejemplo, se utiliza un `ExecutorService` con un grupo de hilos de tamaño fijo (`newFixedThreadPool`). Se asignan varias tareas al `executor`, que las ejecuta en los hilos disponibles.
+
+	Content:
+		La concurrencia es una herramienta poderosa que permite a los programas Java realizar múltiples tareas simultáneamente, mejorando la eficiencia y el rendimiento. Sin embargo, también introduce complejidad, como la necesidad de sincronización y la posibilidad de deadlocks. En el siguiente tema, discutiremos buenas prácticas de programación, incluyendo cómo manejar adecuadamente la concurrencia para evitar problemas comunes.
+
+		**Recursos adicionales:**
+		* [Documentación oficial de Java sobre concurrencia](https://docs.oracle.com/javase/tutorial/essential/concurrency/)

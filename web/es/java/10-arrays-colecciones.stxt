@@ -1,0 +1,169 @@
+Document (campusempresa.org/namespace.stxt): Arrays y Colecciones en Java
+	Navigation:
+		Previous: Interfaces y Clases Abstractas (09-interfaces-clases-abstractas)
+		Next: Manejo de Cadenas de Texto (11-cadenas-texto)
+	
+	Header: Introducción a los Arrays y Colecciones
+	Subheader: ¿Qué son los arrays y las colecciones en Java?
+	
+	Content:
+		Los arrays y colecciones son estructuras de datos fundamentales en Java que permiten almacenar y manipular conjuntos de elementos. Un array es una estructura de tamaño fijo que contiene elementos del mismo tipo, mientras que las colecciones son más flexibles y pueden cambiar de tamaño dinámicamente, ofreciendo métodos más avanzados para gestionar los datos.
+
+	Header: Arrays en Java
+	Subheader: Definición y Uso de Arrays
+	
+	Content:
+		Un array es una estructura de datos que almacena múltiples elementos del mismo tipo. Los arrays tienen un tamaño fijo que se debe definir al momento de su creación.
+		
+	Code:
+		int[] numeros = new int[5]; // Array de enteros con 5 elementos
+		numeros[0] = 10;
+		numeros[1] = 20;
+		numeros[2] = 30;
+		numeros[3] = 40;
+		numeros[4] = 50;
+
+		for (int i = 0; i < numeros.length; i++) {
+		    System.out.println("Elemento en índice " + i + ": " + numeros[i]);
+		}
+	
+	Content:
+		En este ejemplo, se crea un array de enteros llamado `numeros` con 5 elementos. Luego, se asignan valores a cada posición del array y se imprimen en la consola.
+
+	Subheader: Inicialización de Arrays
+	
+	Content:
+		Los arrays en Java pueden inicializarse de diferentes maneras. Una forma común es utilizando una lista de valores en la declaración.
+		
+	Code:
+		int[] numeros = {10, 20, 30, 40, 50};
+
+		for (int numero : numeros) {
+		    System.out.println("Número: " + numero);
+		}
+	
+	Content:
+		En este ejemplo, el array `numeros` se inicializa directamente con los valores 10, 20, 30, 40 y 50. Luego, se recorre el array usando un bucle `for-each`.
+
+	Header: Limitaciones de los Arrays
+	Subheader: Tamaño Fijo y Tipos Homogéneos
+	
+	Content:
+		Los arrays en Java tienen dos limitaciones principales:
+		
+		1. **Tamaño fijo**: Una vez que se crea un array, no se puede cambiar su tamaño.
+		2. **Tipos homogéneos**: Todos los elementos en un array deben ser del mismo tipo.
+
+	Content:
+		Para superar estas limitaciones, Java ofrece las colecciones, que son estructuras de datos más flexibles y poderosas.
+
+	Header: Introducción a las Colecciones
+	Subheader: La Interfaz `Collection`
+	
+	Content:
+		Las colecciones en Java forman parte del framework de colecciones, que es una jerarquía de interfaces y clases para trabajar con grupos de objetos. La interfaz raíz es `Collection`, y de ella derivan varias subinterfaces como `List`, `Set`, y `Queue`.
+		
+	Code:
+		import java.util.ArrayList;
+		import java.util.List;
+
+		public class EjemploColecciones {
+		    public static void main(String[] args) {
+		        List<String> listaNombres = new ArrayList<>();
+		        listaNombres.add("Juan");
+		        listaNombres.add("María");
+		        listaNombres.add("Pedro");
+
+		        for (String nombre : listaNombres) {
+		            System.out.println("Nombre: " + nombre);
+		        }
+		    }
+		}
+	
+	Content:
+		En este ejemplo, se utiliza la interfaz `List` y la clase `ArrayList` para crear una lista de nombres. A diferencia de los arrays, las listas pueden cambiar de tamaño dinámicamente.
+
+	Header: Tipos de Colecciones en Java
+	Subheader: Listas (`List`)
+	
+	Content:
+		Una `List` es una colección ordenada que permite elementos duplicados. Las clases más comunes que implementan `List` son `ArrayList` y `LinkedList`.
+		
+	Code:
+		import java.util.LinkedList;
+		import java.util.List;
+
+		public class EjemploListas {
+		    public static void main(String[] args) {
+		        List<Integer> numeros = new LinkedList<>();
+		        numeros.add(100);
+		        numeros.add(200);
+		        numeros.add(300);
+
+		        numeros.remove(1); // Elimina el elemento en el índice 1 (200)
+
+		        for (int numero : numeros) {
+		            System.out.println("Número: " + numero);
+		        }
+		    }
+		}
+
+	Content:
+		En este ejemplo, se utiliza una `LinkedList` para almacenar una lista de números enteros. Se muestra cómo agregar elementos a la lista y cómo eliminar un elemento por su índice.
+
+	Subheader: Conjuntos (`Set`)
+	
+	Content:
+		Un `Set` es una colección que no permite elementos duplicados. Las clases más comunes que implementan `Set` son `HashSet`, `LinkedHashSet`, y `TreeSet`.
+		
+	Code:
+		import java.util.HashSet;
+		import java.util.Set;
+
+		public class EjemploSet {
+		    public static void main(String[] args) {
+		        Set<String> conjuntoNombres = new HashSet<>();
+		        conjuntoNombres.add("Juan");
+		        conjuntoNombres.add("María");
+		        conjuntoNombres.add("Pedro");
+		        conjuntoNombres.add("Juan"); // Este duplicado no se añadirá
+
+		        for (String nombre : conjuntoNombres) {
+		            System.out.println("Nombre: " + nombre);
+		        }
+		    }
+		}
+
+	Content:
+		En este ejemplo, se utiliza un `HashSet` para almacenar un conjunto de nombres. Debido a que `Set` no permite duplicados, el nombre "Juan" solo se almacena una vez.
+
+	Subheader: Mapas (`Map`)
+	
+	Content:
+		Un `Map` es una estructura de datos que asocia claves con valores. A diferencia de `List` y `Set`, `Map` no es una subinterfaz de `Collection`, pero es parte fundamental del framework de colecciones de Java.
+		
+	Code:
+		import java.util.HashMap;
+		import java.util.Map;
+
+		public class EjemploMap {
+		    public static void main(String[] args) {
+		        Map<String, Integer> mapaEdades = new HashMap<>();
+		        mapaEdades.put("Juan", 25);
+		        mapaEdades.put("María", 30);
+		        mapaEdades.put("Pedro", 35);
+
+		        for (Map.Entry<String, Integer> entrada : mapaEdades.entrySet()) {
+		            System.out.println(entrada.getKey() + " tiene " + entrada.getValue() + " años.");
+		        }
+		    }
+		}
+
+	Content:
+		En este ejemplo, se utiliza un `HashMap` para asociar nombres con edades. Se muestra cómo agregar pares clave-valor al mapa y cómo iterar sobre las entradas del mapa.
+
+	Content:
+		Los arrays y colecciones son fundamentales para el manejo de datos en Java. Con las colecciones, puedes almacenar y manipular conjuntos de datos de manera más flexible que con los arrays. En el siguiente tema, exploraremos el manejo de cadenas de texto, que es otra habilidad crucial para los desarrolladores en Java.
+
+		**Recursos adicionales:**
+		* [Documentación oficial de Java sobre arrays y colecciones](https://docs.oracle.com/javase/tutorial/collections/intro/index.html)

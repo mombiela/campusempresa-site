@@ -1,0 +1,132 @@
+Document (campusempresa.org/namespace.stxt): Tema 7: Selectores y propiedades básicas en CSS
+	Navigation:
+		Previous: Anterior (tema-06)
+		Next: Siguiente (tema-08)
+	Header: Introducción a los selectores en CSS
+	Subheader: ¿Qué es un selector?
+
+	Content:
+		En CSS, un selector es la parte de una regla que selecciona los elementos HTML a los que se aplicarán los estilos. Los selectores permiten aplicar estilos de manera específica a uno o varios elementos dentro de un documento HTML, proporcionando un alto grado de control sobre el diseño de la página.
+
+		**Tipos básicos de selectores**:
+		1. **Selector de elemento**: Selecciona todos los elementos de un tipo dado, como `p` para párrafos o `h1` para encabezados.
+		2. **Selector de clase**: Selecciona elementos que tienen un atributo `class` específico. Se define con un punto (`.`) seguido del nombre de la clase.
+		3. **Selector de ID**: Selecciona un elemento único con un atributo `id` específico. Se define con un símbolo de almohadilla (`#`) seguido del nombre del ID.
+
+	Code:
+		/* Selector de elemento */
+		p {
+			color: blue;
+		}
+
+		/* Selector de clase */
+		.button {
+			background-color: green;
+			color: white;
+		}
+
+		/* Selector de ID */
+		#header {
+			background-color: black;
+			color: white;
+		}
+
+	Subheader: Selectores combinados
+
+	Content:
+		Los selectores combinados permiten aplicar estilos a elementos específicos que cumplen con múltiples condiciones. Hay varios tipos de combinadores que permiten relacionar selectores entre sí:
+
+		1. **Selector de descendiente**: Selecciona elementos dentro de otro elemento.
+		2. **Selector de hijo**: Selecciona elementos que son hijos directos de otro elemento.
+		3. **Selector de hermano adyacente**: Selecciona un elemento que es inmediatamente precedido por otro elemento.
+		4. **Selector de hermano general**: Selecciona todos los elementos hermanos de un elemento dado.
+
+	Code:
+		/* Selector de descendiente */
+		div p {
+			color: red; /* Aplica estilo a todos los <p> que están dentro de un <div> */
+		}
+
+		/* Selector de hijo */
+		div > p {
+			color: blue; /* Aplica estilo solo a <p> que son hijos directos de un <div> */
+		}
+
+		/* Selector de hermano adyacente */
+		h1 + p {
+			color: green; /* Aplica estilo al <p> que sigue inmediatamente a un <h1> */
+		}
+
+		/* Selector de hermano general */
+		h1 ~ p {
+			color: purple; /* Aplica estilo a todos los <p> que son hermanos de un <h1> */
+		}
+
+	Subheader: Propiedades básicas en CSS
+
+	Content:
+		CSS ofrece una amplia gama de propiedades que permiten definir la apariencia visual de los elementos. A continuación, se describen algunas de las propiedades básicas más utilizadas:
+
+		1. **Color y fondo**:
+		   - `color`: Define el color del texto.
+		   - `background-color`: Define el color de fondo de un elemento.
+		2. **Fuente y texto**:
+		   - `font-family`: Especifica la fuente del texto.
+		   - `font-size`: Define el tamaño del texto.
+		   - `text-align`: Alinea el texto dentro de un elemento.
+		3. **Espaciado**:
+		   - `margin`: Define el espacio exterior alrededor de un elemento.
+		   - `padding`: Define el espacio interior dentro de un elemento.
+
+	Code:
+		/* Ejemplos de propiedades básicas */
+		h1 {
+			color: navy;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+
+		p {
+			font-size: 16px;
+			color: gray;
+			margin: 20px;
+			padding: 10px;
+		}
+
+		div {
+			background-color: lightblue;
+		}
+
+	Subheader: Especificidad en CSS
+
+	Content:
+		La especificidad es un concepto clave en CSS que determina qué reglas de estilo se aplican cuando múltiples selectores apuntan al mismo elemento. La especificidad se calcula sumando los valores de los selectores involucrados:
+
+		1. **Selectores de ID**: Tienen una alta especificidad (valor de 100).
+		2. **Selectores de clase y atributos**: Tienen una especificidad media (valor de 10).
+		3. **Selectores de elemento**: Tienen la menor especificidad (valor de 1).
+
+		Cuando dos reglas compiten por aplicar un estilo, la que tenga mayor especificidad prevalecerá.
+
+	Code:
+		/* Ejemplo de especificidad */
+		#header {
+			color: red; /* Especificidad alta */
+		}
+
+		.header-class {
+			color: blue; /* Especificidad media */
+		}
+
+		h1 {
+			color: green; /* Especificidad baja */
+		}
+		
+		/* Resultado: #header prevalece, el color será rojo */
+		
+	Header: Conclusión sobre selectores y propiedades básicas
+	
+	Content: 
+		Comprender los selectores y las propiedades básicas es fundamental para aprovechar al máximo CSS. Con el conocimiento adecuado de cómo seleccionar elementos y aplicarles estilos, puedes controlar de manera precisa la apariencia de tus páginas web.
+
+		Además, la especificidad te permite gestionar cómo se aplican los estilos en caso de que múltiples reglas entren en conflicto. Con práctica, estos conceptos se convertirán en herramientas poderosas en tu conjunto de habilidades de desarrollo web.

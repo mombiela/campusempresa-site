@@ -1,0 +1,123 @@
+Document (campusempresa.org/namespace.stxt): Módulos en JavaScript
+	Navigation:
+		Previous: AJAX y Fetch API (17-ajax-fetch-api)
+		Next: Volver a cursos (../index)
+	Header: Módulos en JavaScript
+	Subheader: ¿Qué es un módulo?
+	
+	Content:
+		Un **módulo** en JavaScript es un archivo que contiene código que puede ser reutilizado y compartido entre diferentes partes de una aplicación. 
+		Los módulos permiten organizar y estructurar mejor el código, manteniéndolo limpio, reutilizable y mantenible.
+
+		Con la introducción de los módulos en ECMAScript 6 (ES6), JavaScript ofrece una forma nativa de importar y exportar código entre diferentes archivos.
+
+	Code:
+		// Ejemplo básico de un módulo
+		// archivo: math.js
+		export function sumar(a, b) {
+			return a + b;
+		}
+
+		export function restar(a, b) {
+			return a - b;
+		}
+
+	Subheader: Exportación de módulos
+	
+	Content:
+		La exportación de módulos se realiza utilizando la palabra clave `export`. 
+		Se pueden exportar funciones, variables, objetos o clases, para que puedan ser utilizados en otros archivos.
+
+		Existen dos formas de exportar módulos en JavaScript:
+
+		* **Exportaciones nombradas**: Se exportan uno o varios elementos específicos del módulo.
+		* **Exportación por defecto**: Se exporta un único valor o una única entidad predeterminada del módulo.
+
+	Code:
+		// Exportación nombrada
+		export const nombre = "Juan";
+		export function saludar() {
+			console.log("¡Hola!");
+		}
+
+		// Exportación por defecto
+		export default function multiplicar(a, b) {
+			return a * b;
+		}
+
+	Subheader: Importación de módulos
+	
+	Content:
+		Para utilizar un módulo en otro archivo, se utiliza la palabra clave `import`. 
+		Dependiendo de cómo fue exportado el módulo, se utiliza una sintaxis diferente para la importación.
+
+	Code:
+		// Importación nombrada
+		import { sumar, restar } from './math.js';
+
+		console.log(sumar(5, 3)); // Output: 8
+		console.log(restar(5, 3)); // Output: 2
+
+		// Importación por defecto
+		import multiplicar from './math.js';
+
+		console.log(multiplicar(4, 2)); // Output: 8
+
+	Subheader: Reexportación de módulos
+	
+	Content:
+		En algunos casos, es posible que desees reexportar módulos de otro archivo. 
+		Esto es útil para crear un punto central de acceso a varios módulos.
+
+	Code:
+		// archivo: operaciones.js
+		export { sumar, restar } from './math.js';
+		export { dividir } from './divisiones.js';
+
+		// Ahora en otro archivo podemos importar desde operaciones.js
+		import { sumar, restar, dividir } from './operaciones.js';
+
+		console.log(sumar(10, 5)); // Output: 15
+		console.log(dividir(10, 2)); // Output: 5
+
+	Subheader: Módulos dinámicos
+	
+	Content:
+		JavaScript también permite la importación dinámica de módulos utilizando la función `import()`. 
+		Esto es útil cuando necesitas cargar un módulo bajo demanda o en respuesta a una acción del usuario.
+
+	Code:
+		// Ejemplo de importación dinámica
+		document.getElementById('cargarModulo').addEventListener('click', async () => {
+			const { saludar } = await import('./saludos.js');
+			saludar();
+		});
+
+	Subheader: Ventajas de usar módulos
+	
+	Content:
+		El uso de módulos en JavaScript ofrece varias ventajas:
+
+		* **Organización**: Mantiene el código organizado y separado en archivos lógicos.
+		* **Reutilización**: Facilita la reutilización de código en diferentes partes de la aplicación.
+		* **Mantenibilidad**: Hace que el código sea más fácil de mantener y actualizar.
+		* **Encapsulamiento**: Los módulos encapsulan su código, evitando conflictos con otras partes del programa.
+
+	Code:
+		// Ejemplo final: combinación de todo
+		// archivo: utilidades.js
+		export function convertirMayusculas(texto) {
+			return texto.toUpperCase();
+		}
+
+		export function convertirMinusculas(texto) {
+			return texto.toLowerCase();
+		}
+
+		// archivo: index.js
+		import { convertirMayusculas, convertirMinusculas } from './utilidades.js';
+
+		const texto = "Hola Mundo";
+
+		console.log(convertirMayusculas(texto)); // Output: HOLA MUNDO
+		console.log(convertirMinusculas(texto)); // Output: hola mundo

@@ -1,0 +1,72 @@
+Document (campusempresa.org/namespace.stxt): Tema 3: Etiquetas y elementos
+	Navigation:
+		Previous: Anterior (tema-02)
+		Next: Siguiente (tema-04)
+	Header: Introducción a las etiquetas y elementos en HTML
+	Subheader: ¿Qué es una etiqueta?
+
+	Content:
+		En HTML, las etiquetas son la base de la estructura del documento. Una etiqueta es un componente que se utiliza para definir la naturaleza de un fragmento de contenido. Las etiquetas están escritas entre corchetes angulares (`< >`) y suelen aparecer en pares: una etiqueta de apertura y una etiqueta de cierre.
+
+		Ejemplo básico:
+		* Etiqueta de apertura: `<p>`
+		* Etiqueta de cierre: `</p>`
+		* Contenido: `Este es un párrafo de texto.`
+
+	Code:
+		<p>Este es un párrafo de texto.</p>
+
+	Subheader: Elementos HTML
+
+	Content:
+		Un elemento HTML se compone de una etiqueta de apertura, contenido y una etiqueta de cierre. Los elementos pueden contener texto, otros elementos o ambos. Los elementos son los bloques básicos que componen una página web.
+
+		Ejemplo de un elemento:
+		* Elemento `<h1>`: Define un encabezado de primer nivel.
+
+	Code:
+		<h1>Este es un encabezado de primer nivel</h1>
+
+	Subheader: Atributos de las etiquetas
+
+	Content:
+		Las etiquetas HTML pueden tener atributos, que son valores adicionales que proporcionan información sobre el elemento. Los atributos se escriben dentro de la etiqueta de apertura y siempre consisten en un nombre y un valor.
+
+		**Ejemplo de atributo:**
+		* La etiqueta `<a>` se utiliza para crear enlaces. Uno de sus atributos es `href`, que define la URL a la que apunta el enlace.
+
+	Code:
+		<a href="https://example.com">Visita nuestro sitio web</a>
+
+	Subheader: Etiquetas auto-cerradas
+
+	Content:
+		Algunas etiquetas HTML no tienen contenido y se cierran en la misma etiqueta de apertura. Estas se conocen como etiquetas auto-cerradas.
+
+		**Ejemplo de etiqueta auto-cerrada:**
+		* La etiqueta `<img>` se utiliza para insertar imágenes y no tiene una etiqueta de cierre separada.
+
+	Code:
+		<img src="imagen.jpg" alt="Descripción de la imagen" />
+
+	Header: Clasificación de elementos HTML
+
+	Content:
+		Los elementos HTML se pueden clasificar en dos categorías principales:
+		
+		1. **Elementos de bloque**: Ocupan todo el ancho disponible y siempre comienzan en una nueva línea. Ejemplos incluyen `<div>`, `<h1>`, `<p>`.
+		2. **Elementos en línea**: Solo ocupan el ancho necesario para su contenido y no interrumpen el flujo del texto. Ejemplos incluyen `<span>`, `<a>`, `<img>`.
+
+	Code:
+		<!-- Ejemplo de elemento de bloque -->
+		<div>
+			<p>Este es un párrafo dentro de un div.</p>
+		</div>
+
+		<!-- Ejemplo de elemento en línea -->
+		<span>Este es un texto dentro de un span.</span>
+
+	Header: Resumen sobre etiquetas y elementos
+	
+	Content: 
+		Comprender las etiquetas y elementos es fundamental para dominar HTML. Saber cómo utilizar correctamente las etiquetas, aplicar atributos y distinguir entre elementos de bloque

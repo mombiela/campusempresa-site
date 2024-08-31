@@ -1,0 +1,91 @@
+Document (campusempresa.org/namespace.stxt): Tema 6: ¿Qué es CSS?
+	Navigation:
+		Previous: Anterior (tema-05)
+		Next: Siguiente (tema-07)
+	Header: Introducción a CSS
+	Subheader: Definición y propósito de CSS
+	
+	Content:
+		CSS, o _Cascading Style Sheets_ (Hojas de Estilo en Cascada), es un lenguaje utilizado para describir la presentación de un documento HTML. Mientras que HTML se encarga de la estructura y el contenido de una página web, CSS se ocupa de su apariencia visual, controlando aspectos como colores, fuentes, márgenes, y el diseño en general.
+
+		El término "en cascada" se refiere a cómo las reglas de estilo se aplican y se heredan a través de los diferentes niveles del documento, permitiendo una gran flexibilidad en el diseño.
+
+	Code:
+		/* Ejemplo de un estilo CSS simple */
+		body {
+			background-color: #f0f0f0;
+			font-family: Arial, sans-serif;
+		}
+
+	Subheader: Cómo funciona CSS
+
+	Content:
+		CSS funciona mediante la aplicación de reglas de estilo a los elementos HTML. Cada regla se compone de un selector y una declaración de estilo. El selector indica qué elementos serán afectados, y la declaración especifica los estilos que se aplicarán.
+
+		**Estructura básica de una regla CSS:**
+		* **Selector**: Define el elemento o elementos a los que se aplicará el estilo (por ejemplo, `p`, `h1`, `.clase`, `#id`).
+		* **Propiedad y valor**: La propiedad es el aspecto que quieres modificar (como `color`, `font-size`, etc.), y el valor es la nueva configuración para esa propiedad.
+
+	Code:
+		/* Regla CSS que aplica color y tamaño de fuente a los párrafos */
+		p {
+			color: blue;
+			font-size: 16px;
+		}
+
+	Subheader: Métodos de inclusión de CSS
+
+	Content:
+		Existen tres métodos principales para incluir CSS en un documento HTML:
+
+		1. **CSS en línea**: Se utiliza el atributo `style` directamente en la etiqueta HTML. Es útil para aplicar estilos únicos a un elemento específico, pero no se recomienda para el diseño general debido a la dificultad de mantenimiento.
+
+		2. **CSS interno**: Se coloca dentro de una etiqueta `<style>` en la sección `<head>` del documento HTML. Es útil para estilos específicos de una página, pero puede volverse difícil de gestionar en sitios más grandes.
+
+		3. **CSS externo**: Se vincula un archivo CSS separado mediante la etiqueta `<link>` en la sección `<head>`. Es el método más recomendado, ya que separa la presentación del contenido y facilita la reutilización y el mantenimiento del código CSS.
+
+	Code:
+		<!-- CSS en línea -->
+		<p style="color: red;">Este es un párrafo con estilo en línea.</p>
+
+		<!-- CSS interno -->
+		<head>
+			<style>
+				body {
+					background-color: lightblue;
+				}
+			</style>
+		</head>
+
+		<!-- CSS externo -->
+		<head>
+			<link rel="stylesheet" href="styles.css">
+		</head>
+
+	Subheader: Ventajas de usar CSS
+
+	Content:
+		El uso de CSS ofrece numerosas ventajas, entre las que se incluyen:
+
+		* **Separación de contenido y presentación**: Mantener el HTML para la estructura y el contenido, y CSS para el diseño, facilita la gestión del sitio.
+		* **Reutilización de estilos**: Los archivos CSS externos permiten aplicar estilos consistentes en múltiples páginas, reduciendo el tiempo y esfuerzo necesarios para cambios de diseño.
+		* **Mantenimiento simplificado**: Actualizar un solo archivo CSS puede modificar el diseño de todo el sitio, lo que es especialmente útil para sitios grandes.
+		* **Carga más rápida**: Los archivos CSS se descargan una vez y se almacenan en caché, mejorando el rendimiento de las páginas web.
+
+	Code:
+		/* Ejemplo de un archivo CSS que aplica estilos consistentes a múltiples elementos */
+		h1 {
+			color: navy;
+			font-size: 24px;
+		}
+		p {
+			color: gray;
+			line-height: 1.5;
+		}
+		
+	Header: Conclusión sobre CSS
+	
+	Content: 
+		CSS es una herramienta poderosa que te permite controlar la apariencia de tus páginas web de manera eficiente y efectiva. Aprender a usar CSS correctamente es esencial para cualquier desarrollador web, ya que te dará la capacidad de crear sitios web atractivos, accesibles y fáciles de mantener.
+
+		A medida que avances en el aprendizaje de CSS, descubrirás que hay una gran cantidad de propiedades y técnicas disponibles para lograr prácticamente cualquier diseño que puedas imaginar.

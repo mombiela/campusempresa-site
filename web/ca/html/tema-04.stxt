@@ -1,0 +1,93 @@
+Document (campusempresa.org/namespace.stxt): Tema 4: Texto y párrafos en HTML
+	Navigation:
+		Previous: Anterior (tema-03)
+		Next: Siguiente (tema-05)
+	Header: Trabajando con texto y párrafos en HTML
+	Subheader: La etiqueta `<p>` para párrafos
+
+	Content:
+		La etiqueta `<p>` es una de las etiquetas más utilizadas en HTML, ya que define párrafos de texto. Cada vez que se usa la etiqueta `<p>`, el navegador coloca el texto dentro de un bloque y lo separa con un espacio antes y después del párrafo.
+
+	Code:
+		<p>Este es un párrafo de ejemplo. Los párrafos se utilizan para agrupar bloques de texto.</p>
+
+	Subheader: Encabezados en HTML
+
+	Content:
+		Los encabezados son cruciales para estructurar el contenido de una página web. HTML proporciona seis niveles de encabezados, desde `<h1>` hasta `<h6>`. `<h1>` es el nivel más alto y más importante, generalmente usado para títulos principales, mientras que `<h6>` es el nivel más bajo.
+
+		**Uso típico de encabezados:**
+		* `<h1>`: Título principal
+		* `<h2>`: Subtítulos
+		* `<h3>`: Secciones dentro de subtítulos
+		* Y así sucesivamente.
+
+	Code:
+		<h1>Este es un encabezado de nivel 1</h1>
+		<h2>Este es un encabezado de nivel 2</h2>
+		<h3>Este es un encabezado de nivel 3</h3>
+
+	Subheader: Formateo de texto
+
+	Content:
+		HTML ofrece una variedad de etiquetas para dar formato al texto. Estas etiquetas permiten resaltar o enfatizar partes del texto según sea necesario.
+
+		**Etiquetas comunes de formateo:**
+		* `<strong>`: Para resaltar texto en negrita, indicando importancia.
+		* `<em>`: Para resaltar texto en cursiva, indicando énfasis.
+		* `<u>`: Para subrayar texto.
+		* `<small>`: Para mostrar texto en un tamaño de fuente más pequeño.
+		* `<mark>`: Para resaltar texto como si estuviera marcado con un rotulador.
+
+	Code:
+		<p>Este es un texto con <strong>negrita</strong>, <em>cursiva</em>, y <u>subrayado</u>.</p>
+		<p>Este es un <small>texto más pequeño</small> y este es un <mark>texto resaltado</mark>.</p>
+
+	Subheader: Citas y citas en bloque
+
+	Content:
+		HTML permite incluir citas de dos maneras: con la etiqueta `<q>` para citas en línea y `<blockquote>` para citas en bloque. La diferencia principal es que `<q>` es para citas cortas dentro de un párrafo, mientras que `<blockquote>` es para citas más largas que ocupan un bloque completo.
+
+	Code:
+		<p>El autor dijo: <q>La práctica hace al maestro.</q></p>
+		<blockquote>
+			<p>“Ser o no ser, esa es la cuestión:
+			si es más noble para el espíritu sufrir
+			las flechas y lanzas de la insultante fortuna,
+			o tomar armas contra un mar de calamidades
+			y oponiéndose a ellas, acabar con ellas”.</p>
+			<footer>— William Shakespeare, Hamlet</footer>
+		</blockquote>
+
+	Header: Listas en HTML
+
+	Content: 
+		HTML también proporciona etiquetas para crear listas, que son útiles para organizar el contenido de forma estructurada.
+
+		**Tipos de listas en HTML:**
+		1. **Listas no ordenadas**: Utilizan la etiqueta `<ul>` y cada ítem dentro de la lista se marca con `<li>`.
+		2. **Listas ordenadas**: Utilizan la etiqueta `<ol>` y los ítems se numeran automáticamente.
+		3. **Listas de definición**: Utilizan `<dl>` para definir una lista de términos y `<dt>` y `<dd>` para definir cada término y su descripción.
+
+	Code:
+		<!-- Lista no ordenada -->
+		<ul>
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+			<li>Elemento 3</li>
+		</ul>
+
+		<!-- Lista ordenada -->
+		<ol>
+			<li>Paso 1</li>
+			<li>Paso 2</li>
+			<li>Paso 3</li>
+		</ol>
+
+		<!-- Lista de definición -->
+		<dl>
+			<dt>HTML</dt>
+			<dd>Lenguaje de marcado para la web</dd>
+			<dt>CSS</dt>
+			<dd>Lenguaje para dar estilo a documentos HTML</dd>
+		</dl>

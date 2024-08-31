@@ -1,0 +1,198 @@
+Document (campusempresa.org/namespace.stxt): Buenas Prácticas de Programación
+	Navigation:
+		Previous: Introducción a la Concurrencia en Java (13-concurrencia)
+		Next: Proyecto Final: Desarrollo de una Aplicación Completa (15-proyecto-final)
+	
+	Header: Introducción a las Buenas Prácticas de Programación
+	Subheader: ¿Qué son las buenas prácticas en programación?
+	
+	Content:
+		Las buenas prácticas de programación son un conjunto de principios, recomendaciones y convenciones que ayudan a escribir código más limpio, eficiente, y mantenible. Seguir estas prácticas facilita el trabajo en equipo, reduce la cantidad de errores y hace que el código sea más fácil de entender y modificar en el futuro.
+
+	Header: Legibilidad del Código
+	Subheader: Uso de Nombres Significativos
+	
+	Content:
+		El uso de nombres significativos para variables, métodos, y clases es fundamental para la legibilidad del código. Los nombres deben describir claramente la función o el propósito del elemento.
+		
+	Code:
+		// Ejemplo de nombres significativos
+		int edadUsuario = 30;
+		String nombreCompleto = "Juan Pérez";
+		
+		// Ejemplo de nombres no significativos
+		int x = 30;
+		String n = "Juan Pérez";
+
+	Content:
+		En este ejemplo, `edadUsuario` y `nombreCompleto` son nombres de variables que describen claramente su contenido, a diferencia de `x` y `n`, que son ambiguos.
+
+	Subheader: Formato y Consistencia
+	
+	Content:
+		Mantener un formato consistente en el código, como la indentación y el espaciado, mejora la legibilidad. La mayoría de los entornos de desarrollo (IDEs) tienen herramientas para ayudar a formatear el código automáticamente.
+		
+	Code:
+		// Ejemplo de buen formato
+		public void saludar(String nombre) {
+		    if (nombre != null) {
+		        System.out.println("Hola, " + nombre);
+		    } else {
+		        System.out.println("Hola, invitado");
+		    }
+		}
+
+		// Ejemplo de mal formato
+		public void saludar(String nombre){
+		if(nombre!=null){System.out.println("Hola, "+nombre);}
+		else{System.out.println("Hola, invitado");}}
+
+	Content:
+		Un código bien formateado es más fácil de leer y entender, lo que reduce la probabilidad de errores.
+
+	Header: Modularidad y Reutilización
+	Subheader: Descomposición del Código en Métodos y Clases
+	
+	Content:
+		Dividir el código en métodos y clases pequeños y específicos mejora la modularidad y facilita la reutilización. Cada método debe realizar una única tarea, lo que sigue el principio de responsabilidad única (SRP, por sus siglas en inglés).
+		
+	Code:
+		// Ejemplo de un método con una sola responsabilidad
+		public class Calculadora {
+		    public int sumar(int a, int b) {
+		        return a + b;
+		    }
+
+		    public int restar(int a, int b) {
+		        return a - b;
+		    }
+		}
+
+		// Ejemplo de un método con múltiples responsabilidades (mala práctica)
+		public int operar(int a, int b, String operacion) {
+		    if (operacion.equals("sumar")) {
+		        return a + b;
+		    } else if (operacion.equals("restar")) {
+		        return a - b;
+		    } else {
+		        return 0;
+		    }
+		}
+
+	Content:
+		En el primer ejemplo, las operaciones `sumar` y `restar` están separadas en métodos individuales, lo que mejora la claridad y la reutilización. En el segundo ejemplo, se mezcla la lógica de las operaciones en un solo método, lo que lo hace más difícil de mantener y extender.
+
+	Subheader: Evitar la Duplicación de Código
+	
+	Content:
+		La duplicación de código es un indicio de mala práctica, ya que aumenta el esfuerzo de mantenimiento y la posibilidad de errores. Siempre que sea posible, reutiliza el código existente en lugar de duplicarlo.
+		
+	Code:
+		// Ejemplo de duplicación de código (mala práctica)
+		public void imprimirSaludo(String nombre) {
+		    System.out.println("Hola, " + nombre);
+		}
+
+		public void imprimirDespedida(String nombre) {
+		    System.out.println("Adiós, " + nombre);
+		}
+
+		// Ejemplo sin duplicación de código
+		public void imprimirMensaje(String mensaje, String nombre) {
+		    System.out.println(mensaje + ", " + nombre);
+		}
+
+	Content:
+		En el segundo ejemplo, la función `imprimirMensaje` evita la duplicación al manejar tanto el saludo como la despedida.
+
+	Header: Manejo de Errores y Excepciones
+	Subheader: Captura Adecuada de Excepciones
+	
+	Content:
+		Las excepciones deben capturarse de manera específica y manejarse adecuadamente. Evita capturar excepciones genéricas como `Exception` a menos que sea absolutamente necesario.
+		
+	Code:
+		// Ejemplo de captura específica de excepciones
+		try {
+		    int resultado = 10 / 0;
+		} catch (ArithmeticException e) {
+		    System.out.println("Error: División por cero.");
+		}
+
+		// Mala práctica: Captura genérica de excepciones
+		try {
+		    int resultado = 10 / 0;
+		} catch (Exception e) {
+		    System.out.println("Error genérico: " + e.getMessage());
+		}
+
+	Content:
+		Capturar excepciones específicas mejora la claridad del código y permite un manejo más preciso de los errores.
+
+	Subheader: Uso de `finally` para Liberar Recursos
+	
+	Content:
+		El bloque `finally` se debe utilizar para liberar recursos como archivos o conexiones de base de datos, asegurando que estos se cierren independientemente de si ocurre una excepción.
+		
+	Code:
+		// Ejemplo de uso de finally para liberar recursos
+		Scanner scanner = null;
+		try {
+		    scanner = new Scanner(new File("archivo.txt"));
+		    // Leer del archivo
+		} catch (FileNotFoundException e) {
+		    System.out.println("Archivo no encontrado.");
+		} finally {
+		    if (scanner != null) {
+		        scanner.close();  // Liberar el recurso
+		    }
+		}
+
+	Content:
+		El bloque `finally` asegura que el recurso `scanner` se cierre correctamente, evitando fugas de recursos.
+
+	Header: Documentación y Comentarios
+	Subheader: Comentarios Claros y Útiles
+	
+	Content:
+		Los comentarios deben ser claros, concisos y útiles. Explican por qué se hace algo, no cómo. Evita comentarios obvios o redundantes que solo repiten lo que ya dice el código.
+		
+	Code:
+		// Mala práctica: Comentario obvio
+		int x = 10;  // Asigna 10 a x
+
+		// Buena práctica: Comentario útil
+		// Asigna el valor inicial a x para el cálculo posterior
+		int x = 10;
+
+	Subheader: Uso de Javadoc para Documentar Código
+	
+	Content:
+		Java ofrece `Javadoc`, una herramienta para generar documentación de código a partir de comentarios en el código fuente. Es recomendable documentar todas las clases públicas, métodos, y campos utilizando esta herramienta.
+		
+	Code:
+		/**
+		 * Calculadora simple que realiza operaciones aritméticas básicas.
+		 */
+		public class Calculadora {
+		    
+		    /**
+		     * Suma dos números enteros.
+		     * 
+		     * @param a El primer número a sumar.
+		     * @param b El segundo número a sumar.
+		     * @return La suma de a y b.
+		     */
+		    public int sumar(int a, int b) {
+		        return a + b;
+		    }
+		}
+
+	Content:
+		El uso de `Javadoc` facilita la generación de documentación profesional para el código, que puede ser útil para otros desarrolladores y para la futura referencia.
+
+	Content:
+		Adoptar buenas prácticas de programación es crucial para el desarrollo de software de alta calidad. Estas prácticas no solo mejoran la legibilidad y mantenibilidad del código, sino que también facilitan la colaboración en equipo y la extensión del software a largo plazo. En el siguiente y último tema, desarrollarás un proyecto final que pondrá en práctica todos los conceptos aprendidos.
+
+		**Recursos adicionales:**
+		* [Documentación oficial de Java sobre buenas prácticas](https://www.oracle.com/technical-resources/articles/java/javadocspec.html)

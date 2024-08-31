@@ -1,0 +1,134 @@
+Document (campusempresa.org/namespace.stxt): Modularización de código en COBOL
+	
+	Content: 
+	    La modularización del código en COBOL implica dividir un programa en componentes más pequeños y manejables, llamados módulos o subprogramas. Esta técnica mejora la claridad, la mantenibilidad y la reutilización del código. A continuación, se detallan las prácticas y técnicas para lograr una modularización efectiva en COBOL.
+	    
+	Header: Ventajas de la modularización
+	
+	Content:
+	    
+	    *  **Reutilización**: Los módulos pueden ser reutilizados en diferentes programas, reduciendo la duplicación de código.
+	    *  **Mantenibilidad**: Es más fácil actualizar y mantener módulos más pequeños y específicos.
+	    *  **Claridad**: Los programas modulares son más fáciles de entender y seguir, ya que cada módulo tiene una función específica.
+	    *  **Colaboración**: Facilita la colaboración en equipo, permitiendo que diferentes desarrolladores trabajen en módulos distintos simultáneamente.
+	    
+	Header: Creación de subprogramas
+	
+	Content:
+	    
+	    Los subprogramas son módulos que contienen lógica específica y pueden ser llamados desde otros programas o subprogramas. Un subprograma en COBOL incluye una ```IDENTIFICATION DIVISION```, una ```ENVIRONMENT DIVISION```, una ```DATA DIVISION``` y una ```PROCEDURE DIVISION```.
+	    
+	Subheader: Ejemplo de un subprograma
+	
+	Content:
+	    
+	Code:
+	    IDENTIFICATION DIVISION.
+	    PROGRAM-ID. Calculo-Interes.
+	    
+	    ENVIRONMENT DIVISION.
+	    
+	    DATA DIVISION.
+	    WORKING-STORAGE SECTION.
+	    01 WS-Tasa-Interes PIC 9V99.
+	    01 WS-Capital PIC 9(5)V99.
+	    01 WS-Interes PIC 9(5)V99.
+	    
+	    LINKAGE SECTION.
+	    01 LS-Tasa-Interes PIC 9V99.
+	    01 LS-Capital PIC 9(5)V99.
+	    01 LS-Interes PIC 9(5)V99.
+	    
+	    PROCEDURE DIVISION USING LS-Tasa-Interes LS-Capital LS-Interes.
+	    MOVE LS-Tasa-Interes TO WS-Tasa-Interes.
+	    MOVE LS-Capital TO WS-Capital.
+	    COMPUTE WS-Interes = WS-Capital * WS-Tasa-Interes.
+	    MOVE WS-Interes TO LS-Interes.
+	    EXIT PROGRAM.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  El subprograma ```Calculo-Interes``` calcula el interés sobre un capital dado una tasa de interés.
+	    *  Los parámetros se pasan a través de la ```LINKAGE SECTION``` y se utilizan en la ```PROCEDURE DIVISION```.
+	    
+	Header: Llamada a subprogramas desde el programa principal
+	
+	Content:
+	    
+	    El programa principal llama a los subprogramas utilizando la sentencia ```CALL```, pasando los parámetros necesarios.
+	    
+	Subheader: Ejemplo de llamada a un subprograma
+	
+	Content:
+	    
+	Code:
+	    IDENTIFICATION DIVISION.
+	    PROGRAM-ID. Programa-Principal.
+	    
+	    ENVIRONMENT DIVISION.
+	    
+	    DATA DIVISION.
+	    WORKING-STORAGE SECTION.
+	    01 WS-Tasa-Interes PIC 9V99 VALUE 0.05.
+	    01 WS-Capital PIC 9(5)V99 VALUE 1000.00.
+	    01 WS-Interes PIC 9(5)V99.
+	    
+	    PROCEDURE DIVISION.
+	    CALL 'Calculo-Interes' USING WS-Tasa-Interes WS-Capital WS-Interes.
+	    DISPLAY 'Interes calculado: ' WS-Interes.
+	    STOP RUN.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  El programa principal define y pasa los parámetros ```WS-Tasa-Interes```, ```WS-Capital``` y ```WS-Interes``` al subprograma ```Calculo-Interes```.
+	    *  Después de la llamada, se muestra el interés calculado utilizando ```DISPLAY```.
+	    
+	Header: Uso de secciones y párrafos
+	
+	Content:
+	    
+	    Además de los subprogramas, COBOL permite modularizar el código dentro del mismo programa utilizando secciones y párrafos. Las secciones y párrafos ayudan a organizar el código en bloques lógicos y reutilizables.
+	    
+	Subheader: Ejemplo de secciones y párrafos
+	
+	Content:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Main-Procedure.
+	    PERFORM Initialize-Section.
+	    PERFORM Processing-Section.
+	    PERFORM Finalize-Section.
+	    STOP RUN.
+	    
+	    Initialize-Section.
+	    DISPLAY 'Iniciando programa...'.
+	    
+	    Processing-Section.
+	    PERFORM Calculo-Interes-Para-Cada-Cliente.
+	    
+	    Calculo-Interes-Para-Cada-Cliente.
+	    DISPLAY 'Calculando interes para cliente...'.
+	    
+	    Finalize-Section.
+	    DISPLAY 'Finalizando programa...'.
+	
+	
+	Content:
+	    
+	    En este ejemplo:
+	    
+	    *  El procedimiento principal llama a diferentes secciones utilizando ```PERFORM```.
+	    *  Cada sección contiene lógica específica, mejorando la organización del código.
+	    
+	Header: Conclusión
+	
+	Content:
+	    
+	    La modularización del código en COBOL mediante el uso de subprogramas, secciones y párrafos es esencial para crear programas claros, mantenibles y reutilizables. Aplicar estas técnicas no solo mejora la calidad del código, sino que también facilita su desarrollo y mantenimiento a largo plazo.

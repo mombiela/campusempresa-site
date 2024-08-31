@@ -1,0 +1,168 @@
+Document (campusempresa.org/namespace.stxt): Bucles y Iteraciones
+	Navigation:
+		Previous: Estructuras Condicionales (04-estructuras-condicionales)
+		Next: Funciones (06-funciones)
+	Header: Bucles y Iteraciones en JavaScript
+	Subheader: Introducción a los Bucles
+	
+	Content:
+		Los bucles son estructuras que permiten ejecutar repetidamente un bloque de código mientras se cumple una condición específica. 
+		JavaScript soporta varios tipos de bucles, cada uno adecuado para diferentes situaciones.
+
+		Los tipos de bucles más comunes en JavaScript son:
+
+		* `for` - Repite un bloque de código un número específico de veces.
+		* `while` - Repite un bloque de código mientras una condición sea verdadera.
+		* `do...while` - Repite un bloque de código al menos una vez y luego continúa mientras la condición sea verdadera.
+		* `for...in` y `for...of` - Itera sobre las propiedades de un objeto o los elementos de una colección respectivamente.
+
+	Code:
+		// Ejemplo básico de bucle for
+		for (let i = 0; i < 5; i++) {
+			console.log("Iteración número " + i);
+		}
+
+	Subheader: Bucle `for`
+	
+	Content:
+		El bucle `for` es uno de los más utilizados cuando se conoce de antemano cuántas veces se debe ejecutar el bloque de código.
+
+	Code:
+		for (inicialización; condición; incremento) {
+			// Código a ejecutar en cada iteración
+		}
+
+	Content:
+		Ejemplo de uso:
+
+	Code:
+		// Ejemplo de bucle for
+		let suma = 0;
+
+		for (let i = 1; i <= 10; i++) {
+			suma += i;
+		}
+
+		console.log("La suma de los números del 1 al 10 es: " + suma); // Output: 55
+
+	Subheader: Bucle `while`
+	
+	Content:
+		El bucle `while` ejecuta un bloque de código mientras la condición especificada sea verdadera. 
+		Es ideal cuando no se sabe con certeza cuántas veces se necesitará repetir el bloque de código.
+
+	Code:
+		while (condición) {
+			// Código a ejecutar mientras la condición sea verdadera
+		}
+
+	Content:
+		Ejemplo de uso:
+
+	Code:
+		// Ejemplo de bucle while
+		let contador = 0;
+
+		while (contador < 5) {
+			console.log("Contador: " + contador);
+			contador++;
+		}
+
+	Subheader: Bucle `do...while`
+	
+	Content:
+		El bucle `do...while` es similar al `while`, pero con una diferencia clave: el bloque de código se ejecuta al menos una vez 
+		antes de evaluar la condición.
+
+	Code:
+		do {
+			// Código a ejecutar al menos una vez
+		} while (condición);
+
+	Content:
+		Ejemplo de uso:
+
+	Code:
+		// Ejemplo de bucle do...while
+		let numero = 0;
+
+		do {
+			console.log("Número: " + numero);
+			numero++;
+		} while (numero < 3);
+
+	Subheader: Bucle `for...in`
+	
+	Content:
+		El bucle `for...in` se utiliza para iterar sobre las propiedades de un objeto. Es útil cuando se necesita recorrer 
+		todas las propiedades enumerables de un objeto.
+
+	Code:
+		for (propiedad in objeto) {
+			// Código a ejecutar para cada propiedad
+		}
+
+	Content:
+		Ejemplo de uso:
+
+	Code:
+		// Ejemplo de bucle for...in
+		let persona = { nombre: "Ana", edad: 28, ciudad: "Madrid" };
+
+		for (let propiedad in persona) {
+			console.log(propiedad + ": " + persona[propiedad]);
+		}
+		// Output:
+		// nombre: Ana
+		// edad: 28
+		// ciudad: Madrid
+
+	Subheader: Bucle `for...of`
+	
+	Content:
+		El bucle `for...of` se utiliza para iterar sobre los valores de una colección iterable, como un arreglo o una cadena de texto. 
+		A diferencia de `for...in`, que itera sobre las propiedades, `for...of` itera sobre los valores.
+
+	Code:
+		for (valor of iterable) {
+			// Código a ejecutar para cada valor
+		}
+
+	Content:
+		Ejemplo de uso:
+
+	Code:
+		// Ejemplo de bucle for...of
+		let colores = ["rojo", "verde", "azul"];
+
+		for (let color of colores) {
+			console.log(color);
+		}
+		// Output:
+		// rojo
+		// verde
+		// azul
+
+	Header: Control de bucles con `break` y `continue`
+	
+	Content: 
+		En ocasiones, es necesario controlar el flujo de un bucle, deteniéndolo antes de que termine (`break`) o saltando 
+		una iteración específica (`continue`).
+
+		* **`break`**: Termina el bucle inmediatamente.
+		* **`continue`**: Salta la iteración actual y pasa a la siguiente.
+
+	Code:
+		// Ejemplo de uso de break y continue
+		for (let i = 0; i < 10; i++) {
+			if (i === 5) {
+				break; // Salir del bucle cuando i es 5
+			}
+			if (i % 2 === 0) {
+				continue; // Saltar las iteraciones pares
+			}
+			console.log("Valor de i: " + i);
+		}
+		// Output:
+		// Valor de i: 1
+		// Valor de i: 3

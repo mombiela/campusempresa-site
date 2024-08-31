@@ -1,0 +1,145 @@
+Document (campusempresa.org/namespace.stxt): Introducción a jQuery
+	Navigation:
+		Previous: Eventos (14-eventos)
+		Next: Promesas y Asincronía (16-promesas-asincronia)
+	Header: Introducción a jQuery
+	Subheader: ¿Qué es jQuery?
+	
+	Content:
+		**jQuery** es una biblioteca de JavaScript rápida, pequeña y rica en funciones que facilita la manipulación del DOM, el manejo de eventos, la creación de animaciones, y la interacción con servidores mediante AJAX. 
+		Fue una de las primeras bibliotecas en simplificar enormemente la escritura de JavaScript, y sigue siendo popular en muchos proyectos.
+
+		jQuery utiliza una sintaxis que permite realizar tareas comunes con menos código y de manera más eficiente.
+
+	Code:
+		// Ejemplo básico de jQuery
+		$(document).ready(function() {
+			$("button").click(function() {
+				alert("¡Botón clickeado!");
+			});
+		});
+
+	Subheader: Selección de elementos con jQuery
+	
+	Content:
+		Una de las características más poderosas de jQuery es su capacidad para seleccionar elementos del DOM utilizando selectores CSS.
+		jQuery proporciona un método unificado (`$`) que se utiliza para seleccionar elementos y realizar acciones sobre ellos.
+
+	Code:
+		// Selección de elementos en jQuery
+		$(document).ready(function() {
+			// Seleccionar todos los párrafos
+			$("p").css("color", "blue");
+
+			// Seleccionar por ID
+			$("#miElemento").hide();
+
+			// Seleccionar por clase
+			$(".miClase").fadeIn();
+		});
+
+	Subheader: Manipulación del DOM con jQuery
+	
+	Content:
+		jQuery facilita la manipulación del DOM, permitiendo agregar, eliminar, o modificar elementos HTML con métodos simples.
+
+		* `html()` - Obtiene o establece el contenido HTML de un elemento.
+		* `text()` - Obtiene o establece el contenido de texto de un elemento.
+		* `attr()` - Obtiene o establece atributos de un elemento.
+		* `append()` - Añade contenido al final de un elemento.
+		* `prepend()` - Añade contenido al principio de un elemento.
+		* `remove()` - Elimina un elemento del DOM.
+
+	Code:
+		// Manipulación del DOM con jQuery
+		$(document).ready(function() {
+			// Cambiar el HTML de un elemento
+			$("#miElemento").html("<strong>Nuevo contenido</strong>");
+
+			// Añadir un nuevo párrafo al final de un div
+			$("#miDiv").append("<p>Este es un nuevo párrafo añadido al final.</p>");
+
+			// Eliminar un elemento
+			$(".miClase").remove();
+		});
+
+	Subheader: Manejo de eventos con jQuery
+	
+	Content:
+		El manejo de eventos en jQuery es sencillo y eficiente. 
+		jQuery ofrece métodos para registrar eventos, como `click()`, `dblclick()`, `hover()`, `focus()`, y `blur()`.
+
+	Code:
+		// Ejemplo de manejo de eventos en jQuery
+		$(document).ready(function() {
+			// Evento de clic
+			$("#miBoton").click(function() {
+				alert("¡Botón clickeado con jQuery!");
+			});
+
+			// Evento de doble clic
+			$("#miDiv").dblclick(function() {
+				$(this).css("background-color", "yellow");
+			});
+
+			// Evento hover
+			$("#miDiv").hover(
+				function() {
+					$(this).css("background-color", "lightgray");
+				},
+				function() {
+					$(this).css("background-color", "");
+				}
+			);
+		});
+
+	Subheader: Animaciones con jQuery
+	
+	Content:
+		jQuery incluye métodos para crear animaciones simples, como mostrar, ocultar, desvanecer, y deslizar elementos.
+
+		* `show()` - Muestra un elemento oculto.
+		* `hide()` - Oculta un elemento.
+		* `fadeIn()` - Desvanece un elemento de oculto a visible.
+		* `fadeOut()` - Desvanece un elemento de visible a oculto.
+		* `slideUp()` - Desliza un elemento hacia arriba para ocultarlo.
+		* `slideDown()` - Desliza un elemento hacia abajo para mostrarlo.
+
+	Code:
+		// Ejemplo de animaciones en jQuery
+		$(document).ready(function() {
+			$("#mostrar").click(function() {
+				$("#miDiv").fadeIn();
+			});
+
+			$("#ocultar").click(function() {
+				$("#miDiv").fadeOut();
+			});
+
+			$("#deslizar").click(function() {
+				$("#miDiv").slideToggle();
+			});
+		});
+
+	Subheader: AJAX con jQuery
+	
+	Content:
+		Una de las características más potentes de jQuery es su capacidad para manejar solicitudes AJAX de manera sencilla. 
+		El método `$.ajax()` permite enviar y recibir datos de servidores de manera asíncrona.
+
+	Code:
+		// Ejemplo básico de AJAX con jQuery
+		$(document).ready(function() {
+			$("#cargarDatos").click(function() {
+				$.ajax({
+					url: "datos.json",
+					method: "GET",
+					success: function(data) {
+						$("#contenido").html(data);
+					},
+					error: function() {
+						alert("Error al cargar los datos.");
+					}
+				});
+			});
+		});

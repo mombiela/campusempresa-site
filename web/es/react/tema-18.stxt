@@ -1,0 +1,144 @@
+Document (campusempresa.org/namespace.stxt): Componentes de Orden Superior
+	Navigation:
+		Previous: Anterior (tema-17)
+		Next: Siguiente (tema-19)
+		
+	Header: Introducción
+	Subheader: ¿Qué son los Componentes de Orden Superior?
+	Content:
+		Un Componente de Orden Superior (HOC, por sus siglas en inglés) es una función en React que toma un componente como argumento y devuelve un nuevo componente. Los HOC son una técnica avanzada en React para reutilizar la lógica entre componentes, permitiendo que diferentes componentes compartan funcionalidades sin necesidad de repetir código.
+
+	Header: Creación de un Componente de Orden Superior
+	Subheader: Ejemplo Básico de un HOC
+	Content:
+		Para crear un HOC, defines una función que recibe un componente como argumento y retorna un nuevo componente que envuelve al componente original. Este nuevo componente puede añadir o modificar funcionalidades del componente original.
+	Code:
+		// Ejemplo básico de un Componente de Orden Superior
+		function withSaludo(Component) {
+			return function WrappedComponent(props) {
+				return (
+					<div>
+						<h2>¡Hola, bienvenido!</h2>
+						<Component {...props} />
+					</div>
+				);
+			};
+		}
+
+		function Usuario({ nombre }) {
+			return <p>Usuario: {nombre}</p>;
+		}
+
+		const UsuarioConSaludo = withSaludo(Usuario);
+
+		function App() {
+			return <UsuarioConSaludo nombre="Juan" />;
+		}
+
+	Content:
+		En este ejemplo, `withSaludo` es un HOC que añade un saludo antes de renderizar el componente `Usuario`. El componente `UsuarioConSaludo` es el resultado de aplicar `withSaludo` a `Usuario`, combinando ambas funcionalidades.
+
+	Header: Uso de HOCs para Reutilizar Lógica
+	Subheader: Reutilización de Lógica de Componentes
+	Content:
+		Los HOCs son útiles cuando necesitas compartir lógica entre múltiples componentes, como manejo de autenticación, datos, o permisos de usuario. En lugar de duplicar el código, puedes encapsular la lógica en un HOC y aplicarla a diferentes componentes.
+	Code:
+		// Ejemplo de HOC para verificación de autenticación
+		function withAutenticacion(Component) {
+			return function WrappedComponent(props) {
+				const isAuthenticated = true; // Simulación de autenticación
+
+				if (!isAuthenticated) {
+					return <p>No tienes acceso a esta página.</p>;
+				}
+
+				return <Component {...props} />;
+			};
+		}
+
+		function PanelControl() {
+			return <h2>Panel de Control</h2>;
+		}
+
+		const PanelControlProtegido = withAutenticacion(PanelControl);
+
+		function App() {
+			return <PanelControlProtegido />;
+		}
+
+	Content:
+		En este ejemplo, `withAutenticacion` es un HOC que añade lógica de autenticación a cualquier componente. Si el usuario no está autenticado, muestra un mensaje de acceso denegado; de lo contrario, renderiza el componente original.
+
+	Header: Composición de Múltiples HOCs
+	Subheader: Combinando HOCs para Crear Componentes Más Complejos
+	Content:
+		Puedes componer múltiples HOCs para añadir varias capas de funcionalidad a un componente. Esto es especialmente útil cuando diferentes funcionalidades deben ser añadidas de manera modular.
+	Code:
+		// Ejemplo de combinación de múltiples HOCs
+		function withTema(Component) {
+			return function WrappedComponent(props) {
+				const tema = 'oscuro';
+				return <Component {...props} tema={tema} />;
+			};
+		}
+
+		function withAutenticacion(Component) {
+			return function WrappedComponent(props) {
+				const isAuthenticated = true; // Simulación de autenticación
+
+				if (!isAuthenticated) {
+					return <p>No tienes acceso a esta página.</p>;
+				}
+
+				return <Component {...props} />;
+			};
+		}
+
+		function PanelControl({ tema }) {
+			return <h2 style={{ color: tema === 'oscuro' ? 'white' : 'black' }}>Panel de Control</h2>;
+		}
+
+		const PanelControlProtegidoConTema = withAutenticacion(withTema(PanelControl));
+
+		function App() {
+			return <PanelControlProtegidoConTema />;
+		}
+
+	Content:
+		En este ejemplo, se combinan dos HOCs: `withTema` y `withAutenticacion`. `PanelControlProtegidoConTema` es un componente que tiene ambas funcionalidades: manejo de tema y autenticación.
+
+	Header: Limitaciones y Alternativas a los HOCs
+	Subheader: Consideraciones y Buenas Prácticas
+	Content:
+		Si bien los HOCs son poderosos, tienen algunas limitaciones y pueden aumentar la complejidad del código si se abusa de ellos. Es importante seguir buenas prácticas para evitar un código difícil de mantener.
+	Subheader: Hooks como Alternativa
+	Content:
+		Con la introducción de los hooks en React, muchas de las necesidades que se resolvían con HOCs ahora se pueden manejar mediante hooks personalizados, que ofrecen una sintaxis más clara y directa para reutilizar lógica.
+	Code:
+		// Ejemplo de Hook personalizado como alternativa a un HOC
+		function useAutenticacion() {
+			const isAuthenticated = true; // Simulación de autenticación
+			return isAuthenticated;
+		}
+
+		function PanelControl() {
+			const isAuthenticated = useAutenticacion();
+
+			if (!isAuthenticated) {
+				return <p>No tienes acceso a esta página.</p>;
+			}
+
+			return <h2>Panel de Control</h2>;
+		}
+
+		function App() {
+			return <PanelControl />;
+		}
+
+	Content:
+		En este ejemplo, el hook `useAutenticacion` reemplaza la lógica que tradicionalmente se implementaría en un HOC, proporcionando una alternativa más sencilla y comprensible.
+
+	Header: Conclusión
+	Subheader: Resumen sobre Componentes de Orden Superior
+	Content:
+		Los Componentes de Orden Superior son una técnica avanzada en React para reutilizar lógica entre componentes de manera eficiente. Aunque son útiles para muchos casos, es importante considerar las alternativas modernas, como los hooks, que pueden ofrecer soluciones más simples y directas. Dominar el uso de HOCs y comprender cuándo es más adecuado utilizarlos es esencial para escribir código React limpio y mantenible. En los próximos temas, exploraremos otras técnicas avanzadas y patrones de diseño en React.

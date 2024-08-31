@@ -1,0 +1,191 @@
+Document (campusempresa.org/namespace.stxt): Clases y Objetos
+	Navigation:
+		Previous: Ciclos en Java: for, while, do-while (06-ciclos)
+		Next: Herencia y Polimorfismo (08-herencia-polimorfismo)
+	
+	Header: Introducción a la Programación Orientada a Objetos (POO)
+	Subheader: ¿Qué es la POO?
+	
+	Content:
+		La Programación Orientada a Objetos (POO) es un paradigma de programación que utiliza "objetos" para modelar conceptos del mundo real y las relaciones entre ellos. Java es un lenguaje de programación que sigue este paradigma, lo que facilita la creación de software modular, reutilizable y fácil de mantener.
+		
+	Header: Clases en Java
+	Subheader: Definición de una Clase
+	
+	Content:
+		Una clase es un molde o plantilla que define las propiedades (atributos) y comportamientos (métodos) de los objetos. En Java, una clase se define utilizando la palabra clave `class` seguida del nombre de la clase.
+		
+	Code:
+		public class Persona {
+		    // Atributos
+		    String nombre;
+		    int edad;
+
+		    // Métodos
+		    void mostrarInformacion() {
+		        System.out.println("Nombre: " + nombre);
+		        System.out.println("Edad: " + edad);
+		    }
+		}
+	
+	Content:
+		En este ejemplo, la clase `Persona` tiene dos atributos (`nombre` y `edad`) y un método (`mostrarInformacion`) que imprime los valores de esos atributos.
+
+	Subheader: Creación de Objetos
+	
+	Content:
+		Un objeto es una instancia de una clase. Para crear un objeto en Java, se utiliza la palabra clave `new` seguida del constructor de la clase.
+		
+	Code:
+		public class Principal {
+		    public static void main(String[] args) {
+		        // Crear un objeto de la clase Persona
+		        Persona persona1 = new Persona();
+		        persona1.nombre = "Juan";
+		        persona1.edad = 30;
+
+		        // Llamar al método de la clase
+		        persona1.mostrarInformacion();
+		    }
+		}
+	
+	Content:
+		En este ejemplo, se crea un objeto `persona1` de la clase `Persona`, se le asignan valores a sus atributos, y se llama al método `mostrarInformacion` para mostrar esos valores.
+
+	Header: Atributos y Métodos
+	Subheader: Atributos de una Clase
+	
+	Content:
+		Los atributos son variables que representan las propiedades de un objeto. Pueden ser de cualquier tipo de dato, incluidos tipos primitivos y referencias a otros objetos.
+		
+	Code:
+		public class Coche {
+		    String marca;
+		    String modelo;
+		    int año;
+		}
+
+	Content:
+		En la clase `Coche`, los atributos `marca`, `modelo` y `año` definen las propiedades de un coche.
+
+	Subheader: Métodos de una Clase
+	
+	Content:
+		Los métodos son funciones que definen los comportamientos de los objetos. Un método puede realizar acciones y puede devolver un valor.
+		
+	Code:
+		public class Coche {
+		    String marca;
+		    String modelo;
+		    int año;
+
+		    void arrancar() {
+		        System.out.println("El coche ha arrancado.");
+		    }
+
+		    void frenar() {
+		        System.out.println("El coche está frenando.");
+		    }
+		}
+
+	Content:
+		En la clase `Coche`, los métodos `arrancar` y `frenar` definen comportamientos que un coche puede realizar.
+
+	Header: Constructores
+	Subheader: ¿Qué es un Constructor?
+	
+	Content:
+		Un constructor es un método especial que se llama automáticamente cuando se crea un nuevo objeto de una clase. Los constructores se utilizan para inicializar los atributos de un objeto.
+		
+	Code:
+		public class Persona {
+		    String nombre;
+		    int edad;
+
+		    // Constructor
+		    public Persona(String nombre, int edad) {
+		        this.nombre = nombre;
+		        this.edad = edad;
+		    }
+
+		    void mostrarInformacion() {
+		        System.out.println("Nombre: " + nombre);
+		        System.out.println("Edad: " + edad);
+		    }
+		}
+	
+	Content:
+		En este ejemplo, el constructor `Persona` inicializa los atributos `nombre` y `edad` cuando se crea un nuevo objeto de la clase.
+
+	Subheader: Sobrecarga de Constructores
+	
+	Content:
+		Java permite tener múltiples constructores en una clase, siempre y cuando tengan diferentes listas de parámetros. Esto se conoce como sobrecarga de constructores.
+		
+	Code:
+		public class Persona {
+		    String nombre;
+		    int edad;
+
+		    // Constructor 1
+		    public Persona(String nombre) {
+		        this.nombre = nombre;
+		        this.edad = 0; // Edad por defecto
+		    }
+
+		    // Constructor 2
+		    public Persona(String nombre, int edad) {
+		        this.nombre = nombre;
+		        this.edad = edad;
+		    }
+
+		    void mostrarInformacion() {
+		        System.out.println("Nombre: " + nombre);
+		        System.out.println("Edad: " + edad);
+		    }
+		}
+
+	Content:
+		En este ejemplo, hay dos constructores en la clase `Persona`. Uno acepta solo el nombre, mientras que el otro acepta tanto el nombre como la edad.
+
+	Header: Encapsulamiento
+	Subheader: Control de Acceso con Modificadores
+	
+	Content:
+		El encapsulamiento es un principio de la POO que restringe el acceso a los detalles internos de un objeto y sólo permite su modificación a través de métodos públicos. En Java, se logra mediante modificadores de acceso como `private`, `public`, y `protected`.
+		
+	Code:
+		public class Persona {
+		    private String nombre;
+		    private int edad;
+
+		    public Persona(String nombre, int edad) {
+		        this.nombre = nombre;
+		        this.edad = edad;
+		    }
+
+		    public String getNombre() {
+		        return nombre;
+		    }
+
+		    public void setNombre(String nombre) {
+		        this.nombre = nombre;
+		    }
+
+		    public int getEdad() {
+		        return edad;
+		    }
+
+		    public void setEdad(int edad) {
+		        this.edad = edad;
+		    }
+		}
+
+	Content:
+		En este ejemplo, los atributos `nombre` y `edad` son privados y solo se pueden acceder y modificar a través de los métodos `getNombre`, `setNombre`, `getEdad`, y `setEdad`.
+
+	Content:
+		Con este conocimiento sobre clases, objetos, constructores y encapsulamiento, has aprendido los fundamentos de la Programación Orientada a Objetos en Java. En el siguiente tema, exploraremos dos conceptos fundamentales adicionales: herencia y polimorfismo.
+
+		**Recursos adicionales:**
+		* [Documentación oficial de Java sobre clases y objetos](https://docs.oracle.com/javase/tutorial/java/concepts/class.html)

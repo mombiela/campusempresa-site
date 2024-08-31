@@ -1,0 +1,99 @@
+Document (campusempresa.org/namespace.stxt): Componentes Controlados vs. No Controlados
+	Navigation:
+		Previous: Anterior (tema-08)
+		Next: Siguiente (tema-10)
+		
+	Header: Introducción
+	Subheader: Diferencias Fundamentales entre Componentes Controlados y No Controlados
+	Content:
+		En React, los componentes pueden manejar la entrada de datos de dos maneras principales: como **componentes controlados** o **componentes no controlados**. Comprender las diferencias entre ambos enfoques es crucial para decidir cuál utilizar en diferentes situaciones al desarrollar formularios y gestionar la entrada de datos.
+
+	Header: Componentes Controlados
+	Subheader: ¿Qué es un Componente Controlado?
+	Content:
+		Un componente controlado es aquel en el que el estado de los elementos del formulario (como `input`, `textarea`, `select`) es manejado por el estado del componente React. El valor del campo es almacenado en el estado y actualizado mediante eventos de cambio.
+	Code:
+		// Ejemplo de un componente controlado
+		function FormularioControlado() {
+			const [valor, setValor] = useState('');
+
+			function manejarCambio(evento) {
+				setValor(evento.target.value);
+			}
+
+			function manejarEnvio(evento) {
+				evento.preventDefault();
+				alert(`Valor enviado: ${valor}`);
+			}
+
+			return (
+				<form onSubmit={manejarEnvio}>
+					<label>
+						Nombre:
+						<input type="text" value={valor} onChange={manejarCambio} />
+					</label>
+					<button type="submit">Enviar</button>
+				</form>
+			);
+		}
+
+	Content:
+		En este ejemplo, el valor del campo de entrada está completamente controlado por el estado de React. Cualquier cambio en el campo de entrada dispara un evento que actualiza el estado del componente, manteniendo siempre la UI sincronizada con los datos.
+
+	Subheader: Ventajas de los Componentes Controlados
+	Content:
+		* **Sincronización directa:** La UI refleja directamente el estado del componente, lo que facilita la validación en tiempo real y la gestión de datos.
+		* **Mejor control sobre la entrada del usuario:** Al manejar el estado internamente, puedes aplicar transformaciones, validaciones y restricciones antes de que el valor sea considerado final.
+		* **Consistencia:** Los componentes controlados permiten que todas las actualizaciones del estado pasen por React, lo que facilita el seguimiento y la depuración.
+
+	Header: Componentes No Controlados
+	Subheader: ¿Qué es un Componente No Controlado?
+	Content:
+		Un componente no controlado es aquel en el que el valor de los elementos del formulario es gestionado directamente por el DOM, en lugar de por el estado de React. Para acceder al valor del campo de entrada, se utilizan referencias (`refs`).
+	Code:
+		// Ejemplo de un componente no controlado
+		function FormularioNoControlado() {
+			const inputRef = useRef(null);
+
+			function manejarEnvio(evento) {
+				evento.preventDefault();
+				alert(`Valor enviado: ${inputRef.current.value}`);
+			}
+
+			return (
+				<form onSubmit={manejarEnvio}>
+					<label>
+						Nombre:
+						<input type="text" ref={inputRef} />
+					</label>
+					<button type="submit">Enviar</button>
+				</form>
+			);
+		}
+
+	Content:
+		En este ejemplo, el valor del campo de entrada es manejado directamente por el DOM. Cuando se envía el formulario, el valor es accedido a través de una referencia (`ref`), permitiendo que React no controle el valor del campo hasta que sea necesario.
+
+	Subheader: Ventajas de los Componentes No Controlados
+	Content:
+		* **Menor sobrecarga de gestión del estado:** No necesitas mantener un estado sincronizado en React para cada campo de entrada, lo que puede simplificar el código en formularios grandes.
+		* **Configuración inicial simple:** Para formularios simples, la configuración inicial puede ser más directa, ya que no necesitas vincular cada campo al estado.
+		* **Compatibilidad con bibliotecas externas:** Los componentes no controlados pueden ser más compatibles con bibliotecas que gestionan el DOM directamente.
+
+	Header: Comparación y Elección
+	Subheader: Cuándo Usar Componentes Controlados
+	Content:
+		* **Validación en tiempo real:** Si necesitas validar los datos a medida que el usuario los introduce.
+		* **Sincronización compleja del estado:** Cuando la entrada del usuario debe interactuar de manera compleja con otros estados o componentes.
+		* **Transformaciones de datos:** Si necesitas transformar los datos de entrada antes de enviarlos o almacenarlos.
+
+	Subheader: Cuándo Usar Componentes No Controlados
+	Content:
+		* **Formularios simples:** Para formularios pequeños donde no se requiere validación en tiempo real o manipulación avanzada del estado.
+		* **Compatibilidad con bibliotecas:** Si estás utilizando bibliotecas que ya gestionan la entrada del usuario y no quieres duplicar la gestión del estado en React.
+		* **Optimización de rendimiento:** Cuando el rendimiento es crucial y quieres minimizar la cantidad de actualizaciones del estado en formularios grandes.
+
+	Header: Conclusión
+	Subheader: Resumen sobre Componentes Controlados vs. No Controlados
+	Content:
+		La elección entre componentes controlados y no controlados depende del contexto y los requisitos específicos de tu aplicación. Mientras que los componentes controlados ofrecen un control total y una sincronización directa del estado, los componentes no controlados pueden ser más simples y eficientes en casos específicos. Entender cuándo usar cada enfoque es clave para construir aplicaciones React eficientes y mantenibles. En los próximos temas, exploraremos más técnicas avanzadas para optimizar y gestionar el estado en React.

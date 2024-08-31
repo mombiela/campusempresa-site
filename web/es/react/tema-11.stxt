@@ -1,0 +1,136 @@
+Document (campusempresa.org/namespace.stxt): Introducción a Redux
+	Navigation:
+		Previous: Anterior (tema-10)
+		Next: Siguiente (tema-12)
+		
+	Header: Introducción
+	Subheader: ¿Qué es Redux?
+	Content:
+		Redux es una biblioteca de manejo del estado predecible para aplicaciones JavaScript. Aunque puede utilizarse con cualquier biblioteca o framework, es comúnmente utilizada junto con React para manejar el estado global de aplicaciones complejas. Redux sigue una arquitectura de flujo unidireccional, lo que significa que el flujo de datos sigue un ciclo predecible y controlado a través de acciones, reducers y el store.
+
+	Header: Conceptos Fundamentales de Redux
+	Subheader: Store
+	Content:
+		El `store` es un objeto que contiene el estado global de la aplicación. Es el único lugar donde se almacena el estado en Redux, lo que garantiza que el estado de la aplicación sea consistente y centralizado.
+	Code:
+		// Ejemplo básico de creación de un store en Redux
+		import { createStore } from 'redux';
+
+		// Un reducer simple
+		function contadorReducer(state = { contador: 0 }, action) {
+			switch (action.type) {
+				case 'INCREMENTAR':
+					return { contador: state.contador + 1 };
+				default:
+					return state;
+			}
+		}
+
+		// Creación del store
+		const store = createStore(contadorReducer);
+
+	Content:
+		En este ejemplo, se crea un store utilizando un reducer simple que maneja un contador. El store contiene el estado actual de la aplicación, y cualquier cambio en el estado se gestiona a través de este único store.
+
+	Subheader: Actions
+	Content:
+		Las `actions` son objetos que describen qué tipo de cambio se desea realizar en el estado. Cada action debe tener al menos una propiedad `type`, que indica el tipo de acción que se está realizando.
+	Code:
+		// Ejemplo de una action en Redux
+		const incrementarAction = {
+			type: 'INCREMENTAR'
+		};
+
+	Content:
+		Este ejemplo muestra una acción simple que incrementa un contador. Las actions son enviadas (dispatched) al store para que este las procese mediante los reducers.
+
+	Subheader: Reducers
+	Content:
+		Los `reducers` son funciones puras que toman el estado actual y una acción como argumentos, y devuelven un nuevo estado. Los reducers son responsables de especificar cómo cambia el estado en respuesta a una acción.
+	Code:
+		// Ejemplo de un reducer en Redux
+		function contadorReducer(state = { contador: 0 }, action) {
+			switch (action.type) {
+				case 'INCREMENTAR':
+					return { contador: state.contador + 1 };
+				default:
+					return state;
+			}
+		}
+
+	Content:
+		Este ejemplo muestra un reducer que responde a la acción `INCREMENTAR` actualizando el estado del contador. Los reducers son funciones puras, lo que significa que no deben causar efectos secundarios.
+
+	Header: Flujo de Datos en Redux
+	Subheader: Descripción del Flujo Unidireccional
+	Content:
+		El flujo de datos en Redux sigue un ciclo predecible:
+		1. El usuario interactúa con la UI, lo que dispara una acción.
+		2. La acción es enviada (dispatched) al store.
+		3. El store pasa la acción al reducer correspondiente.
+		4. El reducer procesa la acción y retorna un nuevo estado.
+		5. El store actualiza el estado y notifica a los componentes suscritos.
+		6. Los componentes se re-renderizan con el nuevo estado.
+
+	Subheader: Ejemplo Completo de Flujo de Datos
+	Content:
+		Un ejemplo simple para ilustrar el flujo de datos en Redux.
+	Code:
+		// Action
+		const incrementarAction = { type: 'INCREMENTAR' };
+
+		// Reducer
+		function contadorReducer(state = { contador: 0 }, action) {
+			switch (action.type) {
+				case 'INCREMENTAR':
+					return { contador: state.contador + 1 };
+				default:
+					return state;
+			}
+		}
+
+		// Store
+		const store = createStore(contadorReducer);
+
+		// Dispatching an action
+		store.dispatch(incrementarAction);
+
+		// Obtener el estado actual
+		console.log(store.getState()); // { contador: 1 }
+
+	Content:
+		Este ejemplo demuestra cómo se envía una acción, se procesa a través del reducer, y cómo el store actualiza el estado. Después de ejecutar la acción `INCREMENTAR`, el estado se actualiza y el contador pasa de 0 a 1.
+
+	Header: Integración de Redux con React
+	Subheader: Configuración Básica de Redux en una Aplicación React
+	Content:
+		Redux se integra con React utilizando el paquete `react-redux`, que proporciona componentes y funciones como `Provider` y `connect` para conectar React con el store de Redux.
+	Code:
+		// Ejemplo básico de integración de Redux con React
+		import React from 'react';
+		import ReactDOM from 'react-dom';
+		import { Provider } from 'react-redux';
+		import { createStore } from 'redux';
+		import contadorReducer from './reducers';
+
+		// Creación del store
+		const store = createStore(contadorReducer);
+
+		function App() {
+			return <div>Mi aplicación React con Redux</div>;
+		}
+
+		ReactDOM.render(
+			<Provider store={store}>
+				<App />
+			</Provider>,
+			document.getElementById('root')
+		);
+
+	Content:
+		En este ejemplo, el componente `Provider` envuelve la aplicación React y proporciona el store de Redux a todos los componentes de la aplicación, permitiendo que estos accedan al estado global y envíen acciones al store.
+
+	Header: Conclusión
+	Subheader: Resumen sobre Redux
+	Content:
+		Redux es una poderosa herramienta para manejar el estado en aplicaciones JavaScript, especialmente cuando se trabaja con aplicaciones grandes y complejas. Su flujo de datos unidireccional y su enfoque en la inmutabilidad del estado ayudan a mantener aplicaciones consistentes y fáciles de depurar. En los próximos temas, exploraremos patrones avanzados de uso de Redux y cómo combinarlo con otras tecnologías como la Context API de React.

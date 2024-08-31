@@ -1,0 +1,130 @@
+Document (campusempresa.org/namespace.stxt): Listas y Keys
+	Navigation:
+		Previous: Anterior (tema-06)
+		Next: Siguiente (tema-08)
+		
+	Header: Introducción
+	Subheader: ¿Qué son las listas en React?
+	Content:
+		En React, las listas son utilizadas para renderizar múltiples elementos basados en datos de un array. Cuando trabajas con listas, es común utilizar la función `map()` de JavaScript para crear un array de elementos React a partir de un array de datos.
+
+	Header: Renderizando Listas en React
+	Subheader: Uso de la Función map()
+	Content:
+		La función `map()` es una forma eficiente de transformar un array de datos en un array de elementos React. Cada elemento en la lista debe tener una `key` única para ayudar a React a identificar qué elementos han cambiado, agregado o eliminado.
+	Code:
+		// Ejemplo básico de renderizado de una lista
+		function ListaFrutas() {
+			const frutas = ['Manzana', 'Banana', 'Naranja', 'Fresa'];
+			const listaFrutas = frutas.map((fruta, index) =>
+				<li key={index}>{fruta}</li>
+			);
+			return <ul>{listaFrutas}</ul>;
+		}
+
+	Content:
+		En este ejemplo, `map()` transforma el array `frutas` en un array de elementos `<li>`, cada uno con una `key` única basada en el índice del array.
+
+	Header: Importancia de las Keys en React
+	Subheader: ¿Por qué son necesarias las Keys?
+	Content:
+		Las `keys` son necesarias para que React pueda identificar de manera eficiente los elementos que han cambiado. Si no se asignan keys o si no son únicas, React puede tener problemas para manejar el renderizado de listas, lo que puede llevar a comportamientos inesperados.
+	Code:
+		// Ejemplo de renderizado sin keys (incorrecto)
+		function ListaFrutasSinKeys() {
+			const frutas = ['Manzana', 'Banana', 'Naranja', 'Fresa'];
+			const listaFrutas = frutas.map((fruta) =>
+				<li>{fruta}</li>
+			);
+			return <ul>{listaFrutas}</ul>;
+		}
+
+		Content:
+			En este ejemplo, al no incluir una `key` única en cada elemento de la lista, React no podrá identificar correctamente cada elemento, lo que puede provocar problemas de rendimiento o de comportamiento en la interfaz.
+
+	Subheader: Asignación de Keys Únicas
+	Content:
+		Para asegurar que cada elemento de la lista tenga una `key` única, es común usar un identificador único de los datos, como un ID, o en su defecto, el índice del array si no hay una mejor opción disponible.
+	Code:
+		// Ejemplo de renderizado con keys únicas usando IDs
+		function ListaFrutasConKeys() {
+			const frutas = [
+				{id: 1, nombre: 'Manzana'},
+				{id: 2, nombre: 'Banana'},
+				{id: 3, nombre: 'Naranja'},
+				{id: 4, nombre: 'Fresa'}
+			];
+			const listaFrutas = frutas.map((fruta) =>
+				<li key={fruta.id}>{fruta.nombre}</li>
+			);
+			return <ul>{listaFrutas}</ul>;
+		}
+
+	Content:
+		En este ejemplo, la `key` se basa en el `id` único de cada objeto en el array, lo que permite a React identificar correctamente cada elemento de la lista.
+
+	Header: Listas Complejas y Componentes
+	Subheader: Renderizado de Listas de Componentes
+	Content:
+		No solo se pueden renderizar elementos básicos como listas de `<li>`, sino que también es posible renderizar listas de componentes completos, pasando datos específicos a cada uno.
+	Code:
+		// Ejemplo de renderizado de una lista de componentes
+		function Fruta({ nombre }) {
+			return <li>{nombre}</li>;
+		}
+
+		function ListaFrutasComponentes() {
+			const frutas = [
+				{id: 1, nombre: 'Manzana'},
+				{id: 2, nombre: 'Banana'},
+				{id: 3, nombre: 'Naranja'},
+				{id: 4, nombre: 'Fresa'}
+			];
+			return (
+				<ul>
+					{frutas.map((fruta) =>
+						<Fruta key={fruta.id} nombre={fruta.nombre} />
+					)}
+				</ul>
+			);
+		}
+
+	Content:
+		En este ejemplo, cada fruta es renderizada por un componente `Fruta`, y cada componente recibe su propio conjunto de datos a través de `props`, lo que facilita la gestión y personalización de cada elemento en la lista.
+
+	Header: Manejo de Listas con Datos Dinámicos
+	Subheader: Actualización Dinámica de Listas
+	Content:
+		Las listas en React pueden actualizarse dinámicamente en función de cambios en los datos, como agregar, eliminar o modificar elementos en el array que las genera. Es crucial que las `keys` permanezcan consistentes incluso cuando los datos cambian, para evitar problemas de renderizado.
+	Code:
+		// Ejemplo de lista que actualiza dinámicamente
+		function ListaFrutasDinamica() {
+			const [frutas, setFrutas] = useState([
+				{id: 1, nombre: 'Manzana'},
+				{id: 2, nombre: 'Banana'}
+			]);
+
+			function agregarFruta() {
+				const nuevaFruta = {id: frutas.length + 1, nombre: 'Naranja'};
+				setFrutas([...frutas, nuevaFruta]);
+			}
+
+			return (
+				<div>
+					<ul>
+						{frutas.map((fruta) =>
+							<Fruta key={fruta.id} nombre={fruta.nombre} />
+						)}
+					</ul>
+					<button onClick={agregarFruta}>Agregar Naranja</button>
+				</div>
+			);
+		}
+
+	Content:
+		Este ejemplo muestra cómo una lista puede actualizarse dinámicamente mediante la adición de nuevos elementos, asegurando que cada uno tenga una `key` única.
+
+	Header: Conclusión
+	Subheader: Resumen sobre Listas y Keys en React
+	Content:
+		El manejo de listas y keys es una habilidad esencial en React para renderizar colecciones de datos de manera eficiente y controlada. Las keys ayudan a React a identificar elementos de forma única, lo que es crucial para un renderizado óptimo y sin errores. En el siguiente tema, profundizaremos en la administración del estado en React, una parte fundamental para el desarrollo de aplicaciones interactivas.

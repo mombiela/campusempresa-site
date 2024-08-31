@@ -1,0 +1,127 @@
+Document (campusempresa.org/namespace.stxt): Tema 11: Variables y tipos de datos en JavaScript
+	Navigation:
+		Previous: Anterior (tema-10)
+		Next: Siguiente (tema-12)
+	Header: Introducción a las variables en JavaScript
+	Subheader: ¿Qué es una variable?
+
+	Content:
+		En JavaScript, una variable es un contenedor que se utiliza para almacenar datos o valores que pueden ser utilizados y manipulados en el código. Las variables permiten a los desarrolladores crear programas dinámicos que pueden trabajar con datos que cambian con el tiempo.
+
+		JavaScript proporciona diferentes maneras de declarar variables, y cada una tiene características específicas:
+
+		1. **`var`**: El método más antiguo para declarar variables. Tiene un alcance global o de función, y permite la redeclaración.
+		2. **`let`**: Introducido en ES6, permite la declaración de variables con un alcance de bloque, lo que evita muchos de los problemas asociados con `var`.
+		3. **`const`**: También introducido en ES6, se utiliza para declarar variables cuyo valor no debe cambiar. Tiene un alcance de bloque, al igual que `let`.
+
+	Code:
+		<!-- Ejemplo de declaración de variables -->
+		<script>
+			var nombre = "Juan";
+			let edad = 30;
+			const PI = 3.14159;
+
+			console.log(nombre); // "Juan"
+			console.log(edad);   // 30
+			console.log(PI);     // 3.14159
+		</script>
+
+	Subheader: Tipos de datos en JavaScript
+
+	Content:
+		JavaScript soporta varios tipos de datos, que se pueden agrupar en dos categorías principales: **primitivos** y **objetos**.
+
+		**Tipos de datos primitivos**:
+		1. **`number`**: Para representar números, tanto enteros como decimales.
+		2. **`string`**: Para representar texto o cadenas de caracteres.
+		3. **`boolean`**: Solo puede tener dos valores: `true` o `false`.
+		4. **`undefined`**: Se asigna automáticamente a las variables que han sido declaradas pero no inicializadas.
+		5. **`null`**: Representa la ausencia intencional de cualquier valor de objeto.
+		6. **`symbol`**: Introducido en ES6, representa un valor único e inmutable.
+
+		**Tipo de datos objeto**:
+		- **`object`**: Utilizado para almacenar colecciones de datos y más complejas entidades, como arreglos, funciones, y otros objetos.
+
+	Code:
+		<!-- Ejemplo de diferentes tipos de datos -->
+		<script>
+			let numero = 42;               // number
+			let texto = "Hola, Mundo!";     // string
+			let esVerdadero = true;         // boolean
+			let valorIndefinido;            // undefined
+			let valorNulo = null;           // null
+			let simbolo = Symbol('id');     // symbol
+
+			let objeto = { nombre: "Juan", edad: 30 }; // object
+
+			console.log(numero);
+			console.log(texto);
+			console.log(esVerdadero);
+			console.log(valorIndefinido);
+			console.log(valorNulo);
+			console.log(simbolo);
+			console.log(objeto);
+		</script>
+
+	Subheader: Operaciones con variables
+
+	Content:
+		En JavaScript, las variables se pueden utilizar en una variedad de operaciones, como la aritmética, la concatenación de cadenas, y las comparaciones lógicas. Es fundamental entender cómo interactúan las variables en estas operaciones para poder escribir código efectivo.
+
+		**Operaciones comunes**:
+		1. **Aritmética**: Suma (`+`), resta (`-`), multiplicación (`*`), división (`/`), y módulo (`%`).
+		2. **Concatenación**: Combina cadenas de texto usando el operador `+`.
+		3. **Asignación**: Asigna valores a variables usando `=` y operadores compuestos como `+=`, `-=`, etc.
+		4. **Comparación**: Compara valores usando `==`, `===`, `!=`, `!==`, `<`, `>`, `<=`, `>=`.
+
+	Code:
+		<!-- Ejemplo de operaciones con variables -->
+		<script>
+			let a = 10;
+			let b = 20;
+
+			// Aritmética
+			let suma = a + b;    // 30
+			let resta = a - b;   // -10
+
+			// Concatenación
+			let saludo = "Hola, " + "Juan!"; // "Hola, Juan!"
+
+			// Comparación
+			let esIgual = (a == b);      // false
+			let esEstrictamenteIgual = (a === 10); // true
+
+			console.log(suma);
+			console.log(resta);
+			console.log(saludo);
+			console.log(esIgual);
+			console.log(esEstrictamenteIgual);
+		</script>
+
+	Subheader: Conversión de tipos
+
+	Content:
+		JavaScript permite convertir variables de un tipo a otro. Esto puede ocurrir de forma automática (coerción de tipos) o explícitamente mediante funciones de conversión.
+
+		**Conversión automática**: Ocurre cuando JavaScript necesita que un tipo de dato se convierta a otro para completar una operación.
+		**Conversión explícita**: Se realiza usando funciones como `String()`, `Number()`, y `Boolean()`.
+
+	Code:
+		<!-- Ejemplo de conversión de tipos -->
+		<script>
+			let num = "42";  // string
+			let convertidoANumero = Number(num); // 42
+
+			let bool = 0;  // number
+			let convertidoABooleano = Boolean(bool); // false
+
+			console.log(convertidoANumero);
+			console.log(convertidoABooleano);
+		</script>
+
+	Header: Conclusión sobre variables y tipos de datos en JavaScript
+	
+	Content: 
+		Comprender las variables y los tipos de datos es esencial para escribir código JavaScript efectivo. Las variables actúan como contenedores para almacenar y manipular datos, mientras que los tipos de datos determinan cómo se comportarán esos datos en las operaciones.
+
+		Con un buen manejo de estos conceptos, podrás crear programas más dinámicos y eficientes, aprovechando al máximo las capacidades de JavaScript.

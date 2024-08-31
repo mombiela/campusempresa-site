@@ -1,0 +1,98 @@
+Document (campusempresa.org/namespace.stxt): Tema 15: Accesibilidad en HTML
+	Navigation:
+		Previous: Anterior (tema-14)
+		Next: Siguiente (tema-16)
+	Header: Introducción a la accesibilidad en la web
+	Subheader: ¿Qué es la accesibilidad web?
+
+	Content:
+		La accesibilidad web se refiere a la práctica de diseñar y desarrollar sitios web de manera que todas las personas, incluidas aquellas con discapacidades, puedan utilizarlos. Esto implica crear contenido que sea accesible para usuarios con diversas capacidades, incluyendo aquellos con discapacidades visuales, auditivas, motoras o cognitivas.
+
+		La accesibilidad no solo es un requisito legal en muchos países, sino que también es una buena práctica que mejora la usabilidad para todos los usuarios. Además, sitios web accesibles suelen ser más fáciles de mantener y más compatibles con diferentes dispositivos.
+
+	Code:
+		<!-- Ejemplo de texto alternativo para imágenes -->
+		<img src="imagen.jpg" alt="Descripción de la imagen" />
+
+	Subheader: Principios básicos de accesibilidad
+
+	Content:
+		La accesibilidad se basa en cuatro principios fundamentales conocidos como **POUR**:
+
+		1. **Perceptible**: La información y los componentes de la interfaz deben ser presentados de manera que puedan ser percibidos por todos los usuarios, incluso aquellos con discapacidades sensoriales.
+		2. **Operable**: Los usuarios deben poder interactuar con la interfaz de manera eficaz, independientemente de sus habilidades motoras.
+		3. **Comprensible**: La información y el funcionamiento de la interfaz deben ser comprensibles para todos los usuarios.
+		4. **Robusto**: El contenido debe ser robusto y compatible con una amplia variedad de tecnologías de asistencia, así como con navegadores y dispositivos actuales y futuros.
+
+	Code:
+		<!-- Ejemplo de accesibilidad básica con etiquetas ARIA -->
+		<button aria-label="Cerrar ventana">X</button>
+
+	Subheader: Uso de etiquetas semánticas para mejorar la accesibilidad
+
+	Content:
+		El uso de etiquetas HTML semánticas es clave para mejorar la accesibilidad de un sitio web. Estas etiquetas ayudan a los usuarios que dependen de tecnologías de asistencia, como lectores de pantalla, a navegar y comprender mejor el contenido.
+
+		**Ejemplos de etiquetas semánticas útiles**:
+		- `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`: Ayudan a estructurar el contenido de manera lógica.
+		- `<label>`: Asocia texto con un elemento de formulario, lo que mejora la usabilidad para todos los usuarios.
+		- `<alt>`: Proporciona texto alternativo para imágenes, esencial para usuarios con discapacidades visuales.
+
+	Code:
+		<!-- Ejemplo de un formulario accesible -->
+		<form>
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre">
+
+			<label for="email">Correo electrónico:</label>
+			<input type="email" id="email" name="email">
+
+			<button type="submit">Enviar</button>
+		</form>
+
+	Subheader: Implementación de ARIA (Accessible Rich Internet Applications)
+
+	Content:
+		ARIA es un conjunto de atributos que se pueden añadir a las etiquetas HTML para mejorar la accesibilidad de las aplicaciones web ricas. ARIA permite describir elementos y estados dinámicos, asegurando que las tecnologías de asistencia puedan interpretar y comunicar correctamente la información al usuario.
+
+		**Atributos ARIA comunes**:
+		- `aria-label`: Proporciona una etiqueta accesible para un elemento.
+		- `aria-hidden`: Indica que un elemento no es visible o no debe ser anunciado por las tecnologías de asistencia.
+		- `role`: Define el rol del elemento (por ejemplo, `button`, `dialog`, `alert`).
+
+	Code:
+		<!-- Ejemplo de uso de atributos ARIA -->
+		<div role="dialog" aria-labelledby="dialogTitle" aria-hidden="true">
+			<h2 id="dialogTitle">Título del diálogo</h2>
+			<p>Contenido del diálogo.</p>
+			<button aria-label="Cerrar diálogo">Cerrar</button>
+		</div>
+
+	Subheader: Buenas prácticas para formularios accesibles
+
+	Content:
+		Los formularios son una parte crítica de la interacción del usuario en la web, y su accesibilidad es fundamental. Algunas buenas prácticas incluyen:
+
+		1. **Etiquetas claras**: Usa etiquetas `<label>` para cada campo de formulario.
+		2. **Texto alternativo para botones**: Asegúrate de que todos los botones tengan un texto alternativo descriptivo.
+		3. **Instrucciones claras**: Proporciona instrucciones claras y accesibles para los usuarios que puedan necesitar asistencia adicional.
+		4. **Orden de tabulación lógico**: Configura el orden de tabulación de manera que sea natural y lógico para los usuarios que navegan con el teclado.
+
+	Code:
+		<!-- Ejemplo de formulario con buenas prácticas de accesibilidad -->
+		<form>
+			<label for="username">Nombre de usuario:</label>
+			<input type="text" id="username" name="username" required>
+
+			<label for="password">Contraseña:</label>
+			<input type="password" id="password" name="password" required>
+
+			<button type="submit" aria-label="Enviar formulario">Enviar</button>
+		</form>
+
+	Header: Conclusión sobre accesibilidad en HTML
+	
+	Content: 
+		La accesibilidad web es un aspecto crucial del desarrollo web moderno. Al seguir las mejores prácticas y utilizar las herramientas proporcionadas por HTML5 y ARIA, puedes asegurarte de que tu sitio web sea inclusivo y accesible para todos los usuarios, independientemente de sus capacidades.
+
+		Implementar accesibilidad no solo cumple con los estándares y regulaciones, sino que también mejora la experiencia general del usuario, haciéndola más intuitiva y fácil de usar.

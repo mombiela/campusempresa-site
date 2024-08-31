@@ -1,0 +1,132 @@
+Document (campusempresa.org/namespace.stxt): Componentes y Props
+	Navigation:
+		Previous: Anterior (tema-03)
+		Next: Siguiente (tema-05)
+		
+	Header: Introducción
+	Content:
+		En React, los componentes son los bloques de construcción fundamentales de la interfaz de usuario. Cada componente puede ser considerado como una pieza aislada y reutilizable que puede manejar su propio estado y lógica.
+
+		Los `props` (abreviatura de "properties") son un mecanismo que permite pasar datos de un componente padre a un componente hijo. En este tema, exploraremos en detalle cómo funcionan los componentes y `props`, y cómo se utilizan para crear interfaces dinámicas y flexibles.
+
+	Subheader: Componentes Funcionales vs. Componentes de Clase
+	Content:
+		En React, existen dos tipos principales de componentes: **funcionales** y **de clase**.
+
+		**Componentes Funcionales:** 
+		- Son funciones de JavaScript que reciben `props` como argumento y devuelven un elemento JSX.
+		- Son más sencillos y fáciles de escribir.
+
+	Code:
+		// Ejemplo de un componente funcional
+		function Bienvenida(props) {
+			return <h1>Hola, {props.name}!</h1>;
+		}
+
+	Content:
+		**Componentes de Clase:**
+		- Son clases de ES6 que extienden de `React.Component`.
+		- Pueden manejar estado y tienen acceso a métodos del ciclo de vida.
+
+	Code:
+		// Ejemplo de un componente de clase
+		class Bienvenida extends React.Component {
+			render() {
+				return <h1>Hola, {this.props.name}!</h1>;
+			}
+		}
+
+	Content:
+		En la mayoría de los casos, los componentes funcionales son suficientes y más recomendados debido a su simplicidad. Con la introducción de hooks en React, la funcionalidad de los componentes de clase puede replicarse en componentes funcionales, lo que hace que estos últimos sean la opción preferida.
+
+	Subheader: Usando Props para Pasar Datos
+	Content:
+		Los `props` permiten que los componentes reciban datos de otros componentes y los utilicen para renderizar contenido dinámico. Los `props` se pasan de componentes padres a componentes hijos como atributos en JSX.
+
+	Code:
+		// Componente padre que pasa props al componente hijo
+		function App() {
+			return <Bienvenida name="React" />;
+		}
+
+		function Bienvenida(props) {
+			return <h1>Hola, {props.name}!</h1>;
+		}
+
+		// Renderizando el componente App en el DOM
+		ReactDOM.render(<App />, document.getElementById('root'));
+
+	Content:
+		En este ejemplo, el componente `App` pasa el prop `name` al componente `Bienvenida`, que luego lo utiliza para mostrar un saludo personalizado.
+
+	Subheader: Props Predeterminados y Validación de Props
+	Content:
+		Es posible definir valores predeterminados para los `props` en caso de que no se proporcionen. Además, React ofrece una forma de validar los `props` que un componente recibe, asegurando que los datos sean del tipo correcto.
+
+		**Definiendo Props Predeterminados:**
+
+	Code:
+		// Definiendo un valor predeterminado para un prop
+		function Bienvenida(props) {
+			return <h1>Hola, {props.name}!</h1>;
+		}
+
+		Bienvenida.defaultProps = {
+			name: 'Invitado'
+		};
+
+		// Renderizando sin pasar el prop 'name'
+		ReactDOM.render(<Bienvenida />, document.getElementById('root'));
+
+	Content:
+		En este caso, si no se pasa un prop `name`, el componente usará "Invitado" como valor predeterminado.
+
+		**Validando Props con PropTypes:**
+
+	Code:
+		import PropTypes from 'prop-types';
+
+		function Bienvenida(props) {
+			return <h1>Hola, {props.name}!</h1>;
+		}
+
+		Bienvenida.propTypes = {
+			name: PropTypes.string
+		};
+
+		// Renderizando con un prop inválido
+		ReactDOM.render(<Bienvenida name={123} />, document.getElementById('root'));
+
+	Content:
+		En este ejemplo, si `name` no es una cadena de texto, React mostrará una advertencia en la consola, ayudando a detectar errores en tiempo de desarrollo.
+
+	Subheader: Composición de Componentes
+	Content:
+		La composición es una de las características más poderosas de React. Permite construir componentes complejos combinando componentes más pequeños y específicos.
+
+	Code:
+		function Cabecera() {
+			return <header><h1>Bienvenidos a React</h1></header>;
+		}
+
+		function Contenido() {
+			return <p>React facilita la creación de interfaces de usuario interactivas.</p>;
+		}
+
+		function App() {
+			return (
+				<div>
+					<Cabecera />
+					<Contenido />
+				</div>
+			);
+		}
+
+		ReactDOM.render(<App />, document.getElementById('root'));
+
+	Content:
+		En este ejemplo, el componente `App` se compone de dos componentes más pequeños, `Cabecera` y `Contenido`, demostrando cómo React fomenta la reusabilidad y la modularidad.
+
+	Subheader: Conclusión
+	Content:
+		En este tema, hemos explorado cómo los componentes y `props` trabajan juntos para construir aplicaciones React dinámicas y reutilizables. Comprender cómo funcionan estos conceptos es crucial para dominar React y aprovechar todo su potencial en el desarrollo de interfaces de usuario modernas y eficientes.

@@ -1,0 +1,136 @@
+Document (campusempresa.org/namespace.stxt): Introducción a React Router
+	Navigation:
+		Previous: Anterior (tema-14)
+		Next: Siguiente (tema-16)
+		
+	Header: Introducción
+	Subheader: ¿Qué es React Router?
+	Content:
+		React Router es una biblioteca estándar para manejar el enrutamiento en aplicaciones React. Permite crear y gestionar rutas en una aplicación web de una sola página (SPA), lo que facilita la navegación entre diferentes vistas o componentes sin recargar la página. React Router permite crear una experiencia de usuario fluida y dinámica, haciendo que la aplicación se sienta más como una aplicación nativa.
+
+	Header: Instalación de React Router
+	Subheader: Instalación mediante npm o yarn
+	Content:
+		Para utilizar React Router en tu proyecto, primero debes instalar la biblioteca utilizando npm o yarn.
+	Code:
+		// Instalación con npm
+		npm install react-router-dom
+
+		// Instalación con yarn
+		yarn add react-router-dom
+
+	Content:
+		Este comando instalará React Router junto con sus dependencias. Una vez instalado, puedes comenzar a configurar las rutas en tu aplicación React.
+
+	Header: Configuración Básica de Rutas
+	Subheader: Uso de BrowserRouter, Routes y Route
+	Content:
+		Para empezar a usar React Router, necesitas envolver tu aplicación en el componente `BrowserRouter`. Luego, puedes definir las rutas usando los componentes `Routes` y `Route`.
+	Code:
+		// Ejemplo básico de configuración de rutas
+		import React from 'react';
+		import ReactDOM from 'react-dom';
+		import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+		function Inicio() {
+			return <h2>Página de Inicio</h2>;
+		}
+
+		function Sobre() {
+			return <h2>Sobre Nosotros</h2>;
+		}
+
+		function App() {
+			return (
+				<Router>
+					<Routes>
+						<Route path="/" element={<Inicio />} />
+						<Route path="/sobre" element={<Sobre />} />
+					</Routes>
+				</Router>
+			);
+		}
+
+		ReactDOM.render(<App />, document.getElementById('root'));
+
+	Content:
+		En este ejemplo, se configuran dos rutas: una para la página de inicio (`/`) y otra para la página "Sobre Nosotros" (`/sobre`). Cuando el usuario navega a estas rutas, React Router renderiza el componente correspondiente.
+
+	Header: Navegación entre Rutas
+	Subheader: Uso del Componente Link
+	Content:
+		El componente `Link` de React Router permite a los usuarios navegar entre las diferentes rutas de la aplicación sin recargar la página. Funciona de manera similar a un enlace HTML `<a>`, pero sin provocar una recarga completa de la página.
+	Code:
+		// Ejemplo de uso de Link para la navegación
+		import { Link } from 'react-router-dom';
+
+		function Navbar() {
+			return (
+				<nav>
+					<ul>
+						<li>
+							<Link to="/">Inicio</Link>
+						</li>
+						<li>
+							<Link to="/sobre">Sobre Nosotros</Link>
+						</li>
+					</ul>
+				</nav>
+			);
+		}
+
+	Content:
+		En este ejemplo, la `Navbar` contiene enlaces que permiten al usuario navegar entre las rutas "Inicio" y "Sobre Nosotros" usando el componente `Link`.
+
+	Header: Parámetros de Ruta
+	Subheader: Uso de Parámetros en las Rutas
+	Content:
+		React Router permite definir rutas con parámetros dinámicos, lo que es útil para manejar URLs que incluyen variables, como identificadores de usuarios o nombres de productos.
+	Code:
+		// Ejemplo de ruta con parámetros
+		function Usuario({ match }) {
+			return <h2>Perfil del Usuario: {match.params.id}</h2>;
+		}
+
+		function App() {
+			return (
+				<Router>
+					<Routes>
+						<Route path="/usuario/:id" element={<Usuario />} />
+					</Routes>
+				</Router>
+			);
+		}
+
+	Content:
+		En este ejemplo, la ruta `/usuario/:id` permite acceder a diferentes perfiles de usuario dependiendo del parámetro `id` en la URL. Si el usuario navega a `/usuario/123`, se mostrará el perfil correspondiente al ID 123.
+
+	Header: Manejo de Rutas No Encontradas
+	Subheader: Uso de la Ruta de Comodín
+	Content:
+		Para manejar rutas no encontradas (404), puedes definir una ruta de comodín que coincida con cualquier URL que no haya sido definida anteriormente.
+	Code:
+		// Ejemplo de manejo de rutas no encontradas
+		function NoEncontrado() {
+			return <h2>404: Página no encontrada</h2>;
+		}
+
+		function App() {
+			return (
+				<Router>
+					<Routes>
+						<Route path="/" element={<Inicio />} />
+						<Route path="/sobre" element={<Sobre />} />
+						<Route path="*" element={<NoEncontrado />} />
+					</Routes>
+				</Router>
+			);
+		}
+
+	Content:
+		En este ejemplo, cualquier URL que no coincida con las rutas definidas mostrará la página "404: Página no encontrada".
+
+	Header: Conclusión
+	Subheader: Resumen sobre React Router
+	Content:
+		React Router es una herramienta esencial para desarrollar aplicaciones React de una sola página (SPA) que requieren enrutamiento y navegación entre diferentes vistas o componentes. Su flexibilidad y facilidad de uso lo convierten en una opción ideal para manejar rutas de manera eficiente y crear experiencias de usuario fluidas. En los próximos temas, exploraremos más características avanzadas de React Router, como la protección de rutas y la carga diferida de componentes.

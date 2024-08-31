@@ -1,0 +1,102 @@
+Document (campusempresa.org/namespace.stxt): Primer componente en React
+	Navigation:
+		Previous: Anterior (tema-02)
+		Next: Siguiente (tema-04)
+		
+	Header: Introducción
+	Content:
+		En React, los componentes son las piezas fundamentales que construyen la interfaz de usuario. Un componente en React es una función o una clase que acepta entradas (conocidas como "props") y devuelve un elemento de React que describe cómo debería aparecer una sección de la interfaz de usuario.
+
+		En este tema, aprenderás cómo crear tu primer componente React, cómo renderizarlo en la página y cómo manejar las propiedades para hacerlo dinámico.
+
+	Subheader: Creación de un componente funcional
+	Content:
+		En React, los componentes funcionales son los más sencillos y directos de crear. Un componente funcional es simplemente una función de JavaScript que devuelve JSX.
+
+		**Ejemplo de un componente funcional básico:**
+
+	Code:
+		// Definiendo un componente funcional
+		function Bienvenida(props) {
+			return <h1>Hola, {props.name}!</h1>;
+		}
+
+	Content:
+		En este ejemplo, `Bienvenida` es un componente funcional que recibe `props` como argumento y devuelve un elemento JSX que muestra un saludo personalizado.
+
+	Subheader: Renderizando un componente en el DOM
+	Content:
+		Una vez que has creado un componente, el siguiente paso es renderizarlo en la página. ReactDOM.render() es el método que se utiliza para esto.
+
+		**Ejemplo de renderizado de un componente:**
+
+	Code:
+		// Importar React y ReactDOM
+		import React from 'react';
+		import ReactDOM from 'react-dom';
+
+		// Definiendo el componente
+		function Bienvenida(props) {
+			return <h1>Hola, {props.name}!</h1>;
+		}
+
+		// Renderizando el componente en el DOM
+		ReactDOM.render(<Bienvenida name="Mundo" />, document.getElementById('root'));
+
+	Content:
+		En este ejemplo, el componente `Bienvenida` se renderiza dentro de un elemento HTML con el ID `root`. El contenido mostrado será "Hola, Mundo!".
+
+	Subheader: Anidamiento de componentes
+	Content:
+		React permite componer interfaces complejas mediante el anidamiento de componentes. Puedes crear componentes más grandes y reutilizables combinando otros componentes más pequeños.
+
+		**Ejemplo de anidamiento de componentes:**
+
+	Code:
+		// Componente principal
+		function App() {
+			return (
+				<div>
+					<Bienvenida name="Mundo" />
+					<Bienvenida name="React" />
+				</div>
+			);
+		}
+
+		// Renderizando el componente principal en el DOM
+		ReactDOM.render(<App />, document.getElementById('root'));
+
+	Content:
+		En este ejemplo, el componente `App` contiene dos instancias del componente `Bienvenida`, mostrando dos saludos diferentes.
+
+	Subheader: Uso de props para hacer componentes dinámicos
+	Content:
+		`Props` (abreviatura de "properties") en React se utilizan para pasar datos de un componente a otro. Los componentes pueden recibir `props` y utilizarlos para personalizar su salida.
+
+		**Ejemplo de uso de props:**
+
+	Code:
+		// Componente funcional que usa props
+		function Usuario(props) {
+			return <p>Usuario: {props.username}</p>;
+		}
+
+		// Componente principal que pasa props a Usuario
+		function App() {
+			return (
+				<div>
+					<Usuario username="Juan" />
+					<Usuario username="Ana" />
+				</div>
+			);
+		}
+
+		// Renderizando el componente principal en el DOM
+		ReactDOM.render(<App />, document.getElementById('root'));
+
+	Content:
+		En este ejemplo, el componente `Usuario` recibe un `username` como prop y lo muestra en pantalla. El componente `App` pasa diferentes valores para `username`, lo que resulta en la visualización de diferentes usuarios.
+
+	Subheader: Conclusión
+	Content:
+		Has aprendido a crear tu primer componente en React, cómo renderizarlo y cómo usar `props` para hacerlo dinámico. Los componentes son la base de cualquier aplicación React, y dominar su creación y uso es fundamental para el desarrollo con React. En los próximos temas, profundizaremos en cómo manejar el estado y los ciclos de vida de los componentes para construir aplicaciones más interactivas y complejas.

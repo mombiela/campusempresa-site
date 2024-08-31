@@ -1,0 +1,153 @@
+Document (campusempresa.org/namespace.stxt): Manejo de Cadenas de Texto
+	Navigation:
+		Previous: Arrays y Colecciones en Java (10-arrays-colecciones)
+		Next: Manejo de Excepciones (12-manejo-excepciones)
+	
+	Header: Introducción al Manejo de Cadenas de Texto en Java
+	Subheader: ¿Qué son las cadenas de texto en Java?
+	
+	Content:
+		En Java, una cadena de texto se representa con la clase `String`. Las cadenas son secuencias de caracteres que se utilizan comúnmente para almacenar y manipular texto. En Java, las cadenas son inmutables, lo que significa que una vez creada una cadena, no se puede modificar.
+
+	Header: Creación y Asignación de Cadenas
+	Subheader: Inicialización de Cadenas
+	
+	Content:
+		Las cadenas en Java se pueden crear de varias maneras. La forma más común es asignar un literal de cadena directamente a una variable de tipo `String`.
+		
+	Code:
+		String saludo = "Hola, mundo!";
+		String otraCadena = new String("Java es divertido");
+	
+	Content:
+		En el primer ejemplo, la cadena `"Hola, mundo!"` se asigna directamente a la variable `saludo`. En el segundo ejemplo, se utiliza el constructor de la clase `String` para crear una nueva instancia.
+
+	Subheader: Concatenación de Cadenas
+	
+	Content:
+		La concatenación es el proceso de unir dos o más cadenas. En Java, se puede hacer utilizando el operador `+` o el método `concat`.
+		
+	Code:
+		String nombre = "Juan";
+		String saludo = "Hola, " + nombre + "!";
+		System.out.println(saludo);  // Salida: Hola, Juan!
+
+		String parte1 = "Java ";
+		String parte2 = "es divertido";
+		String frase = parte1.concat(parte2);
+		System.out.println(frase);  // Salida: Java es divertido
+	
+	Content:
+		En estos ejemplos, se muestran dos formas de concatenar cadenas: utilizando el operador `+` y el método `concat`.
+
+	Header: Métodos Comunes de la Clase `String`
+	Subheader: Longitud de una Cadena
+	
+	Content:
+		El método `length()` devuelve el número de caracteres en una cadena.
+		
+	Code:
+		String texto = "Aprendiendo Java";
+		int longitud = texto.length();
+		System.out.println("La longitud de la cadena es: " + longitud);  // Salida: 16
+
+	Subheader: Acceso a Caracteres Individuales
+	
+	Content:
+		Se puede acceder a un carácter específico en una cadena utilizando el método `charAt()`, que recibe como parámetro el índice del carácter.
+		
+	Code:
+		String texto = "Java";
+		char primerCaracter = texto.charAt(0);
+		System.out.println("El primer carácter es: " + primerCaracter);  // Salida: J
+
+	Subheader: Comparación de Cadenas
+	
+	Content:
+		Para comparar dos cadenas, Java proporciona el método `equals()`, que devuelve `true` si las cadenas son exactamente iguales.
+		
+	Code:
+		String cadena1 = "Hola";
+		String cadena2 = "hola";
+		boolean sonIguales = cadena1.equals(cadena2);
+		System.out.println("Las cadenas son iguales: " + sonIguales);  // Salida: false
+	
+	Content:
+		En este ejemplo, `equals()` devuelve `false` porque Java diferencia entre mayúsculas y minúsculas. Para una comparación que ignore mayúsculas y minúsculas, se puede usar `equalsIgnoreCase()`.
+
+	Subheader: Subcadenas
+	
+	Content:
+		El método `substring()` se utiliza para extraer una parte de una cadena. Puede recibir uno o dos parámetros: el índice de inicio y opcionalmente el índice de fin.
+		
+	Code:
+		String texto = "Aprendiendo Java";
+		String subcadena = texto.substring(0, 10);
+		System.out.println("Subcadena: " + subcadena);  // Salida: Aprendiend
+	
+	Content:
+		En este ejemplo, `substring(0, 10)` extrae los primeros 10 caracteres de la cadena original.
+
+	Header: Manipulación Avanzada de Cadenas
+	Subheader: Reemplazo de Caracteres o Subcadenas
+	
+	Content:
+		El método `replace()` permite reemplazar todas las ocurrencias de un carácter o una subcadena en una cadena con otro carácter o subcadena.
+		
+	Code:
+		String texto = "La programación en Java es divertida";
+		String nuevoTexto = texto.replace("divertida", "poderosa");
+		System.out.println(nuevoTexto);  // Salida: La programación en Java es poderosa
+
+	Subheader: Conversión a Mayúsculas y Minúsculas
+	
+	Content:
+		Java proporciona los métodos `toUpperCase()` y `toLowerCase()` para convertir una cadena a mayúsculas o minúsculas, respectivamente.
+		
+	Code:
+		String texto = "Java";
+		String mayusculas = texto.toUpperCase();
+		String minusculas = texto.toLowerCase();
+		System.out.println("Mayúsculas: " + mayusculas);  // Salida: JAVA
+		System.out.println("Minúsculas: " + minusculas);  // Salida: java
+
+	Subheader: División de Cadenas
+	
+	Content:
+		El método `split()` divide una cadena en partes según un delimitador especificado y devuelve un array con las subcadenas resultantes.
+		
+	Code:
+		String texto = "Java,Python,C++,JavaScript";
+		String[] lenguajes = texto.split(",");
+		for (String lenguaje : lenguajes) {
+		    System.out.println(lenguaje);
+		}
+		// Salida:
+		// Java
+		// Python
+		// C++
+		// JavaScript
+	
+	Content:
+		En este ejemplo, `split(",")` divide la cadena en cuatro subcadenas utilizando la coma como delimitador.
+
+	Header: Inmutabilidad de las Cadenas
+	Subheader: ¿Qué significa que las cadenas sean inmutables?
+	
+	Content:
+		En Java, las cadenas son inmutables, lo que significa que una vez creada una cadena, no se puede modificar su contenido. Cualquier operación que parezca modificar una cadena en realidad crea una nueva cadena con el resultado de la operación.
+		
+	Code:
+		String original = "Hola";
+		String modificada = original.concat(", mundo!");
+		System.out.println("Original: " + original);       // Salida: Hola
+		System.out.println("Modificada: " + modificada);   // Salida: Hola, mundo!
+	
+	Content:
+		En este ejemplo, la cadena `original` no cambia después de la concatenación. En su lugar, se crea una nueva cadena `modificada`.
+
+	Content:
+		El manejo de cadenas de texto es una habilidad crucial en la programación en Java. Con el conocimiento de los métodos de la clase `String`, puedes realizar una amplia gama de operaciones de manipulación de texto. En el siguiente tema, exploraremos el manejo de excepciones, una característica esencial para crear programas robustos y confiables.
+
+		**Recursos adicionales:**
+		* [Documentación oficial de Java sobre la clase `String`](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)

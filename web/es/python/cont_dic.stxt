@@ -1,0 +1,192 @@
+Document (campusempresa.org/namespace.stxt): Diccionarios
+	
+	Content: 
+	Header: Diccionarios en Python
+	
+	Content:
+	    
+	    Los diccionarios en Python son estructuras de datos que almacenan pares de clave-valor. Son muy útiles para asociar un conjunto de valores a claves únicas, permitiendo el acceso rápido a los valores mediante sus claves.
+	    
+	Header: Creación de Diccionarios
+	
+	Content:
+	    
+	    Los diccionarios se crean usando llaves ```{}``` y especificando los pares clave-valor separados por comas.
+	    
+	    Ejemplo:
+	Code:
+	    mi_diccionario = {
+	    "nombre": "Juan",
+	    "edad": 30,
+	    "ciudad": "Madrid"
+	    }
+	
+	
+	Content:
+	    
+	    También se pueden crear diccionarios usando la función ```dict()```.
+	Code:
+	    mi_diccionario = dict(nombre="Juan", edad=30, ciudad="Madrid")
+	
+	
+	Content:
+	    
+	Header: Acceso a Elementos
+	
+	Content:
+	    
+	    Se puede acceder a los valores del diccionario mediante sus claves.
+	    
+	    Ejemplo:
+	Code:
+	    nombre = mi_diccionario["nombre"]
+	    edad = mi_diccionario["edad"]
+	
+	
+	Content:
+	    
+	    Para evitar errores si la clave no existe, se puede usar el método ```get()```.
+	Code:
+	    pais = mi_diccionario.get("pais", "Desconocido")
+	
+	
+	Content:
+	    
+	Header: Modificación de Elementos
+	
+	Content:
+	    
+	    Los valores en un diccionario se pueden modificar asignando un nuevo valor a una clave existente.
+	Code:
+	    mi_diccionario["edad"] = 31
+	
+	
+	Content:
+	    
+	    Para añadir un nuevo par clave-valor, simplemente se asigna un valor a una nueva clave.
+	Code:
+	    mi_diccionario["pais"] = "España"
+	
+	
+	Content:
+	    
+	Header: Eliminar Elementos
+	
+	Content:
+	    
+	    *  **```del```**: Elimina un par clave-valor usando la clave.
+	Code:
+	    del mi_diccionario["ciudad"]
+	
+	
+	Content:
+	    
+	    *  **```pop```**: Elimina y devuelve el valor asociado a una clave.
+	Code:
+	    edad = mi_diccionario.pop("edad")
+	
+	
+	Content:
+	    
+	    *  **```clear```**: Elimina todos los pares clave-valor del diccionario.
+	Code:
+	    mi_diccionario.clear()
+	
+	
+	Content:
+	    
+	Header: Operaciones con Diccionarios
+	
+	Content:
+	    
+	    *  **```keys```**: Devuelve una vista de las claves del diccionario.
+	Code:
+	    claves = mi_diccionario.keys()
+	
+	
+	Content:
+	    
+	    *  **```values```**: Devuelve una vista de los valores del diccionario.
+	Code:
+	    valores = mi_diccionario.values()
+	
+	
+	Content:
+	    
+	    *  **```items```**: Devuelve una vista de los pares clave-valor del diccionario.
+	Code:
+	    pares = mi_diccionario.items()
+	
+	
+	Content:
+	    
+	Header: Iteración sobre Diccionarios
+	
+	Content:
+	    
+	    Se puede iterar sobre las claves, valores o pares clave-valor de un diccionario usando un bucle ```for```.
+	    
+	    Ejemplo iterando sobre claves:
+	Code:
+	    for clave in mi_diccionario:
+	    print(clave)
+	
+	
+	Content:
+	    
+	    Ejemplo iterando sobre valores:
+	Code:
+	    for valor in mi_diccionario.values():
+	    print(valor)
+	
+	
+	Content:
+	    
+	    Ejemplo iterando sobre pares clave-valor:
+	Code:
+	    for clave, valor in mi_diccionario.items():
+	    print(clave, ":", valor)
+	
+	
+	Content:
+	    
+	Header: Comprensión de Diccionarios
+	
+	Content:
+	    
+	    La comprensión de diccionarios es una forma concisa de crear diccionarios.
+	    
+	    Ejemplo:
+	Code:
+	    cuadrados = {x: x**2 for x in range(10)}
+	
+	
+	Content:
+	    
+	    Esto crea un diccionario donde las claves son números del 0 al 9 y los valores son sus cuadrados.
+	    
+	Header: Métodos de Diccionarios
+	
+	Content:
+	    
+	    *  **```update```**: Actualiza el diccionario con pares clave-valor de otro diccionario o de un iterable de pares clave-valor.
+	Code:
+	    mi_diccionario.update({"nombre": "Pedro", "edad": 40})
+	
+	
+	Content:
+	    
+	    *  **```setdefault```**: Devuelve el valor de una clave. Si la clave no existe, inserta la clave con el valor proporcionado.
+	Code:
+	    ciudad = mi_diccionario.setdefault("ciudad", "Barcelona")
+	
+	
+	Content:
+	    
+	Header: Ventajas de los Diccionarios
+	
+	Content:
+	    
+	    *  **Acceso rápido a los valores**: Permiten un acceso rápido a los valores mediante claves únicas.
+	    *  **Flexibilidad en los tipos de datos**: Las claves y los valores pueden ser de cualquier tipo de dato inmutable.
+	    *  **Versatilidad para diversos casos de uso**: Ideales para almacenar datos estructurados, realizar búsquedas rápidas y más.

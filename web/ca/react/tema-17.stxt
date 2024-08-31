@@ -1,0 +1,143 @@
+Document (campusempresa.org/namespace.stxt): Parámetros en la URL
+	Navigation:
+		Previous: Anterior (tema-16)
+		Next: Siguiente (tema-18)
+		
+	Header: Introducción
+	Subheader: ¿Qué son los Parámetros en la URL?
+	Content:
+		Los parámetros en la URL son fragmentos dinámicos que se pueden incluir en las rutas de React Router para pasar información de una vista a otra. Estos parámetros permiten que una sola ruta maneje múltiples valores o identifique recursos específicos, como un perfil de usuario o un detalle de producto, directamente a través de la URL.
+
+	Header: Definición de Parámetros en Rutas
+	Subheader: Creación de Rutas con Parámetros
+	Content:
+		Para definir una ruta con parámetros, se utiliza la sintaxis de dos puntos `:` seguida del nombre del parámetro en la ruta. Estos parámetros se pueden capturar y utilizar dentro del componente que maneja la ruta.
+	Code:
+		// Ejemplo de ruta con un parámetro dinámico
+		import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+		function PerfilUsuario({ match }) {
+			return <h2>Perfil del Usuario: {match.params.id}</h2>;
+		}
+
+		function App() {
+			return (
+				<Router>
+					<Routes>
+						<Route path="/usuario/:id" element={<PerfilUsuario />} />
+					</Routes>
+				</Router>
+			);
+		}
+
+	Content:
+		En este ejemplo, la ruta `/usuario/:id` permite capturar un parámetro `id`, que luego es utilizado dentro del componente `PerfilUsuario` para mostrar información específica del usuario.
+
+	Header: Acceso a Parámetros en Componentes
+	Subheader: Uso del Hook useParams
+	Content:
+		En componentes funcionales, el hook `useParams` de React Router proporciona una manera sencilla de acceder a los parámetros de la URL. Este hook devuelve un objeto con los nombres de los parámetros como claves y sus valores correspondientes.
+	Code:
+		// Ejemplo de uso de useParams
+		import { useParams } from 'react-router-dom';
+
+		function PerfilUsuario() {
+			const { id } = useParams();
+			return <h2>Perfil del Usuario: {id}</h2>;
+		}
+
+	Content:
+		En este ejemplo, `useParams` se utiliza para obtener el valor del parámetro `id` directamente dentro del componente funcional `PerfilUsuario`.
+
+	Header: Parámetros Múltiples en la URL
+	Subheader: Manejo de Múltiples Parámetros
+	Content:
+		React Router también permite definir rutas con múltiples parámetros, lo que es útil para manejar URLs que necesitan varios valores dinámicos.
+	Code:
+		// Ejemplo de ruta con múltiples parámetros
+		function DetallesProducto() {
+			const { categoria, id } = useParams();
+			return (
+				<div>
+					<h2>Categoría: {categoria}</h2>
+					<h2>ID del Producto: {id}</h2>
+				</div>
+			);
+		}
+
+		function App() {
+			return (
+				<Router>
+					<Routes>
+						<Route path="/productos/:categoria/:id" element={<DetallesProducto />} />
+					</Routes>
+				</Router>
+			);
+		}
+
+	Content:
+		En este ejemplo, la ruta `/productos/:categoria/:id` captura tanto `categoria` como `id`, permitiendo que el componente `DetallesProducto` utilice ambos valores para renderizar la vista.
+
+	Header: Parámetros Opcionales en la URL
+	Subheader: Definición de Parámetros Opcionales
+	Content:
+		React Router permite definir parámetros opcionales en las rutas utilizando la sintaxis `:param?`. Esto significa que el parámetro puede estar presente o no en la URL, y el componente debe manejar ambas situaciones.
+	Code:
+		// Ejemplo de ruta con un parámetro opcional
+		function DetallesProducto() {
+			const { id, color } = useParams();
+			return (
+				<div>
+					<h2>ID del Producto: {id}</h2>
+					{color && <h3>Color: {color}</h3>}
+				</div>
+			);
+		}
+
+		function App() {
+			return (
+				<Router>
+					<Routes>
+						<Route path="/producto/:id/:color?" element={<DetallesProducto />} />
+					</Routes>
+				</Router>
+			);
+		}
+
+	Content:
+		En este ejemplo, el parámetro `color` es opcional. Si está presente en la URL, el componente lo mostrará; si no, simplemente no se renderiza la información sobre el color.
+
+	Header: Navegación Basada en Parámetros
+	Subheader: Uso de Parámetros para Navegar entre Rutas
+	Content:
+		Además de capturar y usar parámetros, también puedes construir enlaces o redirecciones basados en parámetros para permitir una navegación dinámica en tu aplicación.
+	Code:
+		// Ejemplo de construcción de enlaces con parámetros
+		import { Link } from 'react-router-dom';
+
+		function ListaProductos() {
+			const productos = [
+				{ id: 1, nombre: 'Producto A', categoria: 'electronica' },
+				{ id: 2, nombre: 'Producto B', categoria: 'ropa' }
+			];
+
+			return (
+				<ul>
+					{productos.map((producto) => (
+						<li key={producto.id}>
+							<Link to={`/productos/${producto.categoria}/${producto.id}`}>
+								{producto.nombre}
+							</Link>
+						</li>
+					))}
+				</ul>
+			);
+		}
+
+	Content:
+		En este ejemplo, la lista de productos genera enlaces dinámicos que incluyen tanto la categoría como el ID del producto, permitiendo navegar a la vista de detalles específica para cada producto.
+
+	Header: Conclusión
+	Subheader: Resumen sobre Parámetros en la URL
+	Content:
+		El uso de parámetros en la URL es una funcionalidad poderosa en React Router que permite crear rutas dinámicas y flexibles. Con `useParams` y la capacidad de manejar múltiples y opcionales parámetros, puedes construir aplicaciones React que respondan de manera eficiente a las necesidades de navegación de tus usuarios. En los próximos temas, exploraremos cómo proteger rutas y manejar la autenticación en aplicaciones React con React Router.
