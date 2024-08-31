@@ -1,33 +1,38 @@
 export const mainConent = `
-	<div id="main_header" class="container-xxl">
+	<div id="header" class="container-xxl">
 		<div class="row">
-			<div class="col-12 p-0">
-				<h1 class="m-0 p-0" id="main_title"></h3>
+			<div class="col-8 p-0">
+				<h1 class="m-0 p-0">
+					<a href="/index.html"><img src="/img/logo_header.png"></a>
+				</h3>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 p-0">
-				<h2 id="main_subtitle"></h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 text-end text-bottom" id="right_menu">
+			<div class="col-4 p-0 text-end">
+				<h2><cite>Construint la societat d'avui i del demà</cite></h2><br>
 			</div>
 		</div>
 	</div>
-	<div class="container-xxl p-1 px-3" id="top_bar">
+	<div class="container-xxl" style="margin-top: -1em;">
 		<div class="row">
-			<div class="col-10">
-				<span class="p-0 m-0" id="left_menu"></span>
-			</div>
-			<div class="col-2 text-end">
-				<span class="p-0 m-0" id="source_page">
-					<a id="link_editor" href="" title="Edit page local navigator">&#128221;</a>
-					<a id="link_source_code" href="" target="_blank" title="Source STxT">&#128270;</a>
-				</span>
+			<div class="col-12 p-0 m-0 text-end">
+				<a href="#">Castellano</a>
+				|
+				<a href="#">Català</a>
 			</div>
 		</div>
 	</div>
+    <div class="top-bar container-fluid">
+		<div class="container-xxl">
+			<div class="row">
+				<div class="col">
+					<a href="#about">Sobre nosaltres</a>
+					<a href="#donate">Donacions</a>
+					<a href="#contribute">Contribuir</a>
+					<a href="#licence">Licencia</a>
+				</div>
+			</div>
+		</div>
+    </div>
+	
 	<div class="container-xxl" id="main_content">
 		<div class="row">
 			<div class="col-12 col-lg-8">
@@ -38,11 +43,20 @@ export const mainConent = `
 			</div>
 		</div>
 	</div>
-	<div class="container-xxl mt-3" id="footer">
+	
+    <div class="container-xxl mt-3">
 		<div class="row">
-			<footer id="main_footer"></footer>
+			<div class="col">
+				<footer>&copy; Copyright 2024. Tots els drets reservats</footer>
+			</div>
 		</div>
-	</div>
+	</div>	
+	
+	<div id="cookies_adv">
+		Fem servir galetes per millorar la teva experiència d'ús i oferir continguts adaptats als teus interessos
+        <a href="javascript:accept();" class="button">Entès!</a>
+        <a href="cookies.html">Més informació</a>
+    </div>	
 `;
 
 export const mainEditor = `
