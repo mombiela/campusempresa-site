@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /set
-
-Sitemap: https://www.semantictext.info/sitemap.xml
