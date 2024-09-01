@@ -100,7 +100,7 @@ export const mainEditor = `
 	</div>
 `;
 
-export const docTemplate = `Document (globalcampus.site/namespace.stxt): Insert a name
+export const docTemplate = `Document (campusempresa.org/namespace.stxt): Insert a name
 	Header:	This is a header
 	Subheader: This is a subheader
 	Content:
