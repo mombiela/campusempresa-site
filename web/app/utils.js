@@ -1,3 +1,4 @@
+import {ROUTES} from './routes.js';
 
 const SAFE_URLS = ["https://semantictext.info","https://raw.githubusercontent.com/mombiela/","https://globalcampus.site","https://github.com/mombiela/"];
 
@@ -20,6 +21,17 @@ export function getUrlFromHash(hashIni)
 	// Is dir?
 	const isDir = hash.endsWith("/");
 	if (isDir) hash = hash.substring(0, hash.length -1);
+	
+	// Miramos si es una url de cambio
+	for (let i = 0; i<ROUTES.length; i++)
+	{
+		let route = ROUTES[i];
+		if (hash.startsWith(route.src))
+		{
+			hash = route.dst + hash.substring(route.src.length);
+			console.log(`route cambiada a ${hash}`);
+		}
+	}
 	
 	// Miramos si es local o remota y que tenga params v�lidos
 	const hashParts = hash.split("/");
