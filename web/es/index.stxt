@@ -1,23 +1,11 @@
 Document(campusempresa.org/namespace.stxt):
-	Header: Aplicaciones Web
-	Content: 
-		* [Aplicaciones Web](apps-web/) 
-		
-	Header: Lenguajes Frontend
-	Content:
-		* [HTML](html/) 
-		* [CSS](css/)
-		* [Javascript](javascript/)
-		
-	Header: Lenguajes Backend
-	Content:
-		* [Cobol](cobol/)
-		* [Java](java/) 
-		* [Python](python/)
-		
-	Header: Frameworks y Tecnologías
-	Content:
-		* [React](react/)
-		
-		
+	
+	Grid:
+		Card:
+			Title: ÁREA TIC
+			Url: #github/mombiela/campusempresa/
+			Content:
+				TIC: Tecnologías de la información i comunicación.
+				
+
 

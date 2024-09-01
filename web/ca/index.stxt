@@ -1,51 +1,15 @@
 Document(campusempresa.org/namespace.stxt):
 	
-	Header: Tecnologías Web
 	Grid:
 		Card:
-			Title: Aplicaciones Web (I)
-			Url: #github/mombiela/campusempresa/apps-web/
-			Content: Introducció a les aplicacions Web.
+			Title: ÁREA TIC
+			Url: #github/mombiela/campusempresa/
+			Content:
+				**Tecnologies de la informació i comunicació.**
+				
+				Cursos disponibles: 10\
+				Rutes d'aprenentatge: 5
+				
+				
 
-	Header: Lenguajes Frontend
-	
-	Grid:
-		Card: 
-			Title: HTML (I)
-			Url: #github/mombiela/campusempresa/html/
-			Content: Bla, bla, bla
-		Card:
-			Title: CSS
-			Url: #github/mombiela/campusempresa/css/
-			Content: Bla, bla, bla
-		Card:
-			Title: Javascript
-			Url: #github/mombiela/campusempresa/javascript/
-			Content: Bla, bla, bla
-
-	Header: Lenguajes Backend
-	
-	Grid:
-		Card:
-			Title: Cobol
-			Url: #github/mombiela/campusempresa/cobol/
-			Content: Bla, bla, bla
-		Card:
-			Title: Java
-			Url: #github/mombiela/campusempresa/java/
-			Content: Bla, bla, bla
-		Card:
-			Title: Python
-			Url: #github/mombiela/campusempresa/python/
-			Content: Bla, bla, bla
-			
-	Header: Frameworks y Tecnologías
-	
-	Grid:
-		Card:
-			Title: React
-			Url: #github/mombiela/campusempresa/react/
-			Content: Bla, bla, bla
-		
-		
 
