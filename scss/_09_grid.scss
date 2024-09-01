@@ -7,10 +7,14 @@
 }
 
 .card {
+	p{
+		text-align: left !important;
+	}
 	border-color: rgb(0, 147, 216);
 	border-color: #333;
 	border-color: $color2;
 	border-radius: 0;
+	border-radius: 5px;
 	.title {
 		background-color: rgb(0, 147, 216);
 		background-color: white;
