@@ -3,21 +3,20 @@ Document(campusempresa.org/namespace.stxt):
 	Grid:
 		Card:
 			Title: ÁREA TIC
-			Url: #github/mombiela/campusempresa/
-			Content:
-				**Tecnologies de la informació i comunicació.**
-				
-				Cursos disponibles: 10\
-				Rutes d'aprenentatge: 5
-				
-		Card:
-			Title: ÁREA TIC
 			Url: #tic/
 			Content:
 				**Tecnologies de la informació i comunicació.**
 				
 				Cursos disponibles: 10\
 				Rutes d'aprenentatge: 5
+				
+#		Card:
+#			Title: ÁREA TIC
+#			Url: #github/mombiela/campusempresa/
+#			Content:
+#				**Tecnologies de la informació i comunicació.**
+#				Cursos disponibles: 10\
+#				Rutes d'aprenentatge: 5
 				
 				
 

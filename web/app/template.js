@@ -3,6 +3,11 @@ import {getLang} from './page.js';
 
 let literals = getLiterals(getLang());
 
+const publi = `<h1>${literals.publi1}</h1>
+	<p>${literals.publi2}</p>
+	<p>${literals.publi3}</p>
+	<p>${literals.publi4}</p>`
+
 export const mainConent = `
 	<div id="header" class="container-xxl">
 		<div class="row">
@@ -45,6 +50,7 @@ export const mainConent = `
 				<div id="inner_content"></div>
 			</div>
 			<div class="col-12 col-lg-4 publi" id="div_publi">
+				${publi}
 			</div>
 		</div>
 	</div>
@@ -100,18 +106,6 @@ export const docTemplate = `Document (globalcampus.site/namespace.stxt): Insert 
 	Content:
 		This is a content, **wiki format!!**
 `;
-
-export const publi = `<h1>Advertisement</h1>
-<p>This space is intended for advertising.</p>
-<p>If you want to be one of our sponsors, <a href="#contact">contact us</a> and you can include links in this area.</p>
-<p><strong>Thank you for collaborating!</strong></p>
-`
-
-export const publi_es = `<h1>Publicidad</h1>
-<p>Este espacio está destinado a publicidad.</p>
-<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
-<p><strong>¡Gracias por colaborar!</strong></p>
-`
 
 export const docError = `
 <style type="text/css">
