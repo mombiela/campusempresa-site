@@ -1,5 +1,31 @@
 Document(campusempresa.org/namespace.stxt):
 	
+	Alert: 
+		Benvinguts a **Campus Empresa**, el primer portal d'aprenentatge amb\
+		TOTS els continguts disponibles en català! 
+	
+	Content:
+		El nostre objetiu és donar recursos formatius, però sense competir amb
+		altres profesionals. Per això col·laborem amb totes les entitats involucrades:
+		
+		* **Treballadors**
+		* Empreses
+		* Universitats
+		* Formadors
+		* Professionals
+		
+		Si vols conèixer millor el nostre projecte, [fes clic aquí i mira els objectius](objectius).
+		
+		Si vols col·laborar, no ho dubtis: [fes clic aquí i mira el que estem fent](contribute)
+	
+
+	Header: Áres de Coneixement
+	
+	Content: Aquest portal está en permanent ampliació, però volem donar-te sempre el millor
+		que tinguem en aquests moments. Per això pots començar ja a fer-lo servir.
+		
+		Aquí trobaràs les nostres àrees de coneixement:	
+	
 	Grid:
 		Card:
 			Title: ÁREA TIC
