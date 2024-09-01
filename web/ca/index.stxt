@@ -3,15 +3,15 @@ Document(campusempresa.org/namespace.stxt):
 	Header: Tecnologías Web
 	Grid:
 		Card:
-			Title: Introducción a Aplicaciones Web
+			Title: Aplicaciones Web (I)
 			Url: #github/mombiela/campusempresa/apps-web/
-			Content: Bla, bla, bla
+			Content: Introducció a les aplicacions Web.
 
 	Header: Lenguajes Frontend
 	
 	Grid:
-		Card:
-			Title: HTML
+		Card: 
+			Title: HTML (I)
 			Url: #github/mombiela/campusempresa/html/
 			Content: Bla, bla, bla
 		Card:

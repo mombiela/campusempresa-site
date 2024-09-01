@@ -140,8 +140,7 @@ function renderCard(child)
 	
 	let url = $("<a>").attr("href",child.getChild("url").getText()).appendTo(cardContainer);
 	let card = $("<div class='card'>").appendTo(url);
-	let cardBody = $("<div class='card-body title'>").appendTo(card);
-	$("<h5 class='card-title'>").text(child.getChild("title").getText()).appendTo(cardBody);
+	let cardBody = $("<div class='card-body title'>").text(child.getChild("title").getText()).appendTo(card);
 	$("<div class='card-body'>").html(purify(marked.parse(child.getChild("content").getText()))).appendTo(card);
 	
 	return cardContainer;
