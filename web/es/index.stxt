@@ -1,51 +1,23 @@
-Document(campusempresa.org/namespace.stxt): Bienvenido al Campus
-	
-	Header: Tecnologías Web
-	Grid:
-		Card:
-			Title: Introducción a Aplicaciones Web
-			Url: apps-web/
-			Content: Bla, bla, bla
-
+Document(campusempresa.org/namespace.stxt): Benvingut al Campus
+	Header: Aplicaciones Web
+	Content: 
+		* [Aplicaciones Web](apps-web/) 
+		
 	Header: Lenguajes Frontend
-	
-	Grid:
-		Card:
-			Title: HTML
-			Url: html/
-			Content: Bla, bla, bla
-		Card:
-			Title: CSS
-			Url: css/
-			Content: Bla, bla, bla
-		Card:
-			Title: Javascript
-			Url: javascript/
-			Content: Bla, bla, bla
-
+	Content:
+		* [HTML](html/) 
+		* [CSS](css/)
+		* [Javascript](javascript/)
+		
 	Header: Lenguajes Backend
-	
-	Grid:
-		Card:
-			Title: Cobol
-			Url: cobol/
-			Content: Bla, bla, bla
-		Card:
-			Title: Java
-			Url: java/
-			Content: Bla, bla, bla
-		Card:
-			Title: Python
-			Url: python/
-			Content: Bla, bla, bla
-			
+	Content:
+		* [Cobol](cobol/)
+		* [Java](java/) 
+		* [Python](python/)
+		
 	Header: Frameworks y Tecnologías
-	
-	Grid:
-		Card:
-			Title: React
-			Url: react/
-			Content: Bla, bla, bla
+	Content:
+		* [React](react/)
 		
 		
 

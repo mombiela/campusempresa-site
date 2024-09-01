@@ -1,17 +1,18 @@
 function setLang(ev)
 {
 	let elem = $(ev.target);
-	localStorage.setItem("lang", elem.data("lang"));
+	//localStorage.setItem("lang", elem.data("lang"));
+	sessionStorage.setItem("lang", elem.data("lang")); // Fomentem l'ús del català ;-)
 	window.location.reload();
 }
 
 function getLang()
 {
-	let lang = localStorage.getItem("lang");
+	let lang = sessionStorage.getItem("lang");
 	if (!lang || (lang != "es" && lang != "ca"))
 	{
-		lang = "es"; // TODO Hacer por dominio
-		localStorage.setItem("lang", lang);
+		lang = "ca"; // TODO Hacer por dominio
+		sessionStorage.setItem("lang", lang);
 	}
 	return lang;
 }
