@@ -1,5 +1,5 @@
 .card-body {
-	padding: 0.5rem;
+	padding: 0.3rem;
 }
 
 .card-title {
@@ -7,10 +7,12 @@
 }
 
 .card {
-	border-color: #f3d8e4;
+	border-color: rgb(0, 147, 216);
+	border-radius: 0;
 	.title {
-		background-color: #f3d8e4;
+		background-color: rgb(0, 147, 216);
 		font-weight: bold;
+		color: white;
 	}
 	margin-bottom: 1em;
 }
