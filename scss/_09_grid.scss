@@ -8,11 +8,21 @@
 
 .card {
 	border-color: rgb(0, 147, 216);
+	border-color: #333;
+	border-color: $color2;
 	border-radius: 0;
 	.title {
 		background-color: rgb(0, 147, 216);
+		background-color: white;
+		background-color: $color2;
 		font-weight: bold;
 		color: white;
+		color: #333;
+		color: white;
+		
+		border-bottom: 1px solid rgb(0, 147, 216);
+		border-bottom: 1px solid #333;
+		border-bottom: 1px solid $color2;
 	}
 	margin-bottom: 1em;
 }
