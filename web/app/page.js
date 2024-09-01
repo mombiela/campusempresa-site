@@ -1,4 +1,4 @@
-function setLang(ev)
+export function setLang(ev)
 {
 	let elem = $(ev.target);
 	//localStorage.setItem("lang", elem.data("lang"));
@@ -6,7 +6,7 @@ function setLang(ev)
 	window.location.reload();
 }
 
-function getLang()
+export function getLang()
 {
 	let lang = sessionStorage.getItem("lang");
 	if (!lang || (lang != "es" && lang != "ca"))
@@ -23,13 +23,13 @@ function remove(id)
 	elem.parentElement.removeChild(elem);
 }
 
-function accept()
+export function accept()
 {
 	Cookies.set('cookies_informed', "OK", {expires: 365});
 	remove("cookies_adv");
 }
 
-function checkCookies()
+export function checkCookies()
 {
 	var x = Cookies.get('cookies_informed');
 	if (x == "OK") remove("cookies_adv");

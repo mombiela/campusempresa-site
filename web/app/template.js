@@ -1,4 +1,5 @@
 import {getLiterals} from './literals.js';
+import {getLang} from './page.js';
 
 let literals = getLiterals(getLang());
 

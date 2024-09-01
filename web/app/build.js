@@ -3,6 +3,7 @@ import { transform, fixUrlsRelativas } from './transform.js';
 import { getDefaultValues } from './default.js';
 import { getUrlFromHash, getHash } from './utils.js';
 import { docError } from './template.js';
+import { getLang, checkCookies,accept, setLang } from './page.js';
 
 export async function buildContentFromHashUrl()
 {

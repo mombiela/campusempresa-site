@@ -1,4 +1,5 @@
 import {ROUTES} from './routes.js';
+import {getLang} from './page.js';
 
 const SAFE_URLS = ["https://semantictext.info","https://raw.githubusercontent.com/mombiela/","https://globalcampus.site","https://github.com/mombiela/"];
 
