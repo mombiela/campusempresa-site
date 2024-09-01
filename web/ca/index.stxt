@@ -1,10 +1,10 @@
-Document(campusempresa.org/namespace.stxt): Bienvenido al Campus
+Document(campusempresa.org/namespace.stxt):
 	
 	Header: Tecnologías Web
 	Grid:
 		Card:
 			Title: Introducción a Aplicaciones Web
-			Url: apps-web/
+			Url: #github/mombiela/campusempresa/apps-web/
 			Content: Bla, bla, bla
 
 	Header: Lenguajes Frontend
@@ -12,15 +12,15 @@ Document(campusempresa.org/namespace.stxt): Bienvenido al Campus
 	Grid:
 		Card:
 			Title: HTML
-			Url: html/
+			Url: #github/mombiela/campusempresa/html/
 			Content: Bla, bla, bla
 		Card:
 			Title: CSS
-			Url: css/
+			Url: #github/mombiela/campusempresa/css/
 			Content: Bla, bla, bla
 		Card:
 			Title: Javascript
-			Url: javascript/
+			Url: #github/mombiela/campusempresa/javascript/
 			Content: Bla, bla, bla
 
 	Header: Lenguajes Backend
@@ -28,15 +28,15 @@ Document(campusempresa.org/namespace.stxt): Bienvenido al Campus
 	Grid:
 		Card:
 			Title: Cobol
-			Url: cobol/
+			Url: #github/mombiela/campusempresa/cobol/
 			Content: Bla, bla, bla
 		Card:
 			Title: Java
-			Url: java/
+			Url: #github/mombiela/campusempresa/java/
 			Content: Bla, bla, bla
 		Card:
 			Title: Python
-			Url: python/
+			Url: #github/mombiela/campusempresa/python/
 			Content: Bla, bla, bla
 			
 	Header: Frameworks y Tecnologías
@@ -44,7 +44,7 @@ Document(campusempresa.org/namespace.stxt): Bienvenido al Campus
 	Grid:
 		Card:
 			Title: React
-			Url: react/
+			Url: #github/mombiela/campusempresa/react/
 			Content: Bla, bla, bla
 		
 		

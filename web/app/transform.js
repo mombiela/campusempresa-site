@@ -3,7 +3,7 @@ import { LineSplitter } from '../js/stxt-parser.min.js';
 import { purify, purifySimple, mixUrlAndHash, getHash } from './utils.js';
 import {publi, publi_es} from './template.js';
 
-const SAFE_HTML = ["#github/mombiela/", "#semantictext.info/"];
+const SAFE_HTML = ["#github/mombiela/"];
 
 export function transform(node, defaultValues) 
 {
@@ -92,6 +92,16 @@ function renderChild(child, parent)
 	{
 		$(text).appendTo(parent);
 	}
+	else if(name=="grid")
+	{
+		let mainDiv = $("<div class='grid row'>").appendTo(parent);
+		for(let i = 0; i<childs.length; i++)
+		{
+			console.log("Child: " + i);
+			let ch = renderCard(childs[i]);
+			ch.appendTo(mainDiv);
+		}				
+	}	
 	else
 	{
 		$("<pre>").text(child.toString()).appendTo(parent);
@@ -122,6 +132,19 @@ function renderTema(child)
 	let link = $("<a>").attr("href",href + url).text(descrip);
 	let li = $("<li>").append(link);
 	return li;
+}
+
+function renderCard(child)
+{
+	let cardContainer = $("<div class='col-4'></div>");
+	
+	let url = $("<a>").attr("href",child.getChild("url").getText()).appendTo(cardContainer);
+	let card = $("<div class='card'>").appendTo(url);
+	let cardBody = $("<div class='card-body'>").appendTo(card);
+	$("<h5 class='card-title'>").text(child.getChild("title").getText()).appendTo(cardBody);
+	$("<div class='car-body'>").html(purify(marked.parse(child.getChild("content").getText()))).appendTo(card);
+	
+	return cardContainer;
 }
 
 function makeCode(text, parent)
