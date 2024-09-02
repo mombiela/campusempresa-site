@@ -7,7 +7,7 @@
    aaa
 // *********************************************/
 
-export const ROUTES = [
+const ROUTES = [
 	{src:"tic/react/", dst:"github/mombiela/campusempresa/react/", stage:"prod"},
 	{src:"tic/html/", dst:"github/mombiela/campusempresa/html/", stage:"test"},
 	{src:"tic/", dst:"github/mombiela/campusempresa/", stage:"pre"},
