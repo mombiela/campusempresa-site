@@ -4,6 +4,7 @@ import { getDefaultValues } from './default.js';
 import { getUrlFromHash, getHash } from './utils.js';
 import { docError } from './template.js';
 import { getLang, checkCookies,accept, setLang } from './page.js';
+import { getRouteInfo } from './routes.js';
 
 export async function buildContentFromHashUrl()
 {
@@ -77,6 +78,14 @@ export async function buildContent(content, stxtUrl)
     $("#btn_accept_cookies").click(accept);
     
     // Lang
+	renderLang();
+	
+	// Stage
+	renderStage();
+}
+
+function renderLang()
+{
     let lang = getLang();
     $("#lnk_lang_es,#lnk_lang_ca").click(setLang);
 	if (lang == "es")
@@ -91,3 +100,10 @@ export async function buildContent(content, stxtUrl)
 	}
 }
 
+function renderStage()
+{
+	let route = getRouteInfo(getHash());
+	$("body").removeClass("test").removeClass("pre");
+	
+	if (route)	$("body").addClass(route.stage);
+}

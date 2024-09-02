@@ -9,3 +9,21 @@
 		display: inline-block;
 	}
 }
+
+body.pre {
+	.top-bar {
+		background-color: rgb(0, 147, 216);
+	}
+}
+
+body.test {
+	.top-bar {
+		background-color: white;
+		border-bottom: 1px solid black;
+		border-top: 1px solid black;
+		
+		a {
+			color: #333;
+		}
+	}
+}
