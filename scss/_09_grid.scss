@@ -26,7 +26,10 @@ div.test {
 	.card {
 		border-color: #333;
 		.title {
-			background: linear-gradient(to right, #777, white);;
+			//background: linear-gradient(to right, #777, white);
+			background-color: white;
+			color: #333;
+			font-weight: bold;
 			border-bottom: 1px solid #333;
 		}
 	}
