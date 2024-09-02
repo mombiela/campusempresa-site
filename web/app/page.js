@@ -17,21 +17,15 @@ export function getLang()
 	return lang;
 }
 
-function remove(id)
-{
-	var elem = document.getElementById(id);
-	elem.parentElement.removeChild(elem);
-}
-
 export function accept()
 {
 	Cookies.set('cookies_informed', "OK", {expires: 365});
-	remove("cookies_adv");
+	$("#cookies_adv").remove();
 }
 
 export function checkCookies()
 {
 	var x = Cookies.get('cookies_informed');
-	if (x == "OK") remove("cookies_adv");
+	if (x == "OK") $("#cookies_adv").remove();
 }
 
