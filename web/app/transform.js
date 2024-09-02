@@ -216,14 +216,7 @@ function insertDefaultValues(defaultValues)
 	if (defaultValues.subtitle) $("#main_subtitle").html(purifySimple(marked.parse(defaultValues.subtitle)));
 	else 						$("#main_subtitle").hide();
 	
-	if (defaultValues.footer) 	$("#main_footer").html(purify(marked.parse(defaultValues.footer)));
-	else 						$("#main_footer").hide();
-	
 	if (defaultValues.leftMenu)	$("#left_menu").html(purifySimple(marked.parse(defaultValues.leftMenu)));
-	else $("#left_menu").html("&nbsp;");
-	
-	if (defaultValues.rightMenu) $("#right_menu").html(purifySimple(marked.parse(defaultValues.rightMenu)));
-	else $("#right_menu").html("&nbsp;");
 	
 	if (!defaultValues.displaySrc) $("#link_source_code").hide();
 	if (!defaultValues.displayEdit) $("#link_editor").hide();

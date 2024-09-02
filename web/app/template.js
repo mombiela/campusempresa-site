@@ -34,7 +34,7 @@ export const mainConent = `
     <div class="top-bar container-fluid">
 		<div class="container-xxl">
 			<div class="row">
-				<div class="col">
+				<div class="col" id="left_menu">
 					<a href="#about">${literals.about}</a>
 					<a href="#donate">${literals.donate}</a>
 					<a href="#contribute">${literals.contribute}</a>
