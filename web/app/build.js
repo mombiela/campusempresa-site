@@ -12,13 +12,9 @@ export async function buildContentFromHashUrl()
     content.empty();
 	try
 	{
-		console.log("antes getHash");
 	    const hash = getHash();
-		console.log("despues getHash");
 		let stxtUrl = getUrlFromHash(hash);
-		console.log("getUrlFromHashl ok: " + stxtUrl);
 		let contentFromUrl = await getUrlContent(stxtUrl);
-		console.log("contentFromUrlok");
 		await buildContent(contentFromUrl, stxtUrl);
 	}
 	catch(exception)
