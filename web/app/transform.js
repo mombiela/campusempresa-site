@@ -145,7 +145,7 @@ function renderCard(child)
 	if (routeInfo && routeInfo.stage) cardContainer.addClass(routeInfo.stage);
 	
 	let url = $("<a class='grid'>").attr("href",child.getChild("url").getText()).appendTo(cardContainer);
-	let card = $("<div class='card'>").appendTo(url);
+	let card = $("<div class='card mb-4'>").appendTo(url);
 	let cardBody = $("<div class='card-body title'>").text(child.getChild("title").getText()).appendTo(card);
 	$("<div class='card-body'>").html(purify(marked.parse(child.getChild("content").getText()))).appendTo(card);
 	
