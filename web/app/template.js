@@ -56,7 +56,7 @@ export const mainConent = `
 		</div>
 	</div>
 	
-    <div class="container-xxl mt-3">
+    <div class="container-xxl my-3">
 		<div class="row">
 			<div class="col">
 				<footer>&copy; Copyright 2024. ${literals.copyright}</footer>
