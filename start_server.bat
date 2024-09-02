@@ -1,3 +1,3 @@
 cd %~dp0
 cd web
-http-server .
+http-server . -p 8081
