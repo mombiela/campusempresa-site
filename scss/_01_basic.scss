@@ -16,5 +16,9 @@ body {
 
 a {
 	color: $color2;
+	text-decoration: underline;
+}
+
+a.grid {
 	text-decoration: none;
 }
