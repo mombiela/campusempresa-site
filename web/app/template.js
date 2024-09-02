@@ -13,7 +13,7 @@ export const mainConent = `
 		<div class="row">
 			<div class="col-8 p-0">
 				<h1 class="m-0 p-0">
-					<a href="/"><img src="/img/logo_header.png" style="visibility:hidden"></a>
+					<a href="/"><img src="/img/logo_header.png"></a>
 				</h3>
 			</div>
 			<div class="col-4 p-0 text-end">
@@ -35,9 +35,10 @@ export const mainConent = `
 		<div class="container-xxl">
 			<div class="row">
 				<div class="col" id="left_menu">
+					<a href="#objective">${literals.objective}</a>
 					<a href="#about">${literals.about}</a>
-					<a href="#donate">${literals.donate}</a>
 					<a href="#contribute">${literals.contribute}</a>
+					<a href="#donate">${literals.donate}</a>
 					<a href="#licence">${literals.licence}</a>
 				</div>
 			</div>
