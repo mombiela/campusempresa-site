@@ -1,6 +1,7 @@
 import { mainConent } from './template.js';
 import { LineSplitter } from '../js/stxt-parser.min.js';
 import { purify, purifySimple, mixUrlAndHash, getHash } from './utils.js';
+import { getRouteInfo } from './routes.js';
 
 const SAFE_HTML = ["#github/mombiela/"];
 
@@ -135,7 +136,13 @@ function renderTema(child)
 
 function renderCard(child)
 {
+	let href = child.getChild("url").getText();
+	href = mixUrlAndHash(href);
+	let routeInfo = getRouteInfo(href);
+	console.log("HREFURL = " + href + " -> " + JSON.stringify(routeInfo));
+	
 	let cardContainer = $("<div class='col-4'></div>");
+	if (routeInfo && routeInfo.stage) cardContainer.addClass(routeInfo.stage);
 	
 	let url = $("<a class='grid'>").attr("href",child.getChild("url").getText()).appendTo(cardContainer);
 	let card = $("<div class='card'>").appendTo(url);

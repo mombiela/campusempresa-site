@@ -9,7 +9,10 @@
 
 export const ROUTES = [
 	{src:"index/", dst:"github/mombiela/campusempresa/", stage:"prod"},
+	{src:"tic/react", dst:"github/mombiela/campusempresa/", stage:"prod"},
+	{src:"tic/html", dst:"github/mombiela/campusempresa/", stage:"test"},
 	{src:"tic/", dst:"github/mombiela/campusempresa/", stage:"pre"},
+	
 	{src:"about", dst:"about", stage:"pre"},
 	{src:"donate", dst:"donate", stage:"test"},
 ]
