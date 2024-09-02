@@ -212,7 +212,6 @@ function insertDefaultValues(defaultValues)
 	
 	// Title, subtitle, footer
 	if (defaultValues.title)	$("#main_title").text(defaultValues.title);
-	else						$("#main_title").text("GlobalCampus.site");
 	
 	if (defaultValues.subtitle) $("#main_subtitle").html(purifySimple(marked.parse(defaultValues.subtitle)));
 	else 						$("#main_subtitle").hide();

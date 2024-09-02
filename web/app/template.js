@@ -17,7 +17,8 @@ export const mainConent = `
 				</h3>
 			</div>
 			<div class="col-4 p-0 text-end">
-				<h2><cite>${literals.slogan}</cite></h2><br>
+				<h2 id="main_title">${literals.slogan}</h2>
+				<h3 id="main_subtitle"></h3>
 			</div>
 		</div>
 	</div>

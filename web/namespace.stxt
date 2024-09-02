@@ -60,7 +60,7 @@ Namespace: globalcampus.site/namespace.stxt
 		Html: (*) TEXT
 
 	Default:
-		Title: (1)
+		Title: (?)
 		Subtitle: (?)
 		Footer: (?)
 		Left Menu: (?)
