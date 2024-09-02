@@ -1,6 +1,6 @@
 const LITERALS = {
 	"ca":{
-		"about":"Sobre nosaltres",
+		"about":"Qui som",
 		"donate":"Donacions",
 		"contribute":"Contribuir",
 		"licence":"Llicència",
@@ -13,7 +13,7 @@ const LITERALS = {
 		"publi4": "Grècias per col·laborar!"
 	},
 	"es":{
-		"about":"Sobre nosotros",
+		"about":"Quienes somos",
 		"donate":"Donaciones",
 		"contribute":"Contribuir",
 		"licence":"Licencia",
