@@ -6,6 +6,7 @@ ROUTES["donate"] 		= {dst:"donate", stage:"pre"};
 ROUTES["contribute"] 	= {dst:"contribute", stage:"pre"};
 ROUTES["licence"] 		= {dst:"licence", stage:"pre"};
 ROUTES["index"] 		= {dst:"index", stage:"pre"};
+ROUTES["_default"] 		= {dst:"_default", stage:"pre"};
 
 // Rutas con prefix (Las routes van de més específiques a menys!!!)
 // Exemple: aaa/bbb/ccc, aaa/bbb, aaa

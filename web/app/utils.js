@@ -27,7 +27,7 @@ export function getUrlFromHash(hashIni)
 	const route = getRouteInfo(hash);
 	if (!route) throw new Error("Ruta no válida: " + hash);
 	hash = route.dst + hash.substring(route.src.length);
-	console.log(`route cambiada a ${hash}`);
+	console.log(`${hashIni} cambiada a ${hash}`);
 	
 	// Miramos si es local o remota y que tenga params vï¿½lidos
 	const hashParts = hash.split("/");
