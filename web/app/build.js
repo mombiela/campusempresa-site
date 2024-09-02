@@ -13,6 +13,9 @@ export async function buildContentFromHashUrl()
 	try
 	{
 	    const hash = getHash();
+		let route = getRouteInfo(hash);
+		if (!route) throw new Error("Invalid route: " + hash);
+
 		let stxtUrl = getUrlFromHash(hash);
 		let contentFromUrl = await getUrlContent(stxtUrl);
 		await buildContent(contentFromUrl, stxtUrl);

@@ -15,6 +15,7 @@ export const ROUTES = [
 	{src:"donate", dst:"donate", stage:"pre"},
 	{src:"contribute", dst:"contribute", stage:"pre"},
 	{src:"licence", dst:"licence", stage:"pre"},
+	{src:"index", dst:"index", stage:"pre"},
 ]
 
 export function getRouteInfo(url)

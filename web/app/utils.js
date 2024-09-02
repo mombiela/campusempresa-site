@@ -64,7 +64,7 @@ export function getUrlFromHash(hashIni)
 	// Miramos otras partes
 	for (let i = startIndex; i<hashParts.length; i++)
 	{
-		if (hashParts[i].length == 0) throw new Exception();
+		if (hashParts[i].length == 0) throw new Error();
 		stxtUrl = stxtUrl + "/" + hashParts[i]; 
 	}
 	
