@@ -1,0 +1,62 @@
+#editor {
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	width: 960px;
+	height: 560px;
+	background-color: #3937a3;
+	border-radius: 10px;
+	border: 2px solid white;
+}
+
+#editor.min {
+	height: 60px;
+	#editor_textarea {
+		display:none;
+	}
+}
+
+#editor.max {
+	left: 10px;
+	right: 10px;
+	width: auto;
+}
+
+
+#editor_textarea {
+	font-family: monospace;
+	tab-size: 4;
+    -moz-tab-size: 4;	
+}
+
+button 
+{
+	padding: 2px 15px;
+	border: 1px solid white;
+	border-radius: 3px;
+	margin-right: 6px;
+}
+
+button {
+	background-color: white;
+	color: #3937a3;
+    border-radius: 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #ddf;
+}
+
+button {
+    transition: all 0.05s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+
+
