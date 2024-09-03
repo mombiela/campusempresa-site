@@ -4,9 +4,8 @@
 	top: 10px;
 	width: 960px;
 	height: 560px;
-	background-color: #3937a3;
-	border-radius: 10px;
-	border: 2px solid white;
+	background-color: $color2;
+	border: 1px solid white;
 }
 
 #editor.min {
@@ -38,15 +37,15 @@ button
 }
 
 button {
-	background-color: white;
-	color: #3937a3;
+	background-color: $color2;
+	color: white;
     border-radius: 20px;
     border: none;
     transition: background-color 0.3s ease;
 }
 
 button:hover, .btn:hover {
-    background-color: #ddf;
+    background-color: $color3;
 }
 
 button {
