@@ -166,12 +166,22 @@ function makeCode(text, parent)
 	*/
 	
 	let div = $("<div style='position:relative'>").appendTo(parent);
-	let a   = $("<a class='copy_button' href='#'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" fill=\"none\" viewBox=\"0 0 24 24\" class=\"icon-sm\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z\" clip-rule=\"evenodd\"></path></svg></a>")
-				.appendTo(div).click(function(ev){
-					ev.preventDefault();
-					navigator.clipboard.writeText(replaceWithEmpty(text));
-					alert("¡Copiado!");
-					});
+	let a = $("<a class='copy_button' href='#'><i class='bi bi-copy'></i></a>")
+	    .appendTo(div)
+	    .click(function(ev) {
+	        ev.preventDefault();
+	        // Copiar el texto al portapapeles
+	        navigator.clipboard.writeText(replaceWithEmpty(text)).then(() => {
+	            // Cambiar el icono al de "ok"
+	            let originalIcon = $(this).find('i').attr('class'); // Guardar la clase del icono original
+	            $(this).find('i').attr('class', 'bi bi-check-square-fill'); // Cambiar al icono de "ok"
+	            
+	            // Volver al icono original después de 2 segundos
+	            setTimeout(() => {
+	                $(this).find('i').attr('class', originalIcon);
+	            }, 2000);
+	        });
+	    });
 	let pre = $("<pre class='code'>").text(text).appendTo(div);
 	let html = replaceWithStrong(pre.html());
 	pre.html(html);
