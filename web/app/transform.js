@@ -48,6 +48,10 @@ function renderChild(child, parent)
 	{
 		$("<div>").html(purify(marked.parse(text))).appendTo(parent);
 	}
+	else if(name == "content index")
+	{
+		$("<div class='index'>").html(purify(marked.parse(text))).appendTo(parent);
+	}
 	else if(name == "math")
 	{
 		$("<div class='math'>").text(text).appendTo(parent);

@@ -15,6 +15,7 @@ Namespace: campusempresa.org/namespace.stxt
 		Header: (*)
 		Subheader: (*)
 		Content: (*) TEXT
+		Content Index: (*) TEXT
 		Math: (*) TEXT
 		Assert: (*) TEXT
 		Alert: (*) TEXT

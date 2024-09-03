@@ -13,7 +13,7 @@ export const mainConent = `
 		<div class="row">
 			<div class="col-8 p-0">
 				<h1 class="m-0 p-0">
-					<a href="/"><img src="/img/logo_header.png"></a>
+					<a href="/"><img src="/img/logo_header.png" style="visibility:hidden;"></a>
 				</h3>
 			</div>
 			<div class="col-4 p-0 text-end">
