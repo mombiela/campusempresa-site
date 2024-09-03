@@ -6,6 +6,7 @@ ROUTES["donate"] 		= {stage:"pre"};
 ROUTES["contribute"] 	= {stage:"pre"};
 ROUTES["licence"] 		= {stage:"pre"};
 ROUTES["index"] 		= {stage:"pre"};
+ROUTES["objective"]		= {stage:"pre"};
 ROUTES["_default"] 		= {stage:"pre"};
 
 // Rutas TIC
