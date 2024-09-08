@@ -1,0 +1,39 @@
+Document(campusempresa.org/namespace.stxt):
+	
+	Alert: 
+		Bienvenidos a **Campus Empresa**, el primer portal de aprendizaje con\
+		TODOS los contenidos disponibles en catalán! 
+	
+	Content:
+		Nuestro objetivo es dar recursos formativos, pero sin competir con
+		otros profesionales. Por eso queremos colaborar con todas las entidades involucradas: 
+		Empresas, Universidades, Formadores y sobre todo los **Profesionales**.
+		
+		Si quieres conocer mejor nuestro proyecto, [haz clic aquí y mira los objetivos](objectius).
+		
+		Si quieres colaborar, no lo dudes: [haz clic aquí y mira lo que estamos haciendo](contribute)
+	
+
+	Header: Áreas de Conocimiento
+	
+	Content: Este portal está en permanente ampliación, pero queremos darte siempre lo mejor
+		que tengamos en todo momento. Por eso puedes empezar ya a usarlo:
+		
+	
+	Grid:
+		Card:
+			Title: ÁREA TIC
+			Url: #tic/
+			Content:
+				**Tecnologías de la información y comunicación.**
+				
+				Cursos disponibles: 10\
+				Rutas de aprendizaje: 5
+				
+#		Card:
+#			Title: ÁREA TIC
+#			Url: #github/mombiela/campusempresa/
+#			Content:
+#				**Tecnologías de la información y comunicación.**
+#				Cursos disponibles: 10\
+#				Rutas de aprendizaje: 5

@@ -1,0 +1,43 @@
+Document (campusempresa.org/namespace.stxt):Donacions al projecte
+
+	Metadata:
+		Description: Realitzar donacions mitjançant PayPal al projecte i als autors de STxT.
+		Author: Joan Costa Mombiela
+		Last modif: 2013-03-01
+	
+	Content:
+		Vols fer una donació al projecte?
+		En aquests moments només tenim disponible fer-ho mitjançant PayPal,
+		encara que en el futur potser acceptem altres mitjans.
+		
+	HTML:
+		<div style="text-align:center;">
+			<form action="https://www.paypal.com/donate" method="post" target="_top">
+			<input type="hidden" name="hosted_button_id" value="VGLW2PDN86U98" />
+			<input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Botó Donar amb PayPal" />
+			<img alt="" border="0" src="https://www.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1" />
+			</form>
+		<p><center><strong>Moltes gràcies per la vostra col·laboració.</strong></center></p>
+		</div>
+	
+	Header: Per què donar?
+		
+	Content:
+		Podria donar-vos molts motius, la inversió que hem fet, el manteniment dels servidors,
+		la feina realitzada, l'ample de banda, les traduccions... i encara que realment espero
+		que aquestes inversions puguin ser amortitzades (algun dia :-D) mitjançant publicitat o altres patrocinadors,
+		aquest no és el motiu principal.
+		
+		Les donacions són per a nosaltres. Per haver fet lliure aquest projecte i haver-lo donat a la comunitat.
+		Per haver-lo realitzat i haver posat tot el nostre esforç. Tota la nostra feina està alliberada.
+		Sou lliures d'usar-lo. De guanyar diners. D'aprofitar-vos-en.
+		Però si realment creieu que ha estat una aportació útil, una donació serà molt agraïda.
+		
+		Vosaltres poseu el preu. Nosaltres us regalem @STxT@.
+		
+	# Què farem amb les donacions? La llista és llarga... Primer finançar aquest projecte. Hem tingut
+	# moltes despeses, les traduccions, els dominis, el temps invertit. Després una justa recompensa per
+	# a nosaltres. Si això va a algun lloc crec que serà merescuda ;-) Finalment, arrencar altres projectes, pensar noves
+	# idees... hi ha tant per fer! Tant per inventar! Però necessitem temps per a això. I també és
+	# part del que demanem.
+	# Gràcies per ajudar-nos!!!

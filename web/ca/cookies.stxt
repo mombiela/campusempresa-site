@@ -1,0 +1,42 @@
+Document (campusempresa.org/namespace.stxt):Cookies
+
+	Metadata:
+		Description: Política de cookies
+		Author: Joan Costa Mombiela
+		Last modif: 2017-04-04
+		
+	Header: Cookies
+	
+	Content:
+		Perquè aquest lloc funcioni adequadament, de vegades instal·lem en els dispositius dels usuaris petits fitxers de dades, coneguts com a cookies. La majoria dels grans llocs web també ho fan.
+		
+	Header: Què són les cookies?
+	
+	Content:
+		Una cookie és un petit fitxer de text que els llocs web instal·len 
+		a l'ordinador o el dispositiu mòbil dels usuaris que els visiten. 
+		Les cookies fan possible que el lloc web recordi les accions 
+		i preferències de l'usuari (identificador d'inici de sessió, 
+		idioma, mida de lletra i altres preferències de visualització), 
+		perquè aquest no hagi de tornar a configurar-los 
+		quan torni al lloc o navegui per les seves pàgines. 
+	
+	Header: Com utilitzem les cookies?
+	
+	Content:
+		Nosaltres fem servir cookies per poder mostrar contingut personalitzat, en particular
+		els anuncis de Google AdSense. També fem servir les cookies per recordar l'idioma,
+		així com saber si un usuari ha llegit la nostra política de cookies. Aquestes cookies
+		tenen una durada indefinida.
+		
+	Header: Com controlar les cookies
+	
+	Content:
+		Vostè pot controlar o esborrar les cookies sempre que ho desitgi: per a més informació, 
+		consulti [[http://aboutcookies.org]]. A més de poder eliminar totes 
+		les cookies que ja es troben al seu ordinador, 
+		també pot configurar la majoria dels navegadors 
+		perquè deixin d'acceptar-les. Però tingui present que, 
+		si rebutja les cookies, és possible que hagi de tornar 
+		a configurar manualment les seves preferències cada vegada que visiti 
+		un lloc i que deixin de funcionar determinats serveis i funcionalitats.
