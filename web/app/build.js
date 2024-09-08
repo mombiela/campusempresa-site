@@ -73,8 +73,8 @@ export async function buildContent(content, stxtUrl)
 	let hash = getHash();
 	$("#link_editor").attr("href", "/edit.html" + hash);
 
-	// Mathjax // TODO Habilitar cuando todo ok
-	//window["mathReload"]();
+	// Mathjax
+	window["mathReload"]();
 	
 	// Cookies
     checkCookies();

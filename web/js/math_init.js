@@ -8,16 +8,21 @@ MathJax = {
     delimiters: [['`', '`']]
   }
 };
-function mathReload()
-{
-	try
-	{
-		console.log("Cargando math....");
-		MathJax.typeset();
-		console.log("Math OK");
-	}
-	catch (e)
-	{
-		console.log(e);
-	}
+
+function mathReload() {
+  try {
+    console.log("Cargando math....");
+    
+    // Seleccionamos solo los elementos que tengan la clase 'math'
+    const elements = document.querySelectorAll('.math');
+    
+    // Usamos MathJax.typesetPromise para procesar solo esos elementos
+    MathJax.typesetPromise(elements).then(() => {
+      console.log("Math OK");
+    }).catch((err) => {
+      console.log("Error en MathJax:", err);
+    });
+  } catch (e) {
+    console.log(e);
+  }
 }
