@@ -5,39 +5,63 @@ Document(campusempresa.org/namespace.stxt):
 		TOTS els continguts disponibles en català! 
 	
 	Content:
-		El nostre objetiu és donar recursos formatius, però sense competir amb
-		altres profesionals. Per això volem col·laborar amb totes les entitats involucrades: 
-		Empreses, Universitats, Formadors i sobretot els **Professionals**.
-		
-		Si vols conèixer millor el nostre projecte, [fes clic aquí i mira els objectius](objectius).
-		
-		Si vols col·laborar, no ho dubtis: [fes clic aquí i mira el que estem fent](contribute)
-	
+		El nostre objectiu és oferir recursos formatius sense entrar en competència amb altres professionals. 
+		Volem col·laborar amb totes les entitats implicades: empreses, universitats, formadors i, sobretot, **els professionals**.
 
-	Header: Àrees de Coneixement
-	
-	Content: Aquest portal está en permanent ampliació, però volem donar-te sempre el millor
-		que tinguem en tot moment. Per això pots començar ja a fer-lo servir:
+		Aquest portal està en constant creixement, però sempre ens esforcem per oferir-te el millor contingut en cada moment. 
+		Ja pots començar a fer-lo servir!
 		
-	
-	Grid:
+		Si vols conèixer millor el nostre projecte, [fes clic aquí per veure els objectius](objectius).\
+		Si vols col·laborar, no ho dubtis: [fes clic aquí per veure com pots participar](contribute)
+
+	Header: Àrea de Coneixement: TIC
+	Grid:	
 		Card:
-			Title: ÁREA TIC
-			Url: #tic/
+			Title: Llenguatges FrontEnd
+			Url: #tic/frontend
 			Content:
-				**Tecnologies de la informació i comunicació.**
+				Cursos de **HTML, Web, Javascript**
+				i tot el que has volgut aprender sobre la web.
 				
-				Cursos disponibles: 10\
-				Rutes d'aprenentatge: 5
+				Cursos disponibles: ??
+		Card:
+			Title: Llenguatges Backend
+			Url: #tic/frontend
+			Content:
+				Cursos de **Java, Python, PHP, C#, etc.** 
+				Domina qualsevol llenguatge per ser un
+				profesional des del costat del servidor.
+				 
+				Cursos disponibles: ??
+		Card:
+			Title: Frameworks (FrontEnd)
+			Url: #tic/frontend-frameworks
+			Content:
+				Aprèn els frameworks més utils d'avui:
+				**Angular, Bootstrap, React** i molts altres.
 				
-#		Card:
-#			Title: ÁREA TIC
-#			Url: #github/mombiela/campusempresa/
-#			Content:
-#				**Tecnologies de la informació i comunicació.**
-#				Cursos disponibles: 10\
-#				Rutes d'aprenentatge: 5
+				Cursos disponibles: ??
 				
+		Card:
+			Title: Frameworks (Backend)
+			Url: #tic/backend-frameworks
+			Content:
+				Aprèn les últimes tecnoligíes a nivel de servidor.
+				Fes cursos de **Spring, Spring Boot** i molt més.
 				
-
-
+				Cursos disponibles: 10
+		Card:
+			Title: Legacy
+			Url: #tic/legacy
+			Content:
+				Treballes (o vols treballar) amb tecnologíes del passat, però que estan
+				molt presents avui en dia? Aquesta és la teva secció. Trobaràs
+				cursos de **Cobol i RPG** entre altres.
+				
+		Card:
+			Title: MISC
+			Url: #tic/misc
+			Content:
+				No et perdis aquesta secció, on trobaràs altres recursos
+				imprescindibles per a tothom: **Git, PowerShell** i altres sorpreses.
+		
