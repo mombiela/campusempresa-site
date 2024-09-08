@@ -28,7 +28,7 @@ Document(campusempresa.org/namespace.stxt):
 
 		Card:
 			Title: Programador Backend
-			Url: #tic/frontend
+			Url: #tic/backend
 			Content:
 				Domina qualsevol llenguatge per ser un
 				profesional des del costat del servidor:
