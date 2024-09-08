@@ -17,46 +17,45 @@ Document(campusempresa.org/namespace.stxt):
 	Header: Àrea de Coneixement: TIC
 	Grid:	
 		Card:
-			Title: Llenguatges FrontEnd
+			Title: Programador FrontEnd
 			Url: #tic/frontend
 			Content:
-				Cursos de **HTML, Web, Javascript**
-				i tot el que has volgut aprender sobre la web.
+				Apren llenguatges com **HTML, Web, Javascript**, a més
+				de frameworks que t'ajudaran al dia a dia, tal
+				com **Angular, Bootstrap o React**.
 				
 				Cursos disponibles: ??
+
 		Card:
-			Title: Llenguatges Backend
+			Title: Programador Backend
 			Url: #tic/frontend
 			Content:
-				Cursos de **Java, Python, PHP, C#, etc.** 
 				Domina qualsevol llenguatge per ser un
-				profesional des del costat del servidor.
-				 
-				Cursos disponibles: ??
-		Card:
-			Title: Frameworks (FrontEnd)
-			Url: #tic/frontend-frameworks
-			Content:
-				Aprèn els frameworks més utils d'avui:
-				**Angular, Bootstrap, React** i molts altres.
+				profesional des del costat del servidor:
+				**Java, Python, PHP o C#** i frameworks 
+				com  **Spring Boot** i molts més.
 				
 				Cursos disponibles: ??
-				
+
 		Card:
-			Title: Frameworks (Backend)
-			Url: #tic/backend-frameworks
-			Content:
-				Aprèn les últimes tecnoligíes a nivel de servidor.
-				Fes cursos de **Spring, Spring Boot** i molt més.
-				
-				Cursos disponibles: 10
-		Card:
-			Title: Legacy
+			Title: Programador Legacy
 			Url: #tic/legacy
 			Content:
-				Treballes (o vols treballar) amb tecnologíes del passat, però que estan
-				molt presents avui en dia? Aquesta és la teva secció. Trobaràs
+				Treballes amb tecnologíes del passat, però que estan
+				molt presents avui en dia? Aquí trobaràs
 				cursos de **Cobol i RPG** entre altres.
+				
+				Cursos disponibles: ??
+				
+		Card:
+			Title: Aplicacions Mòbils
+			Url: #tic/mobile_apps
+			Content:
+				Cursos per aprendre a programar sobre entorn
+				Android i IOS; amb llenguatges con **Kotlin**
+				o **Swift**.
+				
+				Cursos disponibles: ??
 				
 		Card:
 			Title: MISC

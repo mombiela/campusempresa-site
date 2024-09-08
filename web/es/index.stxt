@@ -17,46 +17,45 @@ Document(campusempresa.org/namespace.stxt):
 	Header: Área de Conocimiento: TIC
 	Grid:	
 		Card:
-			Title: Lenguajes FrontEnd
+			Title: Programador FrontEnd
 			Url: #tic/frontend
 			Content:
-				Cursos de **HTML, Web, Javascript**
-				y todo lo que has querido aprender sobre la web.
+				Aprende lenguajes como **HTML, Web, Javascript**, además
+				de frameworks que te ayudarán en el día a día, tales
+				como **Angular, Bootstrap o React**.
 				
 				Cursos disponibles: ??
+
 		Card:
-			Title: Lenguajes Backend
+			Title: Programador Backend
 			Url: #tic/frontend
 			Content:
-				Cursos de **Java, Python, PHP, C#, etc.** 
 				Domina cualquier lenguaje para ser un
-				profesional desde el lado del servidor.
-				 
-				Cursos disponibles: ??
-		Card:
-			Title: Frameworks (FrontEnd)
-			Url: #tic/frontend-frameworks
-			Content:
-				Aprende los frameworks más útiles de hoy:
-				**Angular, Bootstrap, React** y muchos otros.
+				profesional desde el lado del servidor:
+				**Java, Python, PHP o C#** y frameworks 
+				como **Spring Boot** y muchos más.
 				
 				Cursos disponibles: ??
-				
+
 		Card:
-			Title: Frameworks (Backend)
-			Url: #tic/backend-frameworks
-			Content:
-				Aprende las últimas tecnologías a nivel de servidor.
-				Haz cursos de **Spring, Spring Boot** y mucho más.
-				
-				Cursos disponibles: 10
-		Card:
-			Title: Legacy
+			Title: Programador Legacy
 			Url: #tic/legacy
 			Content:
-				¿Trabajas (o quieres trabajar) con tecnologías del pasado, pero que están
-				muy presentes hoy en día? Esta es tu sección. Encontrarás
+				¿Trabajas con tecnologías del pasado, pero que están
+				muy presentes hoy en día? Aquí encontrarás
 				cursos de **Cobol y RPG** entre otros.
+				
+				Cursos disponibles: ??
+				
+		Card:
+			Title: Aplicaciones Móviles
+			Url: #tic/mobile_apps
+			Content:
+				Cursos para aprender a programar sobre entorno
+				Android e IOS; con lenguajes como **Kotlin**
+				o **Swift**.
+				
+				Cursos disponibles: ??
 				
 		Card:
 			Title: MISC
