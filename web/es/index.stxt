@@ -32,8 +32,19 @@ Document(campusempresa.org/namespace.stxt):
 			Content:
 				Domina cualquier lenguaje para ser un
 				profesional desde el lado del servidor:
-				**Java, Python, PHP o C#** y frameworks 
+				**Java, Python o C#** y frameworks 
 				como **Spring Boot** y muchos más.
+				
+				Cursos disponibles: ??
+
+		Card:
+			Title: Programador Fullstack
+			Url: #tic/fullstack
+			Content:
+				Domina lenguajes que utilizan 
+				tecnologías web y de servidor de forma
+				simultánea: **PHP**, **Java Servlets** y
+				**Node**.
 				
 				Cursos disponibles: ??
 
