@@ -17,60 +17,9 @@ Document(campusempresa.org/namespace.stxt):
 	Header: Área de Conocimiento: TIC
 	Grid:	
 		Card:
-			Title: Programador FrontEnd
-			Url: #tic/frontend
+			Title: Área de Conocimiento: TI
+			Url: #tic/
 			Content:
-				Aprende lenguajes como **HTML, Web, Javascript**, además
-				de frameworks que te ayudarán en el día a día, tales
-				como **Angular, Bootstrap o React**.
-				
-				Cursos disponibles: ??
-
-		Card:
-			Title: Programador Backend
-			Url: #tic/backend
-			Content:
-				Domina cualquier lenguaje para ser un
-				profesional desde el lado del servidor:
-				**Java, Python o C#** y frameworks 
-				como **Spring Boot** y muchos más.
-				
-				Cursos disponibles: ??
-
-		Card:
-			Title: Programador Fullstack
-			Url: #tic/fullstack
-			Content:
-				Domina lenguajes que utilizan 
-				tecnologías web y de servidor de forma
-				simultánea: **PHP**, **Java Servlets** y
-				**Node**.
-				
-				Cursos disponibles: ??
-
-		Card:
-			Title: Programador Legacy
-			Url: #tic/legacy
-			Content:
-				¿Trabajas con tecnologías del pasado, pero que están
-				muy presentes hoy en día? Aquí encontrarás
-				cursos de **Cobol y RPG** entre otros.
-				
-				Cursos disponibles: ??
-				
-		Card:
-			Title: Aplicaciones Móviles
-			Url: #tic/mobile_apps
-			Content:
-				Cursos para aprender a programar sobre entorno
-				Android e IOS; con lenguajes como **Kotlin**
-				o **Swift**.
-				
-				Cursos disponibles: ??
-				
-		Card:
-			Title: MISC
-			Url: #tic/misc
-			Content:
-				No te pierdas esta sección, donde encontrarás otros recursos
-				imprescindibles para todos: **Git, PowerShell** y otras sorpresas.
+				* Frontend Developer
+				* Backend Developer
+				* ...
