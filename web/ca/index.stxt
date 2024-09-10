@@ -1,7 +1,7 @@
 Document(campusempresa.org/namespace.stxt):
 	
 	Alert: 
-		Benvinguts a **Campus Empresa**, el primer portal d'aprenentatge amb\
+		Benviguts a **Campus Empresa**, el primer portal d'aprenentatge amb\
 		TOTS els continguts disponibles en català! 
 	
 	Content:
@@ -9,69 +9,25 @@ Document(campusempresa.org/namespace.stxt):
 		Volem col·laborar amb totes les entitats implicades: empreses, universitats, formadors i, sobretot, **els professionals**.
 
 		Aquest portal està en constant creixement, però sempre ens esforcem per oferir-te el millor contingut en cada moment. 
-		Ja pots començar a fer-lo servir!
+		Ja pots començar a utilitzar-lo!
 		
 		Si vols conèixer millor el nostre projecte, [fes clic aquí per veure els objectius](objectius).\
 		Si vols col·laborar, no ho dubtis: [fes clic aquí per veure com pots participar](contribute)
 
-	Header: Àrea de Coneixement: TIC
+	Header: Àrees de Coneixement
 	Grid:	
 		Card:
-			Title: Programador FrontEnd
-			Url: #tic/frontend
+			Title: Tecnologies de la Informació (TI)
+			Url: #tic/
 			Content:
-				Apren llenguatges com **HTML, Web, Javascript**, a més
-				de frameworks que t'ajudaran al dia a dia, tal
-				com **Angular, Bootstrap o React**.
-				
-				Cursos disponibles: ??
+				**Tecnologies de la Informació (TI)** es refereix a l'ús de sistemes informàtics, 
+				software, xarxes i bases de dades per emmagatzemar, processar i transmetre informació. 
+				Inclou àrees com desenvolupament de software, gestió de dades, ciberseguretat i serveis al núvol, 
+				essencials per suportar la infraestructura tecnològica d'empreses i organitzacions.
 
-		Card:
-			Title: Programador Backend
-			Url: #tic/backend
-			Content:
-				Domina qualsevol llenguatge per ser un
-				profesional des del costat del servidor:
-				**Java, Python o C#** i frameworks 
-				com  **Spring Boot** i molts més.
-				
-				Cursos disponibles: ??
-
-		Card:
-			Title: Programador Fullstack
-			Url: #tic/fullstack
-			Content:
-				Domina llenguatges que utilitzen 
-				tecnologies web i de servidor de forma
-				simultània: **PHP**, **Java Servlets** i
-				**Node**.
-				
-				Cursos disponibles: ??
-
-		Card:
-			Title: Programador Legacy
-			Url: #tic/legacy
-			Content:
-				Treballes amb tecnologíes del passat, però que estan
-				molt presents avui en dia? Aquí trobaràs
-				cursos de **Cobol i RPG** entre altres.
-				
-				Cursos disponibles: ??
-				
-		Card:
-			Title: Aplicacions Mòbils
-			Url: #tic/mobile_apps
-			Content:
-				Cursos per aprendre a programar sobre entorn
-				Android i IOS; amb llenguatges con **Kotlin**
-				o **Swift**.
-				
-				Cursos disponibles: ??
-				
-		Card:
-			Title: MISC
-			Url: #tic/misc
-			Content:
-				No et perdis aquesta secció, on trobaràs altres recursos
-				imprescindibles per a tothom: **Git, PowerShell** i altres sorpreses.
-		
+#				Una **carrera de TI** és una especialització dins del camp 
+#				de les Tecnologies de la Informació que se centra en desenvolupar habilitats 
+#				i coneixements en una àrea específica, com el desenvolupament de software, ciberseguretat, 
+#				ciència de dades o administració de sistemes. 
+#				Aquestes carreres capaciten els professionals per dissenyar, implementar, 
+#				mantenir i optimitzar solucions tecnològiques segons les necessitats del sector.
