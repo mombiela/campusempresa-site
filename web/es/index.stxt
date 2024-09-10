@@ -14,12 +14,20 @@ Document(campusempresa.org/namespace.stxt):
 		Si quieres conocer mejor nuestro proyecto, [haz clic aquí para ver los objetivos](objectius).\
 		Si quieres colaborar, no lo dudes: [haz clic aquí para ver cómo puedes participar](contribute)
 
-	Header: Área de Conocimiento: TIC
+	Header: Áreas de Conocimiento
 	Grid:	
 		Card:
-			Title: Área de Conocimiento: TI
+			Title: Tecnologías de la Información (TI)
 			Url: #tic/
 			Content:
-				* Frontend Developer
-				* Backend Developer
-				* ...
+				**Tecnologías de la Información (TI)** se refiere al uso de sistemas informáticos, 
+				software, redes y bases de datos para almacenar, procesar y transmitir información. 
+				Incluye áreas como desarrollo de software, gestión de datos, ciberseguridad y servicios en la nube, 
+				esenciales para soportar la infraestructura tecnológica de empresas y organizaciones.
+
+#				Una **carrera de TI** es una especialización dentro del campo 
+#				de las Tecnologías de la Información que se enfoca en desarrollar habilidades 
+#				y conocimientos en un área específica, como el desarrollo de software, ciberseguridad, 
+#				ciencia de datos o administración de sistemas. 
+#				Estas carreras capacitan a los profesionales para diseñar, implementar, 
+#				mantener y optimizar soluciones tecnológicas según las necesidades del sector.
