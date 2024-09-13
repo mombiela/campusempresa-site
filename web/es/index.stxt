@@ -20,6 +20,7 @@ Document(campusempresa.org/namespace.stxt):
 		Incluye áreas como desarrollo de software, gestión de datos, ciberseguridad y servicios en la nube, 
 		esenciales para soportar la infraestructura tecnológica de empresas y organizaciones.
 	
+	Subheader: Todas las carreras profesionales
 	Grid:	
 		Card:
 			Title: Carreras profesionales
@@ -38,12 +39,6 @@ Document(campusempresa.org/namespace.stxt):
 				Aprende los lenguajes de programación más utilizados 
 				y las herramientas clave para el día a día en el área de TI.
 		Card:
-			Title: Conocimientos
-			Url: #tic/all_conoc
-			Content:
-				Revisa o aprende los fundamentos para desarrollar tu carrera en el ámbito de TI.
-	
-		Card:
 			Title: Competencias sociales
 			Url: #tic/all_social
 			Content:
@@ -51,4 +46,9 @@ Document(campusempresa.org/namespace.stxt):
 			#	La capacidad de comunicarte eficazmente, trabajar en equipo, adaptarte al cambio 
 			#	y liderar con empatía son claves para el éxito en un mundo donde 
 			#	el factor humano marca la diferencia.
-		
+		Card:
+			Title: Conocimientos
+			Url: #tic/all_conoc
+			Content:
+				Revisa o aprende los fundamentos para desarrollar tu carrera en el ámbito de TI.
+			

@@ -20,6 +20,7 @@ Document(campusempresa.org/namespace.stxt):
 		Inclou àrees com desenvolupament de programari, gestió de dades, ciberseguretat i serveis al núvol, 
 		essencials per suportar la infraestructura tecnològica d'empreses i organitzacions.
 	
+	Subheader: Totes les carreres profesionals
 	Grid:	
 		Card:
 			Title: Carreres professionals
@@ -38,12 +39,6 @@ Document(campusempresa.org/namespace.stxt):
 				Aprèn els llenguatges de programació més utilitzats 
 				i les eines clau per al dia a dia en l'àrea de TI.
 		Card:
-			Title: Coneixements
-			Url: #tic/all_conoc
-			Content:
-				Revisa o aprèn els fonaments per desenvolupar la teva carrera en l'àmbit de TI.
-	
-		Card:
 			Title: Competències socials
 			Url: #tic/all_social
 			Content:
@@ -51,4 +46,10 @@ Document(campusempresa.org/namespace.stxt):
 			#	La capacitat de comunicar-te eficaçment, treballar en equip, adaptar-te al canvi 
 			#	i liderar amb empatia són claus per a l'èxit en un món on 
 			#	el factor humà marca la diferència.
-		
+		Card:
+			Title: Coneixements
+			Url: #tic/all_conoc
+			Content:
+				Revisa o aprèn els fonaments per desenvolupar la teva carrera en l'àmbit de TI.
+	
+			
