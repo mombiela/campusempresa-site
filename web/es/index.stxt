@@ -2,7 +2,7 @@ Document(campusempresa.org/namespace.stxt):
 	
 	Alert: 
 		Bienvenidos a **Campus Empresa**, el primer portal de aprendizaje con\
-		TODOS los contenidos disponibles en catalán! 
+		**TODOS** los contenidos disponibles en **castellano**! 
 	
 	Content:
 		Nuestro objetivo es ofrecer recursos formativos sin entrar en competencia con otros profesionales. 
@@ -14,20 +14,43 @@ Document(campusempresa.org/namespace.stxt):
 		Si quieres conocer mejor nuestro proyecto, [haz clic aquí para ver los objetivos](objectius).\
 		Si quieres colaborar, no lo dudes: [haz clic aquí para ver cómo puedes participar](contribute)
 
-	Header: Áreas de Conocimiento
+	Header: TI: Tecnologías de la Información
+	Content:
+		**Tecnologías de la Información (TI)** se refiere al uso de sistemas informáticos, 
+		software, redes y bases de datos para almacenar, procesar y transmitir información. 
+		Incluye áreas como desarrollo de software, gestión de datos, ciberseguridad y servicios en la nube, 
+		esenciales para soportar la infraestructura tecnológica de empresas y organizaciones.
+	
 	Grid:	
 		Card:
-			Title: Tecnologías de la Información (TI)
+			Title: Carreras profesionales
 			Url: #tic/
 			Content:
-				**Tecnologías de la Información (TI)** se refiere al uso de sistemas informáticos, 
-				software, redes y bases de datos para almacenar, procesar y transmitir información. 
-				Incluye áreas como desarrollo de software, gestión de datos, ciberseguridad y servicios en la nube, 
-				esenciales para soportar la infraestructura tecnológica de empresas y organizaciones.
+				Evoluciona tu carrera dentro y desarrolla habilidades 
+				y conocimientos en un área específica, como el desarrollo de software, ciberseguridad, 
+				ciencia de datos o administración de sistemas.
 
-#				Una **carrera de TI** es una especialización dentro del campo 
-#				de las Tecnologías de la Información que se enfoca en desarrollar habilidades 
-#				y conocimientos en un área específica, como el desarrollo de software, ciberseguridad, 
-#				ciencia de datos o administración de sistemas. 
-#				Estas carreras capacitan a los profesionales para diseñar, implementar, 
-#				mantener y optimizar soluciones tecnológicas según las necesidades del sector.
+	Subheader: Todos los cursos
+	Grid:
+		Card:
+			Title: Competencias técnicas
+			Url: #tic/all_comp
+			Content:
+				Aprende los lenguajes de programación,
+				así como las herramientas más utilizadas 
+				en el día a día. 
+		Card:
+			Title: Conocimientos
+			Url: #tic/all_conoc
+			Content:
+				Repasa o aprende las bases para desarrollar
+				tu carrera en el área de ti.
+	
+		Card:
+			Title: Competencias sociales
+			Url: #tic/all_social
+			Content:
+				No dejes de aprender las habilidades sociales
+				imprescindibles, bla, bla, bla...
+	
+		
