@@ -1,8 +1,7 @@
 Document(campusempresa.org/namespace.stxt):
 	
 	Alert: 
-		Benviguts a **Campus Empresa**, el primer portal d'aprenentatge amb\
-		TOTS els continguts disponibles en català! 
+		Benviguts a **Campus Empresa**, el primer portal d'aprenentatge amb **tots els continguts disponibles en català**.
 	
 	Content:
 		El nostre objectiu és oferir recursos formatius sense entrar en competència amb altres professionals. 
@@ -14,20 +13,42 @@ Document(campusempresa.org/namespace.stxt):
 		Si vols conèixer millor el nostre projecte, [fes clic aquí per veure els objectius](objectius).\
 		Si vols col·laborar, no ho dubtis: [fes clic aquí per veure com pots participar](contribute)
 
-	Header: Àrees de Coneixement
+	Header: TI: Tecnologies de la Informació
+	Content:
+		**Tecnologies de la Informació (TI)** es refereix a l'ús de sistemes informàtics, 
+		programes, xarxes i bases de dades per emmagatzemar, processar i transmetre informació. 
+		Inclou àrees com desenvolupament de programari, gestió de dades, ciberseguretat i serveis al núvol, 
+		essencials per suportar la infraestructura tecnològica d'empreses i organitzacions.
+	
 	Grid:	
 		Card:
-			Title: Tecnologies de la Informació (TI)
+			Title: Carreres professionals
 			Url: #tic/
 			Content:
-				**Tecnologies de la Informació (TI)** es refereix a l'ús de sistemes informàtics, 
-				software, xarxes i bases de dades per emmagatzemar, processar i transmetre informació. 
-				Inclou àrees com desenvolupament de software, gestió de dades, ciberseguretat i serveis al núvol, 
-				essencials per suportar la infraestructura tecnològica d'empreses i organitzacions.
-
-#				Una **carrera de TI** és una especialització dins del camp 
-#				de les Tecnologies de la Informació que se centra en desenvolupar habilitats 
-#				i coneixements en una àrea específica, com el desenvolupament de software, ciberseguretat, 
-#				ciència de dades o administració de sistemes. 
-#				Aquestes carreres capaciten els professionals per dissenyar, implementar, 
-#				mantenir i optimitzar solucions tecnològiques segons les necessitats del sector.
+				Desenvolupa la teva carrera professional i adquireix habilitats 
+				i coneixements en àrees específiques, 
+				com desenvolupament de programari, ciberseguretat, 
+				ciència de dades o administració de sistemes.
+	Subheader: Tots els cursos
+	Grid:
+		Card:
+			Title: Competències tècniques
+			Url: #tic/all_comp
+			Content:
+				Aprèn els llenguatges de programació més utilitzats 
+				i les eines clau per al dia a dia en l'àrea de TI.
+		Card:
+			Title: Coneixements
+			Url: #tic/all_conoc
+			Content:
+				Revisa o aprèn els fonaments per desenvolupar la teva carrera en l'àmbit de TI.
+	
+		Card:
+			Title: Competències socials
+			Url: #tic/all_social
+			Content:
+				Potencia les teves habilitats socials per destacar en qualsevol entorn professional. 
+			#	La capacitat de comunicar-te eficaçment, treballar en equip, adaptar-te al canvi 
+			#	i liderar amb empatia són claus per a l'èxit en un món on 
+			#	el factor humà marca la diferència.
+		

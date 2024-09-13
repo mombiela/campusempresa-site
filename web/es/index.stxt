@@ -1,8 +1,7 @@
 Document(campusempresa.org/namespace.stxt):
 	
 	Alert: 
-		Bienvenidos a **Campus Empresa**, el primer portal de aprendizaje con\
-		**TODOS** los contenidos disponibles en **castellano**! 
+		Bienvenidos a **Campus Empresa**, el primer portal de aprendizaje con **todos los contenidos disponibles en castellano**.
 	
 	Content:
 		Nuestro objetivo es ofrecer recursos formativos sin entrar en competencia con otros profesionales. 
@@ -26,31 +25,30 @@ Document(campusempresa.org/namespace.stxt):
 			Title: Carreras profesionales
 			Url: #tic/
 			Content:
-				Evoluciona tu carrera dentro y desarrolla habilidades 
-				y conocimientos en un área específica, como el desarrollo de software, ciberseguridad, 
+				Desarrolla tu carrera profesional y adquiere habilidades 
+				y conocimientos en áreas específicas, 
+				como desarrollo de software, ciberseguridad, 
 				ciencia de datos o administración de sistemas.
-
 	Subheader: Todos los cursos
 	Grid:
 		Card:
 			Title: Competencias técnicas
 			Url: #tic/all_comp
 			Content:
-				Aprende los lenguajes de programación,
-				así como las herramientas más utilizadas 
-				en el día a día. 
+				Aprende los lenguajes de programación más utilizados 
+				y las herramientas clave para el día a día en el área de TI.
 		Card:
 			Title: Conocimientos
 			Url: #tic/all_conoc
 			Content:
-				Repasa o aprende las bases para desarrollar
-				tu carrera en el área de ti.
+				Revisa o aprende los fundamentos para desarrollar tu carrera en el ámbito de TI.
 	
 		Card:
 			Title: Competencias sociales
 			Url: #tic/all_social
 			Content:
-				No dejes de aprender las habilidades sociales
-				imprescindibles, bla, bla, bla...
-	
+				Potencia tus habilidades sociales para destacar en cualquier entorno profesional. 
+			#	La capacidad de comunicarte eficazmente, trabajar en equipo, adaptarte al cambio 
+			#	y liderar con empatía son claves para el éxito en un mundo donde 
+			#	el factor humano marca la diferencia.
 		
