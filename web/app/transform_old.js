@@ -1,6 +1,6 @@
 import { mainConent } from './template.js';
 import { LineSplitter } from '../js/stxt-parser.min.js';
-import { mixUrlAndHash, getHash } from './utils.js';
+import { purify, purifySimple, mixUrlAndHash, getHash } from './utils.js';
 import { getRouteInfo } from './routes.js';
 
 const SAFE_HTML = ["#github/mombiela/"];
@@ -46,11 +46,11 @@ function renderChild(child, parent)
 	}
 	else if(name == "content")
 	{
-		$("<div>").html(marked.parse(text)).appendTo(parent);
+		$("<div>").html(purify(marked.parse(text))).appendTo(parent);
 	}
 	else if(name == "content index")
 	{
-		$("<div class='index'>").html(marked.parse(text)).appendTo(parent);
+		$("<div class='index'>").html(purify(marked.parse(text))).appendTo(parent);
 	}
 	else if(name == "math")
 	{
@@ -58,15 +58,15 @@ function renderChild(child, parent)
 	}
 	else if(name == "alert")
 	{
-		$("<div class='alerta'>").html(marked.parse(text)).appendTo(parent);
+		$("<div class='alerta'>").html(purify(marked.parse(text))).appendTo(parent);
 	}
 	else if(name == "assert")
 	{
-		$("<div class='assert'>").html(marked.parse(text)).appendTo(parent);
+		$("<div class='assert'>").html(purify(marked.parse(text))).appendTo(parent);
 	}
 	else if(name == "preamble")
 	{
-		$("<div class='preamble'>").html(marked.parse(text)).appendTo(parent);
+		$("<div class='preamble'>").html(purify(marked.parse(text))).appendTo(parent);
 	}
 	else if(name == "code")
 	{
@@ -151,7 +151,7 @@ function renderCard(child)
 	let url = $("<a class='grid'>").attr("href",child.getChild("url").getText()).appendTo(cardContainer);
 	let card = $("<div class='card mb-4'>").appendTo(url);
 	let cardBody = $("<div class='card-body title'>").text(child.getChild("title").getText()).appendTo(card);
-	$("<div class='card-body'>").html(marked.parse(child.getChild("content").getText())).appendTo(card);
+	$("<div class='card-body'>").html(purify(marked.parse(child.getChild("content").getText()))).appendTo(card);
 	
 	return cardContainer;
 }
@@ -227,10 +227,10 @@ function insertDefaultValues(defaultValues)
 	// Title, subtitle, footer
 	if (defaultValues.title)	$("#main_title").text(defaultValues.title);
 	
-	if (defaultValues.subtitle) $("#main_subtitle").html(marked.parse(defaultValues.subtitle));
+	if (defaultValues.subtitle) $("#main_subtitle").html(purifySimple(marked.parse(defaultValues.subtitle)));
 	else 						$("#main_subtitle").hide();
 	
-	if (defaultValues.leftMenu)	$("#left_menu").html(marked.parse(defaultValues.leftMenu));
+	if (defaultValues.leftMenu)	$("#left_menu").html(purifySimple(marked.parse(defaultValues.leftMenu)));
 	
 	if (!defaultValues.displaySrc) $("#link_source_code").hide();
 	if (!defaultValues.displayEdit) $("#link_editor").hide();
