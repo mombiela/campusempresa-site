@@ -23,7 +23,7 @@ Namespace: campusempresa.org/namespace.stxt
 		Plantuml: (*) TEXT
 		Html: (*) TEXT
 		Grid: (*)
-			Card: (+)
+			Card: (*)
 				Title: (1)
 				url: (1)
 				Content: (1)
