@@ -11,8 +11,8 @@ ROUTES["_default"] 		= {stage:"pre"};
 
 // Rutas con prefix (Las routes van de més específiques a menys!!!)
 // Exemple: aaa/bbb/ccc, aaa/bbb, aaa
-ROUTES["tic/react/"] 	= {dst:"github/mombiela/campusempresa/react/", stage:"test", prefix:true};
-ROUTES["tic/html/"] 	= {dst:"github/mombiela/campusempresa/html/", stage:"prod", prefix:true};
+//ROUTES["tic/react/"] 	= {dst:"github/mombiela/campusempresa/react/", stage:"test", prefix:true};
+//ROUTES["tic/html/"] 	= {dst:"github/mombiela/campusempresa/html/", stage:"prod", prefix:true};
 ROUTES["tic/"] 			= {dst:"github/mombiela/campusempresa/", stage:"pre", prefix:true};
 
 for (const property in ROUTES)

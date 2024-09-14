@@ -20,15 +20,13 @@ Document(campusempresa.org/namespace.stxt):
 		Incluye áreas como desarrollo de software, gestión de datos, ciberseguridad y servicios en la nube, 
 		esenciales para soportar la infraestructura tecnológica de empresas y organizaciones.
 	
-	Subheader: Todas las carreras profesionales
 	Grid:	
 		Card:
 			Title: Carreras profesionales
 			Url: #tic/
 			Content:
 				Desarrolla tu carrera profesional y adquiere habilidades 
-				y conocimientos en áreas específicas, 
-				como desarrollo de software, ciberseguridad, 
+				de desarrollo de software, ciberseguridad, 
 				ciencia de datos o administración de sistemas.
 	Subheader: Todos los cursos
 	Grid:
@@ -43,9 +41,6 @@ Document(campusempresa.org/namespace.stxt):
 			Url: #tic/all_social
 			Content:
 				Potencia tus habilidades sociales para destacar en cualquier entorno profesional. 
-			#	La capacidad de comunicarte eficazmente, trabajar en equipo, adaptarte al cambio 
-			#	y liderar con empatía son claves para el éxito en un mundo donde 
-			#	el factor humano marca la diferencia.
 		Card:
 			Title: Conocimientos
 			Url: #tic/all_conoc
