@@ -1,42 +1,8 @@
 Document (campusempresa.org/namespace.stxt):Contribueix amb nosaltres
 
-	Metadata:
-		Description: Coses que falten per fer en el llenguatge STxT i formes de contribuir amb el manteniment i els continguts del portal.
-		Author: Joan Costa Mombiela
-		Last modif: 2013-10-17
-		
 	Header: Vols contribuir?
 		
 	Alert: Gràcies per voler col·laborar amb nosaltres!!
 		
 	Content:
-		La millor forma d'ajudar-nos és donant a conèixer el llenguatge. Usant-lo,
-		parlant a altres persones, i gaudint amb ell. Nosaltres ja l'hem 
-		usado, i l'experiència ha estat genial.
-		
-		Encara que queda molt treball per fer. Falten llibreries, editors de text,
-		aplicacions,... la llista és interminable.
-		
-		Bones notícies per als informàtics: una nova joguina per explorar :-)
-		
-	Header:  www.semantictext.info
-	
-	Content:		
-		El nostre llenguatge té infinites aplicacions, però creiem que la seva definició 
-		és única i que ja està llesta.
-		
-		_Les possibles aplicacions o utilitats les deixem per a vosaltres ;-)_ 
-		
-		Pel que fa a aquesta web, creiem que és un projecte tancat, però dista
-		molt de considerar-se perfecte. Segur que pot millorar de mil formes. Creus que 
-		cal afegir un capítol nou al llibre? Has trobat algun error en la documentació? 
-		Milloraries algun exemple? Ens proposes un css diferent i més reduït de mida?
-		
-		Volem que aquesta web sigui un punt de referència en l'aprenentatge de @STxT@.
-		
-	alert: Ajuda'ns a que això sigui possible!\
-		[[admin@semantictext.info]]
-		
-	Content:
-		**Estarem encantats de poder-vos contestar el més aviat possible ;-)**\
-		Per cert, només parlem en català, castellà i anglès :-)
+		Bla, bla, bla
