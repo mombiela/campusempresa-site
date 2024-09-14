@@ -14,7 +14,8 @@
 	h4 {font-size: 1.0rem;}
 	
 	.alerta p, .assert p {
-		border: 3px dashed $color2;
+		border: 2px solid #ff4b9c;
+		background-color: rgb(255, 210, 231);
 		text-align: center;
 		margin-top: 1em;
 		margin-bottom: 1em;
@@ -23,14 +24,10 @@
 	.alerta p {
 		border-color: $color1;
 	}
-	
-	@media (min-width: 750px) {
-		.alert p, .assert p {
-			width: 85%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}	
+	.alerta p {
+		border-color: #1bb537;
+		background-color: #e6fdea;
+	}
 	
 	p {
 		text-align: justify;
