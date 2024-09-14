@@ -10,8 +10,8 @@ Document(campusempresa.org/namespace.stxt):
 		Aquest portal està en constant creixement, però sempre ens esforcem per oferir-te el millor contingut en cada moment. 
 		Ja pots començar a utilitzar-lo!
 		
-		Si vols conèixer millor el nostre projecte, [fes clic aquí per veure els objectius](objectius).\
-		Si vols col·laborar, no ho dubtis: [fes clic aquí per veure com pots participar](contribute)
+	#Si vols conèixer millor el nostre projecte, [fes clic aquí per veure els objectius](objectius).\
+	#Si vols col·laborar, no ho dubtis: [fes clic aquí per veure com pots participar](contribute)
 
 	Header: TI: Tecnologies de la Informació
 	Content:
