@@ -30,7 +30,7 @@ export function getUrlFromHash(hashIni)
 	if (hashParts.length > 8) throw new Error("Page definition not valid");
 	
 	// Miramos partes
-	let stxtUrl = "https://docs.campusempresa.cat/" + lang + "/" + hash;
+	let stxtUrl = "https://campusempresa.org/" + lang + "/" + hash;
 	
 	// Miramos final
 	if (isDir)	stxtUrl += "/index.stxt";
