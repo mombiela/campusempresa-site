@@ -10,44 +10,48 @@ Document(campusempresa.org/namespace.stxt):
 		Aquest portal està en constant creixement, però sempre ens esforcem per oferir-te el millor contingut en cada moment. 
 		Ja pots començar a utilitzar-lo!
 		
-	#Si vols conèixer millor el nostre projecte, [fes clic aquí per veure els objectius](objectius).\
-	#Si vols col·laborar, no ho dubtis: [fes clic aquí per veure com pots participar](contribute)
-
-	Header: TI: Tecnologies de la Informació
-	Content:
-		**Tecnologies de la Informació (TI)** es refereix a l'ús de sistemes informàtics, 
-		programes, xarxes i bases de dades per emmagatzemar, processar i transmetre informació. 
-		Inclou àrees com desenvolupament de programari, gestió de dades, ciberseguretat i serveis al núvol, 
-		essencials per suportar la infraestructura tecnològica d'empreses i organitzacions.
-	
+		Actualment estem treballant per oferir formació a les àrees de **Tecnologies de la Informació**, **Anàlsis de Dades i Inteligencia Artificial**
+		i **Marketing i Comunicació**.
+		
+	Header: Carreres Profesionals
 	Grid:	
 		Card:
-			Title: Carreres professionals
+			Title: Tecnologies de la Informació
 			Url: #tic/
 			Content:
-				Desenvolupa la teva carrera professional i adquireix habilitats 
-				de desenvolupament de programari, ciberseguretat, 
-				ciència de dades o administració de sistemes.
-	Subheader: Tots els cursos
+				Aprèn les habilitats en desenvolupament i sistemes,
+				així com a càrrecs superiors en un departament de TI. 
+		Card:
+			Title: Anàlisis de dades i IA
+			Url: #ad_ia/
+			Content:
+				Desenvolupa la teva carrera en l'àmbit
+				de l'anàlisis de dades i de la Inteligencia
+				Artificial. 
+		Card:
+			Title: Marketing i Comunicació
+			Url: #mkt_com/
+			Content:
+				Aprèn les últimes novetats sobre el marketing,
+				i fes carrera sobre SEO, Xarxes Socials i molts altres.
+	Header: Tots els cursos
 	Grid:
 		Card:
 			Title: Competències tècniques
 			Url: #tic/all_comp
 			Content:
-				Aprèn els llenguatges de programació més utilitzats 
-				i les eines clau per al dia a dia en l'àrea de TI.
+				Aprèn les competències tècniques més utilitzades en
+				el món laboral: llenguatges de programació,	software
+				i molts altres.
 		Card:
 			Title: Competències socials
 			Url: #tic/all_social
 			Content:
 				Potencia les teves habilitats socials per destacar en qualsevol entorn professional. 
-			#	La capacitat de comunicar-te eficaçment, treballar en equip, adaptar-te al canvi 
-			#	i liderar amb empatia són claus per a l'èxit en un món on 
-			#	el factor humà marca la diferència.
 		Card:
 			Title: Coneixements
 			Url: #tic/all_conoc
 			Content:
-				Revisa o aprèn els fonaments per desenvolupar la teva carrera en l'àmbit de TI.
+				Revisa o aprèn els fonaments per desenvolupar la teva carrera professional.
 	
 			

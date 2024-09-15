@@ -14,6 +14,8 @@ ROUTES["_default"] 		= {stage:"pre"};
 //ROUTES["tic/react/"] 	= {dst:"github/mombiela/campusempresa/react/", stage:"test", prefix:true};
 //ROUTES["tic/html/"] 	= {dst:"github/mombiela/campusempresa/html/", stage:"prod", prefix:true};
 ROUTES["tic/"] 			= {dst:"github/mombiela/campusempresa/", stage:"pre", prefix:true};
+ROUTES["ad_ia/"]		= {stage:"test"};
+ROUTES["mkt_com/"]		= {stage:"test"};
 
 for (const property in ROUTES)
 {
