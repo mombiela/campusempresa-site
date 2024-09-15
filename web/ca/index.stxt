@@ -1,7 +1,7 @@
 Document(campusempresa.org/namespace.stxt):
 	
 	Alert: 
-		Benviguts a **Campus Empresa**, el primer portal d'aprenentatge amb **tots els continguts disponibles en català**.
+		Benviguts a **Campus Empresa**, el primer portal d'aprenentatge amb **tots els continguts disponibles en castellà**.
 	
 	Content:
 		El nostre objectiu és oferir recursos formatius sense entrar en competència amb altres professionals. 
@@ -10,39 +10,38 @@ Document(campusempresa.org/namespace.stxt):
 		Aquest portal està en constant creixement, però sempre ens esforcem per oferir-te el millor contingut en cada moment. 
 		Ja pots començar a utilitzar-lo!
 		
-		Actualment estem treballant per oferir formació a les àrees de **Tecnologies de la Informació**, **Anàlsis de Dades i Inteligencia Artificial**
-		i **Marketing i Comunicació**.
-		
-	Header: Carreres Profesionals
+	Header: Carreres professionals
+	
 	Grid:	
 		Card:
 			Title: Tecnologies de la Informació
-			Url: #tic/
+			Url: #tic/area_ti
 			Content:
-				Aprèn les habilitats en desenvolupament i sistemes,
-				així com a càrrecs superiors en un departament de TI. 
+				Desenvolupa la teva carrera professional i adquireix habilitats 
+				de desenvolupament de programari, ciberseguretat,
+				o administració de sistemes.
 		Card:
-			Title: Anàlisis de dades i IA
-			Url: #ad_ia/
+			Title: Ciència de Dades i Intel·ligència Artificial
+			Url: #tic/area_ad_ia
 			Content:
-				Desenvolupa la teva carrera en l'àmbit
-				de l'anàlisis de dades i de la Inteligencia
-				Artificial. 
+				Aprèn sobre la Ciència de Dades i 
+				l'Intel·ligència Artificial per assegurar
+				el teu futur professional.
 		Card:
-			Title: Marketing i Comunicació
-			Url: #mkt_com/
+			Title: Màrqueting i Comunicació
+			Url: #tic/area_mkt
 			Content:
-				Aprèn les últimes novetats sobre el marketing,
-				i fes carrera sobre SEO, Xarxes Socials i molts altres.
+				Desenvolupa la teva carrera en Màrqueting i
+				Comunicació
+				
 	Header: Tots els cursos
 	Grid:
 		Card:
 			Title: Competències tècniques
 			Url: #tic/all_comp
 			Content:
-				Aprèn les competències tècniques més utilitzades en
-				el món laboral: llenguatges de programació,	software
-				i molts altres.
+				Aprèn els llenguatges de programació més utilitzats 
+				i les eines clau per al dia a dia en l'àrea de TI.
 		Card:
 			Title: Competències socials
 			Url: #tic/all_social
@@ -52,6 +51,5 @@ Document(campusempresa.org/namespace.stxt):
 			Title: Coneixements
 			Url: #tic/all_conoc
 			Content:
-				Revisa o aprèn els fonaments per desenvolupar la teva carrera professional.
-	
+				Revisa o aprèn els fonaments per desenvolupar la teva carrera en l'àmbit de TI.
 			

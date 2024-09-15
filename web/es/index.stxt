@@ -10,25 +10,31 @@ Document(campusempresa.org/namespace.stxt):
 		Este portal está en constante crecimiento, pero siempre nos esforzamos por ofrecerte el mejor contenido en cada momento. 
 		¡Ya puedes empezar a usarlo!
 		
-	#Si quieres conocer mejor nuestro proyecto, [haz clic aquí para ver los objetivos](objectius).\
-	#Si quieres colaborar, no lo dudes: [haz clic aquí para ver cómo puedes participar](contribute)
-
-	Header: TI: Tecnologías de la Información
-	Content:
-		**Tecnologías de la Información (TI)** se refiere al uso de sistemas informáticos, 
-		software, redes y bases de datos para almacenar, procesar y transmitir información. 
-		Incluye áreas como desarrollo de software, gestión de datos, ciberseguridad y servicios en la nube, 
-		esenciales para soportar la infraestructura tecnológica de empresas y organizaciones.
+	Header: Carreras profesionales
 	
 	Grid:	
 		Card:
-			Title: Carreras profesionales
-			Url: #tic/
+			Title: Tecnologías de la Información
+			Url: #tic/area_ti
 			Content:
 				Desarrolla tu carrera profesional y adquiere habilidades 
-				de desarrollo de software, ciberseguridad, 
-				ciencia de datos o administración de sistemas.
-	Subheader: Todos los cursos
+				de desarrollo de software, ciberseguridad,
+				o administración de sistemas.
+		Card:
+			Title: Ciencia de Datos e Inteligencia Artificial
+			Url: #tic/area_ad_ia
+			Content:
+				Aprende sobre la Ciencia de Datos y 
+				la Inteligencia Artificial para asegurar
+				tu futuro profesional.
+		Card:
+			Title: Marketing y Comunicación
+			Url: #tic/area_mkt
+			Content:
+				Desarrolla tu carrera en Marketing y
+				Comunicación
+				
+	Header: Todos los cursos
 	Grid:
 		Card:
 			Title: Competencias técnicas
