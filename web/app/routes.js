@@ -1,44 +1,11 @@
-const ROUTES = {};
-
-// Rutes directes
-ROUTES["about"] 		= {stage:"pre"};
-ROUTES["donate"] 		= {stage:"pre"};
-ROUTES["contribute"] 	= {stage:"pre"};
-ROUTES["licence"] 		= {stage:"pre"};
-ROUTES["index"] 		= {stage:"pre"};
-ROUTES["objective"]		= {stage:"pre"};
-ROUTES["_default"] 		= {stage:"pre"};
-
-// Rutas con prefix (Las routes van de més específiques a menys!!!)
-// Exemple: aaa/bbb/ccc, aaa/bbb, aaa
-//ROUTES["tic/react/"] 	= {dst:"github/mombiela/campusempresa/react/", stage:"test", prefix:true};
-//ROUTES["tic/html/"] 	= {dst:"github/mombiela/campusempresa/html/", stage:"prod", prefix:true};
-ROUTES["tic/"] 			= {dst:"github/mombiela/campusempresa/", stage:"pre", prefix:true};
-ROUTES["ad_ia/"]		= {stage:"test"};
-ROUTES["mkt_com/"]		= {stage:"test"};
-
-for (const property in ROUTES)
-{
-	let route = ROUTES[property];
-	route.src = property;
-	if (!route.dst) route.dst = property;
-}
-
 export function getRouteInfo(url)
 {
 	if (url.startsWith("#")) url = url.substring(1);
 	
-	if (ROUTES[url]) return ROUTES[url];
-	
-	// Miramos si es una url de cambio con prefix
-	for (const property in ROUTES)
-	{
-		let route = ROUTES[property];
-		if (!route.prefix) continue;
-		if (url.startsWith(route.src))
-		{
-			return route;
-		}
-	}
-	return null;
+	let result = {
+		stage: "pre",
+		dst: url,
+		src: url,
+	};	
+	return result;
 }

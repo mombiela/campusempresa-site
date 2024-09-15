@@ -23,12 +23,6 @@ export function getUrlFromHash(hashIni)
 	const isDir = hash.endsWith("/");
 	if (isDir) hash = hash.substring(0, hash.length -1);
 	
-	// Miramos si es una url de cambio
-	const route = getRouteInfo(hash);
-	if (!route) throw new Error("Ruta no válida: " + hash);
-	hash = route.dst + hash.substring(route.src.length);
-	console.log(`${hashIni} cambiada a ${hash}`);
-	
 	// Miramos si es local o remota y que tenga params vï¿½lidos
 	const hashParts = hash.split("/");
 	
@@ -36,39 +30,14 @@ export function getUrlFromHash(hashIni)
 	if (hashParts.length > 8) throw new Error("Page definition not valid");
 	
 	// Miramos partes
-	let stxtUrl = hashParts[0];
-	let startIndex = 1;
-	if (esDominioValido(stxtUrl))
-	{
-		stxtUrl = "https://" + stxtUrl;	
-	}
-	else if (hashParts.length >=3 && hashParts[0]=="github")
-	{
-		stxtUrl = "https://raw.githubusercontent.com/" + hashParts[1] + "/" + hashParts[2] + "/master/" + lang + "/";
-		startIndex = 3;
-	}
-	else if (esNombrePaginaValido(stxtUrl))
-	{
-		stxtUrl = obtenerBaseURL() + "/" + lang + "/" + stxtUrl;	
-	}
-	else
-	{
-		 throw new Error("Page definition not valid");			
-	}
-	
-	// Miramos otras partes
-	for (let i = startIndex; i<hashParts.length; i++)
-	{
-		if (hashParts[i].length == 0) throw new Error();
-		stxtUrl = stxtUrl + "/" + hashParts[i]; 
-	}
+	let stxtUrl = "https://docs.campusempresa.cat/" + lang + "/" + hash;
 	
 	// Miramos final
 	if (isDir)	stxtUrl += "/index.stxt";
 	else     	stxtUrl += ".stxt";
 	
 	// Obtenemos content
-	//console.log("URL = " + stxtUrl);
+	console.log("URL = " + stxtUrl);
 	return stxtUrl;
 }
 
