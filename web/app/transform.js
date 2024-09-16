@@ -46,27 +46,27 @@ function renderChild(child, parent)
 	}
 	else if(name == "content")
 	{
-		$("<div class='content'>").html(purify(marked.parse(text))).appendTo(parent);
+		$("<div class='content'>").html(marked.parse(text)).appendTo(parent);
 	}
 	else if(name == "content index")
 	{
-		$("<div class='index'>").html(purify(marked.parse(text))).appendTo(parent);
+		$("<div class='index'>").html(marked.parse(text)).appendTo(parent);
 	}
 	else if(name == "math")
 	{
-		$("<div class='math'>").text(text).appendTo(parent);
+		$("<div class='math'>").html(marked.parse(replaceChars(text))).appendTo(parent);
 	}
 	else if(name == "alert")
 	{
-		$("<div class='alerta'>").html(purify(marked.parse(text))).appendTo(parent);
+		$("<div class='alerta'>").html(marked.parse(text)).appendTo(parent);
 	}
 	else if(name == "assert")
 	{
-		$("<div class='assert'>").html(purify(marked.parse(text))).appendTo(parent);
+		$("<div class='assert'>").html(marked.parse(text)).appendTo(parent);
 	}
 	else if(name == "preamble")
 	{
-		$("<div class='preamble'>").html(purify(marked.parse(text))).appendTo(parent);
+		$("<div class='preamble'>").html(marked.parse(text)).appendTo(parent);
 	}
 	else if(name == "code")
 	{
@@ -110,6 +110,23 @@ function renderChild(child, parent)
 	{
 		$("<pre>").text(child.toString()).appendTo(parent);
 	}
+}
+
+function replaceChars(texto)
+{
+	const reemplazos = {
+	    '\\[': '\\\\[',
+	    '\\]': '\\\\]',
+	    '\\(': '\\\\(',
+	    '\\)': '\\\\)'
+	};	
+    // Itera sobre cada clave en el objeto de reemplazos
+    for (const [original, nuevo] of Object.entries(reemplazos)) {
+        // Reemplaza todas las apariciones usando una expresión regular
+        const regex = new RegExp(original.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'); // Escapa caracteres especiales
+        texto = texto.replace(regex, nuevo);
+    }
+    return texto;
 }
 
 function isSafeHtml()
