@@ -46,7 +46,7 @@ function renderChild(child, parent)
 	}
 	else if(name == "content")
 	{
-		$("<div>").html(purify(marked.parse(text))).appendTo(parent);
+		$("<div class='content'>").html(purify(marked.parse(text))).appendTo(parent);
 	}
 	else if(name == "content index")
 	{
