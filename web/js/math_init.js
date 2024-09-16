@@ -24,7 +24,6 @@ function mathReload() {
       console.log("Error en MathJax:", err);
     });
 
-	/*
     elements = document.querySelectorAll('.content');
     
     // Usamos MathJax.typesetPromise para procesar solo esos elementos
@@ -33,7 +32,6 @@ function mathReload() {
     }).catch((err) => {
       console.log("Error en MathJax:", err);
     });
-	*/
 
   } catch (e) {
     console.log(e);
