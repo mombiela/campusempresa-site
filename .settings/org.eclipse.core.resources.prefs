@@ -1,2 +1,8 @@
 eclipse.preferences.version=1
+encoding//web/app/editor.js=UTF-8
+encoding//web/app/literals.js=UTF-8
+encoding//web/app/page.js=UTF-8
+encoding//web/app/routes.js=UTF-8
+encoding//web/app/template.js=UTF-8
+encoding//web/app/transform.js=UTF-8
 encoding/<project>=UTF-8
